@@ -443,3 +443,123 @@ using namespace std;
 //
 //    return 0;
 //}
+
+//9
+//#include <iostream>
+//#include <string>
+//using namespace std;
+//
+//void SepCard(const string& input, string& card1, string& card2)
+//{
+//    size_t pos = input.find("-");
+//    card1 = input.substr(0, pos);
+//    card2 = input.substr(pos + 1);
+//}
+//
+//void RemoveSpace(string& card)
+//{
+//    size_t pos = 0;
+//    while ((pos = card.find(" ")) != string::npos)
+//    {
+//        card = card.erase(pos, 1);
+//    }
+//}
+//
+//bool IsJoker(string& card)
+//{
+//    if (card[0] == 'j' || card[0] == 'J')
+//    {
+//        return true;
+//    }
+//    else
+//    {
+//        return false;
+//    }
+//}
+//
+//void Replace2(string& card)
+//{
+//    for (auto& ch : card)
+//    {
+//        if (ch == '2')
+//        {
+//            ch = 'L';
+//        }
+//    }
+//}
+//
+//int main()
+//{
+//
+//    string input, card1, card2;
+//    getline(cin, input);
+//
+//    SepCard(input, card1, card2);
+//
+//    // 如何探查每幅手牌是怎样的？
+//    // 应该是双方手牌每次都是相同的情况，如都是对子，都是同花
+//    // 但应该有特例，比如对王和炸弹存在时
+//    // 都是炸弹时，比炸弹，只有炸弹则炸弹大
+//    // 其余情况都只需要比第一张牌大小则可以看出大小
+//    // 字符比较，比的是ASCII值，所以可以将2替换
+//
+//    // 解析手牌
+//    // 1.先去掉空格，方便分情况
+//    // 2.分情况讨论
+//    string parseCard1 = card1, parseCard2 = card2;
+//    RemoveSpace(parseCard1);
+//    RemoveSpace(parseCard2);
+//    Replace2(parseCard1);
+//    Replace2(parseCard2);
+//
+//    if (IsJoker(parseCard1))
+//    {
+//        cout << card1 << endl;
+//    }
+//    else if (IsJoker(parseCard2))
+//    {
+//        cout << card2 << endl;
+//
+//    }
+//    else if (parseCard1.size() == 4 && parseCard2.size() == 4)
+//    {
+//        if (parseCard1[0] > parseCard2[0])
+//        {
+//            cout << card1 << endl;
+//        }
+//        else
+//        {
+//            cout << card2 << endl;
+//        }
+//    }
+//    else if (parseCard1.size() == 4)
+//    {
+//        cout << card1 << endl;
+//    }
+//    else if (parseCard2.size() == 4)
+//    {
+//        cout << card2 << endl;
+//    }
+//    else if (parseCard1.size() == parseCard2.size()) // 单张，对子，三张，顺子
+//    {
+//        if (parseCard1[0] > parseCard2[0])
+//        {
+//            cout << card1 << endl;
+//        }
+//        else
+//        {
+//            cout << card2 << endl;
+//        }
+//    }
+//    else
+//    {
+//        cout << "ERROR" << endl;
+//    }
+//
+//    // 结尾：好像其实是要判断出每副牌属于什么类型，并不是每次给的都是地位对等的
+//    // 所以我这样的写法只能算是最后的结果处理，中间还需要分析出都属于什么类型的牌
+//    // 好实现，但不想实现了:P 写起来篇幅大，起码以我现在的水平能想到的方法是这样的
+//    // 大致思路：写出每组拍的判断函数，置标记位为对应的标识，然后比较
+//
+//    return 0;
+//}
