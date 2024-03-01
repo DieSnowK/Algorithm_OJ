@@ -1,1 +1,2 @@
 C:\Users\w1752\Desktop\My_Repository\Study_Test\OJ\x64\Debug\OJ.exe
+C:\Users\w1752\Desktop\My_Repository\Algorithm_OJ\OJ\x64\Debug\OJ.exe

@@ -563,3 +563,80 @@ using namespace std;
 //
 //    return 0;
 //}
+
+//9
+#include <iostream>
+#include <vector>
+using namespace std;
+
+void YTriangle(vector<vector<int>>& triangle)
+{
+    // 先初始化vector
+    for (int i = 0; i < triangle.size(); i++)
+    {
+        triangle[i].resize(2 * i + 1);
+    }
+
+    triangle[0][0] = triangle[1][0] = triangle[1][1] = triangle[1][2] = 1;
+
+    int lastRow_limit = 3;
+    for (int i = 2; i < triangle.size(); i++)
+    {
+        int row_limit = 2 * i + 1;
+        for (int j = 0; j < row_limit; j++)
+        {
+            if (j == 0 || j == row_limit - 1)
+            {
+                triangle[i][j] = 1;
+            }
+            else if (j == 1)
+            {
+                triangle[i][j] = triangle[i - 1][0] + triangle[i - 1][1];
+            }
+            else if (j == row_limit - 2)
+            {
+                triangle[i][j] = triangle[i - 1][lastRow_limit - 1] + triangle[i - 1][lastRow_limit - 2];
+            }
+            else
+            {
+                triangle[i][j] = triangle[i - 1][j - 1] + triangle[i - 1][j - 2] + triangle[i - 1][j];
+            }
+        }
+
+        lastRow_limit = row_limit;
+    }
+}
+
+int main()
+{
+    // 每行数的个数 2n - 1
+    int n = 0;
+
+    while (cin >> n)
+    {
+        vector<vector<int>> triangle;
+        triangle.resize(n);
+
+        // 先生成n行杨辉三角
+        YTriangle(triangle);
+        bool flag = false;
+
+        // 判定
+        for (int i = 0; i < triangle[n - 1].size(); i++)
+        {
+            if (triangle[n - 1][i] % 2 == 0)
+            {
+                flag = true;
+                cout << i + 1;
+                break;
+            }
+        }
+
+        if (!flag)
+        {
+            cout << -1;
+        }
+    }
+
+    return 0;
+}

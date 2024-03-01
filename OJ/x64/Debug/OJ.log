@@ -1,5 +1,2 @@
 ﻿  OJ.cpp
-C:\Users\w1752\Desktop\My_Repository\Study_Test\OJ\OJ.cpp(463,27): warning C4267: “=”: 从“size_t”转换到“int”，可能丢失数据
-C:\Users\w1752\Desktop\My_Repository\Study_Test\OJ\OJ.cpp(468,19): warning C4267: “初始化”: 从“size_t”转换到“int”，可能丢失数据
-C:\Users\w1752\Desktop\My_Repository\Study_Test\OJ\OJ.cpp(472,29): warning C4267: “=”: 从“size_t”转换到“int”，可能丢失数据
-  OJ.vcxproj -> C:\Users\w1752\Desktop\My_Repository\Study_Test\OJ\x64\Debug\OJ.exe
+  OJ.vcxproj -> C:\Users\w1752\Desktop\My_Repository\Algorithm_OJ\OJ\x64\Debug\OJ.exe
