@@ -565,78 +565,156 @@ using namespace std;
 //}
 
 //9
+//#include <iostream>
+//#include <vector>
+//using namespace std;
+//
+//void YTriangle(vector<vector<int>>& triangle)
+//{
+//    if (triangle.size() > 1) // 大于两行的情况
+//    {
+//        // 先初始化vector
+//        for (int i = 0; i < triangle.size(); i++)
+//        {
+//            triangle[i].resize(2 * i + 1);
+//        }
+//
+//        triangle[0][0] = triangle[1][0] = triangle[1][1] = triangle[1][2] = 1;
+//
+//        int lastRow_limit = 3;
+//        for (int i = 2; i < triangle.size(); i++)
+//        {
+//            int row_limit = 2 * i + 1;
+//            for (int j = 0; j < row_limit; j++)
+//            {
+//                if (j == 0 || j == row_limit - 1)
+//                {
+//                    triangle[i][j] = 1;
+//                }
+//                else if (j == 1)
+//                {
+//                    triangle[i][j] = triangle[i - 1][0] + triangle[i - 1][1];
+//                }
+//                else if (j == row_limit - 2)
+//                {
+//                    triangle[i][j] = triangle[i - 1][lastRow_limit - 1] + triangle[i - 1][lastRow_limit - 2];
+//                }
+//                else
+//                {
+//                    triangle[i][j] = triangle[i - 1][j - 1] + triangle[i - 1][j - 2] + triangle[i - 1][j];
+//                }
+//            }
+//
+//            lastRow_limit = row_limit;
+//        }
+//    }
+//    else // 只有一行的情况
+//    {
+//
+//        triangle[0].push_back(1); // vector[]不会开空间，除了插入操作/或者直接预留空间
+//    }
+//
+//}
+//
+//int main()
+//{
+//    // 每行数的个数 2n - 1
+//    int n = 0;
+//
+//    while (cin >> n)
+//    {
+//        vector<vector<int>> triangle;
+//        triangle.resize(n);
+//
+//        // 先生成n行杨辉三角
+//        YTriangle(triangle);
+//        bool flag = false;
+//
+//        // 判定
+//        for (int i = 0; i < triangle[n - 1].size(); i++)
+//        {
+//            if (triangle[n - 1][i] % 2 == 0)
+//            {
+//                flag = true;
+//                cout << i + 1;
+//                break;
+//            }
+//        }
+//
+//        if (!flag)
+//        {
+//            cout << -1;
+//        }
+//    }
+//
+//    return 0;
+//}
+
+//10.
 #include <iostream>
+#include <algorithm>
 #include <vector>
 using namespace std;
 
-void YTriangle(vector<vector<int>>& triangle)
+void Shuffle(vector<int>& arr, int k)
 {
-    // 先初始化vector
-    for (int i = 0; i < triangle.size(); i++)
+    if (k == 0)
     {
-        triangle[i].resize(2 * i + 1);
+        return;
     }
 
-    triangle[0][0] = triangle[1][0] = triangle[1][1] = triangle[1][2] = 1;
+    // 先分牌
+    vector<int> left(arr.begin(), arr.begin() + arr.size() - 1);
+    vector<int> right(arr.begin() + arr.size(), arr.end());
 
-    int lastRow_limit = 3;
-    for (int i = 2; i < triangle.size(); i++)
+    // 洗牌
+    vector<int> ret(arr);
+    auto posL = left.rbegin();
+    auto posR = right.rbegin();
+
+    for (int i = 0; i < ret.size(); i++)
     {
-        int row_limit = 2 * i + 1;
-        for (int j = 0; j < row_limit; j++)
-        {
-            if (j == 0 || j == row_limit - 1)
-            {
-                triangle[i][j] = 1;
-            }
-            else if (j == 1)
-            {
-                triangle[i][j] = triangle[i - 1][0] + triangle[i - 1][1];
-            }
-            else if (j == row_limit - 2)
-            {
-                triangle[i][j] = triangle[i - 1][lastRow_limit - 1] + triangle[i - 1][lastRow_limit - 2];
-            }
-            else
-            {
-                triangle[i][j] = triangle[i - 1][j - 1] + triangle[i - 1][j - 2] + triangle[i - 1][j];
-            }
-        }
-
-        lastRow_limit = row_limit;
+        // 先放右手，再放左手
+        ret[i++] = *(posR++);
+        ret[i] = *(posL++);
     }
+
+    // 翻转
+    reverse(ret.begin(), ret.end());
+
+    // 覆盖结果给原数组
+    arr = ret;
+
+    Shuffle(arr, --k);
 }
 
 int main()
 {
-    // 每行数的个数 2n - 1
     int n = 0;
+    cin >> n;
 
-    while (cin >> n)
+    for (int i = 0; i < n; i++) // 接收n组数据
     {
-        vector<vector<int>> triangle;
-        triangle.resize(n);
+        int n = 0, k = 0;
+        cin >> n >> k;
 
-        // 先生成n行杨辉三角
-        YTriangle(triangle);
-        bool flag = false;
-
-        // 判定
-        for (int i = 0; i < triangle[n - 1].size(); i++)
+        vector<int> arr(n, 0);
+        for (int j = 0; j < arr.size(); j++) // 接收每组数据
         {
-            if (triangle[n - 1][i] % 2 == 0)
-            {
-                flag = true;
-                cout << i + 1;
-                break;
-            }
+            cin >> arr[i];
         }
 
-        if (!flag)
+        // 数据处理
+        Shuffle(arr, k);
+
+        // 打印结果
+        for (auto& card : arr)
         {
-            cout << -1;
+            cout << card << " ";
         }
+        cout << endl;
     }
+
 
     return 0;
 }
