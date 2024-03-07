@@ -651,70 +651,175 @@ using namespace std;
 //}
 
 //10.
-#include <iostream>
-#include <algorithm>
-#include <vector>
-using namespace std;
+//#include <iostream>
+//#include <algorithm>
+//#include <vector>
+//using namespace std;
+//
+//void Shuffle(vector<int>& arr, int k)
+//{
+//    if (k == 0)
+//    {
+//        return;
+//    }
+//
+//    // 先分牌
+//    vector<int> left(arr.begin(), arr.begin() + arr.size() - 1);
+//    vector<int> right(arr.begin() + arr.size(), arr.end());
+//
+//    // 洗牌
+//    vector<int> ret(arr);
+//    auto posL = left.rbegin();
+//    auto posR = right.rbegin();
+//
+//    for (int i = 0; i < ret.size(); i++)
+//    {
+//        // 先放右手，再放左手
+//        ret[i++] = *(posR++);
+//        ret[i] = *(posL++);
+//    }
+//
+//    // 翻转
+//    reverse(ret.begin(), ret.end());
+//
+//    // 覆盖结果给原数组
+//    arr = ret;
+//
+//    Shuffle(arr, --k);
+//}
+//
+//int main()
+//{
+//    int n = 0;
+//    cin >> n;
+//
+//    for (int i = 0; i < n; i++) // 接收n组数据
+//    {
+//        int n = 0, k = 0;
+//        cin >> n >> k;
+//
+//        vector<int> arr(n, 0);
+//        for (int j = 0; j < arr.size(); j++) // 接收每组数据
+//        {
+//            cin >> arr[i];
+//        }
+//
+//        // 数据处理
+//        Shuffle(arr, k);
+//
+//        // 打印结果
+//        for (auto& card : arr)
+//        {
+//            cout << card << " ";
+//        }
+//        cout << endl;
+//    }
+//
+//
+//    return 0;
+//}
 
-void Shuffle(vector<int>& arr, int k)
-{
-    if (k == 0)
-    {
-        return;
-    }
+// day18 -- 字符串通配符
+//#include <iostream>
+//#include <vector>
+//#include <string>
+//
+//using namespace std;
+//
+//bool isMatch(string pattern, string text) {
+//    int m = pattern.length();
+//    int n = text.length();
+//
+//    // 创建二维动态数组用于存储匹配结果，初始化为 false
+//    vector<vector<bool>> dp(m + 1, vector<bool>(n + 1, false));
+//
+//    // 当 pattern 和 text 都为空时，匹配成功
+//    dp[0][0] = true;
+//
+//    // 处理以 '*' 开头的情况，'*' 可以匹配空串
+//    for (int i = 1; i <= m; ++i) {
+//        if (pattern[i - 1] == '*') {
+//            dp[i][0] = dp[i - 1][0];
+//        }
+//    }
+//
+//    // 动态规划填表
+//    for (int i = 1; i <= m; ++i) {
+//        for (int j = 1; j <= n; ++j) {
+//            if (pattern[i - 1] == '?' || tolower(pattern[i - 1]) == tolower(text[j - 1])) {
+//                // 当前字符匹配，取决于之前的字符是否匹配
+//                dp[i][j] = dp[i - 1][j - 1];
+//            }
+//            else if (pattern[i - 1] == '*') {
+//                // '*' 匹配0个字符，或者匹配多个字符
+//                dp[i][j] = dp[i - 1][j] || dp[i][j - 1];
+//            }
+//        }
+//    }
+//
+//    return dp[m][n];
+//}
+//
+//int main() {
+//    string pattern, text;
+//
+//    cin >> pattern >> text;
+//
+//    if (isMatch(pattern, text)) {
+//        cout << "true" << endl;
+//    }
+//    else {
+//        cout << "false" << endl;
+//    }
+//
+//    return 0;
+//}
 
-    // 先分牌
-    vector<int> left(arr.begin(), arr.begin() + arr.size() - 1);
-    vector<int> right(arr.begin() + arr.size(), arr.end());
-
-    // 洗牌
-    vector<int> ret(arr);
-    auto posL = left.rbegin();
-    auto posR = right.rbegin();
-
-    for (int i = 0; i < ret.size(); i++)
-    {
-        // 先放右手，再放左手
-        ret[i++] = *(posR++);
-        ret[i] = *(posL++);
-    }
-
-    // 翻转
-    reverse(ret.begin(), ret.end());
-
-    // 覆盖结果给原数组
-    arr = ret;
-
-    Shuffle(arr, --k);
-}
-
-int main()
-{
-    int n = 0;
-    cin >> n;
-
-    for (int i = 0; i < n; i++) // 接收n组数据
-    {
-        int n = 0, k = 0;
-        cin >> n >> k;
-
-        vector<int> arr(n, 0);
-        for (int j = 0; j < arr.size(); j++) // 接收每组数据
-        {
-            cin >> arr[i];
-        }
-
-        // 数据处理
-        Shuffle(arr, k);
-
-        // 打印结果
-        for (auto& card : arr)
-        {
-            cout << card << " ";
-        }
-        cout << endl;
-    }
-
-
-    return 0;
-}
+// day19 最长公共字串
+//#include <iostream>
+//#include <string>
+//#include <vector>
+//using namespace std;
+//
+//// 这个动态规划其实还没完全搞懂，以后有机会，有时间可以考虑再看看 day19
+//string GetComSubstr(string& longStr, string& shortStr)
+//{
+//    int start = 0, maxSize = 0;
+//    vector<vector<int>> MSC(shortStr.size() + 1, vector<int>(longStr.size() + 1, 0));
+//
+//    for (int i = 1; i <= shortStr.size(); i++)
+//    {
+//        for (int j = 1; j <= longStr.size(); j++)
+//        {
+//            if (shortStr[i - 1] == longStr[j - 1])
+//            {
+//                MSC[i][j] += MSC[i - 1][j - 1] + 1;
+//            }
+//
+//            if (MSC[i][j] > maxSize)
+//            {
+//                maxSize = MSC[i][j];
+//                start = i - maxSize;
+//            }
+//        }
+//    }
+//
+//    return shortStr.substr(start, maxSize);
+//}
+//
+//int main()
+//{
+//    string longStr, shortStr;
+//    while (cin >> longStr >> shortStr)
+//    {
+//        // 求出长短
+//        if (longStr.size() < shortStr.size())
+//        {
+//            swap(longStr, shortStr);
+//        }
+//
+//        cout << GetComSubstr(longStr, shortStr) << endl;
+//    }
+//
+//    return 0;
+//}
