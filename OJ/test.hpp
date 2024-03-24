@@ -918,3 +918,29 @@ class Solution {
 //        return slow == 1;
 //    }
 //};
+
+// 盛最多水的容器
+// class Solution {
+// public:
+//     int maxArea(vector<int>& height) 
+//     {
+//         int left = 0, right = height.size() - 1;
+//         int maxV = 0;
+//         while(left < right)
+//         {
+//             int v = min(height[right], height[left]) * (right - left);
+//             maxV = v > maxV ? v : maxV;
+
+//             if(height[left] < height[right])
+//             {
+//                 left++;
+//             }
+//             else
+//             {
+//                 right--;
+//             }
+//         }
+
+//         return maxV;
+//     }
+// };
