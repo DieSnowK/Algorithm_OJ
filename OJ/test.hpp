@@ -944,3 +944,34 @@ class Solution {
 //         return maxV;
 //     }
 // };
+
+// 有效三角形的个数
+// class Solution 
+// {
+// public:
+//     int triangleNumber(vector<int>& nums) 
+//     {
+//         // 优化：排序
+//         sort(nums.begin(), nums.end());
+
+//         int count = 0;
+//         for(int max = nums.size() - 1; max >= 2; max--) // 固定最大数
+//         {
+//             int left = 0, right = max - 1;
+//             while(left < right)
+//             {
+//                 if(nums[left] + nums[right] > nums[max]) // 可以组成
+//                 {
+//                     count += right - left;
+//                     right--;
+//                 }
+//                 else // 不可以组成
+//                 {
+//                     left++;
+//                 }
+//             }
+//         }
+
+//         return count;
+//     }
+// };
