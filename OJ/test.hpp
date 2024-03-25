@@ -1070,71 +1070,91 @@ using namespace std;
 // };
 
 // 四数之和
-class Solution 
-{
-public:
-    vector<vector<int>> fourSum(vector<int>& nums, int target) 
-    {
-        int n = nums.size();
-        vector<vector<int>> ret;
+// class Solution 
+// {
+// public:
+//     vector<vector<int>> fourSum(vector<int>& nums, int target) 
+//     {
+//         int n = nums.size();
+//         vector<vector<int>> ret;
         
-        sort(nums.begin(), nums.end());
+//         sort(nums.begin(), nums.end());
         
-        int src1 = 0;
-        while(src1 < n -3) // 固定数1
-        {
-            int src2 = src1 + 1;
-            while(src2 < n - 2) // 固定数2
-            {
-                int left = src2 + 1;
-                int right = n - 1;
+//         int src1 = 0;
+//         while(src1 < n -3) // 固定数1
+//         {
+//             int src2 = src1 + 1;
+//             while(src2 < n - 2) // 固定数2
+//             {
+//                 int left = src2 + 1;
+//                 int right = n - 1;
 
-                // 双指针求和
-                while(left < right)
-                {
-                    long long sum = (long long)nums[left] + nums[right] + nums[src1] + nums[src2];
+//                 // 双指针求和
+//                 while(left < right)
+//                 {
+//                     long long sum = (long long)nums[left] + nums[right] + nums[src1] + nums[src2];
 
-                    if(sum > target)
-                    {
-                        right--;
-                    }
-                    else if(sum < target)
-                    {
-                        left++;
-                    }
-                    else
-                    {
-                        ret.push_back({nums[src1], nums[src2], nums[left++], nums[right--]});
+//                     if(sum > target)
+//                     {
+//                         right--;
+//                     }
+//                     else if(sum < target)
+//                     {
+//                         left++;
+//                     }
+//                     else
+//                     {
+//                         ret.push_back({nums[src1], nums[src2], nums[left++], nums[right--]});
                         
-                        // 去重(left + right) && 避免越界
-                        while(left < right && nums[left] == nums[left - 1])
-                        {
-                            left++;
-                        }
+//                         // 去重(left + right) && 避免越界
+//                         while(left < right && nums[left] == nums[left - 1])
+//                         {
+//                             left++;
+//                         }
                         
-                        while(left < right && nums[right] == nums[right + 1])
-                        {
-                            right--;
-                        }
-                    }
-                } // end of while(left < right)
+//                         while(left < right && nums[right] == nums[right + 1])
+//                         {
+//                             right--;
+//                         }
+//                     }
+//                 } // end of while(left < right)
                 
-                // 去重src2 && 避免越界
-                src2++;
-                while(src2 < n && nums[src2] == nums[src2 - 1])
-                {
-                    src2++;
-                }
-            } // end of while(src2)
+//                 // 去重src2 && 避免越界
+//                 src2++;
+//                 while(src2 < n && nums[src2] == nums[src2 - 1])
+//                 {
+//                     src2++;
+//                 }
+//             } // end of while(src2)
             
-            // 去重src1 && 避免越界
-            src1++;
-            while(src1 < n && nums[src1] == nums[src1 - 1])
-            {
-                src1++;
-            }
-        } // end of while(src1)
+//             // 去重src1 && 避免越界
+//             src1++;
+//             while(src1 < n && nums[src1] == nums[src1 - 1])
+//             {
+//                 src1++;
+//             }
+//         } // end of while(src1)
         
-        return ret;
-    }
-};
+//         return ret;
+//     }
+// };
+
+// 长度最小的子数组
+// class Solution {
+// public:
+//     int minSubArrayLen(int target, vector<int>& nums) 
+//     {
+//         int sum = 0, len = INT_MAX;
+//         for(int left = 0, right = 0; right < nums.size(); right++)
+//         {
+//             sum += nums[right]; // 进窗口
+//             while(sum >= target) // 判断
+//             {
+//                 len = min(len, right - left + 1); // 更新结果
+//                 sum -= nums[left++]; // 出窗口
+//             }
+//         }
+
+//         return len == INT_MAX ? 0 : len;
+//     }
+// };
