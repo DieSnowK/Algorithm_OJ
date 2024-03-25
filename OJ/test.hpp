@@ -1003,3 +1003,68 @@ using namespace std;
 //        return { price[left], price[right] };
 //    }
 //};
+
+// 三数之和
+class Solution 
+{
+public:
+    // 去重：1.set 2.算法
+    vector<vector<int>> threeSum(vector<int>& nums)
+    {
+        sort(nums.begin(), nums.end());
+        vector<vector<int>> ret;
+        int n = nums.size();
+        
+        for(int src = 0; src < n - 2; )
+        {
+            if(nums[src] > 0)
+            {
+                break;
+            }
+            
+            int left = src + 1;
+            int right = n - 1;
+            
+            // 双指针求和
+            while(left < right)
+            {
+                int sum = nums[left] + nums[right];
+                if(sum + nums[src] > 0)
+                {
+                    right--;
+                }
+                else if(sum + nums[src] < 0)
+                {
+                    left++;
+                }
+                else
+                {
+                    // 一轮中，找到第一个并不停止，缩小区间，继续找
+                    ret.push_back({nums[src], nums[left], nums[right]});               
+                    left++;
+                    right--;
+                    
+                    // 去重 && 避免越界
+                    while(left < right && nums[left] == nums[left - 1])
+                    {
+                        left++;
+                    }
+                    
+                    while(left < right && nums[right] == nums[right + 1])
+                    {
+                        right--;
+                    }
+                }
+            }
+            
+            // 去重 && 避免越界
+            src++;
+            while(src < n && nums[src] == nums[src - 1])
+            {
+                src++;
+            }
+        } // end of for()
+
+        return ret;
+    }
+};
