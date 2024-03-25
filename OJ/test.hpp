@@ -894,7 +894,7 @@ using namespace std;
 //};
 
 // 快乐数
-class Solution {
+// class Solution {
 //public:
 //    int BitSum(int n)
 //    {
@@ -975,3 +975,31 @@ class Solution {
 //         return count;
 //     }
 // };
+
+// 查找总价格为目标值的两个商品
+//class Solution
+//{
+//public:
+//    vector<int> twoSum(vector<int>& price, int target)
+//    {
+//        int left = 0, right = price.size() - 1;
+//        while (left < right)
+//        {
+//            int sum = price[left] + price[right];
+//            if (sum > target)
+//            {
+//                right--;
+//            }
+//            else if (sum < target)
+//            {
+//                left++;
+//            }
+//            else
+//            {
+//                break;
+//            }
+//        }
+//
+//        return { price[left], price[right] };
+//    }
+//};
