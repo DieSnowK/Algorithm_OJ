@@ -1078,48 +1078,48 @@ public:
         int n = nums.size();
         vector<vector<int>> ret;
         
-        int src1 = 0, src2 = 1;
+        sort(nums.begin(), nums.end());
+        
+        int src1 = 0;
         while(src1 < n -3) // 固定数1
         {
+            int src2 = src1 + 1;
             while(src2 < n - 2) // 固定数2
             {
                 int left = src2 + 1;
                 int right = n - 1;
 
                 // 双指针求和
-                int src = nums[src1] + nums[src2];
-                int sum = nums[left] + nums[right];
                 while(left < right)
                 {
-                    if(sum + src > 0)
+                    long long sum = (long long)nums[left] + nums[right] + nums[src1] + nums[src2];
+
+                    if(sum > target)
                     {
                         right--;
                     }
-                    else if(sum + src < 0)
+                    else if(sum < target)
                     {
                         left++;
                     }
                     else
                     {
-                        ret.push_back({nums[src1], nums[src2], nums[left], nums[right]});
+                        ret.push_back({nums[src1], nums[src2], nums[left++], nums[right--]});
+                        
+                        // 去重(left + right) && 避免越界
+                        while(left < right && nums[left] == nums[left - 1])
+                        {
+                            left++;
+                        }
+                        
+                        while(left < right && nums[right] == nums[right + 1])
+                        {
+                            right--;
+                        }
                     }
-                    
-                    left++;
-                    right--;
-                    
-                    // 去重(left + right) && 避免越界
-                    while(left < right && nums[left] == nums[left - 1])
-                    {
-                        left++;
-                    }
-                    
-                    while(left < right && nums[right] == nums[right + 1])
-                    {
-                        right--;
-                    }
-                }
+                } // end of while(left < right)
                 
-                // 去重src1 && 避免越界
+                // 去重src2 && 避免越界
                 src2++;
                 while(src2 < n && nums[src2] == nums[src2 - 1])
                 {
@@ -1127,6 +1127,7 @@ public:
                 }
             } // end of while(src2)
             
+            // 去重src1 && 避免越界
             src1++;
             while(src1 < n && nums[src1] == nums[src1 - 1])
             {
