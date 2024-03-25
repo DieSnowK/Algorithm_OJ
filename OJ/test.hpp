@@ -1068,3 +1068,72 @@ using namespace std;
 //         return ret;
 //     }
 // };
+
+// 四数之和
+class Solution 
+{
+public:
+    vector<vector<int>> fourSum(vector<int>& nums, int target) 
+    {
+        int n = nums.size();
+        vector<vector<int>> ret;
+        
+        int src1 = 0, src2 = 1;
+        while(src1 < n -3) // 固定数1
+        {
+            while(src2 < n - 2) // 固定数2
+            {
+                int left = src2 + 1;
+                int right = n - 1;
+
+                // 双指针求和
+                int src = nums[src1] + nums[src2];
+                int sum = nums[left] + nums[right];
+                while(left < right)
+                {
+                    if(sum + src > 0)
+                    {
+                        right--;
+                    }
+                    else if(sum + src < 0)
+                    {
+                        left++;
+                    }
+                    else
+                    {
+                        ret.push_back({nums[src1], nums[src2], nums[left], nums[right]});
+                    }
+                    
+                    left++;
+                    right--;
+                    
+                    // 去重(left + right) && 避免越界
+                    while(left < right && nums[left] == nums[left - 1])
+                    {
+                        left++;
+                    }
+                    
+                    while(left < right && nums[right] == nums[right + 1])
+                    {
+                        right--;
+                    }
+                }
+                
+                // 去重src1 && 避免越界
+                src2++;
+                while(src2 < n && nums[src2] == nums[src2 - 1])
+                {
+                    src2++;
+                }
+            } // end of while(src2)
+            
+            src1++;
+            while(src1 < n && nums[src1] == nums[src1 - 1])
+            {
+                src1++;
+            }
+        } // end of while(src1)
+        
+        return ret;
+    }
+};
