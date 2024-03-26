@@ -1428,3 +1428,62 @@ using namespace std;
 //         return ret;
 //     }
 // };
+
+// 串联所有单词的子串
+class Solution 
+{
+public:
+    vector<int> findSubstring(string s, vector<string>& words) 
+    {
+        int len = words[0].size();
+        unordered_map<string, int> mapS;
+        unordered_map<string, int> mapV;
+        vector<int> ret;
+
+        for(auto& str : words)
+        {
+            mapV[str]++;
+        }
+
+        for(int i = 0; i < len; i++) // 滑动窗口的执行次数
+        {
+            int count = 0;
+            for(int left = i, right = i + len; right < s.size(); right += len)
+            {
+                // 入窗口，截取子串，维护count
+                string str = s.substr(right - len, len);
+                mapS[str]++;
+
+                if(mapV.count(str)) // 看看mapV中是否存在str
+                {
+                    if(mapS[str] <= mapV[str])
+                    {
+                        count++;
+                    }
+                }
+
+                // 判断窗口是否大了
+                if(((right - left) / 3) > words.size())
+                {
+                    // cout << "big " << i << " " << left << " " << right << " " << endl;
+                    // 维护count
+                    string tmp = s.substr(left, len);
+                    if(mapV.count(tmp) && mapS[tmp]-- <= mapV[tmp])
+                    {
+                        count--;
+                    }
+
+                    left += len; // 出窗口
+                }
+
+                if(count == words.size()) // 更新结果
+                {
+                    ret.push_back(left);
+                }
+            }
+            mapS.clear();
+        }
+
+        return ret;
+    }
+};
