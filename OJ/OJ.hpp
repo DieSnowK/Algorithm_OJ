@@ -1160,27 +1160,27 @@ using namespace std;
 // };
 
 // 无重复字符的最长子串
-class Solution 
-{
-public:
-    int lengthOfLongestSubstring(string s) 
-    {
-        int n = s.size(); 
-        int ret = 0;
-        int hash[128] = { 0 }; // 利用hash查重
+// class Solution 
+// {
+// public:
+//     int lengthOfLongestSubstring(string s) 
+//     {
+//         int n = s.size(); 
+//         int ret = 0;
+//         int hash[128] = { 0 }; // 利用hash查重
         
-        for(int left = 0, right = 0; right < n; right++)
-        {
-            hash[s[right]]++; // 入窗口
+//         for(int left = 0, right = 0; right < n; right++)
+//         {
+//             hash[s[right]]++; // 入窗口
             
-            while(hash[s[right]] > 1)
-            {
-                hash[s[left++]]--; // 出窗口
-            }
+//             while(hash[s[right]] > 1)
+//             {
+//                 hash[s[left++]]--; // 出窗口
+//             }
             
-            ret = max(ret, right - left + 1); // 更新结果
-        }
+//             ret = max(ret, right - left + 1); // 更新结果
+//         }
         
-        return ret;
-    }
-};
+//         return ret;
+//     }
+// };
