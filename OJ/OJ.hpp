@@ -1184,3 +1184,33 @@ using namespace std;
 //         return ret;
 //     }
 // };
+
+// 最大连续的一个数 Ⅲ
+// class Solution 
+// {
+// public:
+//     int longestOnes(vector<int>& nums, int k) 
+//     {
+//         // 问题转化为，子数组内，0的个数不超过k
+//         int ret = 0;
+//         for(int left = 0, right = 0, zero = 0; right < nums.size(); right++)
+//         {
+//             if(nums[right] == 0)
+//             {
+//                 zero++; // 入窗口
+//             }
+            
+//             while(zero > k)
+//             {
+//                 if(nums[left++] == 0)
+//                 {
+//                     zero--;
+//                 }
+//             }
+            
+//             ret = max(ret, right - left + 1);
+//         }
+        
+//         return ret;
+//     }
+// };
