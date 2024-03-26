@@ -1288,3 +1288,45 @@ using namespace std;
 //         return ret;
 //     }
 // };
+
+// 水果成篮 v2.0 优化
+// class Solution 
+// {
+// public:
+//     // 模型转化为：数组只有两个元素的最大子数组
+//     // 改造哈希表，以改善时间复杂度
+//     int totalFruit(vector<int>& fruits) 
+//     {
+//         int ret = 0, kinds = 0;
+        
+//         // 水果类型小于一个定值
+//         // 以空间换时间
+//         int basket[100001] = { 0 };
+        
+//         for(int left = 0, right = 0; right < fruits.size(); right++)
+//         {
+//             if(basket[fruits[right]] == 0)
+//             {
+//                 kinds++;
+//             }
+//             basket[fruits[right]]++; // 入窗口
+            
+//             while(kinds > 2) // 判断
+//             {
+//                 // 出窗口
+//                 basket[fruits[left]]--;
+                
+//                 if(basket[fruits[left]] == 0)
+//                 {
+//                     kinds--;
+//                 }
+                
+//                 left++;
+//             }
+            
+//             ret = max(ret, right - left + 1); // 更新数据
+//         }
+        
+//         return ret;
+//     }
+// };
