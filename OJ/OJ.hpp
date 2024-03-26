@@ -1330,3 +1330,53 @@ using namespace std;
 //         return ret;
 //     }
 // };
+
+// 找到字符串中所有字母异位词 v1.0
+// class Solution {
+// public:
+//     // 将问题转化为：p中的字母出现的次数与s中某个字串中出现的次数相同
+//     vector<int> findAnagrams(string s, string p) 
+//     {
+//         vector<int> ret;
+//         int hashS[26] = { 0 };
+//         int hashP[26] = { 0 };
+
+//         // 将p如hash
+//         for(auto& ch : p)
+//         {
+//             hashP[ch - 'a']++;
+//         }
+
+//         // 处理s
+//         int len = p.size();
+//         for(int left = 0, right = 0; right < s.size(); right++)
+//         {
+//             hashS[s[right] - 'a']++; // 入窗口
+
+//             if(right - left + 1 > len) // 判断窗口是否大了
+//             {
+//                 hashS[s[left++] - 'a']--; // 出窗口
+//             }
+
+//             if(right - left + 1 == len) // 尝试更新数据
+//             {
+//                 bool flag = true;
+//                 for(int i = 0; i < 26; i++)
+//                 {
+//                     if(hashP[i] != hashS[i])
+//                     {
+//                         flag = false;
+//                         break;
+//                     }
+//                 }
+                
+//                 if(flag)
+//                 {
+//                     ret.push_back(left);
+//                 }
+//             }
+//         }
+
+//         return ret;
+//     }
+// };
