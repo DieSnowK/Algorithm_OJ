@@ -1254,3 +1254,37 @@ using namespace std;
 //         return ret == -1 ? -1 : nums.size() - ret;
 //     }
 // };
+
+// // 水果成篮 v1.0
+// class Solution 
+// {
+// public:
+//     // 模型转化为：数组只有两个元素的最大子数组
+//     int totalFruit(vector<int>& fruits) 
+//     {
+//         int ret = 0;
+//         unordered_map<int, int> basket; // <水果种类 数量>
+        
+//         for(int left = 0, right = 0; right < fruits.size(); right++)
+//         {
+//             basket[fruits[right]]++; // 入窗口
+            
+//             while(basket.size() > 2) // 判断
+//             {
+//                 // 出窗口
+//                 basket[fruits[left]]--;
+                
+//                 if(basket[fruits[left]] == 0)
+//                 {
+//                     basket.erase(fruits[left]);
+//                 }
+                
+//                 left++;
+//             }
+            
+//             ret = max(ret, right - left + 1); // 更新数据
+//         }
+        
+//         return ret;
+//     }
+// };
