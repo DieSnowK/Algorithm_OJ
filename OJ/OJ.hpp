@@ -1661,30 +1661,55 @@ using namespace std;
 // };
 
 // 搜索插入位置
-class Solution 
-{
-public:
-    int searchInsert(vector<int>& nums, int target) 
-    {
-        int left = 0, right = nums.size() - 1;
-        while(left < right)
-        {
-            int mid = left + (right - left) / 2;
-            if(nums[mid] >= target)
-            {
-                right = mid;              
-            }
-            else
-            {
-                left = mid + 1;
-            }
-        }
+// class Solution 
+// {
+// public:
+//     int searchInsert(vector<int>& nums, int target) 
+//     {
+//         int left = 0, right = nums.size() - 1;
+//         while(left < right)
+//         {
+//             int mid = left + (right - left) / 2;
+//             if(nums[mid] >= target)
+//             {
+//                 right = mid;              
+//             }
+//             else
+//             {
+//                 left = mid + 1;
+//             }
+//         }
         
-        if(nums[left] < target)
-        {
-            left++;
-        }
+//         if(nums[left] < target)
+//         {
+//             left++;
+//         }
         
-        return left;
-    }
-};
+//         return left;
+//     }
+// };
+
+// 山脉数组的峰顶索引
+// class Solution 
+// {
+// public:
+//     // 区间仍然具有二段性，所以可以使用二分查找
+//     int peakIndexInMountainArray(vector<int>& arr) 
+//     {
+//         int left = 1, right = arr.size() - 2;
+//         while(left < right)
+//         {
+//             int mid = left + (right - left + 1) / 2;
+//             if(arr[mid] >= arr[mid - 1])
+//             {
+//                 left = mid;
+//             }
+//             else
+//             {
+//                 right = mid - 1;
+//             }
+//         }
+        
+//         return left;
+//     }
+// };
