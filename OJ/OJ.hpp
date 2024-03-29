@@ -1762,3 +1762,27 @@ using namespace std;
 //         return nums[left];
 //     }
 // };
+
+// 0?n-1 中缺失的数字
+class Solution 
+{
+public:
+    int takeAttendance(vector<int>& records) 
+    {
+        int left = 0, right = records.size() - 1;
+        while(left < right)
+        {
+            int mid = left + (right - left) / 2;
+            if(mid == records[mid])
+            {
+                left = mid + 1;
+            }
+            else
+            {
+                right = mid;
+            }
+        }
+
+        return left == records[left] ? (left + 1) : left; // 处理边界情况
+    }
+};
