@@ -1764,25 +1764,59 @@ using namespace std;
 // };
 
 // 0?n-1 中缺失的数字
-class Solution 
-{
-public:
-    int takeAttendance(vector<int>& records) 
-    {
-        int left = 0, right = records.size() - 1;
-        while(left < right)
-        {
-            int mid = left + (right - left) / 2;
-            if(mid == records[mid])
-            {
-                left = mid + 1;
-            }
-            else
-            {
-                right = mid;
-            }
-        }
+// class Solution 
+// {
+// public:
+//     int takeAttendance(vector<int>& records) 
+//     {
+//         int left = 0, right = records.size() - 1;
+//         while(left < right)
+//         {
+//             int mid = left + (right - left) / 2;
+//             if(mid == records[mid])
+//             {
+//                 left = mid + 1;
+//             }
+//             else
+//             {
+//                 right = mid;
+//             }
+//         }
 
-        return left == records[left] ? (left + 1) : left; // 处理边界情况
-    }
-};
+//         return left == records[left] ? (left + 1) : left; // 处理边界情况
+//     }
+// };
+
+// [模板] 前缀和
+// #include <iostream>
+// #include <vector>
+// using namespace std;
+
+// int main()
+// {
+//     int n = 0, q = 0;
+//     cin >> n >> q;
+
+//     vector<int> arr(n + 1);
+//     for(int i = 1; i <= n; i++)
+//     {
+//         cin >> arr[i];
+//     }
+
+//     // 预处理出来一个前缀和数组
+//     vector<long long> dp(n + 1);
+//     for(int i = 1; i <= n; i++)
+//     {
+//         dp[i] = dp[i - 1] + arr[i];
+//     }
+
+//     // 使用前缀和数组
+//     int l = 0, r = 0;
+//     while(q--)
+//     {
+//         cin >> l >> r;
+//         cout << dp[r] - dp[l - 1] << endl;
+//     }
+
+//     return 0;
+// }
