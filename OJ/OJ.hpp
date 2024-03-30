@@ -1863,3 +1863,38 @@ using namespace std;
 
 //     return 0;
 // }
+
+// 寻找数组的中心下标
+// class Solution 
+// {
+// public:
+//     int pivotIndex(vector<int>& nums) 
+//     {
+//         int n = nums.size();
+//         vector<int> f(n), g(n);
+
+//         // 预处理前缀和数组和后缀和数组
+//         // f[i] -> [0, i - 1]区间，所有元素的和
+//         for(int i = 1; i < n; i++)
+//         {
+//             f[i] = f[i - 1] + nums[i - 1];
+//         }
+
+//         // g[i] -> [i + 1, n - 1]区间，所有元素的和
+//         for(int i = n - 2; i >= 0; i--)
+//         {
+//             g[i] = g[i + 1] + nums[i + 1];
+//         }
+
+//         // 使用 前缀和 && 后缀和 数组
+//         for(int i = 0; i < n; i++)
+//         {
+//             if(f[i] == g[i])
+//             {
+//                 return i;
+//             }
+//         }
+
+//         return -1;
+//     }
+// };
