@@ -1983,3 +1983,31 @@ using namespace std;
 //         return ret;
 //     }
 // };
+
+// 连续数组
+// class Solution 
+// {
+// public:
+//     int findMaxLength(vector<int>& nums) 
+//     {
+//         unordered_map<int, int> hash; // <前缀和， 下标>
+//         hash[0] = -1; // 默认有一个前缀和为0的情况
+
+//         int sum = 0, len = 0; // 标记前一次的前缀和
+//         for(int i = 0; i < nums.size(); i++)
+//         {
+//             sum += nums[i] == 0 ? -1 : 1;
+
+//             if(hash.count(sum))
+//             {
+//                 len = max(len, i - hash[sum]); // 更新最大长度
+//             }
+//             else
+//             {
+//                 hash[sum] = i; // 将(sum, i)入hash
+//             }
+//         }
+
+//         return len;
+//     }
+// };
