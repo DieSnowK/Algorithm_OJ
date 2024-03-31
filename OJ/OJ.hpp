@@ -2011,3 +2011,42 @@ using namespace std;
 //         return len;
 //     }
 // };
+
+// 矩阵区域和
+// class Solution 
+// {
+// public:
+//     vector<vector<int>> matrixBlockSum(vector<vector<int>>& mat, int k) 
+//     {
+//         int row = mat.size(), col = mat[0].size();
+
+//         // 预处理前缀和数组
+//         vector<vector<int>> dp(row + 1, vector<int>(col + 1));
+//         for(int i = 1; i <= row; i++)
+//         {
+//             for(int j = 1; j <= col; j++)
+//             {
+//                 // 下标映射关系 dp[x, y] -> mat[x - 1][y - 1]
+//                 dp[i][j] = dp[i - 1][j] + dp[i][j - 1] - dp[i - 1][j - 1] + mat[i - 1][j - 1];
+//             }
+//         }
+
+//         // 使用前缀和数组
+//         vector<vector<int>> ret(row, vector<int>(col));
+//         for(int i = 0; i < row; i++)
+//         {
+//             for(int j = 0; j < col; j++)
+//             {
+//                 // 下标映射关系 ret[x][y] -> dp[x + 1][y + 1]
+//                 int x1 = max(0, i - k) + 1;
+//                 int y1 = max(0, j - k) + 1;
+//                 int x2 = min(row - 1, i + k) + 1;
+//                 int y2 = min(col - 1, j + k) + 1;
+
+//                 ret[i][j] = dp[x2][y2] - dp[x1 - 1][y2] - dp[x2][y1 - 1] + dp[x1 - 1][y1 - 1];
+//             }
+//         }
+
+//         return ret;
+//     }
+// };
