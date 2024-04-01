@@ -2050,3 +2050,34 @@ using namespace std;
 //         return ret;
 //     }
 // };
+
+// 判断字符是否唯一
+class Solution 
+{
+public:
+    bool isUnique(string astr) 
+    {
+        // 鸽巢优化
+        if(astr.size() > 26)
+        {
+            return false;
+        }
+        
+        int bitset = 0; // 位图
+        for(auto& ch : astr)
+        {
+            int i = ch - 'a';
+            
+            // 判断该字符是否出现过
+            if(((bitset >> i) & 1))
+            {
+                return false;
+            }
+            
+            // 将该字符加入位图中
+            bitset |= 1 << i;
+        }
+        
+        return true;
+    }
+};
