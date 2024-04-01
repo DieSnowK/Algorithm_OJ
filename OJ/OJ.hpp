@@ -2098,3 +2098,21 @@ using namespace std;
 //         return ret;
 //     }
 // };
+
+// 两整数之和
+// class Solution 
+// {
+// public:
+//     int getSum(int a, int b) 
+//     {
+//         while(b)
+//         {
+//             int ret = a ^ b; // 无进位相加
+//             int carry = (a & b) << 1; // 进位
+//             a = ret;
+//             b = carry;
+//         }
+        
+//         return a;
+//     }
+// };
