@@ -2052,32 +2052,49 @@ using namespace std;
 // };
 
 // 判断字符是否唯一
-class Solution 
-{
-public:
-    bool isUnique(string astr) 
-    {
-        // 鸽巢优化
-        if(astr.size() > 26)
-        {
-            return false;
-        }
+// class Solution 
+// {
+// public:
+//     bool isUnique(string astr) 
+//     {
+//         // 鸽巢优化
+//         if(astr.size() > 26)
+//         {
+//             return false;
+//         }
         
-        int bitset = 0; // 位图
-        for(auto& ch : astr)
-        {
-            int i = ch - 'a';
+//         int bitset = 0; // 位图
+//         for(auto& ch : astr)
+//         {
+//             int i = ch - 'a';
             
-            // 判断该字符是否出现过
-            if(((bitset >> i) & 1))
-            {
-                return false;
-            }
+//             // 判断该字符是否出现过
+//             if(((bitset >> i) & 1))
+//             {
+//                 return false;
+//             }
             
-            // 将该字符加入位图中
-            bitset |= 1 << i;
-        }
+//             // 将该字符加入位图中
+//             bitset |= 1 << i;
+//         }
         
-        return true;
-    }
-};
+//         return true;
+//     }
+// };
+
+// 丢失的数字
+// class Solution 
+// {
+// public:
+//     int missingNumber(vector<int>& nums) 
+//     {
+//         int ret = nums.size();
+//         for(int i = 0; i < nums.size(); i++)
+//         {
+//             ret ^= i;
+//             ret ^= nums[i];
+//         }
+        
+//         return ret;
+//     }
+// };
