@@ -2116,3 +2116,32 @@ using namespace std;
 //         return a;
 //     }
 // };
+
+// 只出现一次的数字Ⅱ
+// class Solution 
+// {
+// public:
+//     int singleNumber(vector<int>& nums) 
+//     {
+//         int ret = 0;
+//         for(int i = 0; i < 32; i++) // 枚举每一位
+//         {
+//             int sum = 0;
+//             for(auto& x : nums) // 统计各位1的总和
+//             {
+//                 if((x >> i) & 1)
+//                 {
+//                     sum++;
+//                 }
+//             }
+//             sum %= 3; // 可推广到n
+            
+//             if(sum)
+//             {
+//                 ret |= 1 << i;
+//             }
+//         }
+        
+//         return ret;
+//     }
+// };
