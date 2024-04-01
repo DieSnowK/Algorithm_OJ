@@ -2145,3 +2145,65 @@ using namespace std;
 //         return ret;
 //     }
 // };
+
+// 消失的两个数组
+// class Solution 
+// {
+// public:
+//     vector<int> missingTwo(vector<int>& nums) 
+//     {   
+//         // 将所有的数亦或到一起
+//         int tmp = 0;
+//         for(auto& x : nums)
+//         {
+//             tmp ^= x;
+//         }
+        
+//         for(int i = 1; i <= nums.size() + 2; i++)
+//         {
+//             tmp ^= i;       
+//         }
+        
+//         // 找出两个数第一个不同的bit
+//         int diff = 0;
+//         while(1)
+//         {
+//             if((tmp >> diff) & 1)
+//             {
+//                 break; 
+//             }
+//             else
+//             {
+//                 diff++;
+//             }
+//         }
+        
+//         // 根据diff位的不同，将所有的数划分为两类来亦或
+//         int a = 0, b = 0;
+//         for(auto& x : nums)
+//         {
+//             if((x >> diff) & 1)
+//             {
+//                 a ^= x;
+//             }
+//             else
+//             {
+//                 b ^= x;
+//             }
+//         }
+        
+//         for(int i = 1; i <= nums.size() + 2; i++)
+//         {
+//             if((i >> diff) & 1)
+//             {
+//                 a ^= i;
+//             }
+//             else
+//             {
+//                 b ^= i;
+//             }
+//         }
+        
+//         return {a, b};
+//     }
+// };
