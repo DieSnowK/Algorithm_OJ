@@ -2305,3 +2305,66 @@ using namespace std;
 //         return ret;
 //     }
 // };
+
+// 外观数列
+// 控制逻辑 v1.0
+// class Solution 
+// {
+// public:
+//     string countAndSay(int n) 
+//     {
+//         string src = "1";
+//         for(int i = 2; i <= n; i++) // 控制行
+//         {
+//             // 双指针
+//             string ret;
+//             int left = 0, right = 0;
+
+//             // 自己控代码的逻辑
+//             for(; right < src.size(); right++)
+//             {
+//                 if(src[left] != src[right])
+//                 {
+//                     ret += to_string(right - left) + src[left];
+//                     left = right;
+//                 }
+//             }
+
+//             // 处理最后的一组数
+//             ret += to_string(right - left) + src[left];
+
+//             src = ret;
+//         }
+
+//         return src;
+//     }
+// };
+
+// 控制逻辑 v2.0
+// class Solution 
+// {
+// public:
+//     string countAndSay(int n) 
+//     {
+//         string src = "1";
+//         for(int i = 2; i <= n; i++) // 控制行
+//         {
+//             // 双指针
+//             string ret;
+//             for(int left = 0, right = 0; right < src.size();)
+//             {
+//                 while(right < src.size() && src[left] == src[right])
+//                 {
+//                     right++;
+//                 }
+//                 ret += to_string(right - left) + src[left];
+                
+//                 left = right;
+//             }
+
+//             src = ret;
+//         }
+
+//         return src;
+//     }
+// };
