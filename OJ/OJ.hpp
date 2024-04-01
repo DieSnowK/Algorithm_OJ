@@ -2237,7 +2237,7 @@ using namespace std;
 // class Solution 
 // {
 // public:
-//     int findPoisonedDuration(vector<int>& timeSeries, int duration) 
+//     int FindPoisonedDuration(vector<int>& timeSeries, int duration) 
 //     {
 //         int ret = 0;
 //         for(int i = 1; i < timeSeries.size(); i++)
@@ -2254,5 +2254,54 @@ using namespace std;
 //         }
 
 //         return ret + duration;
+//     }
+// };
+
+// N字形变换
+// class Solution 
+// {
+// public:
+//     // 本模拟找规律
+//     string convert(string s, int numRows) 
+//     {
+//         // 处理边界情况
+//         if(numRows == 1)
+//         {
+//             return s;
+//         }
+
+//         string ret;
+//         int n = s.size(), d = 2 * numRows - 2;
+
+//         // 第一行
+//         for(int i = 0; i < n; i += d)
+//         {
+//             ret += s[i]; 
+//         }
+
+//         // 第二行 -- 倒数第二行
+//         for(int k = 1; k < numRows - 1; k++) // 枚举每一行
+//         {
+//             for(int i = k, j = d - k; i < n || j < n; i += d, j += d)
+//             {
+//                 if(i < n)
+//                 {
+//                     ret += s[i];
+//                 }
+
+//                 if(j < n)
+//                 {
+//                     ret += s[j];
+//                 }
+//             }
+//         }
+
+//         // 最后一行
+//         for(int i = numRows - 1; i < n; i += d)
+//         {
+//             ret += s[i];
+//         }
+
+//         return ret;
 //     }
 // };
