@@ -2543,3 +2543,57 @@ using namespace std;
 //         }
 //     }
 // };
+
+// 库存管理
+// class Solution 
+// {
+// public:
+//     vector<int> InventoryManagement(vector<int>& nums, int k) 
+//     {
+//         srand(time(nullptr));
+//         QuickSort(nums, 0, nums.size()- 1, k);
+//         return {nums.begin(), nums.begin() + k};
+//     }
+    
+//     void QuickSort(vector<int>& nums, int l, int r, int k)
+//     {
+//         if(l >= r)
+//         {
+//             return;
+//         }
+        
+//         int key = nums[rand() % (r - l + 1) + l];
+//         int i = l, left = l - 1, right = r + 1;
+//         while(i < right)
+//         {
+//             if(nums[i] < key)
+//             {
+//                 swap(nums[++left], nums[i++]);
+//             }
+//             else if(nums[i] == key)
+//             {
+//                 i++;
+//             }
+//             else // nums[i] > key
+//             {
+//                 swap(nums[--right], nums[i]);
+//             }
+//         }
+        
+//         // [l, left] [left + 1, right - 1] [right, r]
+//         // 分情况讨论
+//         int a = left - l + 1, b = right - left - 1;
+//         if(a > k)
+//         {
+//             QuickSort(nums, l, left, k);
+//         }
+//         else if(a + b >= k)
+//         {
+//             return;
+//         }
+//         else
+//         {
+//             QuickSort(nums, right, r, k - a - b);
+//         }
+//     }
+// };
