@@ -2490,3 +2490,56 @@ using namespace std;
 //         QuickSort(nums, right, r);
 //     }
 // };
+
+// 数组中第K个最大元素
+// class Solution 
+// {
+// public:
+//     int FindKthLargest(vector<int>& nums, int k) 
+//     {
+//         srand(time(nullptr));
+//         return QuickSort(nums, 0, nums.size() - 1, k);    
+//     }
+    
+//     int QuickSort(vector<int>& nums, int l, int r, int k)
+//     {
+//         if(l == r)
+//         {
+//             return nums[l];
+//         }
+        
+//         // 数组分三块
+//         int key = nums[rand() % (r - l + 1) + l];
+//         int i = l, left = l - 1, right = r + 1;
+//         while(i < right)
+//         {
+//             if(nums[i] < key)
+//             {
+//                 swap(nums[++left], nums[i++]);
+//             }
+//             else if(nums[i] == key)
+//             {
+//                 i++;
+//             }
+//             else // nums[i] > key
+//             {
+//                 swap(nums[--right], nums[i]);
+//             }
+//         }
+        
+//         // 分情况讨论
+//         int c = r - right + 1, b = right - left - 1;
+//         if(c >= k)
+//         {
+//             return QuickSort(nums, right, r, k);
+//         }
+//         else if(b + c >= k)
+//         {
+//             return key;
+//         }
+//         else
+//         {
+//             return QuickSort(nums, l, left, k - b - c);
+//         }
+//     }
+// };
