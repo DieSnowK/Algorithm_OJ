@@ -2368,3 +2368,53 @@ using namespace std;
 //         return src;
 //     }
 // };
+
+// 数青蛙
+// class Solution 
+// {
+// public:
+//     int MinNumberOfFrogs(string croakOfFrogs) 
+//     {
+//         string str = "croak";
+//         int n = str.size();
+//         vector<int> hash(n); // 用数组模拟哈希
+        
+//         unordered_map<char, int> index; // <ch, index>
+//         for(int i = 0; i < n; i++)
+//         {
+//             index[str[i]] = i;
+//         }
+        
+//         for(auto& ch : croakOfFrogs)
+//         {
+//             if(ch == 'c')
+//             {
+//                 if(hash[n - 1]) // k已存在
+//                 {
+//                     hash[n - 1]--;
+//                 }
+//                 hash[0]++;
+//             }
+//             else
+//             {
+//                 int i = index[ch];
+//                 if(hash[i - 1] == 0)
+//                 {
+//                     return -1;
+//                 }
+//                 hash[i - 1]--;
+//                 hash[i]++;
+//             }
+//         }
+        
+//         for(int i = 0; i < n - 1; i++)
+//         {
+//             if(hash[i] != 0)
+//             {
+//                 return -1;
+//             }
+//         }
+        
+//         return hash[n - 1];
+//     }
+// };
