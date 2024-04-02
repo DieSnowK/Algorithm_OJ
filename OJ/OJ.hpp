@@ -2444,3 +2444,49 @@ using namespace std;
 //         }
 //     }
 // };
+
+// 快速排序
+// 数组分三块 + 随机基准
+// class Solution 
+// {
+// public:
+//     vector<int> sortArray(vector<int>& nums) 
+//     {
+//         srand(time(nullptr)); // 种下随机数种子
+//         QuickSort(nums, 0, nums.size() - 1);
+//         return nums;
+//     }
+
+//     void QuickSort(vector<int>& nums, int l, int r)
+//     {
+
+//         if(l >= r)
+//         {
+//             return ;
+//         }
+
+//         // 数组分三块
+//         int key = nums[rand() % (r - l + 1) + l];
+//         int i = l, left = l - 1, right = r + 1;
+//         while(i < right)
+//         {
+//             if(nums[i] < key)
+//             {
+//                 swap(nums[++left], nums[i++]);
+//             }
+//             else if(nums[i] == key)
+//             {
+//                 i++;
+//             }
+//             else // nums[i] > key
+//             {
+//                 swap(nums[--right], nums[i]);
+//             }
+//         }
+
+//         // 递归左右区间
+//         // [l, left] [left + 1, right - 1] [right, r]
+//         QuickSort(nums, l, left);
+//         QuickSort(nums, right, r);
+//     }
+// };
