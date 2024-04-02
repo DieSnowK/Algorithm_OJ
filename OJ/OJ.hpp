@@ -2418,3 +2418,29 @@ using namespace std;
 //         return hash[n - 1];
 //     }
 // };
+
+// 颜色分类
+// class Solution 
+// {
+// public:
+//     void SortColors(vector<int>& nums) 
+//     {
+//         int i = 0, left = -1, right = nums.size(); // 三指针
+//         while(i < right)
+//         {
+//             if(nums[i] == 0)
+//             {
+//                 swap(nums[++left], nums[i++]);
+//             }
+//             else if(nums[i] == 1)
+//             {
+//                 i++;
+//             }
+//             else // nums[i] == 2
+//             {
+//                 // 此处i无需往后迭代，因为此处元素仍属于未扫描
+//                 swap(nums[--right], nums[i]);
+//             }
+//         }
+//     }
+// };
