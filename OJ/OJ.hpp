@@ -2859,3 +2859,79 @@ using namespace std;
 //         }
 //     }
 // };
+
+// 翻转对
+// // v1.0 降序
+// class Solution 
+// {
+//     vector<int> assist;
+// public:
+//     int reversePairs(vector<int>& nums) 
+//     {
+//         assist.resize(nums.size());
+//         return MergeSort(nums, 0, nums.size() - 1);
+//     }
+
+//     int MergeSort(vector<int>& nums, int left, int right)
+//     {
+//         if(left >= right)
+//         {
+//             return 0;
+//         }
+
+//         int ret = 0;
+//         // 中间点，划分两区间
+//         int mid = left + (right - left) / 2;
+//         // [left, mid] [mid + 1, right]
+    
+//         // 先计算左右子区间翻转对
+//         ret += MergeSort(nums, left, mid);
+//         ret += MergeSort(nums, mid + 1, right);
+
+//         // 计算一左一右翻转对的数量
+//         int cur1 = left, cur2 = mid + 1, i = left;
+//         while(cur1 <= mid) // 降序
+//         {
+//             while(cur2 <= right && nums[cur2] >= nums[cur1] / 2.0)
+//             {
+//                 cur2++;
+//             }
+
+//             if(cur2 > right)
+//             {
+//                 break;
+//             }
+
+//             ret += right - cur2 + 1;
+//             cur1++;
+//         }
+
+//         // 合并两个有序数组
+//         cur1 = left, cur2 = mid + 1;
+//         while(cur1 <= mid && cur2 <= right)
+//         {
+//             assist[i++] = nums[cur1] <= nums[cur2] ? nums[cur2++] : nums[cur1++];
+//         }
+
+//         // 处理未遍历完数组
+//         while(cur1 <= mid)
+//         {
+//             assist[i++] = nums[cur1++];
+//         }
+
+//         while(cur2 <= right)
+//         {
+//             assist[i++] = nums[cur2++];
+//         }
+
+//         // 还原
+//         for(int i = left; i <= right; i++)
+//         {
+//             nums[i] = assist[i];
+//         }
+
+//         return ret;
+//     }
+// };
+
+// v2.0 升序
