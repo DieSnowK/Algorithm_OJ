@@ -2650,3 +2650,69 @@ using namespace std;
 //         }
 //     }
 // };
+
+// 交易逆序对的总数
+// v1.0 升序
+// class Solution 
+// {
+//     vector<int> assist;
+// public:
+//     int ReversePairs(vector<int>& nums) 
+//     {
+//         assist.resize(nums.size());
+//         return MergeSort(nums, 0, nums.size() - 1);
+//     }
+
+//     int MergeSort(vector<int>& nums, int left, int right)
+//     {
+//         if(left >= right)
+//         {
+//             return 0;
+//         }
+
+//         int ret = 0;
+//         // 选择中点，划分数组
+//         int mid = left + (right - left) / 2;
+
+//         // 左边的个数 + 排序 + 右边的个数 + 排序
+//         // [left, mid] [mid + 1, right]
+//         ret += MergeSort(nums, left, mid);
+//         ret += MergeSort(nums, mid + 1, right);
+
+//         // 一左一右的个数 + 排序
+//         int cur1 = left, cur2 = mid + 1, i = 0;
+//         while(cur1 <= mid && cur2 <= right)
+//         {
+//             if(nums[cur1] <= nums[cur2])
+//             {
+//                 assist[i++] = nums[cur1++];
+//             }
+//             else
+//             {
+//                 ret += mid - cur1 + 1;
+//                 assist[i++] = nums[cur2++];
+//             }
+//         }
+
+//         // 处理未遍历完的数组
+//         while(cur1 <= mid)
+//         {
+//             assist[i++] = nums[cur1++];
+//         }
+
+//         while(cur2 <= right)
+//         {
+//             assist[i++] = nums[cur2++];
+//         }
+
+//         // 还原
+//         for(int i = left; i <= right; i++)
+//         {
+//             nums[i] = assist[i - left];
+//         }
+
+//         return ret;
+//     }
+// };
+
+// v2.0 降序
