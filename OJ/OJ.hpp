@@ -2777,3 +2777,85 @@ using namespace std;
 //         return ret;
 //     }
 // };
+
+// 计算右侧小于当前元素的个数
+// class Solution 
+// {
+//     vector<int> ret;
+//     vector<int> index;
+//     vector<int> assistNums;
+//     vector<int> assistIndex;
+// public:
+//     vector<int> countSmaller(vector<int>& nums) 
+//     {
+//         int n = nums.size();
+//         ret.resize(n);
+//         index.resize(n);
+//         assistNums.resize(n);
+//         assistIndex.resize(n);
+        
+//         // 初始化index
+//         for(int i = 0; i < n; i++)
+//         {
+//             index[i] = i;
+//         }
+        
+//         MergeSort(nums, 0, n - 1);
+        
+//         return ret;
+//     }
+    
+//     void MergeSort(vector<int>& nums, int left, int right)
+//     {
+//         if(left >= right)
+//         {
+//             return;
+//         }
+        
+//         // 中间点，划分数组
+//         int mid = left + (right - left) / 2;
+//         // [left, mid] [mid + 1, right]
+        
+//         // 先处理左右子数组
+//         MergeSort(nums, left, mid);
+//         MergeSort(nums, mid + 1, right);
+        
+//         // 处理一左一右 + 排序(降序)
+//         // 元素和下标同步迁移
+//         int cur1 = left, cur2 = mid + 1, i = 0;
+//         while(cur1 <= mid && cur2 <= right)
+//         {
+//             if(nums[cur1] <= nums[cur2])
+//             {
+//                 assistNums[i] = nums[cur2];
+//                 assistIndex[i++] = index[cur2++];
+//             }
+//             else
+//             {
+//                 ret[index[cur1]] += right - cur2 + 1; // 统计 -> 重点
+//                 assistNums[i] = nums[cur1];
+//                 assistIndex[i++] = index[cur1++];
+//             }
+//         }
+        
+//         // 处理未遍历完数组
+//         while(cur1 <= mid)
+//         {
+//             assistNums[i] = nums[cur1];
+//             assistIndex[i++] = index[cur1++];
+//         }
+        
+//         while(cur2 <= right)
+//         {
+//             assistNums[i] = nums[cur2];
+//             assistIndex[i++] = index[cur2++];
+//         }
+        
+//         // 还原
+//         for(int i = left; i <= right; i++)
+//         {
+//             nums[i] = assistNums[i - left];
+//             index[i] = assistIndex[i - left];
+//         }
+//     }
+// };
