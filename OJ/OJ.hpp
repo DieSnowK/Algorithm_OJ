@@ -2889,8 +2889,8 @@ using namespace std;
 //         ret += MergeSort(nums, mid + 1, right);
 
 //         // 计算一左一右翻转对的数量
-//         int cur1 = left, cur2 = mid + 1, i = left;
-//         while(cur1 <= mid) // 降序
+//         int cur1 = left, cur2 = mid + 1, i = 0;
+//         while(cur1 <= mid) // 降序 固定cur1
 //         {
 //             while(cur2 <= right && nums[cur2] >= nums[cur1] / 2.0)
 //             {
@@ -2927,7 +2927,7 @@ using namespace std;
 //         // 还原
 //         for(int i = left; i <= right; i++)
 //         {
-//             nums[i] = assist[i];
+//             nums[i] = assist[i - left];
 //         }
 
 //         return ret;
@@ -2935,3 +2935,75 @@ using namespace std;
 // };
 
 // v2.0 升序
+// class Solution 
+// {
+//     vector<int> assist;
+// public:
+//     int reversePairs(vector<int>& nums) 
+//     {
+//         assist.resize(nums.size());
+//         return MergeSort(nums, 0, nums.size() - 1);
+//     }
+
+//     int MergeSort(vector<int>& nums, int left, int right)
+//     {
+//         if(left >= right)
+//         {
+//             return 0;
+//         }
+
+//         int ret = 0;
+//         // 中间点，划分两区间
+//         int mid = left + (right - left) / 2;
+//         // [left, mid] [mid + 1, right]
+    
+//         // 先计算左右子区间翻转对
+//         ret += MergeSort(nums, left, mid);
+//         ret += MergeSort(nums, mid + 1, right);
+
+//         // 计算一左一右翻转对的数量
+//         int cur1 = left, cur2 = mid + 1, i = 0;
+//         while(cur2 <= right) // 升序  固定cur2
+//         {
+//             while(cur1 <= mid && nums[cur2] >= nums[cur1] / 2.0)
+//             {
+//                 cur1++;
+//             }
+
+//             // 优化
+//             if(cur1 > mid)
+//             {
+//                 break;
+//             }
+
+//             ret += mid - cur1 + 1;
+//             cur2++;
+//         }
+
+//         // 合并两个有序数组
+//         cur1 = left, cur2 = mid + 1;
+//         while(cur1 <= mid && cur2 <= right)
+//         {
+//             assist[i++] = nums[cur1] <= nums[cur2] ? nums[cur1++] : nums[cur2++];
+//         }
+
+//         // 处理未遍历完数组
+//         while(cur1 <= mid)
+//         {
+//             assist[i++] = nums[cur1++];
+//         }
+
+//         while(cur2 <= right)
+//         {
+//             assist[i++] = nums[cur2++];
+//         }
+
+//         // 还原
+//         for(int i = left; i <= right; i++)
+//         {
+//             nums[i] = assist[i - left];
+//         }
+
+//         return ret;
+//     }
+// };
