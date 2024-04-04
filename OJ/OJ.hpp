@@ -3055,3 +3055,57 @@ using namespace std;
 //         return ret;
 //     }
 // };
+
+// 两两交换链表中的结点
+/**
+ * Definition for singly-linked list.
+ * struct ListNode {
+ *     int val;
+ *     ListNode *next;
+ *     ListNode() : val(0), next(nullptr) {}
+ *     ListNode(int x) : val(x), next(nullptr) {}
+ *     ListNode(int x, ListNode *next) : val(x), next(next) {}
+ * };
+ */
+// class Solution 
+// {
+// public:
+//     ListNode* swapPairs(ListNode* list) 
+//     {
+//         // 边界处理
+//         if(list == nullptr || list->next == nullptr)
+//         {
+//             return list;
+//         }
+
+//         ListNode *head = new ListNode(0);
+//         head->next = list;
+
+//         ListNode *prev = head, *cur = head->next, *next = cur->next, *nNext = next->next;
+
+//         while(cur && next)
+//         {
+//             // Swap
+//             prev->next = next;
+//             next->next = cur;
+//             cur->next = nNext;
+
+//             // Update
+//             prev = cur;
+//             cur = nNext; 
+//             if(cur)
+//             {
+//                 next = cur->next;
+//             }
+//             if(next)
+//             {
+//                 nNext = next->next;
+//             }
+//         }
+
+//         ListNode *ret = head->next;
+//         delete head;
+
+//         return ret;
+//     }
+// };
