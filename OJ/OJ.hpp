@@ -3007,3 +3007,51 @@ using namespace std;
 //         return ret;
 //     }
 // };
+
+// 两数相加
+/**
+ * Definition for singly-linked list.
+ * struct ListNode {
+ *     int val;
+ *     ListNode *next;
+ *     ListNode() : val(0), next(nullptr) {}
+ *     ListNode(int x) : val(x), next(nullptr) {}
+ *     ListNode(int x, ListNode *next) : val(x), next(next) {}
+ * };
+ */
+// class Solution 
+// {
+// public:
+//     ListNode* addTwoNumbers(ListNode* l1, ListNode* l2) 
+//     {
+//         ListNode* head = new ListNode(0);
+//         ListNode* cur1 = l1, *cur2 = l2;
+//         ListNode* tail = head; // 尾指针
+
+//         int carry = 0; // 记录进位 & 临时数据
+//         while(cur1 || cur2 || carry)
+//         {
+//             if(cur1)
+//             {
+//                 carry += cur1->val;
+//                 cur1 = cur1->next;
+//             }
+
+//             if(cur2)
+//             {
+//                 carry += cur2->val;
+//                 cur2 = cur2->next;
+//             }
+
+//             tail->next = new ListNode(carry % 10);
+//             tail = tail->next;
+
+//             carry /= 10;
+//         }
+
+//         ListNode* ret = head->next;
+//         delete head;
+
+//         return ret;
+//     }
+// };
