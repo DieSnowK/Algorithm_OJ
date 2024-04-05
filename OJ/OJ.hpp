@@ -3206,3 +3206,86 @@ using namespace std;
 //         return tail;
 //     }
 // };
+
+// v2.0 递归/分治
+// class Solution 
+// {
+// public:
+//     ListNode* mergeKLists(vector<ListNode*>& lists) 
+//     {
+//         return Merge(lists, 0, lists.size() - 1);
+//     }
+
+//     ListNode* Merge(vector<ListNode*>& lists, int left, int right)
+//     {
+//         // 边界情况处理
+//         if(left > right)
+//         {
+//             return nullptr;
+//         }
+
+//         if(left == right)
+//         {
+//             return lists[left];
+//         }
+
+//         // 中间点划分数组
+//         int mid = left + (right - left) / 2;
+//         // [left, mid] [mid + 1, right]
+
+//         // 递归处理左右区间
+//         ListNode* l1 = Merge(lists, left, mid);
+//         ListNode* l2 = Merge(lists, mid + 1, right);
+
+//         // 合并两个有序链表
+//         return MergeTwoLists(l1, l2);
+//     }
+
+//     ListNode* MergeTwoLists(ListNode* l1, ListNode* l2)
+//     {
+//         // 边界情况处理
+//         if(l1 == nullptr)
+//         {
+//             return l2;
+//         }
+
+//         if(l2 == nullptr)
+//         {
+//             return l1;
+//         }
+
+//         // 合并两有序链表
+//         ListNode head(0);
+//         ListNode *cur1 = l1, *cur2 = l2, *tail = &head;
+//         while(cur1 && cur2)
+//         {
+//             if(cur1->val <= cur2->val)
+//             {
+//                 tail->next = cur1;
+//                 tail = tail->next;
+
+//                 cur1 = cur1->next;
+                
+//             }
+//             else
+//             {
+//                 tail->next = cur2;
+//                 tail = tail->next;
+
+//                 cur2 = cur2->next;
+//             }
+//         }
+
+//         if(cur1)
+//         {
+//             tail->next = cur1;
+//         }
+
+//         if(cur2)
+//         {
+//             tail->next = cur2;
+//         }
+
+//         return head.next;
+//     }
+// };
