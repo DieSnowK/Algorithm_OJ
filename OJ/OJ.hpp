@@ -3057,16 +3057,6 @@ using namespace std;
 // };
 
 // 两两交换链表中的结点
-/**
- * Definition for singly-linked list.
- * struct ListNode {
- *     int val;
- *     ListNode *next;
- *     ListNode() : val(0), next(nullptr) {}
- *     ListNode(int x) : val(x), next(nullptr) {}
- *     ListNode(int x, ListNode *next) : val(x), next(next) {}
- * };
- */
 // class Solution 
 // {
 // public:
@@ -3111,16 +3101,6 @@ using namespace std;
 // };
 
 // 重排链表
-/**
- * Definition for singly-linked list.
- * struct ListNode {
- *     int val;
- *     ListNode *next;
- *     ListNode() : val(0), next(nullptr) {}
- *     ListNode(int x) : val(x), next(nullptr) {}
- *     ListNode(int x, ListNode *next) : val(x), next(next) {}
- * };
- */
 // class Solution 
 // {
 // public:
@@ -3174,5 +3154,55 @@ using namespace std;
 
 //         delete head2;
 //         delete ret;
+//     }
+// };
+
+// 合并K个升序链表
+// v1.0 堆
+// class Solution 
+// {
+//     struct Cmp
+//     {
+//         bool operator()(const ListNode* l1, const ListNode* l2)
+//         {
+//             return l1->val > l2->val;
+//         }
+//     };
+// public:
+//     ListNode* mergeKLists(vector<ListNode*>& lists) 
+//     {
+//         // 创建一个小根堆
+//         priority_queue<ListNode*, vector<ListNode*>, Cmp> heap;
+
+//         // 让所有头结点入堆
+//         for(auto& list : lists)
+//         {
+//             if(list)
+//             {
+//                 heap.push(list);
+//             }
+//         }
+
+//         // 合并K个有序链表
+//         ListNode* ret = new ListNode(0);
+//         ListNode* tail = ret;
+//         while(!heap.empty())
+//         {
+//             ListNode* tmp = heap.top();
+//             heap.pop();
+
+//             tail->next = tmp;
+//             tail = tail->next;
+
+//             if(tmp->next)
+//             {
+//                 heap.push(tmp->next);
+//             }
+//         }
+
+//         tail = ret->next;
+//         delete ret;
+
+//         return tail;
 //     }
 // };
