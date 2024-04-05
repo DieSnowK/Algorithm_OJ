@@ -3289,3 +3289,39 @@ using namespace std;
 //         return head.next;
 //     }
 // };
+
+// K个一组翻转链表
+// ListNode* ReverseKGroup(ListNode* head, int k) 
+// {
+//     // 遍历求n
+//     int n = 0;
+//     ListNode* cur = head;
+//     while(cur)
+//     {
+//         n++;
+//         cur = cur->next;
+//     }
+//     n /= k;
+
+//     // 重复n次逆序长度为k的链表 -> 头插
+//     ListNode ret(0);
+//     ListNode *prev = &ret;
+//     cur = head;
+//     while(n--)
+//     {
+//         ListNode *back = cur;
+//         for(int i = 0; i < k; i++)
+//         {
+//             ListNode* next = cur->next;
+//             cur->next = prev->next;
+//             prev->next = cur;
+//             cur = next;
+//         }
+//         prev = back; // 更次每次头插的"头"
+//     }
+
+//     // 链接剩下的结点
+//     prev->next = cur;
+
+//     return ret.next;
+// }
