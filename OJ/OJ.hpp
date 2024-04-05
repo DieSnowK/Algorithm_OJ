@@ -3109,3 +3109,70 @@ using namespace std;
 //         return ret;
 //     }
 // };
+
+// 重排链表
+/**
+ * Definition for singly-linked list.
+ * struct ListNode {
+ *     int val;
+ *     ListNode *next;
+ *     ListNode() : val(0), next(nullptr) {}
+ *     ListNode(int x) : val(x), next(nullptr) {}
+ *     ListNode(int x, ListNode *next) : val(x), next(next) {}
+ * };
+ */
+// class Solution 
+// {
+// public:
+//     void reorderList(ListNode* head) 
+//     {
+//         // 边界处理
+//         if(!(head || head->next || head->next->next))
+//         {
+//             return;
+//         }
+
+//         // 1.找到链表的中间结点 -> 快慢指针
+//         ListNode *slow = head, *fast = head;
+//         while(fast && fast->next) // 偶 && 奇
+//         {
+//             slow = slow->next;
+//             fast = fast->next->next;
+//         }
+
+//         // 2.逆序后半部分 -> 头插
+//         ListNode *head2 = new ListNode(0);
+//         ListNode *cur = slow->next;
+//         slow->next = nullptr; // 断开两个链表
+//         while(cur)
+//         {
+//             ListNode *next = cur->next;
+//             cur->next = head2->next;
+//             head2->next = cur;
+//             cur = next;
+//         }
+
+//         // 3.合并两个链表 -> 尾插 -> 双指针
+//         ListNode *ret = new ListNode(0);
+//         ListNode *tail = ret;
+//         ListNode *cur1 = head, *cur2 = head2->next;
+//         while(cur1)
+//         {
+//             // 先连第一个链表
+//             tail->next = cur1;
+//             tail = tail->next;
+//             cur1 = cur1->next;
+
+//             // 再连第二个链表
+//             if(cur2)
+//             {
+//                 tail->next = cur2;
+//                 tail = tail->next;
+//                 cur2 = cur2->next;
+//             }
+//         }
+
+//         delete head2;
+//         delete ret;
+//     }
+// };
