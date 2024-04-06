@@ -3377,3 +3377,26 @@ using namespace std;
 //         return true;
 //     }
 // };
+
+// ´æÔÚÖØ¸´ÔªËØ
+// class Solution 
+// {
+// public:
+//     bool containsDuplicate(vector<int>& nums) 
+//     {
+//         unordered_set<int> hash; // <nums[i]>
+//         for(auto& x : nums)
+//         {
+//             if(hash.count(x))
+//             {
+//                 return true;
+//             }
+//             else
+//             {
+//                 hash.insert(x);
+//             }
+//         }
+
+//         return false;
+//     }
+// };
