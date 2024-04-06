@@ -3480,7 +3480,6 @@ using namespace std;
 // public:
 //     string longestCommonPrefix(vector<string>& strs) 
 //     {
-//         // 法二：统一比较
 //         for(int i = 0; i < strs[0].size(); i++) // 控制第几个字符
 //         {
 //             char tmp = strs[0][i];
@@ -3494,5 +3493,47 @@ using namespace std;
 //         }
 
 //         return strs[0];
+//     }
+// };
+
+// 最长回文子串
+// class Solution 
+// {
+// public:
+//     string longestPalindrome(string s) 
+//     {
+//         int begin = 0, len = 0, n = s.size();
+//         for(int i = 0; i < n; i++) // 枚举所有的点
+//         {
+//             // 奇数长度扩展
+//             int left = i, right = i;
+//             while(left >= 0 && right < n && s[left] == s[right])
+//             {
+//                 left--;
+//                 right++;
+//             }
+
+//             if(len < right - left - 1)
+//             {
+//                 begin = left + 1;
+//                 len = right - left - 1;
+//             }
+
+//             // 偶数长度扩展
+//             left = i, right = i + 1;
+//             while(left >= 0 && right < n && s[left] == s[right])
+//             {
+//                 left--;
+//                 right++;
+//             }
+
+//             if(len < right - left - 1)
+//             {
+//                 begin = left + 1;
+//                 len = right - left - 1;
+//             }
+//         }
+
+//         return s.substr(begin, len);
 //     }
 // };
