@@ -3537,3 +3537,33 @@ using namespace std;
 //         return s.substr(begin, len);
 //     }
 // };
+
+// 二进制求和
+// class Solution 
+// {
+// public:
+//     string addBinary(string a, string b) 
+//     {
+//         string ret;
+//         int cur1 = a.size() - 1, cur2 = b.size() - 1, carry = 0;
+//         while(cur1 >= 0 || cur2 >= 0 || carry)
+//         {
+//             if(cur1 >= 0)
+//             {
+//                 carry += a[cur1--] - '0';
+//             }
+
+//             if(cur2 >= 0)
+//             {
+//                 carry += b[cur2--] - '0';
+//             }
+
+//             ret += carry % 2 + '0';
+//             carry /= 2;
+//         }
+
+//         reverse(ret.begin(), ret.end());
+
+//         return ret;
+//     }
+// };
