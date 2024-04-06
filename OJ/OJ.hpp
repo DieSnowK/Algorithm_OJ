@@ -3473,3 +3473,26 @@ using namespace std;
 //         return str1.substr(0, i);
 //     }
 // };
+
+// v2.0 统一比较
+// class Solution 
+// {
+// public:
+//     string longestCommonPrefix(vector<string>& strs) 
+//     {
+//         // 法二：统一比较
+//         for(int i = 0; i < strs[0].size(); i++) // 控制第几个字符
+//         {
+//             char tmp = strs[0][i];
+//             for(int j = 1; j < strs.size(); j++) // 控制第几个string
+//             {
+//                 if(i == strs[j].size() || tmp != strs[j][i])
+//                 {
+//                     return strs[0].substr(0, i); // 包含了空串的情况
+//                 }
+//             }
+//         }
+
+//         return strs[0];
+//     }
+// };
