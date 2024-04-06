@@ -3445,3 +3445,31 @@ using namespace std;
 //         return ret;
 //     }
 // };
+
+// 最长公共子串
+// v1.0 两两比较
+// class Solution 
+// {
+// public:
+//     string longestCommonPrefix(vector<string>& strs) 
+//     {
+//         string ret = strs[0];
+//         for(int i = 1; i < strs.size(); i++)
+//         {
+//             ret = FindCommon(ret, strs[i]);
+//         }
+
+//         return ret;
+//     }
+
+//     string FindCommon(const string& str1, const string& str2)
+//     {
+//         int i = 0;
+//         while(i < min(str1.size(), str2.size()) && str1[i] == str2[i])
+//         {
+//             i++;
+//         }
+
+//         return str1.substr(0, i);
+//     }
+// };
