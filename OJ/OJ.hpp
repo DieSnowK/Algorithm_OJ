@@ -3325,3 +3325,25 @@ using namespace std;
 
 //     return ret.next;
 // }
+
+// 两数相加
+// class Solution 
+// {
+// public:
+//     vector<int> twoSum(vector<int>& nums, int target) 
+//     {
+//         unordered_map<int, int> hash; // <nums[i], i>
+//         for(int i = 0; i < nums.size(); i++)
+//         {
+//             int tmp = target - nums[i];
+//             if(hash.count(tmp))
+//             {
+//                 return {hash[tmp], i};
+//             }
+
+//             hash[nums[i]] = i;
+//         }
+
+//         return {-1, -1};
+//     }
+// };
