@@ -3623,16 +3623,15 @@ using namespace std;
 //     string removeDuplicates(string s) 
 //     {
 //         string ret; // stringÄ£Äâstack
-//         ret += s[0];
-//         for(int i = 1; i < s.size(); i++)
+//         for(auto& ch : s)
 //         {
-//             if(!ret.empty() && ret.back() == s[i])
+//             if(!ret.empty() && ret.back() == ch)
 //             {
 //                 ret.pop_back();
 //             }
 //             else
 //             {
-//                 ret += s[i];
+//                 ret += ch;
 //             }
 //         }
 
