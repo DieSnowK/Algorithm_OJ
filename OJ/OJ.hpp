@@ -3638,3 +3638,38 @@ using namespace std;
 //         return ret;
 //     }
 // };
+
+// 比较含退格的字符串
+// class Solution 
+// {
+// public:
+//     bool backspaceCompare(string s, string t) 
+//     {
+//         string ret1, ret2;
+//         for(auto& ch : s)
+//         {
+//             if(ret1.size() && ch == '#')
+//             {
+//                 ret1.pop_back();
+//             }
+//             else if(ch != '#')
+//             {
+//                 ret1 += ch;
+//             }
+//         }
+
+//         for(auto& ch : t)
+//         {
+//             if(ret2.size() && ch == '#')
+//             {
+//                 ret2.pop_back();
+//             }
+//             else if(ch != '#')
+//             {
+//                 ret2 += ch;
+//             }
+//         }
+
+//         return ret1 == ret2;
+//     }
+// };
