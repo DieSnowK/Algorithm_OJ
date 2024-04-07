@@ -3673,3 +3673,64 @@ using namespace std;
 //         return ret1 == ret2;
 //     }
 // };
+
+// 基本计算器Ⅱ
+// class Solution 
+// {
+// public:
+//     int calculate(string s) 
+//     {
+//         char op = '+';
+//         int n = s.size();
+//         vector<int> st; // vector模拟stack
+
+//         int i = 0;
+//         while(i < n)
+//         {
+//             if(s[i] == ' ')
+//             {
+//                 i++;
+//             }
+//             else if(s[i] >= '0' && s[i] <= '9')
+//             {
+//                 // 提取数字
+//                 int num = 0;
+//                 while(i < n && s[i] >= '0' && s[i] <= '9')
+//                 {
+//                     num = num * 10 + (s[i++] - '0'); // ()防止int溢出
+//                 }
+
+//                 // 分情况讨论
+//                 if(op == '+')
+//                 {
+//                     st.push_back(num);
+//                 }                
+//                 else if(op == '-')
+//                 {
+//                     st.push_back(-num);
+//                 }
+//                 else if(op == '*')
+//                 {
+//                     st.back() *= num;
+//                 }
+//                 else
+//                 {
+//                     st.back() /= num;
+//                 }
+//             }
+//             else
+//             {
+//                 op = s[i];
+//                 i++;
+//             }
+//         }
+
+//         size_t ret = 0;
+//         for(auto& x : st)
+//         {
+//             ret += x;
+//         }
+
+//         return ret;
+//     }
+// };
