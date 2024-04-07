@@ -3734,3 +3734,75 @@ using namespace std;
 //         return ret;
 //     }
 // };
+
+// 字符串解码
+// class Solution 
+// {
+// public:
+//     string decodeString(string s) 
+//     {
+//         stack<int> numSt;
+//         stack<string> strSt;
+//         strSt.push(""); // 细节，放溢出:P
+
+//         int i = 0, n = s.size();
+//         while(i < n)
+//         {
+//             if(isdigit(s[i]))
+//             {
+//                 // 提取数字
+//                 int num = s[i++] - '0';
+//                 while(isdigit(s[i]))
+//                 {
+//                     num = num * 10 + (s[i++] - '0');
+//                 }
+
+//                 numSt.push(num);
+//             }
+//             else if(s[i] == '[')
+//             {
+//                 i++;
+                
+//                 // 提取字符串，入栈
+//                 string tmp;
+//                 while(isalpha(s[i]))
+//                 {
+//                     tmp += s[i++];
+//                 }
+
+//                 strSt.push(tmp);
+//             }
+//             else if(s[i] == ']') // error
+//             {
+//                 i++;
+
+//                 // 解析，加入到栈顶后面
+//                 int k = numSt.top();
+//                 numSt.pop();
+//                 string tmp = strSt.top();
+//                 strSt.pop();
+
+//                 string str;
+//                 while(k--)
+//                 {
+//                     str += tmp;
+//                 }
+
+//                 strSt.top() += str;
+//             }
+//             else
+//             {
+//                 // 提取字符串，入栈
+//                 string tmp;
+//                 while(i < n && isalpha(s[i]))
+//                 {
+//                     tmp += s[i++];
+//                 }
+
+//                 strSt.top() += tmp;
+//             }
+//         }
+
+//         return strSt.top();
+//     }
+// };
