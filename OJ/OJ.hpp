@@ -3615,3 +3615,27 @@ using namespace std;
 //         return ret;
 //     }
 // };
+
+// 删除字符串中的所有相邻重复项
+// class Solution 
+// {
+// public:
+//     string removeDuplicates(string s) 
+//     {
+//         string ret; // string模拟stack
+//         ret += s[0];
+//         for(int i = 1; i < s.size(); i++)
+//         {
+//             if(!ret.empty() && ret.back() == s[i])
+//             {
+//                 ret.pop_back();
+//             }
+//             else
+//             {
+//                 ret += s[i];
+//             }
+//         }
+
+//         return ret;
+//     }
+// };
