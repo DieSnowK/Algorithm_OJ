@@ -4039,3 +4039,33 @@ public:
 //         return ret;
 //     }
 // };
+
+// 最后一块石头的重量
+// class Solution 
+// {
+// public:
+//     int lastStoneWeight(vector<int>& stones) 
+//     {
+//         priority_queue<int> heap; // STL默认大根堆
+//         for(auto& x : stones)
+//         {
+//             heap.push(x);
+//         }
+
+//         // 模拟过程
+//         while(heap.size() > 1)
+//         {
+//             int a = heap.top();
+//             heap.pop();
+//             int b = heap.top();
+//             heap.pop();
+
+//             if(a > b)
+//             {
+//                 heap.push(a - b);
+//             }
+//         }
+
+//         return heap.size() ? heap.top() : 0;
+//     }
+// };
