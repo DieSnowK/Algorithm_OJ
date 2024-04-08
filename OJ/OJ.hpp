@@ -3957,3 +3957,50 @@ public:
 //         return ret;
 //     }
 // };
+
+// 二叉树的最大宽度
+
+
+// 在每个树?中找最?值
+// class Solution 
+// {
+// public:
+//     vector<int> largestValues(TreeNode* root) 
+//     {
+//         if(root == nullptr)
+//         {
+//             return {};
+//         }
+        
+//         vector<int> ret;
+//         queue<TreeNode*> q;
+        
+//         q.push(root);
+//         while(q.size())
+//         {
+//             int sz = q.size(), maxV = INT_MIN;
+//             while(sz--)
+//             {
+//                 TreeNode* node = q.front();
+//                 q.pop();
+                
+//                 maxV = max(maxV, node->val);
+                
+//                 // 将下一层入队列
+//                 if(node->left)
+//                 {
+//                     q.push(node->left);
+//                 }
+                
+//                 if(node->right)
+//                 {
+//                     q.push(node->right);
+//                 }
+//             }
+            
+//             ret.push_back(maxV);
+//         }
+        
+//         return ret;
+//     }
+// };
