@@ -4107,3 +4107,57 @@ public:
  * KthLargest* obj = new KthLargest(k, nums);
  * int param_1 = obj->add(val);
  */
+
+// 前k个高频单词
+//  class Solution 
+// {
+//     typedef pair<string, int> PSI;
+
+//     struct Cmp
+//     {
+//         bool operator()(PSI& a, PSI& b)
+//         {
+//             // 频次相同，字典序按大根堆排序
+//             if(a.second == b.second)
+//             {
+//                 return a.first < b.first;
+//             }
+
+//             // 频次按小根堆排序
+//             return a.second > b.second;
+//         }
+//     };
+// public:
+//     vector<string> topKFrequent(vector<string>& words, int k) 
+//     {
+//         // 统计每个单词出现的次数
+//         unordered_map<string, int> hash;
+//         for(auto& str : words)
+//         {
+//             hash[str]++;
+//         }
+
+//         // 创建一个大小为k的堆
+//         priority_queue<PSI, vector<PSI>, Cmp> heap;
+
+//         // TOP-K
+//         for(auto& psi : hash)
+//         {
+//             heap.push(psi);
+//             if(heap.size() > k)
+//             {
+//                 heap.pop();
+//             }
+//         }
+
+//         // 提取结果，逆序heap
+//         vector<string> ret(k);
+//         for(int i = k - 1; i >= 0; i--)
+//         {
+//             ret[i] = heap.top().first;
+//             heap.pop();
+//         }
+
+//         return ret;
+//     }
+// };
