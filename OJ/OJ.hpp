@@ -3959,7 +3959,42 @@ public:
 // };
 
 // 二叉树的最大宽度
-
+// class Solution 
+// {
+// public:
+//     int widthOfBinaryTree(TreeNode* root) 
+//     {
+//         vector<pair<TreeNode*, size_t>> q; // 用vector模拟queue
+//         q.push_back({root, 1});
+        
+//         size_t ret = 0;        
+//         while(q.size())
+//         {
+//             auto& [x1, y1] = q[0]; // 队头
+//             auto& [x2, y2] = q.back(); // 队尾
+            
+//             ret = max(ret, y2 - y1 + 1);
+            
+//             // 将下一层入队列
+//             vector<pair<TreeNode*, size_t>> tmp;
+//             for(auto& [x, y] : q)
+//             {
+//                 if(x->left)
+//                 {
+//                     tmp.push_back({x->left, 2 * y});
+//                 }
+                
+//                 if(x->right)
+//                 {
+//                     tmp.push_back({x->right, 2 * y + 1});
+//                 }
+//             }
+//             q = tmp; // 覆盖原队列，避免了队列的头删
+//         }
+        
+//         return ret;
+//     }
+// };
 
 // 在每个树?中找最?值
 // class Solution 
