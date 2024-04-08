@@ -3893,3 +3893,67 @@ public:
 //         return ret;
 //     }
 // };
+
+// 二叉树的锯齿形层序遍历
+/**
+ * Definition for a binary tree node.
+ * struct TreeNode {
+ *     int val;
+ *     TreeNode *left;
+ *     TreeNode *right;
+ *     TreeNode() : val(0), left(nullptr), right(nullptr) {}
+ *     TreeNode(int x) : val(x), left(nullptr), right(nullptr) {}
+ *     TreeNode(int x, TreeNode *left, TreeNode *right) : val(x), left(left), right(right) {}
+ * };
+ */
+// class Solution 
+// {
+// public:
+//     vector<vector<int>> zigzagLevelOrder(TreeNode* root) 
+//     {
+//         vector<vector<int>> ret;
+//         queue<TreeNode*> q;
+        
+//         if(root == nullptr)
+//         {
+//             return ret;
+//         }
+        
+//         q.push(root);
+//         bool rvs = false; // reverse
+//         while(q.size())
+//         {
+//             int sz = q.size(); // 本层元素个数
+//             vector<int> tmp; // 统计本层元素
+            
+//             while(sz--)
+//             {
+//                 TreeNode* node = q.front();
+//                 q.pop();
+                
+//                 tmp.push_back(node->val);
+                
+//                 // 孩子节点入队列
+//                 if(node->left)
+//                 {
+//                     q.push(node->left);    
+//                 }
+                
+//                 if(node->right)
+//                 {
+//                     q.push(node->right);    
+//                 }
+//             }
+            
+//             if(rvs)
+//             {
+//                 reverse(tmp.begin(), tmp.end());
+//             }
+//             rvs = !rvs;
+            
+//             ret.push_back(tmp);
+//         }
+        
+//         return ret;
+//     }
+// };
