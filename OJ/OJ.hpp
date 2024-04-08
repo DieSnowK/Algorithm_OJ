@@ -4069,3 +4069,41 @@ public:
 //         return heap.size() ? heap.top() : 0;
 //     }
 // };
+
+// 数据流中的第K大元素
+class KthLargest 
+{
+    // 创建一个大小为k的小根堆
+    priority_queue<int, vector<int>, greater<int>> heap;
+    int _k = 0;
+public:
+    KthLargest(int k, vector<int>& nums) 
+    {
+        _k = k;
+        for(auto& x : nums)
+        {
+            heap.push(x);
+            if(heap.size() > _k)
+            {
+                heap.pop();
+            }
+        }
+    }
+    
+    int add(int val) 
+    {
+        heap.push(val);
+        if(heap.size() > _k)
+        {
+            heap.pop();
+        }
+
+        return heap.top();
+    }
+};
+
+/**
+ * Your KthLargest object will be instantiated and called as such:
+ * KthLargest* obj = new KthLargest(k, nums);
+ * int param_1 = obj->add(val);
+ */
