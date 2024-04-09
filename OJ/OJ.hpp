@@ -3,6 +3,9 @@
 #include <string>
 #include <algorithm>
 #include <vector>
+#include <queue>
+#include <utility>
+#include <map>
 using namespace std;
 
 // 1
@@ -4262,3 +4265,62 @@ public:
 //         return image;
 //     }
 // };
+
+// 岛屿数量
+//class Solution
+//{
+//    int n, m;
+//    vector<vector<bool>> visit;
+//
+//    // "方向"向量数组
+//    int dx[4] = { 1, -1, 0, 0 };
+//    int dy[4] = { 0, 0, 1, -1 };
+//public:
+//    int numIslands(vector<vector<char>>& grid)
+//    {
+//        int ret = 0;
+//        n = grid.size(), m = grid[0].size();
+//        visit.resize(n, vector<bool>(m, false));
+//
+//        for (int i = 0; i < n; i++)
+//        {
+//            for (int j = 0; j < m; j++)
+//            {
+//                if (grid[i][j] == '1' && !visit[i][j])
+//                {
+//                    ret++;
+//                    BFS(grid, i, j); // 标记这整块陆地
+//                }
+//            }
+//        }
+//
+//        return ret;
+//    }
+//
+//    void BFS(vector<vector<char>>& grid, int row, int col)
+//    {
+//        visit[row][col] = true;
+//        queue<pair<int, int>> q;
+//        q.push({ row, col });
+//
+//        // BFS主逻辑
+//        while (q.size())
+//        {
+//            auto [a, b] = q.front();
+//            q.pop();
+//
+//            // 将下一层入队列
+//            for (int i = 0; i < 4; i++)
+//            {
+//                int x = a + dx[i], y = b + dy[i];
+//
+//                if (x >= 0 && x < n && y >= 0 && y < m && \
+//                    grid[x][y] == '1' && !visit[x][y])
+//                {
+//                    visit[x][y] = true;
+//                    q.push({ x, y });
+//                }
+//            }
+//        }
+//    }
+//};
