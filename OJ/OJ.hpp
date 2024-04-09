@@ -4220,3 +4220,45 @@ public:
  * obj->addNum(num);
  * double param_2 = obj->findMedian();
  */
+
+ // 图像渲染
+// class Solution 
+// {
+//     // "方向"向量数组 
+//     int dx[4] = {0, 0, 1, -1};
+//     int dy[4] = {1, -1, 0, 0};
+// public:
+//     vector<vector<int>> floodFill(vector<vector<int>>& image, int sr, int sc, int color) 
+//     {
+//         int target = image[sr][sc];
+//         if(color == target) // 边界情况处理
+//         {
+//             return image;
+//         }
+        
+//         int n = image.size(), m = image[0].size();
+//         queue<pair<int, int>> q; // <row, col>
+//         q.push({sr, sc});
+        
+//         while(q.size())
+//         {
+//             auto [a, b] = q.front();
+//             q.pop();
+//             image[a][b] = color;
+            
+//             // 将下一层入队列
+//             for(int i = 0; i < 4; i++)
+//             {
+//                 int x = a + dx[i], y = b + dy[i];
+                
+//                 // 防止越界 && 颜色符合
+//                 if(x >= 0 && x < n && y >= 0 && y < m && image[x][y] == target)
+//                 {
+//                     q.push({x, y});    
+//                 }
+//             }
+//         }
+        
+//         return image;
+//     }
+// };
