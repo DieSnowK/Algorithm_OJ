@@ -4386,3 +4386,87 @@ public:
 //         return count;
 //     }
 // };
+
+// 被围绕的区域
+// class Solution 
+// {
+//     int n, m;
+
+//     // 方向向量数组
+//     int dx[4] = {1, -1, 0, 0};
+//     int dy[4] = {0, 0, 1, -1};
+// public:
+//     void solve(vector<vector<char>>& board) 
+//     {
+//         n = board.size(), m = board[0].size();
+
+//         // 先处理边界情况
+//         for(int i = 0; i < n; i++)
+//         {
+//             if(board[i][0] == 'O')
+//             {
+//                 BFS(board, i, 0);
+//             }
+
+//             if(board[i][m - 1] == 'O')
+//             {
+//                 BFS(board, i, m - 1);
+//             }
+//         }
+
+//         for(int i = 0; i < m; i++)
+//         {
+//             if(board[0][i] == 'O')
+//             {
+//                 BFS(board, 0, i);
+//             }
+
+//             if(board[n - 1][i] == 'O')
+//             {
+//                 BFS(board, n - 1, i);
+//             }
+//         }
+
+//         // 还原
+//         for(int i = 0; i < n; i++)
+//         {
+//             for(int j = 0; j < m; j++)
+//             {
+//                 if(board[i][j] == 'O')
+//                 {
+//                     board[i][j] = 'X';
+//                 }
+//                 else if(board[i][j] == 'K')
+//                 {
+//                     board[i][j] = 'O';
+//                 }
+//             }
+//         }
+//     }
+
+//     void BFS(vector<vector<char>>& board, int row, int col)
+//     {
+//         board[row][col] = 'K';
+
+//         queue<pair<int, int>> q;
+//         q.push({row, col});
+
+//         while(q.size())
+//         {
+//             auto [a, b] = q.front();
+//             q.pop();
+
+//             // 将下一层入队列
+//             for(int i = 0; i < 4; i++)
+//             {
+//                 int x = a + dx[i], y = b + dy[i];
+//                 if(x >= 0 && x < n && y >= 0 && y < m \
+//                     && board[x][y] == 'O')
+//                 {
+//                     board[x][y] = 'K';
+//                     q.push({x, y});
+//                 }
+//             }
+//         }
+//     }
+// };
