@@ -4470,3 +4470,55 @@ public:
 //         }
 //     }
 // };
+
+// 迷宫中离入口最近的出口
+class Solution 
+{
+    int dx[4] = {1, -1, 0, 0};
+    int dy[4] = {0, 0, 1, -1};
+public:
+    int nearestExit(vector<vector<char>>& maze, vector<int>& entrance) 
+    {
+        int n = maze.size(), m = maze[0].size();
+        vector<vector<bool>> visit(n, vector<bool>(m, false));
+        visit[entrance[0]][entrance[1]] = true;
+
+        queue<pair<int, int>> q;
+        q.push({entrance[0], entrance[1]});
+
+        // BFS
+        int step = 0;
+        while(q.size())
+        {
+            step++;
+
+            int sz = q.size();
+            while(sz--) // 本层
+            {
+                auto [a, b] = q.front();
+                q.pop();
+
+                // 将下一层入队列
+                for(int i = 0; i < 4; i++)
+                {
+                    int x = a + dx[i], y = b + dy[i];
+
+                    if(x >= 0 && x < n && y >= 0 && y < m \
+                        && maze[x][y] == '.' && !visit[x][y])
+                    {
+                        // 判断是否遇到出口
+                        if(x == 0 || x == n - 1 || y == 0 || y == m - 1)
+                        {
+                            return step;
+                        }
+
+                        visit[x][y] = true;
+                        q.push({x, y});
+                    }
+                }
+            }
+        }
+
+        return -1;
+    }
+};
