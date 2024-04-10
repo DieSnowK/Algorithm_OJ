@@ -4588,4 +4588,30 @@ public:
 //     }
 // };
 
-// 
+// µ¥´Ê½ÓÁú
+// class Solution 
+// {
+// public:
+//     int ladderLength(string beginWord, string endWord, vector<string>& wordList) 
+//     {
+//         unordered_set<string> visit;
+//         unordered_set<string> dictionary(wordList.begin(), wordList.end());
+
+//         if(!dictionary.count(endWord))
+//         {
+//             return 0;
+//         }
+
+//         queue<string> q;
+//         q.push(beginWord);
+//         visit.insert(beginWord);
+
+//         // BFS
+//         int count = 0;
+//         while(q.size())
+//         {
+//             count++;
+            
+//         }
+//     }
+// };
