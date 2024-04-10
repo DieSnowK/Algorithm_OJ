@@ -4645,3 +4645,104 @@ public:
 //         return 0;
 //     }
 // };
+
+// 为高尔夫比赛砍树
+// class Solution 
+// {
+//     typedef pair<int, int> PII;
+//     int n, m;
+//     bool visit[50][50];
+    
+//     // 方向向量数组
+//     int dx[4] = {1, -1, 0, 0};
+//     int dy[4] = {0, 0, 1, -1};
+// public:
+//     int cutOffTree(vector<vector<int>>& forest) 
+//     {
+//         n = forest.size(), m = forest[0].size();
+        
+//         // 找出砍树的顺序
+//         vector<PII> trees;
+//         for(int i = 0; i < n; i++)
+//         {
+//             for(int j = 0; j < m; j++)
+//             {
+//                 if(forest[i][j] > 1)
+//                 {
+//                     trees.push_back({i, j});
+//                 }
+//             }
+//         }
+        
+//         sort(trees.begin(), trees.end(), [&](const PII& p1, const PII& p2)
+//         {
+//             return forest[p1.first][p1.second] < forest[p2.first][p2.second];
+//         });
+        
+//         // 按照顺序砍树
+//         int ret = 0;
+//         int beginX = 0, beginY = 0;
+//         for(auto& [a, b] : trees)
+//         {
+//             int step = BFS(forest, beginX, beginY, a, b);
+//             if(step == -1)
+//             {
+//                 return -1;
+//             }
+//             ret += step;
+            
+//             beginX = a, beginY = b;
+//         }
+        
+//         return ret;
+//     }
+    
+//     // 解决单源权值为一的最短路径问题
+//     int BFS(vector<vector<int>>& forest, int beginX, int beginY, int endX, int endY)
+//     {
+//         // 边界情况处理
+//         if(beginX == endX && beginY == endY)
+//         {
+//             return 0;
+//         }
+        
+//         memset(visit, false, sizeof visit); // 每次调用BFS都需要执行，否则影响下次BFS
+//         visit[beginX][beginY] = true;
+        
+//         queue<PII> q;
+//         q.push({beginX, beginY});
+        
+//         int step = 0;
+//         while(q.size())
+//         {
+//             step++;
+//             int sz = q.size();
+            
+//             while(sz--)
+//             {
+//                 auto [a, b] = q.front();
+//                 q.pop();
+                
+//                 // 将下一层入队列
+//                 for(int i = 0; i < 4; i++)
+//                 {
+//                     int x = a + dx[i], y = b + dy[i];
+                    
+//                     if(x >= 0 && x < n && y >= 0 && y < m \
+//                       && forest[x][y] && !visit[x][y])
+//                     {
+//                         if(x == endX && y == endY)
+//                         {
+//                             return step;
+//                         }
+                        
+//                         visit[x][y] = true;
+//                         q.push({x, y});
+//                     }
+//                 }
+//             }
+//         }
+        
+//         return -1;
+//     }
+// };
