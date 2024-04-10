@@ -4877,3 +4877,51 @@ public:
 //         return count;
 //     }
 // };
+
+// 地图中的最高点
+// class Solution 
+// {
+//     int dx[4] = {1, -1, 0, 0};
+//     int dy[4] = {0, 0, 1, -1};
+// public:
+//     vector<vector<int>> highestPeak(vector<vector<int>>& isWater) 
+//     {
+//         int n = isWater.size(), m = isWater[0].size();
+//         vector<vector<int>> dist(n, vector<int>(m, -1));
+//         queue<pair<int, int>> q;
+        
+//         // 将边界水域入队列
+//         for(int i = 0; i < n; i++)
+//         {
+//             for(int j = 0; j < m; j++)
+//             {
+//                 if(isWater[i][j])
+//                 {
+//                     dist[i][j] = 0;
+//                     q.push({i, j});
+//                 }
+//             }
+//         }
+
+//         // 多源BFS
+//         while(q.size())
+//         {
+//             auto [a, b] = q.front();
+//             q.pop();
+
+//             // 下一层入队列
+//             for(int i = 0; i < 4; i++)
+//             {
+//                 int x = a + dx[i], y = b + dy[i];
+
+//                 if(x >= 0 && x < n && y >= 0 && y < m && dist[x][y] == -1)
+//                 {
+//                     dist[x][y] = dist[a][b] + 1;
+//                     q.push({x, y});
+//                 }
+//             }
+//         }
+
+//         return dist;
+//     }
+// };
