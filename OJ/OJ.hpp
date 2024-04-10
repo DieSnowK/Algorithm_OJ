@@ -4596,22 +4596,52 @@ public:
 //     {
 //         unordered_set<string> visit;
 //         unordered_set<string> dictionary(wordList.begin(), wordList.end());
-
+        
 //         if(!dictionary.count(endWord))
 //         {
 //             return 0;
 //         }
-
+        
 //         queue<string> q;
 //         q.push(beginWord);
 //         visit.insert(beginWord);
-
+        
 //         // BFS
 //         int count = 0;
 //         while(q.size())
 //         {
 //             count++;
+//             int sz = q.size();
             
+//             while(sz--)
+//             {
+//                 string str = q.front();
+//                 q.pop();
+                
+//                 // 将下一层入队列
+//                 // 暴力枚举所有可能情况:P
+//                 for(int i = 0; i < beginWord.size(); i++)
+//                 {
+//                     string tmp = str; // 细节：确保每次只更改一个位置
+//                     for(char j = 'a'; j <= 'z'; j++)
+//                     {
+//                         tmp[i] = j;
+                        
+//                         if(dictionary.count(tmp) && !visit.count(tmp))
+//                         {
+//                             if(tmp == endWord)
+//                             {
+//                                 return ++count;
+//                             }
+                            
+//                             q.push(tmp);
+//                             visit.insert(tmp);
+//                         }
+//                     }
+//                 }
+//             }
 //         }
+        
+//         return 0;
 //     }
 // };
