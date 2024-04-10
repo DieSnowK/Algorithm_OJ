@@ -4925,3 +4925,53 @@ public:
 //         return dist;
 //     }
 // };
+
+// 地图分析
+// class Solution 
+// {
+//     int dx[4] = {1, -1, 0, 0};
+//     int dy[4] = {0, 0, 1, -1};
+// public:
+//     int maxDistance(vector<vector<int>>& grid) 
+//     {
+//         int n = grid.size();
+//         vector<vector<int>> dist(n, vector(n, -1));
+//         queue<pair<int, int>> q;
+
+//         // 将陆地入队列
+//         for(int i = 0; i < n; i++)
+//         {
+//             for(int j = 0; j < n; j++)
+//             {
+//                 if(grid[i][j])
+//                 {
+//                     dist[i][j] = 0;
+//                     q.push({i, j});
+//                 }
+//             }
+//         }
+
+//         // 多源BFS
+//         int ret = -1;
+//         while(q.size())
+//         {
+//             auto [a, b] = q.front();
+//             q.pop();
+
+//             // 下层入队列
+//             for(int i = 0; i < 4; i++)
+//             {
+//                 int x = a + dx[i], y = b + dy[i];
+
+//                 if(x >= 0 && x < n && y >= 0 && y < n && dist[x][y] == -1)
+//                 {
+//                     dist[x][y] = dist[a][b] + 1;
+//                     q.push({x, y});
+//                     ret = max(ret, dist[x][y]);
+//                 }
+//             }
+//         }
+
+//         return ret;
+//     }
+// };
