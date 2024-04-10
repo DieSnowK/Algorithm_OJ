@@ -4472,53 +4472,120 @@ public:
 // };
 
 // 迷宫中离入口最近的出口
-class Solution 
-{
-    int dx[4] = {1, -1, 0, 0};
-    int dy[4] = {0, 0, 1, -1};
-public:
-    int nearestExit(vector<vector<char>>& maze, vector<int>& entrance) 
-    {
-        int n = maze.size(), m = maze[0].size();
-        vector<vector<bool>> visit(n, vector<bool>(m, false));
-        visit[entrance[0]][entrance[1]] = true;
+// class Solution 
+// {
+//     int dx[4] = {1, -1, 0, 0};
+//     int dy[4] = {0, 0, 1, -1};
+// public:
+//     int nearestExit(vector<vector<char>>& maze, vector<int>& entrance) 
+//     {
+//         int n = maze.size(), m = maze[0].size();
+//         vector<vector<bool>> visit(n, vector<bool>(m, false));
+//         visit[entrance[0]][entrance[1]] = true;
 
-        queue<pair<int, int>> q;
-        q.push({entrance[0], entrance[1]});
+//         queue<pair<int, int>> q;
+//         q.push({entrance[0], entrance[1]});
 
-        // BFS
-        int step = 0;
-        while(q.size())
-        {
-            step++;
+//         // BFS
+//         int step = 0;
+//         while(q.size())
+//         {
+//             step++;
 
-            int sz = q.size();
-            while(sz--) // 本层
-            {
-                auto [a, b] = q.front();
-                q.pop();
+//             int sz = q.size();
+//             while(sz--) // 本层
+//             {
+//                 auto [a, b] = q.front();
+//                 q.pop();
 
-                // 将下一层入队列
-                for(int i = 0; i < 4; i++)
-                {
-                    int x = a + dx[i], y = b + dy[i];
+//                 // 将下一层入队列
+//                 for(int i = 0; i < 4; i++)
+//                 {
+//                     int x = a + dx[i], y = b + dy[i];
 
-                    if(x >= 0 && x < n && y >= 0 && y < m \
-                        && maze[x][y] == '.' && !visit[x][y])
-                    {
-                        // 判断是否遇到出口
-                        if(x == 0 || x == n - 1 || y == 0 || y == m - 1)
-                        {
-                            return step;
-                        }
+//                     if(x >= 0 && x < n && y >= 0 && y < m \
+//                         && maze[x][y] == '.' && !visit[x][y])
+//                     {
+//                         // 判断是否遇到出口
+//                         if(x == 0 || x == n - 1 || y == 0 || y == m - 1)
+//                         {
+//                             return step;
+//                         }
 
-                        visit[x][y] = true;
-                        q.push({x, y});
-                    }
-                }
-            }
-        }
+//                         visit[x][y] = true;
+//                         q.push({x, y});
+//                     }
+//                 }
+//             }
+//         }
 
-        return -1;
-    }
-};
+//         return -1;
+//     }
+// };
+
+// 最小基因变化
+// class Solution 
+// {
+// public:
+//     int minMutation(string startGene, string endGene, vector<string>& bank) 
+//     {
+//         unordered_set<string> visit; // 用来标记已经搜索过的状态
+//         unordered_set<string> hash(bank.begin(), bank.end()); // 存储基因库
+//         string change = "ACGT"; // hash
+
+//         // 边界情况处理
+//         if(startGene == endGene)
+//         {
+//             return 0;
+//         }
+
+//         if(!hash.count(endGene))
+//         {
+//             return -1;
+//         }
+
+//         queue<string> q;
+//         q.push(startGene);
+//         visit.insert(startGene);
+
+//         // BFS
+//         int ret = 0;
+//         while(q.size())
+//         {
+//             ret++;
+//             int sz = q.size();
+
+//             while(sz--)
+//             {
+//                 string str = q.front();
+//                 q.pop();
+
+//                 // 将下一层入队列
+//                 // 暴力穷举所有的变化情况:P
+//                 for(int i = 0; i < 8; i++)
+//                 {
+//                     string tmp = str; // 细节：确保每次只变化一个位置
+//                     for(int j = 0; j < 4; j++)
+//                     {
+//                         tmp[i] = change[j];
+
+//                         if(tmp == endGene)
+//                         {
+//                             return ret;
+//                         }
+
+//                         if(hash.count(tmp) && !visit.count(tmp))
+//                         {
+//                             visit.insert(tmp);
+//                             q.push(tmp);
+//                         }
+//                     }
+//                 }
+//             }
+//         }
+
+//         return -1;
+//     }
+// };
+
+// 
