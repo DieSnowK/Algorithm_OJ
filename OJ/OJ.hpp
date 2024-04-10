@@ -4746,3 +4746,54 @@ public:
 //         return -1;
 //     }
 // };
+
+// 矩阵
+// class Solution 
+// {
+//     int dx[4] = {1, -1, 0, 0};
+//     int dy[4] = {0, 0, 1, -1};
+// public:
+//     vector<vector<int>> updateMatrix(vector<vector<int>>& mat) 
+//     {
+//         int n = mat.size(), m = mat[0].size();
+
+//         // dist[i][j] == -1 未搜索过
+//         // dist[i][j] != -1 最短距离
+//         vector<vector<int>> dist(n, vector<int>(m, -1));
+//         queue<pair<int, int>> q;
+
+//         // 将所有源点加入到队列中
+//         for(int i = 0; i < n; i++)
+//         {
+//             for(int j = 0; j < m; j++)
+//             {
+//                 if(mat[i][j] == 0)
+//                 {
+//                     q.push({i, j});
+//                     dist[i][j] = 0;
+//                 }
+//             }
+//         }
+
+//         // 多源BFS
+//         while(q.size())
+//         {
+//             auto [a, b] = q.front();
+//             q.pop();
+
+//             // 将下一层入队列
+//             for(int i = 0; i < 4; i++)
+//             {
+//                 int x = a + dx[i], y = b + dy[i];
+
+//                 if(x >= 0 && x < n && y >= 0 && y < m && dist[x][y] == -1)
+//                 {
+//                     dist[x][y] = dist[a][b] + 1;
+//                     q.push({x, y});
+//                 }
+//             }
+//         }
+
+//         return dist;
+//     }
+// };
