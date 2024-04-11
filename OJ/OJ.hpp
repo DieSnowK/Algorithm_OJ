@@ -5033,3 +5033,63 @@ public:
 //         return true;
 //     }
 // };
+
+// 课程表Ⅱ
+// class Solution 
+// {
+// public:
+//     vector<int> findOrder(int n, vector<vector<int>>& prerequisites) 
+//     {
+//         vector<vector<int>> edges(n);
+//         vector<int> in(n);
+
+//         // 1.建图
+//         for(auto& v : prerequisites)
+//         {
+//             int a = v[0], b = v[1]; // b -> a
+//             edges[b].push_back(a);
+//             in[a]++;
+//         }
+
+//         // 2.拓扑排序
+//         vector<int> ret;
+//         queue<int> q;
+
+//         // (1) 将所有入度为0的点入队列
+//         for(int i = 0 ; i < n; i++)
+//         {
+//             if(in[i] == 0)
+//             {
+//                 q.push(i);
+//             }
+//         }
+
+//         // (2) BFS
+//         while(q.size())
+//         {
+//             int tmp = q.front();
+//             q.pop();
+//             ret.push_back(tmp);
+
+//             // 修改相连结点的边
+//             for(auto& e : edges[tmp])
+//             {
+//                 in[e]--;
+//                 if(in[e] == 0)
+//                 {
+//                     q.push(e);
+//                 }
+//             }
+//         }
+
+//         // 判断结果并返回
+//         if(ret.size() == n)
+//         {
+//             return ret;
+//         }
+//         else
+//         {
+//             return {};
+//         }
+//     }
+// };
