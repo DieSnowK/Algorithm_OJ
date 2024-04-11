@@ -4975,3 +4975,61 @@ public:
 //         return ret;
 //     }
 // };
+
+// 课程表
+// class Solution 
+// {
+// public:
+//     bool canFinish(int n, vector<vector<int>>& prerequisites) 
+//     {
+//         unordered_map<int, vector<int>> edges; // 邻接表
+//         vector<int> in(n); // 存储每一个结点的入度
+
+//         // 1.建图
+//         for(auto& e : prerequisites)
+//         {
+//             int a = e[0], b = e[1]; // b -> a
+//             edges[b].push_back(a); // 构建图的逻辑结构
+//             in[a]++; // 入度表
+//         }
+
+//         // 2.拓扑排序BFS
+//         // (1) 把所有入度为0的结点加入队列
+//         queue<int> q;
+//         for(int i = 0; i < n; i++)
+//         {
+//             if(in[i] == 0)
+//             {
+//                 q.push(i);
+//             }
+//         }
+
+//         // (2) BFS
+//         while(q.size())
+//         {
+//             int tmp = q.front();
+//             q.pop();
+
+//             // 修改相连结点的边
+//             for(auto& e : edges[tmp])
+//             {
+//                 in[e]--;
+//                 if(in[e] == 0)
+//                 {
+//                     q.push(e);
+//                 }
+//             }
+//         }
+
+//         // 3.判断是否有环
+//         for(auto& e : in)
+//         {
+//             if(e)
+//             {
+//                 return false;
+//             }
+//         }
+
+//         return true;
+//     }
+// };
