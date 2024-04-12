@@ -5093,3 +5093,109 @@ public:
 //         }
 //     }
 // };
+
+// 火星词典
+class Solution 
+{
+    unordered_map<char, unordered_set<char>> edges; // 邻接表
+    unordered_map<char, int> in; // 入度表
+    bool check = false; // 处理边界情况
+public:
+    string alienOrder(vector<string>& words) 
+    {
+        // 1.初始化入度表
+        for(auto& str : words)
+        {
+            for(auto& ch : str)
+            {
+                in[ch] = 0;
+            }
+        }
+
+        // 2.枚举搜集字典信息 + 建图
+        int n = words.size();
+        for(int i = 0; i < n; i++)
+        {
+            for(int j = i + 1; j < n; j++)
+            {
+                AddInfo(words[i], words[j]);
+                if(check)
+                {
+                    return "";
+                }
+            }
+        }
+
+        // 3. 拓扑排序
+        string ret;
+        queue<char> q;
+
+        // (1) 入度为0的入队列
+        for(auto& [ch, count] : in)
+        {
+            if(count == 0)
+            {
+                q.push(ch);
+            }
+        }
+
+        // BFS
+        while(q.size())
+        {
+            char tmp = q.front();
+            q.pop();
+            ret += tmp;
+
+            // 修改相邻点的边
+            for(auto& ch : edges[tmp])
+            {
+                if(--in[ch] == 0)
+                {
+                    q.push(ch);
+                }
+            }
+        }
+
+        // 检验是否有环
+        for(auto& [ch, count] : in)
+        {
+            if(count != 0)
+            {
+                return "";
+            }
+        }
+
+        return ret;
+    }
+
+    void AddInfo(const string& s1, const string& s2)
+    {
+        int n = min(s1.size(), s2.size());
+        
+        int i = 0;
+        while(i < n)
+        {
+            if(s1[i] != s2[i]) 
+            {
+                char a = s1[i], b = s2[i];
+                
+                // 避免数据冗余
+                if(!edges.count(a) || !edges[a].count(b))
+                {
+                    edges[a].insert(b);  // s1[i] -> s2[i]
+                    in[b]++;
+                }
+
+                break;
+            }
+
+            i++;
+        }
+
+        // 边界情况处理
+        if(i == s2.size() && i < s1.size())
+        {
+            check = true;
+        }
+    }
+};
