@@ -5199,3 +5199,28 @@ public:
 //         }
 //     }
 // };
+
+// ººÅµËþ
+// class Solution 
+// {
+// public:
+//     void hanota(vector<int>& A, vector<int>& B, vector<int>& C) 
+//     {
+//         DFS(A, B, C, A.size());
+//     }
+
+//     void DFS(vector<int>& a, vector<int>& b, vector<int>& c, size_t n)
+//     {
+//         if(n == 1)
+//         {
+//             c.push_back(a.back());
+//             a.pop_back();
+//             return;
+//         }
+
+//         DFS(a, c, b, n - 1);
+//         c.push_back(a.back());
+//         a.pop_back();
+//         DFS(b, a, c, n - 1);
+//     }
+// };
