@@ -5471,7 +5471,7 @@ public:
  * };
  */
 
- // v1.0 ±©Á¦ÅÐ¶Ï
+// v1.0 ±©Á¦ÅÐ¶Ï
 // class Solution 
 // {
 //     long prev = LONG_MIN;
