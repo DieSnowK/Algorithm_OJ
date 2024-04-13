@@ -5324,3 +5324,26 @@ public:
 //         return ret;
 //     }
 // };
+
+// Pow(x, n)
+// class Solution 
+// {
+// public:
+//     double myPow(double x, int n) 
+//     {
+//         return n >= 0 ? Pow(x, n) : 1 / Pow(x, -(long long)n);
+//     }
+
+//     double Pow(double x, long long n)
+//     {
+//         // º¯Êý³ö¿Ú
+//         if(n == 0)
+//         {
+//             return 1;
+//         }
+
+//         double tmp = Pow(x, n / 2);
+        
+//         return n % 2 == 0 ? tmp * tmp : tmp * tmp * x;
+//     }
+// };
