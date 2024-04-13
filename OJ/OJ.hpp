@@ -5502,3 +5502,40 @@ public:
 // };
 
 // v2.0 ¼ôÖ¦
+// class Solution 
+// {
+//     long prev = LONG_MIN;
+// public:
+//     bool isValidBST(TreeNode* root) 
+//     {
+//         if(root == nullptr)
+//         {
+//             return true;
+//         }
+
+//         // 1.ÅÐ¶Ï×ó×ÓÊ÷
+//         bool left = isValidBST(root->left);
+//         if(!left) // ¼ôÖ¦
+//         {
+//             return false;
+//         }
+
+//         // 2.ÅÐ¶Ï×Ô¼º
+//         bool cur = false;
+//         if(root->val > prev)
+//         {
+//             cur = true;
+//         }
+//         prev = root->val;
+
+//         if(!cur) // ¼ôÖ¦
+//         {
+//             return false;
+//         }
+
+//         // 3.ÅÐ¶ÏÓÒ×ÓÊ÷
+//         bool right = isValidBST(root->right);
+
+//         return left && right && cur;
+//     }
+// };
