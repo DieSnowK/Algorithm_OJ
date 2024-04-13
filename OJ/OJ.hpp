@@ -5457,3 +5457,48 @@ public:
 //         return root;
 //     }
 // };
+
+// —È÷§∂˛≤ÊÀ—À˜ ˜
+/**
+ * Definition for a binary tree node.
+ * struct TreeNode {
+ *     int val;
+ *     TreeNode *left;
+ *     TreeNode *right;
+ *     TreeNode() : val(0), left(nullptr), right(nullptr) {}
+ *     TreeNode(int x) : val(x), left(nullptr), right(nullptr) {}
+ *     TreeNode(int x, TreeNode *left, TreeNode *right) : val(x), left(left), right(right) {}
+ * };
+ */
+
+ // v1.0 ±©¡¶≈–∂œ
+// class Solution 
+// {
+//     long prev = LONG_MIN;
+// public:
+//     bool isValidBST(TreeNode* root) 
+//     {
+//         if(root == nullptr)
+//         {
+//             return true;
+//         }
+
+//         // ≈–∂œ◊Û◊” ˜
+//         bool left = isValidBST(root->left);
+
+//         // ≈–∂œ◊‘º∫
+//         bool cur = false;
+//         if(root->val > prev)
+//         {
+//             cur = true;
+//         }
+//         prev = root->val;
+
+//         // ≈–∂œ”“◊” ˜
+//         bool right = isValidBST(root->right);
+
+//         return left && right && cur;
+//     }
+// };
+
+// v2.0 ºÙ÷¶
