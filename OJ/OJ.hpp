@@ -5347,3 +5347,40 @@ public:
 //         return n % 2 == 0 ? tmp * tmp : tmp * tmp * x;
 //     }
 // };
+
+// 计算布尔二叉树的值
+/**
+ * Definition for a binary tree node.
+ * struct TreeNode {
+ *     int val;
+ *     TreeNode *left;
+ *     TreeNode *right;
+ *     TreeNode() : val(0), left(nullptr), right(nullptr) {}
+ *     TreeNode(int x) : val(x), left(nullptr), right(nullptr) {}
+ *     TreeNode(int x, TreeNode *left, TreeNode *right) : val(x), left(left), right(right) {}
+ * };
+ */
+// class Solution 
+// {
+// public:
+//     bool evaluateTree(TreeNode* root) 
+//     {
+//         // 函数出口
+//         if(root->left == nullptr)
+//         {
+//             return root->val;
+//         }
+
+//         auto left = evaluateTree(root->left);
+//         auto right = evaluateTree(root->right);
+
+//         if(root->val == 2)
+//         {
+//             return left | right;
+//         }
+//         else
+//         {
+//             return left & right;
+//         }
+//     }
+// };
