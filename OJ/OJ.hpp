@@ -5667,3 +5667,34 @@ public:
 //         }
 //     }
 // };
+
+// 子集
+// v1.0 每次盯着一个数，选或是不选
+// class Solution 
+// {
+//     vector<vector<int>> ret;
+//     vector<int> path;
+// public:
+//     vector<vector<int>> subsets(vector<int>& nums) 
+//     {
+//         DFS(nums, 0);
+//         return ret;
+//     }
+
+//     void DFS(vector<int>& nums, int i)
+//     {
+//         if(i == nums.size())
+//         {
+//             ret.push_back(path);
+//             return;
+//         }
+
+//         // 选
+//         path.push_back(nums[i]);
+//         DFS(nums, i + 1);
+//         path.pop_back(); // 回溯，恢复现场
+
+//         // 不选
+//         DFS(nums, i + 1);
+//     }
+// };
