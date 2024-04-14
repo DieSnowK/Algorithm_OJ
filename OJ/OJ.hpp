@@ -5581,3 +5581,51 @@ public:
 //         DFS(root->right);
 //     }
 // };
+
+// 二叉树的所有路径
+/**
+ * Definition for a binary tree node.
+ * struct TreeNode {
+ *     int val;
+ *     TreeNode *left;
+ *     TreeNode *right;
+ *     TreeNode() : val(0), left(nullptr), right(nullptr) {}
+ *     TreeNode(int x) : val(x), left(nullptr), right(nullptr) {}
+ *     TreeNode(int x, TreeNode *left, TreeNode *right) : val(x), left(left), right(right) {}
+ * };
+ */
+// class Solution 
+// {
+//     vector<string> ret;
+// public:
+//     vector<string> binaryTreePaths(TreeNode* root) 
+//     {
+//         DFS(root, "");
+//         return ret;
+//     }
+
+//     // 参数path实现回溯
+//     void DFS(TreeNode* root, string path)
+//     {
+//         path += to_string(root->val);
+
+//         // 叶子结点 + 函数出口
+//         if(!root->left && !root->right)
+//         {
+//             ret.push_back(path);
+//         }
+
+//         path += "->";
+
+//         // 非叶子结点 + 剪枝
+//         if(root->left)
+//         {
+//             DFS(root->left, path);
+//         }
+
+//         if(root->right)
+//         {
+//             DFS(root->right, path);
+//         }
+//     }
+// };
