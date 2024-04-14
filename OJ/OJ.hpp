@@ -5698,3 +5698,28 @@ public:
 //         DFS(nums, i + 1);
 //     }
 // };
+
+// v2.0 每次都只选一个数，此后只能选它后面的数
+// class Solution 
+// {
+//     vector<vector<int>> ret;
+//     vector<int> path;
+// public:
+//     vector<vector<int>> subsets(vector<int>& nums) 
+//     {
+//         DFS(nums, 0);
+//         return ret;
+//     }
+
+//     void DFS(vector<int>& nums, int pos)
+//     {
+//         ret.push_back(path);
+
+//         for(int i = pos; i < nums.size(); i++)
+//         {
+//             path.push_back(nums[i]);
+//             DFS(nums, i + 1);
+//             path.pop_back(); // 回溯，恢复现场
+//         }
+//     }
+// };
