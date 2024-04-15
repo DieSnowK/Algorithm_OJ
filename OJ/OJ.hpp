@@ -5960,3 +5960,42 @@ public:
 //         }
 //     }
 // };
+
+// 目标和
+// v1.0 效率低，可能会超时
+// class Solution 
+// {
+//     int ret = 0;
+//     int path = 0;
+//     int _target = 0;
+// public:
+//     int findTargetSumWays(vector<int>& nums, int target) 
+//     {
+//         _target = target;
+//         DFS(nums, 0);
+//         return ret;
+//     }
+
+//     void DFS(vector<int>& nums, int pos)
+//     {
+//         if(pos == nums.size())
+//         {
+//             if(path == _target)
+//             {
+//                 ret++;
+//             }
+
+//             return;
+//         }
+
+//         // 加
+//         path += nums[pos];
+//         DFS(nums, pos + 1);
+//         path -= nums[pos]; // 回溯，恢复现场
+
+//         // 减
+//         path -= nums[pos];
+//         DFS(nums, pos + 1);
+//         path += nums[pos]; // 回溯，恢复现场
+//     }
+// };
