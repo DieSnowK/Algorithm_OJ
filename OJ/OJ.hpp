@@ -5875,3 +5875,54 @@ public:
 //         }
 //     }
 // };
+
+// 括号生成
+// class Solution 
+// {
+//     int left;
+//     int right = 0;
+//     int total = 0;
+
+//     string path;
+//     vector<string> ret;
+// public:
+//     vector<string> generateParenthesis(int n) 
+//     {
+//         total = n;
+//         DFS();
+//         return ret;
+//     }
+
+//     void DFS()
+//     {
+//         if(right == total)
+//         {
+//             ret.push_back(path);
+//         }
+
+//         // 递归 + 剪枝
+//         if(left < total)
+//         {
+//             path += '(';
+//             left++;
+
+//             DFS();
+            
+//             // 回溯，恢复现场
+//             path.pop_back();
+//             left--;
+//         }
+
+//         if(right < left)
+//         {
+//             path += ')';
+//             right++;
+
+//             DFS();
+
+//             // 回溯，恢复现场
+//             path.pop_back(); 
+//             right--;
+//         }
+//     }
+// };
