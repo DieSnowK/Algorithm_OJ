@@ -5723,3 +5723,32 @@ public:
 //         }
 //     }
 // };
+
+// 找出所有子集的异或总和再求和
+// class Solution 
+// {
+//     int sum = 0;
+//     int path = 0;
+// public:
+//     int subsetXORSum(vector<int>& nums) 
+//     {
+//         DFS(nums, 0);
+//         return sum;
+//     }
+    
+//     void DFS(vector<int>& nums, int pos)
+//     {
+//         sum += path;
+        
+//         for(int i = pos; i < nums.size(); i++)
+//         {
+//             path ^= nums[i];
+//             DFS(nums, i + 1);
+//             path ^= nums[i]; // 回溯，恢复现场
+//         }
+//     }
+// };
+
+// 全排列Ⅱ
+
+
