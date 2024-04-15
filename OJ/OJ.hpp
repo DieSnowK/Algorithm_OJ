@@ -5837,3 +5837,41 @@ public:
 //         }
 //     }
 // };
+
+// 电话号码的字母组合
+// class Solution 
+// {
+//     vector<string> ret;
+//     string path;
+    
+//     // 按键映射字母
+//     string str[10] = {"", "", "abc", "def", \
+//         "ghi", "jkl", "mno", "pqrs", "tuv", "wxyz"};
+// public:
+//     vector<string> letterCombinations(string digits) 
+//     {
+//         if(digits.size() == 0)
+//         {
+//             return ret;
+//         }
+        
+//         DFS(digits, 0);
+//         return ret;
+//     }
+    
+//     void DFS(string& digits, int pos)
+//     {
+//         if(path.size() == digits.size())
+//         {
+//             ret.push_back(path);
+//             return;
+//         }
+        
+//         for(auto& ch : str[digits[pos] - '0'])
+//         {
+//             path += ch;
+//             DFS(digits, pos + 1);
+//             path.pop_back(); // 回溯，恢复现场
+//         }
+//     }
+// };
