@@ -5926,3 +5926,37 @@ public:
 //         }
 //     }
 // };
+
+// 组合
+// class Solution 
+// {
+//     int _n;
+//     int _k;
+
+//     vector<vector<int>> ret;
+//     vector<int> path;
+// public:
+//     vector<vector<int>> combine(int n, int k) 
+//     {
+//         _n = n;
+//         _k = k;
+//         DFS(1);
+//         return ret;
+//     }
+
+//     void DFS(int start)
+//     {
+//         if(path.size() == _k)
+//         {
+//             ret.push_back(path);
+//         }
+
+//         // 递归 + 剪枝
+//         for(int i = start; i <= _n; i++)
+//         {
+//             path.push_back(i);
+//             DFS(i + 1);
+//             path.pop_back(); // 回溯，恢复现场
+//         }
+//     }
+// };
