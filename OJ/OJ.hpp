@@ -5750,5 +5750,49 @@ public:
 // };
 
 // 全排列Ⅱ
-
+// 剪枝v1.0
+// class Solution 
+// {
+//     vector<vector<int>> ret;
+//     vector<int> path;
+//     vector<bool> check;
+// public:
+//     vector<vector<int>> permuteUnique(vector<int>& nums) 
+//     {
+//         check.resize(nums.size(), false);
+//         sort(nums.begin(), nums.end());
+        
+//         DFS(nums);
+//         return ret;
+//     }
+    
+//     void DFS(vector<int>& nums)
+//     {
+//         if(path.size() == nums.size())
+//         {
+//             ret.push_back(path);
+//             return;
+//         }
+        
+//         for(int i = 0; i < nums.size(); i++)
+//         {
+//             // 剪纸 - 何时不进？
+//             if(check[i] == true || \
+//               (i != 0 && nums[i]== nums[i - 1] && check[i - 1] == false))
+//             {
+//                 continue;
+//             }
+            
+//             // 进
+//             path.push_back(nums[i]);
+//             check[i] = true;
+            
+//             DFS(nums);
+            
+//             path.pop_back(); // 回溯，恢复现场
+//             check[i] = false;
+            
+//         }
+//     }
+// };
 
