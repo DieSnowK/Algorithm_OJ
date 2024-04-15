@@ -5999,3 +5999,36 @@ public:
 //         path += nums[pos]; // 回溯，恢复现场
 //     }
 // };
+
+// v2.0，效率有所改善
+// class Solution 
+// {
+//     int ret = 0;
+//     int _target = 0;
+// public:
+//     int findTargetSumWays(vector<int>& nums, int target) 
+//     {
+//         _target = target;
+//         DFS(nums, 0, 0);
+//         return ret;
+//     }
+
+//     void DFS(vector<int>& nums, int pos, int path)
+//     {
+//         if(pos == nums.size())
+//         {
+//             if(path == _target)
+//             {
+//                 ret++;
+//             }
+
+//             return;
+//         }
+
+//         // 加
+//         DFS(nums, pos + 1, path + nums[pos]);
+
+//         // 减
+//         DFS(nums, pos + 1, path - nums[pos]);
+//     }
+// };
