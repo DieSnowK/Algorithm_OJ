@@ -6032,3 +6032,49 @@ public:
 //         DFS(nums, pos + 1, path - nums[pos]);
 //     }
 // };
+
+// 组合总数
+// class Solution 
+// {
+//     int _target;
+//     vector<int> path;
+//     vector<vector<int>> ret;
+// public:
+//     vector<vector<int>> combinationSum(vector<int>& nums, int target) 
+//     {
+//         _target = target;
+//         DFS(nums, 0, 0);
+//         return ret;
+//     }
+    
+//     void DFS(vector<int>& nums, int pos, int sum)
+//     {
+//         if(sum == _target)
+//         {
+//             ret.push_back(path);
+//             return;
+//         }
+        
+//         if(sum > _target || pos == nums.size())
+//         {
+//             return;
+//         }
+        
+//         // 枚举个数 + 剪枝
+//         for(int i = 0; i * nums[pos] + sum <= _target; i++)
+//         {
+//             if(i)
+//             {
+//                 path.push_back(nums[pos]);    
+//             }
+            
+//             DFS(nums, pos + 1, i * nums[pos] + sum);
+//         }
+        
+//         // 回溯，恢复现场
+//         for(int i = 1; i * nums[pos] + sum <= _target; i++)
+//         {
+//             path.pop_back();
+//         }
+//     }
+// };
