@@ -6201,3 +6201,52 @@ public:
 //         }
 //     }
 // };
+
+// N皇后
+// class Solution 
+// {
+//     int _n = 0;
+//     vector<bool> checkCol;
+//     vector<bool> checkDig1;
+//     vector<bool> checkDig2;
+
+//     vector<vector<string>> ret;
+//     vector<string> path;
+// public:
+//     vector<vector<string>> solveNQueens(int n) 
+//     {
+//         _n = n;
+//         checkCol.resize(n, false);
+//         checkDig1.resize(2 * n, false);
+//         checkDig2.resize(2 * n, false);
+//         path.resize(n, string(n, '.'));
+
+//         DFS(0);
+
+//         return ret;
+//     }
+
+//     void DFS(int row)
+//     {
+//         // 递归出口
+//         if(row == _n)
+//         {
+//             ret.push_back(path);
+//             return;
+//         }
+
+//         // 对于每一行，枚举每一列
+//         for(int i = 0; i < _n; i++)
+//         {
+//             // 剪枝
+//             if(!checkCol[i] && !checkDig1[row - i + _n] && !checkDig2[row + i])
+//             {
+//                 checkCol[i] = checkDig1[row - i + _n] = checkDig2[row + i] = true;
+//                 path[row][i] = 'Q';
+//                 DFS(row + 1);
+//                 checkCol[i] = checkDig1[row - i + _n] = checkDig2[row + i] = false; // 回溯
+//                 path[row][i] = '.';
+//             }
+//         }
+//     }
+// };
