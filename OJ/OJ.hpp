@@ -6078,3 +6078,55 @@ public:
 //         }
 //     }
 // };
+
+// 字母大小写全排列
+// class Solution 
+// {
+//     string path;
+//     vector<string> ret;
+// public:
+//     vector<string> letterCasePermutation(string s) 
+//     {
+//         DFS(s, 0);
+//         return ret;
+//     }
+    
+//     void DFS(string& s, int pos)
+//     {
+//         if(pos == s.size())
+//         {
+//             ret.push_back(path);
+//             return;
+//         }
+        
+//         char ch = s[pos];
+        
+//         // 不改变
+//         path += ch;
+//         DFS(s, pos + 1);
+//         path.pop_back(); // 回溯，恢复现场
+        
+//         // 改变
+//         if(ch < '0' || ch > '9')
+//         {
+//             ch = Change(ch);
+//             path += ch;
+//             DFS(s, pos + 1);
+//             path.pop_back(); // 回溯，恢复现场
+//         }
+//     }
+    
+//     char Change(char ch)
+//     {
+//         if(ch >= 'a' && ch <= 'z')
+//         {
+//             ch -= 32;
+//         }
+//         else
+//         {
+//             ch += 32;
+//         }
+        
+//         return ch;
+//     }
+// };
