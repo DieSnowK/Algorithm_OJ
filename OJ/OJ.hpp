@@ -6034,6 +6034,44 @@ public:
 // };
 
 // 组合总数
+// v1.0 每次都只选一个数，此后只能选它及它后面的数
+// class Solution 
+// {
+//     int _target;
+//     vector<int> path;
+//     vector<vector<int>> ret;
+// public:
+//     vector<vector<int>> combinationSum(vector<int>& nums, int target) 
+//     {
+//         _target = target;
+//         DFS(nums, 0, 0);
+//         return ret;
+//     }
+    
+//     void DFS(vector<int>& nums, int pos, int sum)
+//     {
+//         if(sum == _target)
+//         {
+//             ret.push_back(path);
+//             return;
+//         }
+        
+//         if(sum > _target || pos == nums.size())
+//         {
+//             return;
+//         }
+        
+//         // 递归决策 + 剪枝
+//         for(int i = pos; i < nums.size(); i++)
+//         {
+//             path.push_back(nums[i]);
+//             DFS(nums, i, sum + nums[i]);
+//             path.pop_back(); // 回溯，恢复现场
+//         }
+//     }
+// };
+
+// v2.0 每次枚举一个数，出现几次
 // class Solution 
 // {
 //     int _target;
