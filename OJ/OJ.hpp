@@ -6168,3 +6168,36 @@ public:
 //         return ch;
 //     }
 // };
+
+// 优美的排列
+// class Solution 
+// {
+//     int ret = 0;
+//     vector<bool> check;
+// public:
+//     int countArrangement(int n) 
+//     {
+//         check.resize(n + 1, false);
+//         DFS(1, n);
+//         return ret;
+//     }
+
+//     void DFS(int pos, int n)
+//     {
+//         if(pos == n + 1)
+//         {
+//             ret++;
+//             return;
+//         }
+
+//         for(int i = 1; i <= n; i++)
+//         {
+//             if(!check[i] && (i % pos == 0 || pos % i == 0))
+//             {
+//                 check[i] = true;
+//                 DFS(pos + 1, n);
+//                 check[i] = false; // 回溯，恢复现场
+//             }
+//         }
+//     }
+// };
