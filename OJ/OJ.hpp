@@ -6409,3 +6409,51 @@ public:
 //         return false;
 //     }
 // };
+
+// 黄金矿工
+// class Solution 
+// {
+//     int n = 0, m = 0, ret = 0;
+//     vector<vector<bool>> visit;
+
+//     // "方向"向量偏移数组
+//     int dx[4] = {1, -1, 0, 0};
+//     int dy[4] = {0, 0, 1, -1};
+// public:
+//     int getMaximumGold(vector<vector<int>>& grid) 
+//     {
+//         n = grid.size(), m = grid[0].size();
+//         visit.resize(n, vector(m, false));
+
+//         for(int i = 0; i < n; i++)
+//         {
+//             for(int j = 0; j < m; j++)
+//             {
+//                 if(grid[i][j])
+//                 {
+//                     visit[i][j] = true;
+//                     DFS(grid, i, j, grid[i][j]);
+//                     visit[i][j] = false; // 回溯
+//                 }
+//             }
+//         }
+
+//         return ret;
+//     }
+
+//     void DFS(vector<vector<int>>& grid, int i, int j, int path)
+//     {
+//         ret = max(ret, path);
+
+//         for(int k = 0; k < 4; k++)
+//         {
+//             int x = i + dx[k], y = j + dy[k];
+//             if(x >= 0 && x < n && y >= 0 && y < m && grid[x][y] && !visit[x][y])
+//             {
+//                 visit[x][y] = true;
+//                 DFS(grid, x, y, path + grid[x][y]);
+//                 visit[x][y] = false;
+//             }
+//         }
+//     }
+// };
