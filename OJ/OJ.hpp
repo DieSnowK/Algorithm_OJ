@@ -6457,3 +6457,67 @@ public:
 //         }
 //     }
 // };
+
+// 不同路径Ⅲ
+// class Solution 
+// {
+//     int n, m, ret = 0, step = 2;
+//     vector<vector<bool>> visit;
+
+//     // "方向"向量偏移数组
+//     int dx[4] = {1, -1, 0, 0};
+//     int dy[4] = {0, 0, 1, -1};
+// public:
+//     int uniquePathsIII(vector<vector<int>>& grid) 
+//     {
+//         n = grid.size(), m = grid[0].size();
+//         visit.resize(n, vector(m, false));
+//         int bx = 0, by = 0;
+
+//         // Init
+//         for(int i = 0; i < n; i++)
+//         {
+//             for(int j = 0; j < m; j++)
+//             {
+//                 if(grid[i][j] == 0)
+//                 {
+//                     step++;
+//                 }
+                
+//                 if(grid[i][j] == 1)
+//                 {
+//                     bx = i, by = j;
+//                     visit[i][j] = true;
+//                 }
+//             }
+//         }
+
+//         DFS(grid, bx, by, 1);
+
+//         return ret;
+//     }
+
+//     void DFS(vector<vector<int>>& grid, int bx, int by, int count)
+//     {
+//         if(grid[bx][by] == 2)
+//         {
+//             if(count == step)
+//             {
+//                 ret++;
+//                 return;
+//             }
+//         }
+
+//         for(int i = 0; i < 4; i++)
+//         {
+//             int x = bx + dx[i], y = by + dy[i];
+//             if(x >= 0 && x < n && y >= 0 && y < m \
+//                 && grid[x][y] != -1 && !visit[x][y])
+//             {
+//                 visit[x][y] = true;
+//                 DFS(grid, x, y, count + 1);
+//                 visit[x][y] = false; // 回溯
+//             }
+//         }
+//     }
+// };
