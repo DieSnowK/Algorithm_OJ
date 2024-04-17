@@ -6345,3 +6345,67 @@ public:
 //         return true; // 重点理解
 //     }
 // };
+
+// 单词搜索
+// class Solution 
+// {
+//     int n = 0, m = 0;
+//     string _word;
+//     vector<vector<bool>> visit;
+    
+//     // "方向"向量偏移数组
+//     int dx[4] = {1, -1, 0, 0};
+//     int dy[4] = {0, 0, 1, -1};
+// public:
+//     bool exist(vector<vector<char>>& board, string word) 
+//     {
+//         n = board.size(), m = board[0].size();
+//         visit.resize(n, vector(m, false));
+//         _word = word;
+        
+//         // 枚举找源
+//         for(int i = 0; i < n; i++)
+//         {
+//             for(int j = 0; j < m; j++)
+//             {
+//                 // 找到源后，DFS检验是否存在
+//                 if(board[i][j] == word[0])
+//                 {
+//                     visit[i][j] = true;
+//                     if(DFS(board, i, j, 1))
+//                     {
+//                         return true;
+//                     }
+//                     visit[i][j] = false;
+//                 }
+//             }
+//         }
+        
+//         return false;
+//     }
+    
+//     bool DFS(vector<vector<char>>& board, int i, int j, int pos)
+//     {
+//         if(pos == _word.size())
+//         {
+//             return true;
+//         }
+        
+//         for(int k = 0; k < 4; k++)
+//         {
+//             int x = i + dx[k], y = j + dy[k];
+//             if(x >= 0 && x < n && y >= 0 && y < m && \
+//                !visit[x][y] && board[x][y] == _word[pos])
+//             {
+//                 visit[x][y] = true;
+//                 if(DFS(board, x, y, pos + 1))
+//                 {
+//                     return true;
+//                 }
+//                 visit[x][y] = false; // 回溯，恢复现场
+//             }
+//         }
+        
+//         return false;
+//     }
+// };
