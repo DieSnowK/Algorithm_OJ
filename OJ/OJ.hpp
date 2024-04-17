@@ -6282,3 +6282,66 @@ public:
 //         return true;
 //     }
 // };
+
+// 解数独
+// class Solution 
+// {
+//     bool row[9][10] = {false};
+//     bool col[9][10] = {false};
+//     bool grid[3][3][10] = {false};
+// public:
+//     void solveSudoku(vector<vector<char>>& board) 
+//     {
+//         // Init
+//         for(int i = 0; i < 9; i++)
+//         {
+//             for(int j = 0; j < 9; j++)
+//             {
+//                 if(board[i][j] != '.')
+//                 {
+//                     int num = board[i][j] - '0'; // 下标映射
+//                     row[i][num] = col[j][num] = grid[i / 3][j / 3][num] = true;
+//                 }
+//             }
+//         }
+        
+//         DFS(board);
+//     }
+    
+//     bool DFS(vector<vector<char>>& board)
+//     {
+//         for(int i = 0; i < 9; i++)
+//         {
+//             for(int j = 0; j < 9; j++)
+//             {
+//                 if(board[i][j] == '.') // 此处无数字
+//                 {
+//                     for(int num = 1; num <= 9; num++) // 枚举每一个数字
+//                     {
+//                         if(!row[i][num] && !col[j][num] && !grid[i / 3][j / 3][num]) // 合法性检验
+//                         {
+//                             board[i][j] = num + '0';
+//                             row[i][num] = col[j][num] = grid[i / 3][j / 3][num] = true;
+                        
+//                             if(DFS(board) == true)
+//                             {
+//                                 // 当得到最终解后，就没必要往后枚举了
+//                                 return true; // 重点理解
+//                             }
+                        
+//                             // 若没有最终解，说明上述情况不行，需要回溯
+//                             board[i][j] = '.';
+//                             row[i][num] = col[j][num] = grid[i / 3][j / 3][num] = false;
+//                         }
+//                     }
+                    
+//                     // 当全部数字都尝试无果后，标识这种情况无解
+//                     return false; // 重点理解
+//                 }
+//             }
+//         }
+        
+//         // 无数字可填，表明解出最终解
+//         return true; // 重点理解
+//     }
+// };
