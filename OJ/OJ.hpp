@@ -6521,3 +6521,42 @@ public:
 //         }
 //     }
 // };
+
+// 渲染图像 DFS
+// class Solution 
+// {
+//     int n, m, ori;
+
+//     // "方向"向量数组
+//     int dx[4] = {1, -1, 0, 0};
+//     int dy[4] = {0, 0, 1, -1};
+// public:
+//     vector<vector<int>> floodFill(vector<vector<int>>& image, int sr, int sc, int color) 
+//     {
+//         if(image[sr][sc] == color)
+//         {
+//             return image;
+//         }
+
+//         ori = image[sr][sc];
+//         n = image.size(), m = image[0].size();
+
+//         DFS(image, sr, sc, color);
+
+//         return image;
+//     }
+
+//     void DFS(vector<vector<int>>& image, int i, int j, int color)
+//     {
+//         image[i][j] = color;
+
+//         for(int k = 0; k < 4; k++)
+//         {
+//             int x = i + dx[k], y = j + dy[k];
+//             if(x >= 0 && x < n && y >= 0 && y < m && image[x][y] == ori)
+//             {
+//                 DFS(image, x, y, color);
+//             }
+//         }
+//     }
+// };
