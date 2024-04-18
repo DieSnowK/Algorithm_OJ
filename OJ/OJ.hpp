@@ -6727,3 +6727,62 @@ public:
 //     }
 
 // };
+
+// 太平洋大西洋水流问题
+// class Solution 
+// {
+//     int n, m;
+
+//     // "方向"向量数组
+//     int dx[4] = {1, -1, 0, 0};
+//     int dy[4] = {0, 0, 1, -1};
+// public:
+//     vector<vector<int>> pacificAtlantic(vector<vector<int>>& h) 
+//     {
+//         n = h.size(), m = h[0].size();
+//         vector<vector<bool>> pac(n, vector(m, false));
+//         vector<vector<bool>> atl(n, vector(m, false));
+
+//         // 看看各能爬多高:P
+//         for(int i = 0; i < n; i++)
+//         {
+//             DFS(h, i, 0, pac);
+//             DFS(h, i, m - 1, atl);
+//         }
+
+//         for(int i = 0; i < m; i++)
+//         {
+//             DFS(h, 0, i, pac);
+//             DFS(h, n - 1, i, atl);
+//         }
+
+//         // 由重叠找答案
+//         vector<vector<int>> ret;
+//         for(int i = 0; i < n; i++)
+//         {
+//             for(int j = 0; j < m; j++)
+//             {
+//                 if(pac[i][j] && atl[i][j])
+//                 {
+//                     ret.push_back({i, j});
+//                 }
+//             }
+//         }
+
+//         return ret;
+//     }
+
+//     void DFS(vector<vector<int>>& h, int i, int j, vector<vector<bool>>& visit)
+//     {
+//         visit[i][j] = true;
+        
+//         for(int k = 0; k < 4; k++)
+//         {
+//             int x = i + dx[k], y = j + dy[k];
+//             if(x >= 0 && x < n && y >= 0 && y < m && !visit[x][y] && h[x][y] >= h[i][j])
+//             {
+//                 DFS(h, x, y, visit);
+//             }
+//         }
+//     }
+// };
