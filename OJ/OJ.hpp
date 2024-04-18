@@ -6787,3 +6787,64 @@ public:
 //         }
 //     }
 // };
+
+// 地雷游戏
+// class Solution 
+// {
+//     int n, m;
+
+//     // "方向"向量数组
+//     int dx[8] = {1, -1, 0, 0, -1, 1, -1, 1};
+//     int dy[8] = {0, 0, 1, -1, -1, -1, 1, 1};
+// public:
+//     vector<vector<char>> updateBoard(vector<vector<char>>& board, vector<int>& click) 
+//     {
+//         n = board.size(), m = board[0].size();
+//         int x = click[0], y = click[1];
+
+//         // 直接点到地雷
+//         if(board[x][y] == 'M')
+//         {
+//             board[x][y] = 'X';
+//         }
+//         else
+//         {
+//             DFS(board, x, y);
+//         }
+
+//         return board;
+//     }
+
+//     void DFS(vector<vector<char>>& board, int i, int j)
+//     {
+//         // 统计周围地雷的数量
+//         int count = 0;
+//         for(int k = 0; k < 8; k++)
+//         {
+//             int x = i + dx[k], y = j + dy[k];
+//             if(x >= 0 && x < n && y >= 0 && y < m && board[x][y] == 'M')
+//             {
+//                 count++;
+//             }
+//         }
+
+//         if(count) // 周围有地雷
+//         {
+//             board[i][j] = count + '0';
+//             return;
+//         }
+//         else // 周围无地雷
+//         {
+//             board[i][j] = 'B';
+
+//             for(int k = 0; k < 8; k++)
+//             {
+//                 int x = i + dx[k], y = j + dy[k];
+//                 if(x >= 0 && x < n && y >= 0 && y < m && board[x][y] == 'E')
+//                 {
+//                     DFS(board, x, y);
+//                 }
+//             }
+//         }
+//     }
+// };
