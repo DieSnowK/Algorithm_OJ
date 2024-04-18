@@ -6606,3 +6606,51 @@ public:
 //         }
 //     }
 // };
+
+// 岛屿的最大面积 DFS
+// class Solution 
+// {
+//     int n, m, count = 0;
+//     vector<vector<bool>> visit;
+
+//     // "方向"向量数组
+//     int dx[4] = {1, -1, 0, 0};
+//     int dy[4] = {0, 0, 1, -1};
+// public:
+//     int maxAreaOfIsland(vector<vector<int>>& grid) 
+//     {
+//         n = grid.size(), m = grid[0].size();
+//         visit.resize(n, vector(m, false));
+
+//         int ret = 0;
+//         for(int i = 0; i < n; i++)
+//         {
+//             for(int j = 0; j < m; j++)
+//             {
+//                 if(grid[i][j] && !visit[i][j])
+//                 {
+//                     count = 0;
+//                     DFS(grid, i, j);
+//                     ret = max(ret, count);
+//                 }
+//             }
+//         }
+
+//         return ret;
+//     }
+
+//     void DFS(vector<vector<int>>& grid, int i, int j)
+//     {
+//         count++;
+//         visit[i][j] = true;
+
+//         for(int k = 0; k < 4; k++)
+//         {
+//             int x = i + dx[k], y = j + dy[k];
+//             if(x >= 0 && x < n && y >= 0 && y < m && grid[x][y] && !visit[x][y])
+//             {
+//                 DFS(grid, x, y);
+//             }
+//         }
+//     }
+// };
