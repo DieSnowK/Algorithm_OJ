@@ -6962,7 +6962,7 @@ public:
 // };
 
 // 不同路径
-// v1.0 暴搜 -> 会超时
+// // v1.0 暴搜 -> 会超时
 // int uniquePaths(int n, int m) 
 // {
 //     if(n == 0 || m == 0)
@@ -6977,3 +6977,37 @@ public:
 
 //     return uniquePaths(n - 1, m) + uniquePaths(n, m - 1);
 // }
+
+// v2.0 记忆化搜索
+// class Solution 
+// {
+//     vector<vector<int>> mem; // 备忘录
+// public:
+//     int uniquePaths(int n, int m) 
+//     {
+//         mem.resize(n + 1, vector<int>(m + 1, 0));
+//         return DFS(n, m);
+//     }
+
+//     int DFS(int i, int j)
+//     {
+//         if(mem[i][j] != 0)
+//         {
+//             return mem[i][j];
+//         }
+
+//         if(i == 0 || j == 0)
+//         {
+//             return 0;
+//         }
+
+//         if(i == 1 && j == 1)
+//         {
+//             mem[i][j] = 1;
+//             return 1;
+//         }
+
+//         mem[i][j] = DFS(i - 1, j) + DFS(i, j - 1);
+//         return mem[i][j];
+//     }
+// };
