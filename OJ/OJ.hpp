@@ -6896,3 +6896,32 @@ public:
 //         return tmp;
 //     }
 // };
+
+// 斐波那契数列 记忆化搜索
+// class Solution 
+// {
+//     vector<int> mem; // 备忘录
+// public:
+//     int fib(int n) 
+//     {
+//         mem.resize(n + 1, -1); // 初始化
+//         return DFS(n);
+//     }
+
+//     int DFS(int n)
+//     {
+//         // 忘备忘录里面瞅瞅:P
+//         if(mem[n] != -1)
+//         {
+//             return mem[n];
+//         }
+
+//         if(n == 0 || n == 1)
+//         {
+//             return n;
+//         }
+
+//         mem[n] = DFS(n - 1) + DFS(n - 2); // 记到备忘录里面
+//         return mem[n];
+//     }
+// };
