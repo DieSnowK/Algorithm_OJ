@@ -7033,3 +7033,35 @@ public:
 
 //     return dp[n][m];
 // }
+
+// 最长递增子序列
+// v1.0 暴搜
+// class Solution 
+// {
+// public:
+//     int lengthOfLIS(vector<int>& nums) 
+//     {
+//         int ret = 0;
+//         for(int i = 0; i < nums.size(); i++)
+//         {
+//             ret = max(ret, DFS(nums, i));
+//         }
+
+//         return ret;
+//     }
+
+//     int DFS(vector<int>& nums, int pos)
+//     {
+//         int ret = 1; // 细节：初值为1
+
+//         for(int i = pos + 1; i < nums.size(); i++)
+//         {
+//             if(nums[i] > nums[pos])
+//             {
+//                 ret = max(ret, DFS(nums, i) + 1);    
+//             }
+//         }
+
+//         return ret;
+//     }
+// };
