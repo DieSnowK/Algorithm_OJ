@@ -7104,3 +7104,26 @@ public:
 //         return ret;
 //     }
 // };
+
+// v3.0 动态规划
+// int lengthOfLIS(vector<int>& nums) 
+// {
+//     int n = nums.size();
+//     vector<int> dp(n, 1);
+
+//     int ret = 0;
+//     for(int i = n - 1; i >= 0; i--) // 枚举每个位置
+//     {
+//         for(int j = i + 1; j < n; j++) // 依次枚举后面的值的最长子序列
+//         {
+//             if(nums[j] > nums[i])
+//             {
+//                 dp[i] = max(dp[i], dp[j] + 1);
+//             }
+//         }
+
+//         ret = max(ret, dp[i]);
+//     }
+
+//     return ret;
+// }
