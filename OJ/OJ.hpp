@@ -7065,3 +7065,42 @@ public:
 //         return ret;
 //     }
 // };
+
+// v2.0 记忆化搜索
+// class Solution 
+// {
+//     vector<int> mem;
+// public:
+//     int lengthOfLIS(vector<int>& nums) 
+//     {
+//         mem.resize(nums.size());
+
+//         int ret = 0;
+//         for(int i = 0; i < nums.size(); i++)
+//         {
+//             ret = max(ret, DFS(nums, i));
+//         }
+
+//         return ret;
+//     }
+
+//     int DFS(vector<int>& nums, int pos)
+//     {
+//         if(mem[pos] != 0)
+//         {
+//             return mem[pos];
+//         }
+
+//         int ret = 1; // 细节：初值为1
+//         for(int i = pos + 1; i < nums.size(); i++)
+//         {
+//             if(nums[i] > nums[pos])
+//             {
+//                 ret = max(ret, DFS(nums, i) + 1);    
+//             }
+//         }
+
+//         mem[pos] = ret;
+//         return ret;
+//     }
+// };
