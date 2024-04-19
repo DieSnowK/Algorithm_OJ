@@ -6848,3 +6848,51 @@ public:
 //         }
 //     }
 // };
+
+// 衣橱整理
+// class Solution 
+// {
+//     int _n, _m, _cnt;
+//     int ret = 0;
+//      vector<vector<bool>> visit;
+
+//     // "方向"向量数组
+//     int dx[2] = {1, 0};
+//     int dy[2] = {0, 1};
+// public:
+//     int wardrobeFinishing(int n, int m, int cnt) 
+//     {
+//         _n = n, _m = m, _cnt = cnt;
+//         visit.resize(n, vector(m, false));
+//         DFS(0, 0);
+//         return ret;
+//     }
+
+//     void DFS(int i, int j)
+//     {
+//         ret++;
+//         visit[i][j] = true;
+
+//         for(int k = 0; k < 2; k++)
+//         {
+//             int x = i + dx[k], y = j + dy[k];
+//             if(x >= 0 && x < _n && y >= 0 && y < _m && \
+//                 !visit[x][y] && Dight(x) + Dight(y) <= _cnt)
+//             {
+//                 DFS(x, y);
+//             }
+//         }
+//     }
+
+//     int Dight(int x)
+//     {
+//         int tmp = 0;
+//         while(x)
+//         {
+//             tmp += x % 10;
+//             x /= 10;
+//         }
+
+//         return tmp;
+//     }
+// };
