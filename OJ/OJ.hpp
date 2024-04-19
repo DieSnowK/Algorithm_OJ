@@ -6897,7 +6897,23 @@ public:
 //     }
 // };
 
-// 斐波那契数列 记忆化搜索
+// 斐波那契数列 
+// v1.0 递归
+// class Solution 
+// {
+// public:
+//     int fib(int n) 
+//     {
+//         if(n == 0 || n == 1)
+//         {
+//             return n;
+//         }
+
+//         return fib(n - 1) + fib(n - 2);
+//     }
+// };
+
+// v2.0 记忆化搜索
 // class Solution 
 // {
 //     vector<int> mem; // 备忘录
