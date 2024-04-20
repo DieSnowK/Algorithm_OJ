@@ -7127,3 +7127,32 @@ public:
 
 //     return ret;
 // }
+
+// 猜数字大小
+// v1.0 暴搜
+// class Solution 
+// {
+// public:
+//     int getMoneyAmount(int n) 
+//     {
+//         return DFS(1, n);
+//     }
+
+//     int DFS(int left, int right)
+//     {
+//         if(left >= right)
+//         {
+//             return 0;
+//         }
+
+//         int ret = INT_MAX;
+//         for(int i = left; i <= right; i++) // 选择头结点
+//         {
+//             int x = DFS(left, i - 1);
+//             int y = DFS(i + 1, right);
+//             ret = min(ret, max(x, y) + i);
+//         }
+
+//         return ret;
+//     }
+// };
