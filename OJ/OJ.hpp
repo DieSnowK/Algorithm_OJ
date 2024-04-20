@@ -7413,4 +7413,31 @@ public:
 //     return dp[n - 1];
 // }
 
-// 
+// v2.0 优化
+// int numDecodings(string s) 
+// {
+//     int n = s.size();
+//     vector<int> dp(n + 1, 0);
+
+//     dp[0] = 1;
+//     dp[1] = s[0] != '0';
+
+//     // Dynamic Plan
+//     for(int i = 2; i <= n; i++)
+//     {
+//         // 一个位置解码出来一个
+//         if(s[i - 1] != '0')
+//         {
+//             dp[i] += dp[i - 1];
+//         }
+
+//         // 两个位置解码出来一个
+//         int tmp = (s[i - 2] - '0') * 10 + s[i - 1] - '0';
+//         if(tmp >= 10 && tmp <= 26)
+//         {
+//             dp[i] += dp[i - 2];
+//         }
+//     }
+
+//     return dp[n];
+// }
