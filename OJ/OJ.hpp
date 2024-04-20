@@ -7193,3 +7193,45 @@ public:
 //         return ret;
 //     }
 // };
+
+// 矩阵中的最长递增路径
+// v1.0 暴搜
+// class Solution 
+// {
+//     int n, m;
+
+//     // "方向"向量数组
+//     int dx[4] = {1, -1, 0, 0};
+//     int dy[4] = {0, 0, 1, -1};
+// public:
+//     int longestIncreasingPath(vector<vector<int>>& matrix) 
+//     {
+//         n = matrix.size(), m = matrix[0].size();
+
+//         int ret = 0;
+//         for(int i = 0; i < n; i++)
+//         {
+//             for(int j = 0; j < m; j++)
+//             {
+//                 ret = max(ret, DFS(matrix, i, j));
+//             }
+//         }
+
+//         return ret;
+//     }
+
+//     int DFS(vector<vector<int>>& matrix, int i, int j)
+//     {
+//         int ret = 1;
+//         for(int k = 0; k < 4; k++)
+//         {
+//             int x = i + dx[k], y = j + dy[k];
+//             if(x >= 0 && x < n && y >= 0 && y < m && matrix[x][y] > matrix[i][j])
+//             {
+//                 ret = max(ret, DFS(matrix, x, y) + 1);
+//             }
+//         }
+
+//         return ret;
+//     }
+// };
