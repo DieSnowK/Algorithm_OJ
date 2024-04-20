@@ -7156,3 +7156,40 @@ public:
 //         return ret;
 //     }
 // };
+
+// v2.0 记忆化搜索
+// class Solution 
+// {
+//     vector<vector<int>> mem;
+// public:
+//     int getMoneyAmount(int n) 
+//     {
+//         mem.resize(n + 1, vector(n + 1, 0));
+//         return DFS(1, n);
+//     }
+
+//     int DFS(int left, int right)
+//     {
+//         if(left >= right)
+//         {
+//             return 0;
+//         }
+
+//         if(mem[left][right] != 0)
+//         {
+//             return mem[left][right];
+//         }
+
+
+//         int ret = INT_MAX;
+//         for(int i = left; i <= right; i++) // 选择头结点
+//         {
+//             int x = DFS(left, i - 1);
+//             int y = DFS(i + 1, right);
+//             ret = min(ret, max(x, y) + i);
+//         }
+
+//         mem[left][right] = ret;
+//         return ret;
+//     }
+// };
