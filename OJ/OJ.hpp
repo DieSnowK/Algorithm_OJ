@@ -7300,3 +7300,19 @@ public:
 
 //     return dp[n];
 // }
+
+// v2.0 动态规划 + 滚动数组空间优化
+// int tribonacci(int n) 
+// {
+//     // 边界情况处理
+//     if(n == 0 || n == 1) return n;
+
+//     int a = 0, b = 1, c = 1, ret = 1;
+//     for(int i = 3; i <= n; i++)
+//     {
+//         ret = a + b + c;
+//         a = b, b = c, c = ret; // 滚动数组
+//     }
+
+//     return ret;
+// }
