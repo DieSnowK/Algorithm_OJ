@@ -7338,7 +7338,7 @@ public:
 // }
 
 // 使用最小花费爬楼梯
-// v1.0
+// v1.0 以i位置为结尾
 // int minCostClimbingStairs(vector<int>& cost) 
 // {
 //     int n = cost.size();
@@ -7350,4 +7350,20 @@ public:
 //     }
 
 //     return dp[n];
+// }
+
+// v2.0 以i位置为起点
+// int minCostClimbingStairs(vector<int>& cost) 
+// {
+//     int n = cost.size();
+//     vector<int> dp(n);
+
+//     dp[n - 1] = cost[n - 1], dp[n - 2] = cost[n - 2];
+
+//     for(int i = n - 3; i >= 0; i--)
+//     {
+//         dp[i] = cost[i] + min(dp[i + 1], dp[i + 2]);
+//     }
+
+//     return min(dp[0], dp[1]);
 // }
