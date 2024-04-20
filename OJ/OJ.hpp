@@ -7282,3 +7282,21 @@ public:
 //         return mem[i][j] = ret;
 //     }
 // };
+
+// 第 N 个泰波那契数
+// v1.0 动态规划
+// int tribonacci(int n) 
+// {
+//     // 边界情况处理
+//     if(n == 0 || n == 1) return n;
+
+//     vector<int> dp(n + 1, 0);
+//     dp[1] = dp[2] = 1;
+
+//     for(int i = 3; i <= n; i++)
+//     {
+//         dp[i] = dp[i - 1] + dp[i - 2] + dp[i - 3];
+//     }
+
+//     return dp[n];
+// }
