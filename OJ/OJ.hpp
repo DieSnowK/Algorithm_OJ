@@ -7236,4 +7236,49 @@ public:
 //     }
 // };
 
-// 
+// v2.0 记忆化搜索
+// class Solution 
+// {
+//     int n, m;
+//     vector<vector<int>> mem;
+
+//     // "方向"向量数组
+//     int dx[4] = {1, -1, 0, 0};
+//     int dy[4] = {0, 0, 1, -1};
+// public:
+//     int longestIncreasingPath(vector<vector<int>>& matrix) 
+//     {
+//         n = matrix.size(), m = matrix[0].size();
+//         mem.resize(n, vector<int>(m, 0));
+
+//         int ret = 0;
+//         for(int i = 0; i < n; i++)
+//         {
+//             for(int j = 0; j < m; j++)
+//             {
+//                 ret = max(ret, DFS(matrix, i, j));
+//             }
+//         }
+
+//         return ret;
+//     }
+
+//     int DFS(vector<vector<int>>& matrix, int i, int j)
+//     {
+//         if(mem[i][j] != 0)
+//         {
+//             return mem[i][j];
+//         }
+//         int ret = 1;
+//         for(int k = 0; k < 4; k++)
+//         {
+//             int x = i + dx[k], y = j + dy[k];
+//             if(x >= 0 && x < n && y >= 0 && y < m && matrix[x][y] > matrix[i][j])
+//             {
+//                 ret = max(ret, DFS(matrix, x, y) + 1);
+//             }
+//         }
+
+//         return mem[i][j] = ret;
+//     }
+// };
