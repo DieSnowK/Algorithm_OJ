@@ -7547,3 +7547,24 @@ public:
 
 //     return dp[n][m];
 // }
+
+// 地下城游戏
+// int calculateMinimumHP(vector<vector<int>>& d) 
+// {
+//     // Init
+//     int n = d.size(), m = d[0].size();
+//     vector<vector<int>> dp(n + 1, vector<int>(m + 1, INT_MAX));
+//     dp[n][m - 1] = dp[n - 1][m] = 1;
+
+//     // Dynamic Plan
+//     for(int i = n - 1; i >= 0; i--)
+//     {
+//         for(int j = m - 1; j >= 0; j--)
+//         {
+//             dp[i][j] = min(dp[i + 1][j], dp[i][j + 1]) - d[i][j];
+//             dp[i][j] = max(1, dp[i][j]); // 防止"死了还能到":P
+//         }
+//     }
+
+//     return dp[0][0];
+// }
