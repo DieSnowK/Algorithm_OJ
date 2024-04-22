@@ -7496,3 +7496,34 @@ public:
 
 //     return dp[n][m];
 // }
+
+// 下降路径最小和
+// int minFallingPathSum(vector<vector<int>>& matrix) 
+// {
+//     // Init
+//     int n = matrix.size();
+//     vector<vector<int>> dp(n + 1, vector<int>(n + 2, INT_MAX));
+//     for(int i = 0; i < n + 2; i++)
+//     {
+//         dp[0][i] = 0;
+//     }
+
+//     // Dynamic Plan
+//     for(int i = 1; i < n + 1; i++)
+//     {
+//         for(int j = 1; j < n + 1; j++)
+//         {
+//             dp[i][j] = min(dp[i - 1][j], min(dp[i - 1][j - 1], dp[i - 1][j + 1]))
+//                 + matrix[i - 1][j - 1]; 
+//         }
+//     }
+
+//     // 找最小值
+//     int ret = INT_MAX;
+//     for(int i = 0; i < n + 2; i++)
+//     {
+//         ret = min(ret, dp[n][i]);
+//     }
+
+//     return ret;
+// }
