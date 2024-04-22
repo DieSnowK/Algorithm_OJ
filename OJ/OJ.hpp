@@ -7587,3 +7587,34 @@ public:
 
 //     return max(f[n - 1], g[n - 1]);
 // }
+
+// 打家劫舍Ⅱ
+// class Solution
+// {
+// public:
+//     int rob(vector<int>& nums) 
+//     {
+//         int n = nums.size();
+        
+//         // 分类讨论，取两种情况中的最大值
+//         return max(nums[0] + _rob(nums, 2, n - 2), _rob(nums, 1, n - 1));
+//     }
+    
+//     int _rob(vector<int>& nums, int left, int right)
+//     {
+//         if(left > right) return 0;
+        
+//         int n = nums.size();
+//         vector<int> f(n); // 选
+//         vector<int> g(n); // 不选
+//         f[left] = nums[left];
+        
+//         for(int i = left + 1; i <= right; i++)
+//         {
+//             f[i] = g[i - 1] + nums[i];
+//             g[i] = max(f[i - 1], g[i - 1]);
+//         }
+        
+//         return max(f[right], g[right]);
+//     }
+// };
