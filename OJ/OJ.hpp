@@ -7618,3 +7618,26 @@ public:
 //         return max(f[right], g[right]);
 //     }
 // };
+
+// 删除并获得点数
+// int deleteAndEarn(vector<int>& nums) 
+// {
+//     sort(nums.begin(), nums.end());
+//     int n = nums.back(); // max
+
+//     vector<int> arr(n + 1);
+//     for(auto& x : nums)
+//     {
+//         arr[x] += x;
+//     }
+
+//     vector<int> f(n + 1);
+//     vector<int> g(n + 1);
+//     for(int i = 1; i <= n; i++)
+//     {
+//         f[i] = g[i - 1] + arr[i];
+//         g[i] = max(f[i - 1], g[i - 1]);
+//     }
+
+//     return max(f[n], g[n]);
+// }
