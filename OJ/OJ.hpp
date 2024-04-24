@@ -7725,3 +7725,40 @@ public:
 
 //     return ret;
 // }
+
+// 买卖股票的最佳时机Ⅳ
+// int maxProfit(int k, vector<int>& prices) 
+// {
+//     const int INF = -0x3f3f3f3f; // 替代"INT_MIN"的功能
+//     int n = prices.size();
+
+//     // 优化处理细节，避免空间浪费
+//     k = min(k, n / 2);
+
+//     vector<vector<int>> f(n, vector<int>(k + 1, INF));
+//     vector<vector<int>> g(n, vector<int>(k + 1, INF));
+//     f[0][0] = -prices[0], g[0][0] = 0;
+
+//     for(int i = 1; i < n; i++)
+//     {
+//         for(int j = 0; j <= k; j++)
+//         {
+//             f[i][j] = max(f[i - 1][j], g[i - 1][j] - prices[i]);
+
+//             // 处理g时，要避免越界
+//             g[i][j] = g[i - 1][j];
+//             if(j - 1 >= 0)
+//             {
+//                 g[i][j] = max(g[i][j], f[i - 1][j - 1] + prices[i]);
+//             }
+//         }
+//     }
+
+//     int ret = 0;
+//     for(int i = 0; i <= k; i++)
+//     {
+//         ret = max(ret, g[n - 1][i]);
+//     }
+
+//     return ret;
+// }
