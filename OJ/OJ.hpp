@@ -7802,3 +7802,21 @@ public:
 
 //     return sum == gmin ? fmax : max(fmax, sum - gmin);
 // }
+
+// 
+// int maxProduct(vector<int>& nums) 
+// {
+//     int n = nums.size();
+//     vector<int> f(n + 1), g(n + 1);
+//     f[0] = g[0] = 1;
+
+//     int ret = INT_MIN;
+//     for(int i = 1; i <= n; i++)
+//     {
+//         f[i] = max(nums[i - 1], max(f[i - 1] * nums[i - 1], g[i - 1] * nums[i - 1]));
+//         g[i] = min(nums[i - 1], min(f[i - 1] * nums[i - 1], g[i - 1] * nums[i - 1]));
+//         ret = max(ret, f[i]);
+//     }
+
+//     return ret;
+// }
