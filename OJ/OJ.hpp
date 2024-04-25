@@ -7803,7 +7803,7 @@ public:
 //     return sum == gmin ? fmax : max(fmax, sum - gmin);
 // }
 
-// 
+// 乘积最大子数组
 // int maxProduct(vector<int>& nums) 
 // {
 //     int n = nums.size();
