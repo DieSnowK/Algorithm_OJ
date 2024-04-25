@@ -7779,3 +7779,26 @@ public:
 
 //     return ret;
 // }
+
+// 环形子数组的最大和
+// int maxSubarraySumCircular(vector<int>& nums) 
+// {
+//     int n = nums.size();
+//     vector<int> f(n + 1);
+//     vector<int> g(n + 1);
+
+//     int fmax = INT_MIN, gmin = INT_MAX, sum = 0;
+//     for(int i = 1; i <= n; i++)
+//     {
+//         int x = nums[i - 1];
+//         sum += x;
+
+//         f[i] = max(x, x + f[i - 1]);
+//         fmax = max(fmax, f[i]);
+
+//         g[i] = min(x, x + g[i - 1]);
+//         gmin = min(gmin, g[i]);
+//     }
+
+//     return sum == gmin ? fmax : max(fmax, sum - gmin);
+// }
