@@ -7886,3 +7886,35 @@ public:
 
 //     return ret;
 // }
+
+// 单词拆分
+// bool wordBreak(string s, vector<string>& wordDict) 
+// {
+//     // 优化
+//     unordered_set<string> hash;
+//     for(auto& str : wordDict)
+//     {
+//         hash.insert(str);
+//     }
+
+//     // Init
+//     int n = s.size();
+//     vector<bool> dp(n + 1, false);
+//     dp[0] = true;
+//     s = ' ' + s; // 给原始字符串下标统一+1
+
+//     // DP
+//     for(int i = 1; i <= n; i++)
+//     {
+//         for(int j = i; j >= 1; j--) // 找此时的最后一个单词
+//         {
+//             if(dp[j - 1] && hash.count(s.substr(j, i - j + 1)))
+//             {
+//                 dp[i] = true;
+//                 break;
+//             }
+//         }
+//     }
+
+//     return dp[n];
+// }
