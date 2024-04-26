@@ -7918,3 +7918,34 @@ public:
 
 //     return dp[n];
 // }
+
+// 环绕字符串中唯一的子字符串
+// int findSubstringInWraproundString(string s) 
+// {
+//     int n = s.size();
+//     vector<int> dp(n, 1); // 创建dp表 + 初始化
+
+//     for(int i = 1; i < n; i++)
+//     {
+//         if(s[i - 1] + 1 == s[i] || s[i - 1] == 'z' && s[i] == 'a')
+//         {
+//             dp[i] += dp[i - 1];
+//         }
+//     }
+
+//     // 结果去重
+//     int hash[26] = {0};
+//     for(int i = 0; i < n; i++)
+//     {
+//         hash[s[i] - 'a'] = max(hash[s[i] - 'a'], dp[i]);
+//     }
+
+//     // 求和返回
+//     int sum = 0;
+//     for(auto& x : hash)
+//     {
+//         sum += x;
+//     }
+
+//     return sum;
+// }
