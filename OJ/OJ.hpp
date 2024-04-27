@@ -7972,3 +7972,30 @@ public:
 
 //     return ret;
 // }
+
+// °Ú¶¯ÐòÁÐ
+// int wiggleMaxLength(vector<int>& nums) 
+// {
+//     int n = nums.size();
+//     vector<int> f(n, 1), g(n, 1);
+
+//     int ret = 1;
+//     for(int i = 1; i < n; i++)
+//     {
+//         for(int j = 0; j < i; j++)
+//         {
+//             if(nums[j] < nums[i])
+//             {
+//                 f[i] = max(f[i], g[j] + 1);
+//             }
+//             else if(nums[j] > nums[i])
+//             {
+//                 g[i] = max(g[i], f[j] + 1);
+//             }
+//         }
+
+//         ret = max(ret, max(f[i], g[i]));
+//     }
+
+//     return ret;
+// }
