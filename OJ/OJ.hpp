@@ -8063,3 +8063,21 @@ public:
 
 //     return ret;
 // }
+
+// 最长定差子序列
+// int longestSubsequence(vector<int>& arr, int difference) 
+// {
+//     unordered_map<int, int> hash; // <arr[i], dp[i]>
+//     hash[arr[0]] = 1;
+
+//     int ret = 0;
+//     for(int i = 1; i < arr.size(); i++)
+//     {
+//         // 1.如果arr[j]不存在，那么arr[i]就会被初始化为1
+//         // 2.如果出现重复的值，那么后面出现的值会覆盖掉前面的值
+//         hash[arr[i]] = hash[arr[i] - difference] + 1; 
+//         ret = max(ret, hash[arr[i]]);
+//     }
+
+//     return ret;
+// }
