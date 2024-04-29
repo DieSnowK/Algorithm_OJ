@@ -8112,3 +8112,31 @@ public:
 
 //     return ret < 3 ? 0 : ret;
 // }
+
+// 最长等差数列
+// int longestArithSeqLength(vector<int>& nums) 
+// {
+//     unordered_map<int, int> hash; // <nums[i], i>
+//     hash[nums[0]] = 0;
+
+//     int n = nums.size();
+//     vector<vector<int>> dp(n, vector<int>(n, 2));
+
+//     int ret = 2;
+//     for(int i = 1; i < n; i++) // 固定倒数第二个数
+//     {
+//         for(int j = i + 1; j < n; j++) // 枚举倒数第一个数
+//         {
+//             int a = 2 * nums[i] - nums[j];
+//             if(hash.count(a)) // 已经包含了判断 k < i
+//             {
+//                 dp[i][j] = dp[hash[a]][i] + 1;
+//                 ret = max(ret, dp[i][j]);
+//             }
+//         }
+
+//         hash[nums[i]] = i; // 存入当前下标，对应下一次的最近元素的下标
+//     }
+
+//     return ret;
+// }
