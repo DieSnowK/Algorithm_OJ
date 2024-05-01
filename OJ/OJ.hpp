@@ -8140,3 +8140,41 @@ public:
 
 //     return ret;
 // }
+
+// 等差数列划分 II - 子序列
+// int numberOfArithmeticSlices(vector<int>& nums) 
+// {
+//     int n = nums.size();
+
+//     // 优化，<nums[i], vector<int> index()>
+//     unordered_map<long long, vector<int>> hash;
+//     for(int i = 0; i < n; i++)
+//     {
+//         hash[nums[i]].push_back(i);
+//     }
+
+//     vector<vector<int>> dp(n, vector<int>(n));
+
+//     int ret = 0;
+//     for(int j = 2; j < n; j++) // 固定第一个数
+//     {
+//         for(int i = 1; i < j; i++) // 枚举第二个数
+//         {
+//             long long a = (long long)2 * nums[i] - nums[j];
+//             if(hash.count(a))
+//             {
+//                 for(auto& k : hash[a])
+//                 {
+//                     if(k < i)
+//                     {
+//                         dp[i][j] += dp[k][i] + 1;
+//                     }
+//                 }
+//             }
+
+//             ret += dp[i][j];
+//         }
+//     }
+
+//     return ret;
+// }
