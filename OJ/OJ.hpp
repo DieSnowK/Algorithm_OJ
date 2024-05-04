@@ -8402,3 +8402,32 @@ public:
 
 //     return dp[n][m];
 // }
+
+// 不同的子序列
+// int numDistinct(string s, string t) 
+// {
+//     const int MOD = 1e9 + 7;
+//     int n = s.size(), m = t.size();
+//     vector<vector<long long>> dp(m + 1, vector<long long>(n + 1));
+
+//     // Init
+//     for(int i = 0; i <= n; i++)
+//     {
+//         dp[0][i] = 1;
+//     }
+
+//     // DP
+//     for(int i = 1; i <= m; i++)
+//     {
+//         for(int j = 1; j <= n; j++)
+//         {
+//             dp[i][j] += dp[i][j - 1] % MOD;
+//             if(t[i - 1] == s[j - 1])
+//             {
+//                 dp[i][j] += dp[i - 1][j - 1] % MOD;
+//             }
+//         }
+//     }
+
+//     return dp[m][n];
+// }
