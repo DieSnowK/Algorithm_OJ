@@ -8471,3 +8471,43 @@ public:
 
 //     return dp[n][m];
 // }
+
+// 正则表达式匹配
+// bool isMatch(string s, string p) 
+// {
+//     int n = s.size(), m = p.size();
+//     s = " " + s, p = " " + p;
+//     vector<vector<bool>> dp(n + 1, vector<bool>(m + 1));
+
+//     // Init
+//     dp[0][0] = true;
+//     for(int i = 2; i <= m; i += 2)
+//     {
+//         if(p[i] == '*')
+//         {
+//             dp[0][i] = true;
+//         }
+//         else
+//         {
+//             break;
+//         }
+//     }
+
+//     // DP
+//     for(int i = 1; i <= n; i++)
+//     {
+//         for(int j = 1; j <= m; j++)
+//         {
+//             if(p[j] == '*')
+//             {
+//                 dp[i][j] = dp[i][j - 2] || (p[j - 1] == '.' || p[j - 1] == s[i]) && dp[i - 1][j];
+//             }
+//             else
+//             {
+//                 dp[i][j] = (p[j] == s[i] || p[j] == '.') && dp[i - 1][j - 1];
+//             }
+//         }
+//     }
+
+//     return dp[n][m];
+// }
