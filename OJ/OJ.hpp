@@ -8613,3 +8613,56 @@ public:
 
 //     return ret;
 // }
+
+// 01背包
+// int main()
+// {
+//     int n = 0, V = 0;
+//     cin >> n >> V;
+    
+//     vector<int> v(n + 1), w(n + 1);
+//     for(int i = 1; i <= n; i++)
+//     {
+//         cin >> v[i] >> w[i];
+//     }
+    
+//     vector<vector<int>> dp(n + 1, vector<int>(V + 1));
+    
+//     // Q1
+//     for(int i = 1; i <= n; i++)
+//     {
+//         for(int j = 1; j <= V; j++)
+//         {
+//             dp[i][j] = dp[i - 1][j];
+//             if(j >= v[i])
+//             {
+//                 dp[i][j] = max(dp[i][j], dp[i - 1][j - v[i]] + w[i]);
+//             }
+//         }
+//     }
+//     cout << dp[n][V] << endl;
+
+//     // Q2
+//     dp.resize(n + 1, vector<int>(V + 1));
+//     for(int i = 1; i <= V; i++)
+//     {
+//         dp[0][i] = -1;
+//     }
+
+//     for(int i = 1; i <= n; i++)
+//     {
+//         for(int j = 1; j <= V; j++)
+//         {
+//             dp[i][j] = dp[i - 1][j];
+//             if(j >= v[i] && dp[i - 1][j - v[i]] != -1)
+//             {
+//                 dp[i][j] = max(dp[i][j], dp[i - 1][j - v[i]] + w[i]);
+//             }
+//         }
+//     }
+//     cout << (dp[n][V] == -1 ? 0 : dp[n][V]) << endl;
+
+//     return 0;
+// }
+
+// v2.0 滚动数组优化
