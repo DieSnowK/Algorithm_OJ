@@ -8747,3 +8747,30 @@ public:
 
 //     return dp[n][aim];
 // }
+
+// v2.0 滚动数组优化
+// bool canPartition(vector<int>& nums) 
+// {
+//     int n = nums.size(), sum = 0;
+//     for(auto& x : nums)
+//     {
+//         sum += x;
+//     }
+
+//     if(sum % 2) return false;
+
+//     int aim = sum / 2;
+//     vector<bool> dp(aim + 1);                
+//     dp[0] = true;
+
+//     // DP
+//     for(int i = 1; i <= n; i++)
+//     {
+//         for(int j = aim; j >= nums[i - 1]; j--)
+//         {
+//             dp[j] = dp[j] || dp[j - nums[i - 1]];
+//         }
+//     }
+
+//     return dp[aim];
+// }
