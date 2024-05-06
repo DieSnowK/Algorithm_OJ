@@ -8710,3 +8710,40 @@ public:
 
 //     return 0;
 // }
+
+// 分割等和子集
+// v1.0
+// bool canPartition(vector<int>& nums) 
+// {
+//     int n = nums.size(), sum = 0;
+//     for(auto& x : nums)
+//     {
+//         sum += x;
+//     }
+
+//     if(sum % 2) return false;
+
+//     int aim = sum / 2;
+//     vector<vector<bool>> dp(n + 1, vector<bool>(aim + 1));
+
+//     // Init
+//     for(int i = 1; i <= n; i++)
+//     {
+//         dp[i][0] = true;
+//     }
+
+//     // DP
+//     for(int i = 1; i <= n; i++)
+//     {
+//         for(int j = 1; j <= aim; j++)
+//         {
+//             dp[i][j] = dp[i - 1][j];
+//             if(j >= nums[i - 1])
+//             {
+//                 dp[i][j] = dp[i][j] || dp[i - 1][j - nums[i - 1]];
+//             }
+//         }
+//     }
+
+//     return dp[n][aim];
+// }
