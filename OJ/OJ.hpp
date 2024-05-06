@@ -8559,3 +8559,35 @@ public:
 
 //     return dp[n][m];
 // }
+
+// 两个字符串的最小ASCII删除和
+// int minimumDeleteSum(string s1, string s2) 
+// {
+//     int n = s1.size(), m = s2.size();
+//     vector<vector<int>> dp(n + 1, vector<int>(m + 1));
+
+//     for(int i = 1; i <= n; i++)
+//     {
+//         for(int j = 1; j <= m; j++)
+//         {
+//             dp[i][j] = max(dp[i][j - 1], dp[i - 1][j]);
+//             if(s1[i - 1] == s2[j - 1])
+//             {
+//                 dp[i][j] = max(dp[i][j], dp[i - 1][j - 1] + s1[i - 1]);
+//             }
+//         }
+//     }
+
+//     int ret = 0;
+//     for(auto& ch : s1)
+//     {
+//         ret += ch;
+//     }
+
+//     for(auto& ch : s2)
+//     {
+//         ret += ch;
+//     }
+
+//     return ret - dp[n][m] * 2;
+// }
