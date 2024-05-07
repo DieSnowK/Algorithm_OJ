@@ -8940,3 +8940,49 @@ public:
 
 //     return 0;
 // }
+
+// v2.0 滚动数组优化
+// int main()
+// {
+//     int n = 0, V = 0;
+//     cin >> n >> V;
+
+//     vector<int> v(n + 1), w(n + 1);
+//     for(int i = 1; i <= n; i++)
+//     {
+//         cin >> v[i] >> w[i];
+//     }
+
+//     vector<int> dp(V + 1);
+    
+//     // Q1
+//     for(int i = 1; i <= n; i++)
+//     {
+//         for(int j = v[i]; j <= V; j++)
+//         {
+//             dp[j] = max(dp[j], dp[j - v[i]] + w[i]);
+//         }
+//     }
+//     cout << dp[V] << endl;
+
+//     // Q2
+//     dp.resize(V + 1);
+//     for(int i = 1; i <= V; i++)
+//     {
+//         dp[i] = -1;
+//     }
+
+//     for(int i = 1; i <= n; i++)
+//     {
+//         for(int j = v[i]; j <= V; j++)
+//         {
+//             if(dp[j - v[i]] != -1)
+//             {
+//                 dp[j] = max(dp[j], dp[j - v[i]] + w[i]);
+//             }
+//         }
+//     }
+//     cout << (dp[V] == -1 ? 0 : dp[V]) << endl;
+
+//     return 0;
+// }
