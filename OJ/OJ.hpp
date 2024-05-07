@@ -8808,3 +8808,32 @@ public:
 
 //     return dp[n][aim];
 // }
+
+// v2.0 滚动数组优化
+// int findTargetSumWays(vector<int>& nums, int target) 
+// {
+//     // 问题转换
+//     int sum = 0;
+//     for(auto& x : nums)
+//     {
+//         sum += x;
+//     }
+//     int aim = (sum + target) / 2;
+
+//     // 边界处理
+//     if(aim < 0 || (sum + target) % 2) return 0;
+
+//     int n = nums.size();
+//     vector<int> dp(aim + 1);
+
+//     dp[0] = 1;
+//     for(int i = 1; i <= n; i++)
+//     {
+//         for(int j = aim; j >= nums[i - 1]; j--)
+//         {
+//             dp[j] += dp[j  - nums[i - 1]];
+//         }
+//     }
+
+//     return dp[aim];
+// }
