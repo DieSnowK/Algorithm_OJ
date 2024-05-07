@@ -8774,3 +8774,37 @@ public:
 
 //     return dp[aim];
 // }
+
+// 目标和
+// v1.0
+// int findTargetSumWays(vector<int>& nums, int target) 
+// {
+//     // 问题转换
+//     int sum = 0;
+//     for(auto& x : nums)
+//     {
+//         sum += x;
+//     }
+//     int aim = (sum + target) / 2;
+
+//     // 边界处理
+//     if(aim < 0 || (sum + target) % 2) return 0;
+
+//     int n = nums.size();
+//     vector<vector<int>> dp(n + 1, vector<int>(aim + 1));
+
+//     dp[0][0] = 1;
+//     for(int i = 1; i <= n; i++)
+//     {
+//         for(int j = 0; j <= aim; j++) // 第一列没有初始化，也在DP阶段处理
+//         {
+//             dp[i][j] = dp[i - 1][j];
+//             if(j >= nums[i - 1])
+//             {
+//                 dp[i][j] += dp[i - 1][j  - nums[i - 1]];
+//             }
+//         }
+//     }
+
+//     return dp[n][aim];
+// }
