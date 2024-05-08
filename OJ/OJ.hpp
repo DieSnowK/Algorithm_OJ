@@ -9107,3 +9107,36 @@ public:
 
 //     return dp[n];
 // }
+
+// 一和零
+// v1.0
+// int findMaxForm(vector<string>& strs, int n, int m) 
+// {
+//     int len = strs.size();
+//     vector<vector<vector<int>>> dp(len + 1, vector<vector<int>>(n + 1, vector<int>(m + 1)));
+
+//     for(int i = 1; i <= len; i++)
+//     {
+//         // 先统计字符串中0 1的个数
+//         int a = 0, b = 0;
+//         for(auto& ch : strs[i - 1])
+//         {
+//             ch == '0' ? a++ : b++;
+//         }
+
+//         // DP
+//         for(int j = 0; j <= n; j++)
+//         {
+//             for(int k = 0; k <= m; k++)
+//             {
+//                 dp[i][j][k] = dp[i - 1][j][k];
+//                 if(j >= a && k >= b)
+//                 {
+//                     dp[i][j][k] = max(dp[i][j][k], dp[i - 1][j - a][k - b] + 1);
+//                 }
+//             }
+//         }
+//     }
+
+//     return dp[len][n][m];
+// }
