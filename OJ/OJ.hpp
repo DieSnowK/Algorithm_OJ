@@ -8986,3 +8986,34 @@ public:
 
 //     return 0;
 // }
+
+// ¡„«Æ∂“ªª
+// v1.0
+// int coinChange(vector<int>& coins, int amount) 
+// {
+//     const int INF = 0x3f3f3f3f;
+
+//     int n = coins.size();
+//     vector<vector<int>> dp(n + 1, vector<int>(amount + 1));
+
+//     // Init
+//     for(int j = 1; j <= amount; j++)
+//     {
+//         dp[0][j] = INF;
+//     }
+
+//     // DP
+//     for(int i = 1; i <= n; i++)
+//     {
+//         for(int j = 0; j <= amount; j++)
+//         {
+//             dp[i][j] = dp[i - 1][j];
+//             if(j >= coins[i - 1])
+//             {
+//                 dp[i][j] = min(dp[i][j], dp[i][j - coins[i - 1]] + 1);
+//             }
+//         }
+//     }
+
+//     return dp[n][amount] >= INF ? -1 : dp[n][amount];
+// }
