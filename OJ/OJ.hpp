@@ -9140,3 +9140,31 @@ public:
 
 //     return dp[len][n][m];
 // }
+
+// v2.0 滚动数组优化
+// int findMaxForm(vector<string>& strs, int n, int m) 
+// {
+//     int len = strs.size();
+//     vector<vector<int>> dp(n + 1, vector<int>(m + 1));
+
+//     for(int i = 1; i <= len; i++)
+//     {
+//         // 先统计字符串中0 1的个数
+//         int a = 0, b = 0;
+//         for(auto& ch : strs[i - 1])
+//         {
+//             ch == '0' ? a++ : b++;
+//         }
+
+//         // DP
+//         for(int j = n; j >= a; j--)
+//         {
+//             for(int k = m; k >= b; k--)
+//             {
+//                 dp[j][k] = max(dp[j][k], dp[j - a][k - b] + 1);
+//             }
+//         }
+//     }
+
+//     return dp[n][m];
+// }
