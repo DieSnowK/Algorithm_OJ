@@ -9086,3 +9086,24 @@ public:
 
 //     return dp[m][n];
 // }
+
+// v2.0 滚动数组优化
+// int numSquares(int n) 
+// {
+//     const int INF = 0x3f3f3f3f;
+
+//     int m = sqrt(n);
+//     vector<int> dp(n + 1, INF);
+//     dp[0] = 0;
+
+//     // DP
+//     for(int i = 1; i <= m; i++)
+//     {
+//         for(int j = i * i; j <= n; j++)
+//         {
+//             dp[j] = min(dp[j], dp[j - i * i] + 1);
+//         }
+//     }
+
+//     return dp[n];
+// }
