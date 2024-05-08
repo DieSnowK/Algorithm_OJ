@@ -9055,3 +9055,34 @@ public:
 
 //     return dp[amount];
 // }
+
+// 完全平方数
+// v1.0
+// int numSquares(int n) 
+// {
+//     const int INF = 0x3f3f3f3f;
+
+//     int m = sqrt(n);
+//     vector<vector<int>> dp(m + 1, vector<int>(n + 1));
+
+//     // Init
+//     for(int j = 1; j <= n; j++)
+//     {
+//         dp[0][j] = INF;
+//     }
+
+//     // DP
+//     for(int i = 1; i <= m; i++)
+//     {
+//         for(int j = 0; j <= n; j++)
+//         {
+//             dp[i][j] = dp[i - 1][j];
+//             if(j >= i * i)
+//             {
+//                 dp[i][j] = min(dp[i][j], dp[i][j - i * i] + 1);
+//             }
+//         }
+//     }
+
+//     return dp[m][n];
+// }
