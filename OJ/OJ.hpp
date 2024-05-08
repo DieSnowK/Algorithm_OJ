@@ -9017,3 +9017,24 @@ public:
 
 //     return dp[n][amount] >= INF ? -1 : dp[n][amount];
 // }
+
+// v2.0 滚动数组优化
+// int coinChange(vector<int>& coins, int amount) 
+// {
+//     const int INF = 0x3f3f3f3f;
+
+//     int n = coins.size();
+//     vector<int> dp(amount + 1, INF);
+//     dp[0] = 0;
+
+//     // DP
+//     for(int i = 1; i <= n; i++)
+//     {
+//         for(int j = coins[i - 1]; j <= amount; j++)
+//         {
+//             dp[j] = min(dp[j], dp[j - coins[i - 1]] + 1);
+//         }
+//     }
+
+//     return dp[amount] >= INF ? -1 : dp[amount];
+// }
