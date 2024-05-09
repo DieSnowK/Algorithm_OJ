@@ -9168,3 +9168,37 @@ public:
 
 //     return dp[n][m];
 // }
+
+// Ó¯Àû¼Æ»®
+// v1.0
+// int profitableSchemes(int n, int m, vector<int>& g, vector<int>& p) 
+// {
+//     const int MOD = 1e9 + 7;
+//     int len = g.size();
+
+//     // Init
+//     vector<vector<vector<int>>> dp(len + 1, vector<vector<int>>(n + 1, vector<int>(m + 1)));
+//     for(int j = 0; j <= n; j++)
+//     {
+//         dp[0][j][0] = 1;
+//     }
+
+//     // DP
+//     for(int i = 1; i <= len; i++)
+//     {
+//         for(int j = 0; j <= n; j++)
+//         {
+//             for(int k = 0; k <= m; k++)
+//             {
+//                 dp[i][j][k] = dp[i - 1][j][k];
+//                 if(j >= g[i - 1])
+//                 {
+//                     dp[i][j][k] += dp[i - 1][j - g[i - 1]][max(0, k - p[i - 1])];
+//                 }
+//                 dp[i][j][k] %= MOD;
+//             }
+//         }
+//     }
+
+//     return dp[len][n][m];
+// }
