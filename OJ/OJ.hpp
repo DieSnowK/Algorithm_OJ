@@ -9202,3 +9202,32 @@ public:
 
 //     return dp[len][n][m];
 // }
+
+// v2.0 滚动数组优化
+// int profitableSchemes(int n, int m, vector<int>& g, vector<int>& p) 
+// {
+//     const int MOD = 1e9 + 7;
+//     int len = g.size();
+
+//     // Init
+//     vector<vector<int>> dp(n + 1, vector<int>(m + 1));
+//     for(int j = 0; j <= n; j++)
+//     {
+//         dp[j][0] = 1;
+//     }
+
+//     // DP
+//     for(int i = 1; i <= len; i++)
+//     {
+//         for(int j = n; j >= g[i - 1]; j--)
+//         {
+//             for(int k = m; k >= 0; k--)
+//             {
+//                 dp[j][k] += dp[j - g[i - 1]][max(0, k - p[i - 1])];
+//                 dp[j][k] %= MOD;
+//             }
+//         }
+//     }
+
+//     return dp[n][m];
+// }
