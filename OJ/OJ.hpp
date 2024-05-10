@@ -9231,3 +9231,23 @@ public:
 
 //     return dp[n][m];
 // }
+
+// 组合总数Ⅳ
+// int combinationSum4(vector<int>& nums, int target) 
+// {
+//     vector<unsigned long long> dp(target + 1);
+//     dp[0] = 1;
+
+//     for(int i = 1; i <= target; i++)
+//     {
+//         for(auto& x : nums)
+//         {
+//             if(i >= x)
+//             {
+//                 dp[i] += dp[i - x];
+//             }
+//         }
+//     }
+
+//     return dp[target];
+// }
