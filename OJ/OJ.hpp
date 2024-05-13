@@ -9311,3 +9311,30 @@ public:
 
 //     return true;
 // }
+
+// 将数组和减半的最少操作次数
+// int halveArray(vector<int>& nums) 
+// {
+//     double sum = 0.0;
+//     priority_queue<double> heap;
+
+//     for(const auto& x : nums)
+//     {
+//         heap.push(x);
+//         sum += x;
+//     }
+//     sum /= 2.0;
+
+//     int count = 0;
+//     while(sum > 0)
+//     {
+//         double tmp = heap.top() / 2;
+//         heap.pop();
+
+//         sum -= tmp;
+//         count++;
+//         heap.push(tmp);
+//     }
+
+//     return count;
+// }
