@@ -9338,3 +9338,27 @@ public:
 
 //     return count;
 // }
+
+// 最大数
+// string largestNumber(vector<int>& nums) 
+// {
+//     // 优化：先转化成字符串，再比较字典序
+//     vector<string> strs;
+//     for(const auto& x : nums)
+//     {
+//         strs.push_back(to_string(x));
+//     }
+
+//     sort(strs.begin(), strs.end(), [](const string& s1, const string& s2)
+//     {
+//         return s1 + s2 > s2 + s1;
+//     });
+
+//     string ret;
+//     for(const auto& str : strs)
+//     {
+//         ret += str;
+//     }
+
+//     return ret[0] == '0' ? "0" : ret;
+// }
