@@ -9399,3 +9399,26 @@ public:
     
 //     return ret.size();
 // }
+
+// 递增的三元子序列
+// bool increasingTriplet(vector<int>& nums) 
+// {
+//     int a = nums[0], b = INT_MAX;
+//     for(int i = 1; i < nums.size(); i++)
+//     {
+//         if(nums[i] > b)
+//         {
+//             return true;
+//         }
+//         else if(nums[i] > a)
+//         {
+//             b = nums[i];
+//         }
+//         else
+//         {
+//             a = nums[i];
+//         }
+//     }
+
+//     return false;
+// }
