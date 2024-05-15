@@ -9422,3 +9422,22 @@ public:
 
 //     return false;
 // }
+
+// 最长连续递增序列
+// int findLengthOfLCIS(vector<int>& nums) 
+// {
+//     int n = nums.size(), ret = 0;
+//     for(int i = 0; i < n; )
+//     {
+//         int j = i + 1;
+//         while(j < n && nums[j - 1] < nums[j])
+//         {
+//             j++;
+//         }
+
+//         ret = max(ret, j - i);
+//         i = j; // 贪心
+//     }
+
+//     return ret;
+// }
