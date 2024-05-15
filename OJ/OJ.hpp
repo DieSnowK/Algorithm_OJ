@@ -9441,3 +9441,20 @@ public:
 
 //     return ret;
 // }
+
+// 买卖股票的最佳时机
+// int maxProfit(vector<int>& prices) 
+// {
+//     int ret = 0, prevMin = INT_MAX;
+//     for(int i = 0; i < prices.size(); i++)
+//     {
+//         if(prices[i] > prevMin)
+//         {
+//             ret = max(ret, prices[i] - prevMin);
+//         }
+
+//         prevMin = min(prices[i], prevMin); // 贪心
+//     }
+
+//     return ret;
+// }
