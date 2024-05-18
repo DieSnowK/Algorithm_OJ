@@ -9458,3 +9458,23 @@ public:
 
 //     return ret;
 // }
+
+// 买卖股票的最佳时机 II
+// v1.0 双指针
+// int maxProfit(vector<int>& p) 
+// {
+//     int ret = 0, n = p.size();
+//     for(int i = 0; i < n; i++)
+//     {
+//         int j = i;
+//         while(j + 1 < n && p[j + 1] > p[j])
+//         {
+//             j++;
+//         }
+
+//         ret += p[j] - p[i];
+//         i = j;
+//     }
+
+//     return ret;
+// }
