@@ -9478,3 +9478,18 @@ public:
 
 //     return ret;
 // }
+
+// v2.0 拆分成一天一天
+// int maxProfit(vector<int>& p) 
+// {
+//     int ret = 0;
+//     for(int i = 1; i < p.size(); i++)
+//     {
+//         if(p[i - 1] < p[i])
+//         {
+//             ret += p[i] - p[i - 1];
+//         }
+//     }
+
+//     return ret;
+// }
