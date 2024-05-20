@@ -9524,3 +9524,30 @@ public:
 
 //     return 0;
 // }
+
+// 牛客 星际密码
+// 矩阵模型化简之后，就是斐波那契数列模型
+// int main()
+// {
+//     // 准备Fib
+//     int fib[10001] = {1, 1};
+//     for(int i = 2; i <= 10000; i++)
+//     {
+//         fib[i] = fib[i - 1] + fib[i - 2];
+//         fib[i] %= 10000;
+//     }
+ 
+//     // 解
+//     int n = 0, tmp = 0;
+//     while(cin >> n)
+//     {
+//         while(n--)
+//         {
+//             cin >> tmp;
+//             printf("%04d", fib[tmp]);
+//         }
+//         cout << endl;
+//     }
+ 
+//     return 0;
+// }
