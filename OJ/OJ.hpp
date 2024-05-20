@@ -9493,3 +9493,34 @@ public:
 
 //     return ret;
 // }
+
+// 牛客 树根
+// int main()
+// {
+//     string orgin;
+//     while(cin >> orgin)
+//     {
+//         // 提取数据
+//         int n = 0;
+//         for(const auto& ch : orgin)
+//         {
+//             n += ch - '0';
+//         }
+
+//         // 求树根
+//         while(n / 10) // 每轮计算
+//         {
+//             int tmp = 0;
+//             while(n) // 计算各位和
+//             {
+//                 tmp += n % 10;
+//                 n /= 10;
+//             }
+//             n = tmp;
+//         }
+
+//         cout << n << endl;
+//     }
+
+//     return 0;
+// }
