@@ -9567,3 +9567,23 @@ public:
 
 //     return 0;
 // }
+
+// 牛客 有假币
+// int main()
+// {
+//     int n = 0;
+//     while(cin >> n)
+//     {
+//         if(n == 0) break;
+
+//         int cnt = 0;
+//         while(n > 1)
+//         {
+//             cnt++;
+//             n = n / 3 + (n % 3 > 0); // 后面为逻辑表达式
+//         }
+//         cout << cnt << endl;
+//     }
+
+//     return 0;
+// }
