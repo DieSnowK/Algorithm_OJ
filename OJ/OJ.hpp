@@ -9551,3 +9551,19 @@ public:
  
 //     return 0;
 // }
+
+// 牛客 猴子分桃
+// 数学公式推导
+// int main()
+// {
+//     int n = 0;
+//     while(cin >> n)
+//     {
+//         if(n == 0) break;
+//         long long total = pow(5, n) - 4;
+//         long long left = pow(4, n) + n - 4;
+//         cout << total << " " << left << endl;
+//     }
+
+//     return 0;
+// }
