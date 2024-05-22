@@ -9587,3 +9587,49 @@ public:
 
 //     return 0;
 // }
+
+// K 次取反后最大化的数组和
+// int largestSumAfterKNegations(vector<int>& nums, int k) 
+// {
+//     int n = nums.size(), m = 0, minElem = INT_MAX, ret = 0;
+
+//     // 求负数个数 & 最小值
+//     for(const auto& x : nums)
+//     {
+//         if(x < 0)
+//         {
+//             m++;
+//         }
+//         minElem = min(minElem, abs(x));
+//     }
+
+//     // 分类讨论
+//     if(m > k)
+//     {
+//         sort(nums.begin(), nums.end());
+//         for(int i = 0; i < k; i++)
+//         {
+//             ret += -nums[i];
+//         }
+
+//         for(int i = k; i < n; i++)
+//         {
+//             ret += nums[i];
+//         }
+//     }
+//     else
+//     {
+//         // 把所有负数变成正数
+//         for(const auto& x : nums)
+//         {
+//             ret += abs(x);
+//         }
+
+//         if((k - m) % 2)
+//         {
+//             ret -= 2 * minElem;
+//         }
+//     }
+
+//     return ret;
+// }
