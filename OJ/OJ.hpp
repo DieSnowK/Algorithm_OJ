@@ -9633,3 +9633,29 @@ public:
 
 //     return ret;
 // }
+
+// 按身高排序
+// vector<string> sortPeople(vector<string>& names, vector<int>& heights) 
+// {
+//     int n = names.size();
+//     vector<int> index(n); // 下标数组
+//     for(int i = 0; i < n; i++)
+//     {
+//         index[i] = i;
+//     }
+
+//     // 对下标进行排序
+//     sort(index.begin(), index.end(), [&](int i, int j)
+//          {
+//              return heights[i] > heights[j];
+//          });
+
+//     // 从下标数组取结果
+//     vector<string> ret;
+//     for(const auto& x : index)
+//     {
+//         ret.push_back(names[x]);
+//     }
+
+//     return ret;
+// }
