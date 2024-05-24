@@ -9659,3 +9659,38 @@ public:
 
 //     return ret;
 // }
+
+// 优势洗牌
+// vector<int> advantageCount(vector<int>& nums1, vector<int>& nums2) 
+// {
+//     int n = nums1.size();
+//     vector<int> index(n);
+//     for(int i = 0; i < n; i++)
+//     {
+//         index[i] = i;
+//     }
+
+//     // 排序
+//     sort(nums1.begin(), nums1.end());
+//     sort(index.begin(), index.end(), [&](int i, int j)
+//          {
+//              return nums2[i] < nums2[j];
+//          });
+
+//     // 田忌赛马
+//     vector<int> ret(n);
+//     int left = 0, right = n - 1;
+//     for(const auto& x : nums1)
+//     {
+//         if(nums2[index[left]] < x)
+//         {
+//             ret[index[left++]] = x;
+//         }
+//         else
+//         {
+//             ret[index[right--]] = x;
+//         }
+//     }
+
+//     return ret;
+// }
