@@ -9694,3 +9694,21 @@ public:
 
 //     return ret;
 // }
+
+// 最长回文串 贪心
+// int longestPalindrome(string s) 
+// {
+//     int hash[128] = {0};
+//     for(const auto& ch : s)
+//     {
+//         hash[ch]++;
+//     }
+
+//     int ret = 0;
+//     for(const auto& x : hash)
+//     {
+//         ret += x / 2 * 2; // 奇偶混合处理
+//     }
+
+//     return ret < s.size() ? ret + 1 : ret;
+// }
