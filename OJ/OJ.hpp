@@ -9780,3 +9780,27 @@ public:
 
 //     return ret;
 // }
+
+// 跳跃游戏Ⅱ
+// int jump(vector<int>& nums) 
+// {
+//     int left = 0, right = 0, maxPos = 0, ret = 0, n = nums.size();
+//     while(left <= right)
+//     {
+//         if(maxPos >= n - 1)
+//         {
+//             return ret;
+//         }
+
+// 		// 遍历当前层，更新下一层最右端点
+//         for(int i = left; i <= right; i++)
+//         {
+//             maxPos = max(maxPos, nums[i] + i);
+//         }
+//         left = right + 1;
+//         right = maxPos;
+//         ret++;
+//     }
+
+//     return -1; // 跳不到的情况
+// }
