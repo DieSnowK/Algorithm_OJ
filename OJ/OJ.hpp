@@ -9854,3 +9854,32 @@ public:
 
 //     return -1;
 // }
+
+// v2.0 贪心
+// int canCompleteCircuit(vector<int>& gas, vector<int>& cost) 
+// {
+//     int n = gas.size();
+//     for(int i = 0; i < n; i++) // 枚举起点
+//     {
+//         int rest = 0, step = 0;
+//         for(; step < n; step++) // 枚举向后走的步数
+//         {
+//             int index = (i + step) % n; // 求出走step步之后的下标
+//             rest = rest + gas[index] - cost[index];
+
+//             if(rest < 0)
+//             {
+//                 break;
+//             }
+//         }
+
+//         if(rest >= 0)
+//         {
+//             return i;
+//         }
+
+//         i = i + step; // 优化
+//     }
+
+//     return -1;
+// }
