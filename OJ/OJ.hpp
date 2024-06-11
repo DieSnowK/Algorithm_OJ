@@ -9883,3 +9883,38 @@ public:
 
 //     return -1;
 // }
+
+// 单调递增的数字
+// int monotoneIncreasingDigits(int n)
+// {
+//     string str = to_string(n); // 把数字转化为字符串，以便逐位操作
+
+//     int i = 0, m = str.size();
+
+//     // 找到第一个递减的位置
+//     while (i + 1 < m && str[i] <= str[i + 1])
+//     {
+//         i++;
+//     }
+
+//     // 特判
+//     if (i == m - 1)
+//     {
+//         return n;
+//     }
+
+//     // 回推
+//     while (i - 1 >= 0 && str[i] == str[i - 1])
+//     {
+//         i--;
+//     }
+
+//     // 操作
+//     str[i]--;
+//     for (int j = i + 1; j < m; j++)
+//     {
+//         str[j] = '9';
+//     }
+
+//     return stoi(str);
+// }
