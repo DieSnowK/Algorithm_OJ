@@ -22,3 +22,30 @@ using namespace std;
 
 //     return ret;
 // }
+
+// µã»÷Ïû³ý
+// #include <iostream>
+// #include <string>
+// using namespace std;
+
+// int main()
+// {
+//     string str, st;
+//     getline(cin, str);
+
+//     for (const auto &ch : str)
+//     {
+//         if (st.size() && st.back() == ch)
+//         {
+//             st.pop_back()
+//         }
+//         else
+//         {
+//             st += ch;
+//         }
+//     }
+
+//     cout << (st.size() == 0 ? 0 : st) << endl;
+
+//     return 0;
+// }
