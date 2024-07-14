@@ -49,3 +49,36 @@ using namespace std;
 
 //     return 0;
 // }
+
+// Å£Å£µÄ¿ìµÝ
+// #include <iostream>
+// #include <cmath>
+// using namespace std;
+
+// int main()
+// {
+//     int cnt = 20;
+//     double weight = 0.0;
+//     char flag = 'n';
+
+//     cin >> weight >> flag;
+//     if (flag == 'y')
+//     {
+//         cnt += 5;
+//     }
+
+//     if (--weight > 0.0)
+//     {
+//         // cnt += ceil(weight); // v1.0
+
+//         // v2.0
+//         if (weight - (int)weight > 0)
+//         {
+//             cnt += (int)weight + 1;
+//         }
+//     }
+
+//     cout << cnt << endl;
+
+//     return 0;
+// }
