@@ -154,3 +154,25 @@ using namespace std;
 
 //     return 0;
 // }
+
+// FibÊıÁĞ
+// #include <iostream>
+// using namespace std;
+
+// int main()
+// {
+//     int n = 0;
+//     cin >> n;
+
+//     int a = 0, b = 1, c = 1;
+//     while (n > c)
+//     {
+//         a = b;
+//         b = c;
+//         c = a + b;
+//     }
+
+//     cout << min(c - n, n - b);
+
+//     return 0;
+// }
