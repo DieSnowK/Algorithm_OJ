@@ -176,3 +176,61 @@ using namespace std;
 
 //     return 0;
 // }
+
+// µ¥´ÊËÑË÷
+// class Solution
+// {
+//     int n = 0, m = 0;
+//     vector<vector<bool>> visit;
+
+//     int dx[4] = {1, -1, 0, 0};
+//     int dy[4] = {0, 0, 1, -1};
+
+// public:
+//     bool exist(vector<string> &board, string word)
+//     {
+//         n = board.size(), m = board[0].size();
+//         visit.resize(n, vector<bool>(m, false));
+
+//         for (int i = 0; i < n; i++)
+//         {
+//             for (int j = 0; j < m; j++)
+//             {
+//                 if (board[i][j] == word[0]) // ¼ôÖ¦
+//                 {
+//                     if (DFS(board, i, j, word, 0))
+//                     {
+//                         return true;
+//                     }
+//                 }
+//             }
+//         }
+
+//         return false;
+//     }
+
+//     bool DFS(vector<string> &board, int i, int j, string &word, int pos)
+//     {
+//         if (pos == word.size() - 1)
+//         {
+//             return true;
+//         }
+
+//         visit[i][j] = true;
+//         for (int k = 0; k < 4; k++)
+//         {
+//             int a = i + dx[k], b = j + dy[k];
+//             if (a >= 0 && a < n && b >= 0 && b < m &&
+//                 !visit[a][b] && board[a][b] == word[pos + 1]) // ¼ôÖ¦
+//             {
+//                 if (DFS(board, a, b, word, pos + 1))
+//                 {
+//                     return true;
+//                 }
+//             }
+//         }
+//         visit[i][j] = false;
+
+//         return false;
+//     }
+// };
