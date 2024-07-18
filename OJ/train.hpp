@@ -234,3 +234,15 @@ using namespace std;
 //         return false;
 //     }
 // };
+
+// 孩子们的游戏 -> 约瑟夫环
+// int LastRemaining_Solution(int n, int m)
+// {
+//     int dp = 0;
+//     for (int i = 2; i <= n; i++)
+//     {
+//         dp = (dp + m) % i;
+//     }
+
+//     return dp;
+// }
