@@ -246,3 +246,31 @@ using namespace std;
 
 //     return dp;
 // }
+
+// 大数加法
+// string solve(string s, string t)
+// {
+//     string ret;
+
+//     int i = s.size() - 1, j = t.size() - 1;
+//     int carry = 0;
+//     while (i >= 0 || j >= 0 || carry)
+//     {
+//         if (i >= 0)
+//         {
+//             carry += s[i--] - '0';
+//         }
+
+//         if (j >= 0)
+//         {
+//             carry += t[j--] - '0';
+//         }
+
+//         ret += carry % 10 + '0';
+//         carry /= 10;
+//     }
+
+//     reverse(ret.begin(), ret.end());
+
+//     return ret;
+// }
