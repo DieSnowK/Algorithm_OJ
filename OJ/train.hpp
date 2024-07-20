@@ -274,3 +274,40 @@ using namespace std;
 
 //     return ret;
 // }
+
+// Æ´Èý½Ç
+// #include <iostream>
+// #include <algorithm>
+// #include <vector>
+// using namespace std;
+
+// int main()
+// {
+//     int n = 0;
+//     cin >> n;
+
+//     vector<int> nums(6, 0);
+//     while (n--)
+//     {
+//         for (int i = 0; i < 6; i++)
+//         {
+//             cin >> nums[i];
+//         }
+
+//         sort(nums.begin(), nums.end());
+
+//         if (nums[0] + nums[1] > nums[2] && nums[3] + nums[4] > nums[5] ||
+//             nums[0] + nums[2] > nums[3] && nums[1] + nums[4] > nums[5] ||
+//             nums[0] + nums[3] > nums[4] && nums[1] + nums[2] > nums[5] ||
+//             nums[0] + nums[4] > nums[5] && nums[1] + nums[2] > nums[3])
+//         {
+//             cout << "Yes" << endl;
+//         }
+//         else
+//         {
+//             cout << "No" << endl;
+//         }
+//     }
+
+//     return 0;
+// }
