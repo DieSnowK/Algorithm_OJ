@@ -311,3 +311,27 @@ using namespace std;
 
 //     return 0;
 // }
+
+// 最小公倍数
+// #include <iostream>
+// using namespace std;
+
+// int GCD(int a, int b)
+// {
+//     if (b == 0)
+//     {
+//         return a;
+//     }
+
+//     return GCD(b, a % b);
+// }
+
+// int main()
+// {
+//     int a = 0, b = 0;
+//     cin >> a >> b;
+
+//     cout << (a * b / GCD(a, b)) << endl;
+
+//     return 0;
+// }
