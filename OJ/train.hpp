@@ -335,3 +335,32 @@ using namespace std;
 
 //     return 0;
 // }
+
+// ÌøÌ¨½×
+// #include <iostream>
+// using namespace std;
+
+// int main()
+// {
+//     int n = 0;
+//     cin >> n;
+
+//     int a = 1, b = 2, c = 2;
+//     for (int i = 3; i <= n; i++)
+//     {
+//         c = a + b;
+//         a = b;
+//         b = c;
+//     }
+
+//     if (n == 0 || n == 1)
+//     {
+//         cout << n << endl;
+//     }
+//     else
+//     {
+//         cout << c << endl;
+//     }
+
+//     return 0;
+// }
