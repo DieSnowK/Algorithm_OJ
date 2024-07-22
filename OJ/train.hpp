@@ -364,3 +364,32 @@ using namespace std;
 
 //     return 0;
 // }
+
+// 最长回文子串
+// int getLongestPalindrome(string A)
+// {
+//     int n = A.size(), len = 1;
+
+//     for (int i = 1; i < n; i++) // 枚举每个中心点
+//     {
+//         // 当长度是奇数时
+//         int left = i - 1, right = i + 1;
+//         while (left >= 0 && right < n && A[left] == A[right])
+//         {
+//             left--;
+//             right++;
+//         }
+//         len = max(len, right - left - 1);
+
+//         // 当长度是偶数时
+//         left = i - 1, right = i;
+//         while (left >= 0 && right < n && A[left] == A[right])
+//         {
+//             left--;
+//             right++;
+//         }
+//         len = max(len, right - left - 1);
+//     }
+
+//     return len;
+// }
