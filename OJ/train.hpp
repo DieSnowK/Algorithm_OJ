@@ -393,3 +393,35 @@ using namespace std;
 
 //     return len;
 // }
+
+// ¹ýºÓ×ä
+// #include <iostream>
+// #include <vector>
+// #include <cmath>
+// using namespace std;
+
+// int main()
+// {
+//     int n, m, x, y, cnt = 0;
+//     cin >> n >> m >> x >> y;
+
+//     vector<vector<long long>> dp(n + 2, vector<long long>(m + 2, 0));
+//     dp[0][1] = 1;
+//     x += 1, y += 1;
+
+//     for (int i = 1; i <= n + 1; i++)
+//     {
+//         for (int j = 1; j <= m + 1; j++)
+//         {
+//             if (!((i == x && j == y) ||
+//                   (abs(i - x) + abs(j - y) == 3 && i != x && j != y)))
+//             {
+//                 dp[i][j] = dp[i - 1][j] + dp[i][j - 1];
+//             }
+//         }
+//     }
+
+//     cout << dp[n + 1][m + 1] << endl;
+
+//     return 0;
+// }
