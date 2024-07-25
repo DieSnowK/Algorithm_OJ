@@ -425,3 +425,24 @@ using namespace std;
 
 //     return 0;
 // }
+
+// 游游的水果大礼包
+// #include <iostream>
+// #include <algorithm>
+// using namespace std;
+
+// int main()
+// {
+//     long long n, m, a, b;
+//     cin >> n >> m >> a >> b;
+
+//     long long ret = 0;
+//     for (int x = 0; x <= min(n / 2, m); x++) // 枚举1号礼包的个数
+//     {
+//         int y = min(n - x * 2, (m - x) / 2); // 计算2号礼包的个数
+//         ret = max(ret, a * x + b * y);
+//     }
+
+//     cout << ret << endl;
+//     return 0;
+// }
