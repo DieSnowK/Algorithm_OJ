@@ -446,3 +446,16 @@ using namespace std;
 //     cout << ret << endl;
 //     return 0;
 // }
+
+// 两个链表的第一个公共结点
+// ListNode *FindFirstCommonNode(ListNode *pHead1, ListNode *pHead2)
+// {
+//     ListNode *cur1 = pHead1, *cur2 = pHead2;
+//     while (cur1 != cur2)
+//     {
+//         cur1 = cur1 != NULL ? cur1->next : pHead2;
+//         cur2 = cur2 != NULL ? cur2->next : pHead1;
+//     }
+
+//     return cur1;
+// }
