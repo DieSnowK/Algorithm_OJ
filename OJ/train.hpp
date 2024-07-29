@@ -459,3 +459,38 @@ using namespace std;
 
 //     return cur1;
 // }
+
+// mariºÍshiny
+// #include <iostream>
+// #include <string>
+// using namespace std;
+
+// int main()
+// {
+//     int n = 0;
+//     string str;
+//     cin >> n >> str;
+
+//     long long s = 0, h = 0, y = 0;
+//     for (int i = 0; i < n; i++)
+//     {
+//         char ch = str[i];
+
+//         if (ch == 's')
+//         {
+//             s++;
+//         }
+//         else if (ch == 'h')
+//         {
+//             h += s;
+//         }
+//         else if (ch == 'y')
+//         {
+//             y += h;
+//         }
+//     }
+
+//     cout << y << endl;
+
+//     return 0;
+// }
