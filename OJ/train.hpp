@@ -494,3 +494,71 @@ using namespace std;
 
 //     return 0;
 // }
+
+// 重排字符串
+// #include <iostream>
+// #include <string>
+// #include <unordered_map>
+// using namespace std;
+
+// int main()
+// {
+//     int n = 0;
+//     string str;
+//     cin >> n >> str;
+
+//     unordered_map<char, int> hash;
+//     int maxLen = 0;
+//     char maxCh = 'a';
+
+//     for (const auto &ch : str)
+//     {
+//         if (++hash[ch] > maxLen)
+//         {
+//             maxLen = hash[ch];
+//             maxCh = ch;
+//         }
+//     }
+
+//     if (maxLen > (n + 1) / 2)
+//     {
+//         cout << "no" << endl;
+//     }
+//     else
+//     {
+//         int index = 0;
+//         string ret;
+//         ret.resize(n);
+
+//         // 先去拜访出现次数最多的
+//         while (maxLen--)
+//         {
+//             ret[index] = maxCh;
+//             index += 2;
+//         }
+//         hash.erase(maxCh);
+
+//         // 再摆放剩下的
+//         for (auto &it : hash)
+//         {
+//             if (it.second)
+//             {
+//                 while (it.second--)
+//                 {
+//                     if (index >= n)
+//                     {
+//                         index = 1;
+//                     }
+
+//                     ret[index] = it.first;
+//                     index += 2;
+//                 }
+//             }
+//         }
+
+//         cout << "yes" << endl
+//              << ret << endl;
+//     }
+
+//     return 0;
+// }
