@@ -562,3 +562,34 @@ using namespace std;
 
 //     return 0;
 // }
+
+// 删除相邻数字的最大分数
+// #include <iostream>
+// using namespace std;
+
+// const int N = 1e4 + 1;
+
+// int main()
+// {
+//     int n = 0;
+//     cin >> n;
+
+//     int x = 0;
+//     int hash[N] = {0};
+//     while (cin >> x)
+//     {
+//         hash[x] += x;
+//     }
+
+//     int f[N] = {0};
+//     int g[N] = {0};
+//     for (int i = 1; i < N; i++)
+//     {
+//         f[i] = g[i - 1] + hash[i];
+//         g[i] = max(f[i - 1], g[i - 1]);
+//     }
+
+//     cout << max(f[N - 1], g[N - 1]);
+
+//     return 0;
+// }
