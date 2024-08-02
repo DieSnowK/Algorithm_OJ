@@ -593,3 +593,60 @@ using namespace std;
 
 //     return 0;
 // }
+
+// 分组
+// #include <iostream>
+// #include <unordered_map>
+// using namespace std;
+
+// int n = 0, m = 0;
+// unordered_map<int, int> cnt;
+
+// // 判断人数最多为x时，能否分成m组
+// bool Check(int x)
+// {
+//     int g = 0;
+//     for (auto &[a, b] : cnt)
+//     {
+//         g += b / x + (b % x == 0 ? 0 : 1);
+//     }
+
+//     return g <= m;
+// }
+
+// int main()
+// {
+
+//     cin >> n >> m;
+
+//     int x = 0, hMax = 0;
+//     for (int i = 0; i < n; i++)
+//     {
+//         cin >> x;
+//         hMax = max(hMax, ++cnt[x]);
+//     }
+
+//     if (cnt.size() > m) // 边界情况处理
+//     {
+//         cout << -1 << endl;
+//     }
+//     else
+//     {
+//         int l = 1, r = hMax;
+//         while (l < r)
+//         {
+//             int mid = (l + r) / 2;
+//             if (Check(mid))
+//             {
+//                 r = mid;
+//             }
+//             else
+//             {
+//                 l = mid + 1;
+//             }
+//         }
+//         cout << l << endl;
+//     }
+
+//     return 0;
+// }
