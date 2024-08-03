@@ -650,3 +650,38 @@ using namespace std;
 
 //     return 0;
 // }
+
+// Ê®×Ö±¬ÆÆ
+// #include <iostream>
+// #include <vector>
+// using namespace std;
+
+// int main()
+// {
+//     int n = 0, m = 0;
+//     scanf("%d %d", &n, &m);
+
+//     vector<vector<int>> nums(n, vector<int>(m, 0));
+//     vector<long long> row(n, 0), col(m, 0);
+
+//     for (int i = 0; i < n; i++)
+//     {
+//         for (int j = 0; j < m; j++)
+//         {
+//             scanf("%d", &nums[i][j]);
+//             row[i] += nums[i][j];
+//             col[j] += nums[i][j];
+//         }
+//     }
+
+//     for (int i = 0; i < n; i++)
+//     {
+//         for (int j = 0; j < m; j++)
+//         {
+//             printf("%lld ", row[i] + col[j] - nums[i][j]);
+//         }
+//         printf("\n");
+//     }
+
+//     return 0;
+// }
