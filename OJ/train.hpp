@@ -685,3 +685,62 @@ using namespace std;
 
 //     return 0;
 // }
+
+// 比那名居的桃子
+// #include <iostream>
+// #include <vector>
+// using namespace std;
+
+// int main()
+// {
+//     int n = 0, k = 0;
+//     cin >> n >> k;
+
+//     vector<int> happy(n, 0), shame(n, 0);
+//     for (int i = 0; i < n; i++)
+//     {
+//         cin >> happy[i];
+//     }
+
+//     for (int i = 0; i < n; i++)
+//     {
+//         cin >> shame[i];
+//     }
+
+//     int left = 0, right = 0;
+//     long long hSum = 0, sSum = 0, hMax = 0, sMin = 0, begin = 0;
+
+//     while (right < n)
+//     {
+//         hSum += happy[right];
+//         sSum += shame[right];
+
+//         while (right - left + 1 > k)
+//         {
+//             hSum -= happy[left];
+//             sSum -= shame[left];
+//             left++;
+//         }
+
+//         if (right - left + 1 == k)
+//         {
+//             if (hSum > hMax)
+//             {
+//                 begin = left;
+//                 hMax = hSum;
+//                 sMin = sSum;
+//             }
+//             else if (hSum == hMax && sSum < sMin)
+//             {
+//                 begin = left;
+//                 sMin = sSum;
+//             }
+//         }
+
+//         right++;
+//     }
+
+//     cout << begin + 1 << endl;
+
+//     return 0;
+// }
