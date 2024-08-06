@@ -744,3 +744,51 @@ using namespace std;
 
 //     return 0;
 // }
+
+// chika∫Õ√€∏Ã
+// #include <iostream>
+// #include <algorithm>
+// #include <vector>
+// using namespace std;
+
+// typedef pair<int, int> PII;
+
+// int main()
+// {
+//     int n = 0, k = 0;
+//     cin >> n >> k;
+
+//     vector<PII> orgs(n); // <sour, sweet>
+//     for (int i = 0; i < n; i++)
+//     {
+//         cin >> orgs[i].first;
+//     }
+
+//     for (int i = 0; i < n; i++)
+//     {
+//         cin >> orgs[i].second;
+//     }
+
+//     sort(orgs.begin(), orgs.end(), [&](const PII &p1, const PII &p2)
+//          {
+//              if (p1.second != p2.second)
+//              {
+//                  return p1.second > p2.second;
+//              }
+//              else
+//              {
+//                  return p1.first < p2.first;
+//              }
+//          });
+
+//     long long sour = 0, sweet = 0;
+//     for (int i = 0; i < k; i++)
+//     {
+//         sour += orgs[i].first;
+//         sweet += orgs[i].second;
+//     }
+
+//     cout << sour << " " << sweet << endl;
+
+//     return 0;
+// }
