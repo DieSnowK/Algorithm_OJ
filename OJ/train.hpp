@@ -809,3 +809,71 @@ using namespace std;
 
 //     return dp[n][m];
 // }
+
+// 对称之美
+// #include <iostream>
+// #include <vector>
+// #include <string>
+// using namespace std;
+
+// // 判断两个字符串中是否有相同字符
+// vector<vector<bool>> visit;
+
+// bool Check(int left, int right)
+// {
+//     for (int i = 0; i < 26; i++)
+//     {
+//         if (visit[left][i] && visit[right][i])
+//         {
+//             return true;
+//         }
+//     }
+
+//     return false;
+// }
+
+// int main()
+// {
+//     int t = 0;
+//     cin >> t;
+//     while (t--)
+//     {
+//         int n = 0;
+//         cin >> n;
+//         visit.clear();
+//         visit.resize(n, vector<bool>(26, false));
+
+//         string str;
+//         for (int i = 0; i < n; i++) // 将所有字符串的字符信息存入hash
+//         {
+//             cin >> str;
+//             for (const auto &ch : str)
+//             {
+//                 visit[i][ch - 'a'] = true;
+//             }
+//         }
+
+//         // 判断回文
+//         int left = 0, right = n - 1;
+//         while (left < right)
+//         {
+//             if (!Check(left, right))
+//             {
+//                 break;
+//             }
+
+//             left++, right--;
+//         }
+
+//         if (left < right)
+//         {
+//             cout << "No" << endl;
+//         }
+//         else
+//         {
+//             cout << "Yes" << endl;
+//         }
+//     }
+
+//     return 0;
+// }
