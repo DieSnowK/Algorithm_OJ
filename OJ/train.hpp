@@ -877,3 +877,39 @@ using namespace std;
 
 //     return 0;
 // }
+
+// 经此一役小红所向无敌
+// #include <iostream>
+// using namespace std;
+
+// int main()
+// {
+//     long long a, b, h, k, ret = 0;
+//     cin >> a >> h >> b >> k;
+
+//     // 1.计算互砍多少回合
+//     long long n = min(h / b, k / a);
+//     ret += n * (a + b);
+
+//     // 2.计算剩余血量
+//     h -= n * b;
+//     k -= n * a;
+
+//     // 3.判断是否都还活着
+//     if (h > 0 && k > 0)
+//     {
+//         h -= b;
+//         k -= a;
+//         ret += a + b;
+//     }
+
+//     // 4.判断是否会放大
+//     if (h > 0 || k > 0)
+//     {
+//         ret += 10 * (h > 0 ? a : b);
+//     }
+
+//     cout << ret << endl;
+
+//     return 0;
+// }
