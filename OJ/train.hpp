@@ -913,3 +913,32 @@ using namespace std;
 
 //     return 0;
 // }
+
+// 连续子数组最大和
+// #include <iostream>
+// #include <vector>
+// using namespace std;
+
+// int main()
+// {
+//     int n = 0;
+//     cin >> n;
+//     vector<int> arr(n + 1, 0);
+//     vector<int> dp(n + 1, 0);
+
+//     for (int i = 1; i <= n; i++)
+//     {
+//         cin >> arr[i];
+//     }
+
+//     int ret = -0x3f3f3f3f;
+//     for (int i = 1; i <= n; i++)
+//     {
+//         dp[i] = max(dp[i - 1], 0) + arr[i];
+//         ret = max(ret, dp[i]);
+//     }
+
+//     cout << ret << endl;
+
+//     return 0;
+// }
