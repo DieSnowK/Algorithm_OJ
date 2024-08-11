@@ -942,3 +942,66 @@ using namespace std;
 
 //     return 0;
 // }
+
+// 非对称之美
+// #include <iostream>
+// #include <string>
+// using namespace std;
+
+// int n;
+// string str;
+
+// int Adjust()
+// {
+//     // 1.判断是否全都是相同字符
+//     bool flag = true;
+//     for (int i = 1; i < n; i++)
+//     {
+//         if (str[i] != str[0])
+//         {
+//             flag = false;
+//             break;
+//         }
+//     }
+
+//     if (flag)
+//     {
+//         return 0;
+//     }
+
+//     // 2.判断本身是否是回文
+//     flag = true;
+//     int left = 0, right = n - 1;
+//     while (left < right)
+//     {
+//         if (str[left] == str[right])
+//         {
+//             left++;
+//             right--;
+//         }
+//         else
+//         {
+//             flag = false;
+//             break;
+//         }
+//     }
+
+//     if (flag)
+//     {
+//         return n - 1;
+//     }
+//     else
+//     {
+//         return n;
+//     }
+// }
+
+// int main()
+// {
+//     cin >> str;
+//     n = str.size();
+
+//     cout << Adjust() << endl;
+
+//     return 0;
+// }
