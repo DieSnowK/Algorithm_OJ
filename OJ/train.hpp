@@ -1036,3 +1036,54 @@ using namespace std;
 
 //     return 0;
 // }
+
+// Êý×é±ä»»
+// #include <iostream>
+// #include <vector>
+// using namespace std;
+
+// int n = 0, maxValue = 0;
+// vector<int> nums;
+
+// bool Check()
+// {
+//     for (int i = 0; i < n; i++)
+//     {
+//         if (maxValue % nums[i])
+//         {
+//             return false;
+//         }
+
+//         int x = maxValue / nums[i];
+//         if (x - (x & -x))
+//         {
+//             return false;
+//         }
+//     }
+
+//     return true;
+// }
+
+// int main()
+// {
+
+//     cin >> n;
+//     nums.resize(n, 0);
+
+//     for (auto &x : nums)
+//     {
+//         cin >> x;
+//         maxValue = max(x, maxValue);
+//     }
+
+//     if (Check())
+//     {
+//         cout << "YES" << endl;
+//     }
+//     else
+//     {
+//         cout << "NO" << endl;
+//     }
+
+//     return 0;
+// }
