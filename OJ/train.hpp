@@ -1005,3 +1005,34 @@ using namespace std;
 
 //     return 0;
 // }
+
+// 添加字符
+// #include <iostream>
+// #include <string>
+// using namespace std;
+
+// int main()
+// {
+//     string a, b;
+//     cin >> a >> b;
+//     int m = a.size(), n = b.size();
+
+//     int ret = m;
+//     for (int i = 0; i <= n - m; i++) // 枚举b的起始位置
+//     {
+//         int tmp = 0;
+//         for (int j = 0; j < m; j++)
+//         {
+//             if (a[j] != b[i + j])
+//             {
+//                 tmp++;
+//             }
+//         }
+
+//         ret = min(tmp, ret);
+//     }
+
+//     cout << ret << endl;
+
+//     return 0;
+// }
