@@ -1087,3 +1087,38 @@ using namespace std;
 
 //     return 0;
 // }
+
+// 打怪
+// #include <iostream>
+// using namespace std;
+
+// int h, a, H, A;
+
+// int Check()
+// {
+//     if (a >= H)
+//     {
+//         return -1;
+//     }
+
+//     int m = (H / a) + (H % a != 0 ? 1 : 0); // 怪物能抗?次
+//     int n = m - 1;                          // 玩家被攻击?次
+//     int x = n * A;                          // 杀死?只怪物的时候，玩家会掉多少?
+//     int ret = h / x - (h % x == 0 ? 1 : 0);
+
+//     return ret;
+// }
+
+// int main()
+// {
+//     int t = 0;
+//     cin >> t;
+
+//     while (t--)
+//     {
+//         cin >> h >> a >> H >> A;
+//         cout << Check() << endl;
+//     }
+
+//     return 0;
+// }
