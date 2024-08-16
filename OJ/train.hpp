@@ -1122,3 +1122,36 @@ using namespace std;
 
 //     return 0;
 // }
+
+// 判断是不是平衡二叉树
+// class Solution
+// {
+// public:
+//     bool IsBalanced_Solution(TreeNode *pRoot)
+//     {
+//         return DFS(pRoot) != -1;
+//     }
+
+//     // 返回值不是-1的话，其余的返回值表示的是树高
+//     int DFS(TreeNode *root)
+//     {
+//         if (root == nullptr)
+//         {
+//             return 0;
+//         }
+
+//         int left = DFS(root->left);
+//         if (left == -1)
+//         {
+//             return -1; // 剪枝
+//         }
+
+//         int right = DFS(root->right);
+//         if (right == -1)
+//         {
+//             return -1;
+//         }
+
+//         return abs(left - right) <= 1 ? max(left, right) + 1 : -1;
+//     }
+// };
