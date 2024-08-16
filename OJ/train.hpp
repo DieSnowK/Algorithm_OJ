@@ -1155,3 +1155,44 @@ using namespace std;
 //         return abs(left - right) <= 1 ? max(left, right) + 1 : -1;
 //     }
 // };
+
+// 最大子矩阵
+// #include <iostream>
+// #include <vector>
+// using namespace std;
+
+// int main()
+// {
+//     int n = 0, x = 0;
+//     cin >> n;
+
+//     // 动态规划 --> 求二维前缀和数组
+//     vector<vector<int>> dp(n + 1, vector<int>(n + 1, 0));
+//     for (int i = 1; i <= n; i++)
+//     {
+//         for (int j = 1; j <= n; j++)
+//         {
+//             cin >> x;
+//             dp[i][j] = dp[i - 1][j] + dp[i][j - 1] - dp[i - 1][j - 1] + x;
+//         }
+//     }
+
+//     int ret = -0x3f3f3f3f;
+//     for (int x1 = 1; x1 <= n; x1++)
+//     {
+//         for (int y1 = 1; y1 <= n; y1++)
+//         {
+//             for (int x2 = x1; x2 <= n; x2++)
+//             {
+//                 for (int y2 = y1; y2 <= n; y2++)
+//                 {
+//                     ret = max(ret, dp[x2][y2] - dp[x1 - 1][y2] - dp[x2][y1 - 1] + dp[x1 - 1][y1 - 1]);
+//                 }
+//             }
+//         }
+//     }
+
+//     cout << ret << endl;
+
+//     return 0;
+// }
