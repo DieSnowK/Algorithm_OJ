@@ -1196,3 +1196,46 @@ using namespace std;
 
 //     return 0;
 // }
+
+// 小葱的01串
+// #include <iostream>
+// #include <string>
+// using namespace std;
+// int main()
+// {
+//     int n = 0;
+//     string str;
+//     cin >> n >> str;
+
+//     int sum[2] = {0}; // 统计字符串中所有0和1的个数
+//     for (auto &ch : str)
+//     {
+//         sum[ch - '0']++;
+//     }
+
+//     int left = 0, right = 0, ret = 0, half = n / 2;
+//     int cnt[2] = {0};     // 统计窗口内0和1的个数
+//     while (right < n - 1) // 细节
+//     {
+//         cnt[str[right] - '0']++;
+
+//         while (right - left + 1 > half)
+//         {
+//             cnt[str[left++] - '0']--;
+//         }
+
+//         if (right - left + 1 == half)
+//         {
+//             if (cnt[0] * 2 == sum[0] && cnt[1] * 2 == sum[1])
+//             {
+//                 ret += 2;
+//             }
+//         }
+
+//         right++;
+//     }
+
+//     cout << ret << endl;
+
+//     return 0;
+// }
