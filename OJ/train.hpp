@@ -1270,3 +1270,31 @@ using namespace std;
 
 //     return 0;
 // }
+
+// 不相邻取数
+// #include <iostream>
+// #include <vector>
+// using namespace std;
+
+// int main()
+// {
+//     int n = 0;
+//     cin >> n;
+
+//     vector<int> nums(n + 1, 0);
+//     for (int i = 1; i <= n; i++)
+//     {
+//         cin >> nums[i];
+//     }
+
+//     vector<int> f(n + 1, 0), g(n + 1, 0);
+//     for (int i = 1; i <= n; i++)
+//     {
+//         f[i] = g[i - 1] + nums[i];
+//         g[i] = max(f[i - 1], g[i - 1]);
+//     }
+
+//     cout << max(f[n], g[n]) << endl;
+
+//     return 0;
+// }
