@@ -1239,3 +1239,34 @@ using namespace std;
 
 //     return 0;
 // }
+
+// 小红的ABC
+// #include <iostream>
+// #include <string>
+// using namespace std;
+
+// int main()
+// {
+//     string str;
+//     cin >> str;
+//     int n = str.size();
+
+//     int ret = -1;
+//     for (int i = 0; i < n; i++)
+//     {
+//         if (i + 1 < n && str[i] == str[i + 1]) // 判断?度为2的?串
+//         {
+//             ret = 2;
+//             break;
+//         }
+
+//         if (i + 2 < n && str[i] == str[i + 2]) // 判断?度为 3 的?串
+//         {
+//             ret = 3;
+//         }
+//     }
+
+//     cout << ret << endl;
+
+//     return 0;
+// }
