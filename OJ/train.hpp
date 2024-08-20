@@ -1298,3 +1298,25 @@ using namespace std;
 
 //     return 0;
 // }
+
+// kotoriºÍÆøÇò
+// #include <iostream>
+// using namespace std;
+
+// int main()
+// {
+//     const int MOD = 109;
+
+//     int n = 0, m = 0;
+//     cin >> n >> m;
+
+//     int ret = n;
+//     for (int i = 0; i < m - 1; i++)
+//     {
+//         ret = ret * (n - 1) % MOD;
+//     }
+
+//     cout << ret << endl;
+
+//     return 0;
+// }
