@@ -1320,3 +1320,57 @@ using namespace std;
 
 //     return 0;
 // }
+
+// 体操队形
+// #include <iostream>
+// #include <vector>
+// using namespace std;
+
+// int n = 0, ret = 0;
+// vector<int> nums;
+// vector<bool> visit;
+
+// void DFS(int pos)
+// {
+//     if (pos == n + 1)
+//     {
+//         ret++;
+//         return;
+//     }
+
+//     // 对于该位置，依次枚举每个队员
+//     for (int i = 1; i <= n; i++)
+//     {
+//         if (visit[i]) // 剪枝 -> i队员已经被放过
+//         {
+//             continue;
+//         }
+
+//         if (visit[nums[i]]) // 剪枝 -> i队员的诉求已经无法完成
+//         {
+//             return;
+//         }
+
+//         visit[i] = true; // 放上i号队员
+//         DFS(pos + 1);
+//         visit[i] = false; // 回溯
+//     }
+// }
+
+// int main()
+// {
+//     cin >> n;
+//     nums.resize(n + 1, 0);
+//     visit.resize(n + 1, false);
+
+//     for (int i = 1; i <= n; i++)
+//     {
+//         cin >> nums[i];
+//     }
+
+//     DFS(1); // 按进入位置划分
+
+//     cout << ret << endl;
+
+//     return 0;
+// }
