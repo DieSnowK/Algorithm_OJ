@@ -1374,3 +1374,32 @@ using namespace std;
 
 //     return 0;
 // }
+
+// 二叉树中的最大路径和
+// class Solution
+// {
+// public:
+//     int ret = -0x3f3f3f3f;
+
+//     int maxPathSum(TreeNode *root)
+//     {
+//         DFS(root);
+//         return ret;
+//     }
+
+//     int DFS(TreeNode *root)
+//     {
+//         if (root == nullptr)
+//         {
+//             return 0;
+//         }
+
+//         // 左右子树最大单链和
+//         int l = max(0, DFS(root->left));
+//         int r = max(0, DFS(root->right));
+
+//         ret = max(ret, root->val + l + r); // 经过root的最?路径和
+
+//         return root->val + max(l, r);
+//     }
+// };
