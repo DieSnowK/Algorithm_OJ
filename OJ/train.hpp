@@ -1403,3 +1403,36 @@ using namespace std;
 //         return root->val + max(l, r);
 //     }
 // };
+
+// Ïû¼õÕûÊı
+// #include <iostream>
+// using namespace std;
+
+// int Check(int h)
+// {
+//     int ret = 0, a = 1;
+//     while (h)
+//     {
+//         ret++;
+
+//         h -= a;
+//         if (h % (2 * a) == 0)
+//         {
+//             a *= 2;
+//         }
+//     }
+
+//     return ret;
+// }
+
+// int main()
+// {
+//     int n = 0, h = 0;
+//     cin >> n;
+
+//     while (n--)
+//     {
+//         cin >> h;
+//         cout << Check(h) << endl;
+//     }
+// }
