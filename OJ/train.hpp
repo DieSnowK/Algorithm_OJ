@@ -1436,3 +1436,41 @@ using namespace std;
 //         cout << Check(h) << endl;
 //     }
 // }
+
+// 最长上升子序列(二)
+// int LIS(vector<int> &a)
+// {
+//     int pos = 0;
+//     vector<int> dp(a.size() + 1, 0); // dp[i]: 长度为i的最小末尾
+
+//     // 查找x应该放在哪个位置
+//     for (const auto &x : a)
+//     {
+//         // 边界情况处理
+//         if (pos == 0 || x > dp[pos])
+//         {
+//             dp[++pos] = x;
+//         }
+//         else
+//         {
+//             // 二分查找插入位置
+//             int l = 1, r = pos;
+//             while (l < r)
+//             {
+//                 int mid = (l + r) / 2;
+//                 if (dp[mid] >= x)
+//                 {
+//                     r = mid;
+//                 }
+//                 else
+//                 {
+//                     l = mid + 1;
+//                 }
+//             }
+
+//             dp[l] = x;
+//         }
+//     }
+
+//     return pos;
+// }
