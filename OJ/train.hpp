@@ -1474,3 +1474,70 @@ using namespace std;
 
 //     return pos;
 // }
+
+// ¥∫”Œ
+// #include <iostream>
+// using namespace std;
+
+// long long n = 0, a = 0, b = 0;
+
+// long long CostTotal(char ch)
+// {
+//     long long sum = 0;
+
+//     if (ch == 'a')
+//     {
+//         sum = n / 2 * a;
+
+//         n %= 2;
+//         if (n)
+//         {
+//             sum += min(min(a, b), b - a);
+//         }
+//     }
+//     else
+//     {
+//         sum = n / 3 * b;
+
+//         n %= 3;
+//         if (n == 1)
+//         {
+//             sum += min(min(a, b), 2 * a - b);
+//         }
+//         else if (n == 2)
+//         {
+//             sum += min(min(a, b), 3 * a - b);
+//         }
+//     }
+
+//     return sum;
+// }
+
+// int main()
+// {
+//     int t = 0;
+//     cin >> t;
+
+//     while (t--)
+//     {
+//         cin >> n >> a >> b;
+//         float av = a / 2.0, bv = b / 3.0;
+
+//         if (n <= 2)
+//         {
+//             cout << min(a, b) << endl;
+//             continue;
+//         }
+
+//         if (av < bv)
+//         {
+//             cout << CostTotal('a') << endl;
+//         }
+//         else
+//         {
+//             cout << CostTotal('b') << endl;
+//         }
+//     }
+
+//     return 0;
+// }
