@@ -1541,3 +1541,52 @@ using namespace std;
 
 //     return 0;
 // }
+
+// 合唱团
+// #include <iostream>
+// #include <vector>
+// using namespace std;
+
+// int main()
+// {
+//     const long long INF = 0x3f3f3f3f3f3f3f3f;
+//     int n = 0, k = 0, d = 0;
+//     cin >> n;
+
+//     vector<int> nums(n + 1, 0);
+//     for (int i = 1; i <= n; i++)
+//     {
+//         cin >> nums[i];
+//     }
+//     cin >> k >> d;
+
+//     vector<vector<long long>> f(n + 1, vector<long long>(k + 1, 0));
+//     vector<vector<long long>> g(n + 1, vector<long long>(k + 1, 0));
+
+//     // 初始化在填表中进行
+//     for (int i = 1; i <= n; i++)
+//     {
+//         g[i][1] = f[i][1] = nums[i];         // 初始化
+//         for (int j = 2; j <= min(i, k); j++) // 挑选几个人
+//         {
+//             f[i][j] = -INF; // 初始化
+//             g[i][j] = INF;  // 初始化
+
+//             // 前?挑选的最后?个位置
+//             for (int prev = max(i - d, j - 1); prev <= i - 1; prev++)
+//             {
+//                 f[i][j] = max(max(f[prev][j - 1] * nums[i], g[prev][j - 1] * nums[i]), f[i][j]);
+//                 g[i][j] = min(min(f[prev][j - 1] * nums[i], g[prev][j - 1] * nums[i]), g[i][j]);
+//             }
+//         }
+//     }
+
+//     long long ret = -INF;
+//     for (int i = k; i <= n; i++)
+//     {
+//         ret = max(ret, f[i][k]);
+//     }
+//     cout << ret << endl;
+
+//     return 0;
+// }
