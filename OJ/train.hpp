@@ -1603,3 +1603,51 @@ using namespace std;
 
 //     return 0;
 // }
+
+// 矩阵最长递增路径
+// class Solution
+// {
+//     int n = 0, m = 0;
+//     int dx[4] = {1, -1, 0, 0};
+//     int dy[4] = {0, 0, 1, -1};
+//     vector<vector<int>> mem;
+
+// public:
+//     int solve(vector<vector<int>> &matrix)
+//     {
+//         n = matrix.size(), m = matrix[0].size();
+//         mem.resize(n, vector<int>(m, -1));
+
+//         int ret = 1;
+//         for (int i = 0; i < n; i++)
+//         {
+//             for (int j = 0; j < m; j++)
+//             {
+//                 ret = max(ret, DFS(i, j, matrix));
+//             }
+//         }
+
+//         return ret;
+//     }
+
+//     int DFS(int i, int j, const vector<vector<int>> &matrix)
+//     {
+//         if (mem[i][j] != -1)
+//         {
+//             return mem[i][j];
+//         }
+
+//         int len = 1;
+//         for (int k = 0; k < 4; k++)
+//         {
+//             int x = i + dx[k], y = j + dy[k];
+//             if (x >= 0 && x < n && y >= 0 && y < m && matrix[x][y] > matrix[i][j])
+//             {
+//                 len = max(len, 1 + DFS(x, y, matrix));
+//             }
+//         }
+
+//         mem[i][j] = len;
+//         return len;
+//     }
+// };
