@@ -1590,3 +1590,16 @@ using namespace std;
 
 //     return 0;
 // }
+
+// 跳台阶扩展问题
+// #include <iostream>
+// using namespace std;
+
+// int main()
+// {
+//     int n = 0;
+//     cin >> n;
+//     cout << (1 << (n - 1)) << endl;
+
+//     return 0;
+// }
