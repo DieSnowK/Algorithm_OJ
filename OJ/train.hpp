@@ -1672,3 +1672,51 @@ using namespace std;
 
 //     return 0;
 // }
+
+// 求和
+// #include <iostream>
+// using namespace std;
+
+// int n = 0, m = 0;
+// bool choose[11] = {false}; // 标记路径中选了哪些数
+// int sum = 0;               // 标记已选数的总和
+
+// void DFS(int x)
+// {
+//     if (sum == m)
+//     {
+//         for (int i = 1; i <= n; i++)
+//         {
+//             if (choose[i])
+//             {
+//                 cout << i << " ";
+//             }
+//         }
+//         cout << endl;
+
+//         return;
+//     }
+
+//     if (sum > m || x > n)
+//     {
+//         return;
+//     }
+
+//     // 选
+//     sum += x;
+//     choose[x] = true;
+//     DFS(x + 1);
+//     sum -= x;
+//     choose[x] = false;
+
+//     // 不选
+//     DFS(x + 1);
+// }
+
+// int main()
+// {
+//     cin >> n >> m;
+//     DFS(1);
+
+//     return 0;
+// }
