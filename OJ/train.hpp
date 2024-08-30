@@ -1651,3 +1651,24 @@ using namespace std;
 //         return len;
 //     }
 // };
+
+// ÆæÊıÎ»¶ªÆú
+// #include <iostream>
+// using namespace std;
+
+// int main()
+// {
+//     int n = 0;
+//     while (cin >> n)
+//     {
+//         int ret = 1;
+//         while (ret - 1 <= n)
+//         {
+//             ret *= 2;
+//         }
+
+//         cout << ret / 2 - 1 << endl;
+//     }
+
+//     return 0;
+// }
