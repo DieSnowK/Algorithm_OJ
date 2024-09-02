@@ -1764,3 +1764,43 @@ using namespace std;
 
 //     return 0;
 // }
+
+// ¹ş·òÂü±àÂë
+// #include <iostream>
+// #include <vector>
+// #include <queue>
+// using namespace std;
+
+// typedef long long LL;
+
+// int main()
+// {
+//     int n = 0;
+//     cin >> n;
+
+//     priority_queue<LL, vector<LL>, greater<>> heap;
+//     while (n--)
+//     {
+//         LL x = 0;
+//         cin >> x;
+//         heap.push(x);
+//     }
+
+//     // ¹¹½¨×îÓÅ¶ş²æÊ÷/¹ş·òÂüÊ÷
+//     LL ret = 0;
+//     while (heap.size() > 1)
+//     {
+//         LL x1 = heap.top();
+//         heap.pop();
+//         LL x2 = heap.top();
+//         heap.pop();
+
+//         heap.push(x1 + x2);
+
+//         ret += x1 + x2;
+//     }
+
+//     cout << ret << endl;
+
+//     return 0;
+// }
