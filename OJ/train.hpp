@@ -1804,3 +1804,34 @@ using namespace std;
 
 //     return 0;
 // }
+
+// abb
+// #include <iostream>
+// #include <string>
+// using namespace std;
+
+// int main()
+// {
+//     int n = 0;
+//     string str;
+//     cin >> n >> str;
+
+//     long long f[26] = {0};
+//     long long g[26] = {0};
+
+//     long long ret = 0;
+//     for (int i = 0; i < n; i++)
+//     {
+//         // DP
+//         int x = str[i] - 'a';
+//         ret += f[x];
+
+//         // Update
+//         f[x] = f[x] + i - g[x];
+//         g[x] = g[x] + 1;
+//     }
+
+//     cout << ret << endl;
+
+//     return 0;
+// }
