@@ -1835,3 +1835,14 @@ using namespace std;
 
 //     return 0;
 // }
+
+// Ðý×ª×Ö·û´®
+// bool solve(string A, string B)
+// {
+//     if (A.size() != B.size())
+//     {
+//         return false;
+//     }
+
+//     return (A + A).find(B) != string::npos;
+// }
