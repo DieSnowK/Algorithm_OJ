@@ -1846,3 +1846,41 @@ using namespace std;
 
 //     return (A + A).find(B) != string::npos;
 // }
+
+// 合并k个已排序的链表
+// class Solution
+// {
+//     typedef pair<int, ListNode *> PIL;
+
+// public:
+//     ListNode *mergeKLists(vector<ListNode *> &lists)
+//     {
+//         priority_queue<PIL, vector<PIL>, greater<>> heap;
+//         for (const auto &list : lists)
+//         {
+//             ListNode *cur = list;
+//             while (cur)
+//             {
+//                 heap.push({cur->val, cur});
+//                 cur = cur->next;
+//             }
+//         }
+
+//         ListNode *newHead = new ListNode(0);
+//         ListNode *tail = newHead;
+//         while (heap.size())
+//         {
+//             ListNode *node = heap.top().second;
+//             heap.pop();
+
+//             tail->next = node;
+//             tail = tail->next;
+//         }
+//         tail->next = nullptr;
+
+//         tail = newHead->next;
+//         delete newHead;
+
+//         return tail;
+//     }
+// };
