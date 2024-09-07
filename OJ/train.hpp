@@ -1884,3 +1884,85 @@ using namespace std;
 //         return tail;
 //     }
 // };
+
+// dd爱旋转
+// #include <iostream>
+// #include <vector>
+// using namespace std;
+
+// int n = 0;
+// vector<vector<int>> matrix;
+
+// void SwapRol() // 行对称
+// {
+//     for (int i = 0; i < n / 2; i++)
+//     {
+//         for (int j = 0; j < n; j++)
+//         {
+//             swap(matrix[i][j], matrix[n - 1 - i][j]);
+//         }
+//     }
+// }
+
+// void SwapCol() // 列对称
+// {
+//     for (int j = 0; j < n / 2; j++)
+//     {
+//         for (int i = 0; i < n; i++)
+//         {
+//             swap(matrix[i][j], matrix[i][n - 1 - j]);
+//         }
+//     }
+// }
+
+// int main()
+// {
+//     cin >> n;
+
+//     matrix.resize(n, vector<int>(n, 0));
+//     for (int i = 0; i < n; i++)
+//     {
+//         for (int j = 0; j < n; j++)
+//         {
+//             cin >> matrix[i][j];
+//         }
+//     }
+
+//     int q = 0, x = 0;
+//     cin >> q;
+
+//     int row = 0, col = 0;
+//     while (q--)
+//     {
+//         cin >> x;
+//         if (x == 1)
+//         {
+//             row++, col++;
+//         }
+//         else
+//         {
+//             row++;
+//         }
+//     }
+
+//     if (row %= 2)
+//     {
+//         SwapRol();
+//     }
+
+//     if (col %= 2)
+//     {
+//         SwapCol();
+//     }
+
+//     for (int i = 0; i < n; i++)
+//     {
+//         for (int j = 0; j < n; j++)
+//         {
+//             cout << matrix[i][j] << " ";
+//         }
+//         cout << endl;
+//     }
+
+//     return 0;
+// }
