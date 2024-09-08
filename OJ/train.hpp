@@ -1966,3 +1966,36 @@ using namespace std;
 
 //     return 0;
 // }
+
+// Ð¡ºìÈ¡Êý
+// #include <iostream>
+// #include <vector>
+// #include <climits>
+// using namespace std;
+
+// int main()
+// {
+//     int n = 0, k = 0;
+//     cin >> n >> k;
+
+//     vector<long long> nums(n + 1, 0);
+//     for (int i = 1; i <= n; i++)
+//     {
+//         cin >> nums[i];
+//     }
+
+//     vector<vector<long long>> dp(n + 1, vector<long long>(k, LLONG_MIN));
+//     dp[0][0] = 0;
+
+//     for (int i = 1; i <= n; i++)
+//     {
+//         for (int j = 0; j < k; j++)
+//         {
+//             dp[i][j] = max(dp[i - 1][j], dp[i - 1][(j - nums[i] % k + k) % k] + nums[i]);
+//         }
+//     }
+
+//     cout << (dp[n][0] <= 0 ? -1 : dp[n][0]) << endl;
+
+//     return 0;
+// }
