@@ -1999,3 +1999,51 @@ using namespace std;
 
 //     return 0;
 // }
+
+// 字符编码
+// #include <iostream>
+// #include <string>
+// #include <vector>
+// #include <queue>
+// using namespace std;
+
+// int main()
+// {
+//     string str;
+//     while (cin >> str)
+//     {
+//         // 1.统计每个字符的频次
+//         int hash[300] = {0};
+//         for (const auto &ch : str)
+//         {
+//             hash[ch]++;
+//         }
+
+//         // 2.将所有的频次放入堆中
+//         priority_queue<int, vector<int>, greater<>> heap;
+//         for (int i = 0; i < 300; i++)
+//         {
+//             if (hash[i])
+//             {
+//                 heap.push(hash[i]);
+//             }
+//         }
+
+//         // 3.哈夫曼编码
+//         int ret = 0;
+//         while (heap.size() > 1)
+//         {
+//             int x1 = heap.top();
+//             heap.pop();
+//             int x2 = heap.top();
+//             heap.pop();
+
+//             ret += x1 + x2;
+//             heap.push(x1 + x2);
+//         }
+
+//         cout << ret << endl;
+//     }
+
+//     return 0;
+// }
