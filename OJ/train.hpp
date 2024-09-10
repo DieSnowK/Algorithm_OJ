@@ -2047,3 +2047,32 @@ using namespace std;
 
 //     return 0;
 // }
+
+// 最少的完全平方数
+// #include <iostream>
+// #include <cstring>
+// using namespace std;
+
+// const int N = 1e4 + 10;
+
+// int main()
+// {
+//     int n = 0;
+//     cin >> n;
+
+//     int dp[N];
+//     memset(dp, 0x3f, sizeof dp);
+//     dp[0] = 0;
+
+//     for (int i = 1; i * i <= n; i++)
+//     {
+//         for (int j = i * i; j <= n; j++)
+//         {
+//             dp[j] = min(dp[j], dp[j - i * i] + 1);
+//         }
+//     }
+
+//     cout << dp[n] << endl;
+
+//     return 0;
+// }
