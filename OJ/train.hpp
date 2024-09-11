@@ -2076,3 +2076,30 @@ using namespace std;
 
 //     return 0;
 // }
+
+// 游游的字母串
+// #include <iostream>
+// #include <cmath>
+// #include <string>
+// using namespace std;
+
+// int main()
+// {
+//     string str;
+//     cin >> str;
+
+//     int ret = 0x3f3f3f3f;
+//     for (char ch = 'a'; ch <= 'z'; ch++) // 枚举变成什么字符
+//     {
+//         int sum = 0;
+//         for (auto x : str)
+//         {
+//             sum += min(abs(x - ch), 26 - abs(x - ch));
+//         }
+//         ret = min(ret, sum);
+//     }
+
+//     cout << ret << endl;
+
+//     return 0;
+// }
