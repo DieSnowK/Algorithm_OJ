@@ -2103,3 +2103,54 @@ using namespace std;
 
 //     return 0;
 // }
+
+// 体育课测验(二)
+// vector<int> findOrder(int n, vector<vector<int>> &groups)
+// {
+//     vector<vector<int>> edges(n);
+//     vector<int> in(n);
+
+//     // 1.建图
+//     for (auto v : groups)
+//     {
+//         int a = v[0], b = v[1]; // b -> a
+//         edges[b].push_back(a);
+//         in[a]++;
+//     }
+
+//     // 2.入度为0的点，加入到队列中
+//     queue<int> q;
+//     for (int i = 0; i < n; i++)
+//     {
+//         if (in[i] == 0)
+//         {
+//             q.push(i);
+//         }
+//     }
+
+//     // 3.拓扑排序
+//     vector<int> ret;
+//     while (q.size())
+//     {
+//         int tmp = q.front();
+//         q.pop();
+//         ret.push_back(tmp);
+
+//         for (auto x : edges[tmp])
+//         {
+//             if (--in[x] == 0)
+//             {
+//                 q.push(x);
+//             }
+//         }
+//     }
+
+//     if (ret.size() == n)
+//     {
+//         return ret;
+//     }
+//     else
+//     {
+//         return {};
+//     }
+// }
