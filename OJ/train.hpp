@@ -2154,3 +2154,54 @@ using namespace std;
 //         return {};
 //     }
 // }
+
+// 合唱队形
+// #include <iostream>
+// #include <vector>
+// using namespace std;
+
+// int main()
+// {
+//     int n = 0;
+//     cin >> n;
+
+//     vector<int> nums(n, 0), f(n, 1), g(n, 1);
+//     for (auto &x : nums)
+//     {
+//         cin >> x;
+//     }
+
+//     // 从前向后
+//     for (int i = 0; i < n; i++)
+//     {
+//         for (int j = 0; j < i; j++)
+//         {
+//             if (nums[j] < nums[i])
+//             {
+//                 f[i] = max(f[i], f[j] + 1);
+//             }
+//         }
+//     }
+
+//     // 从后向前
+//     for (int i = n - 1; i >= 0; i--)
+//     {
+//         for (int j = i + 1; j < n; j++)
+//         {
+//             if (nums[i] > nums[j])
+//             {
+//                 g[i] = max(g[i], g[j] + 1);
+//             }
+//         }
+//     }
+
+//     int len = 0;
+//     for (int i = 0; i < n; i++)
+//     {
+//         len = max(len, f[i] + g[i] - 1);
+//     }
+
+//     cout << n - len << endl;
+
+//     return 0;
+// }
