@@ -2231,3 +2231,51 @@ using namespace std;
 
 //     return 0;
 // }
+
+// นýวล
+// #include <iostream>
+// #include <vector>
+// using namespace std;
+
+// int n = 0;
+// vector<int> nums;
+
+// int BFS()
+// {
+//     int ret = 0;
+//     int left = 1, right = 1;
+//     while (left <= right)
+//     {
+//         ret++;
+
+//         int r = right;
+//         for (int i = left; i <= right; i++)
+//         {
+//             r = max(r, nums[i] + i);
+//             if (r >= n)
+//             {
+//                 return ret;
+//             }
+//         }
+
+//         left = right + 1;
+//         right = r;
+//     }
+
+//     return -1;
+// }
+
+// int main()
+// {
+//     cin >> n;
+
+//     nums.resize(n + 1, 0);
+//     for (int i = 1; i <= n; i++)
+//     {
+//         cin >> nums[i];
+//     }
+
+//     cout << BFS() << endl;
+
+//     return 0;
+// }
