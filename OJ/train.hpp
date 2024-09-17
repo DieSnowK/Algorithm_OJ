@@ -2205,3 +2205,29 @@ using namespace std;
 
 //     return 0;
 // }
+
+// Ïü°µµÄÑý¹Ö
+// #include <iostream>
+// #include <vector>
+// using namespace std;
+
+// int main()
+// {
+//     int n = 0;
+//     cin >> n;
+
+//     vector<long long> nums(n + 1, 0), dp(n + 1, 0);
+//     for (int i = 1; i <= n; i++)
+//     {
+//         cin >> nums[i];
+//     }
+
+//     for (int i = 3; i <= n; i++)
+//     {
+//         dp[i] = max(dp[i - 1], dp[i - 3] + nums[i - 1]);
+//     }
+
+//     cout << dp[n] << endl;
+
+//     return 0;
+// }
