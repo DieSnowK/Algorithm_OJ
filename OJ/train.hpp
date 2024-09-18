@@ -2279,3 +2279,16 @@ using namespace std;
 
 //     return 0;
 // }
+
+// ×î´ó²îÖµ
+// int getDis(vector<int> &nums, int n)
+// {
+//     int ret = 0, minPrev = nums[0];
+//     for (int i = 1; i < n; i++)
+//     {
+//         minPrev = min(nums[i], minPrev);
+//         ret = max(ret, nums[i] - minPrev);
+//     }
+
+//     return ret;
+// }
