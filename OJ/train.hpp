@@ -2292,3 +2292,42 @@ using namespace std;
 
 //     return ret;
 // }
+
+// ∂“ªª¡„«Æ
+// #include <iostream>
+// #include <vector>
+// using namespace std;
+
+// int main()
+// {
+//     int n = 0, aim = 0;
+//     cin >> n >> aim;
+
+//     vector<int> arr(n + 1, 0);
+//     for (int i = 1; i <= n; i++)
+//     {
+//         cin >> arr[i];
+//     }
+
+//     vector<int> dp(aim + 1, 0x3f3f3f3f);
+//     dp[0] = 0;
+
+//     for (int i = 1; i <= n; i++)
+//     {
+//         for (int j = arr[i]; j <= aim; j++)
+//         {
+//             dp[j] = min(dp[j], dp[j - arr[i]] + 1);
+//         }
+//     }
+
+//     if (dp[aim] >= 0x3f3f3f3f)
+//     {
+//         cout << -1 << endl;
+//     }
+//     else
+//     {
+//         cout << dp[aim] << endl;
+//     }
+
+//     return 0;
+// }
