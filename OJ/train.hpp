@@ -2331,3 +2331,55 @@ using namespace std;
 
 //     return 0;
 // }
+
+// 小红的字串
+// #include <iostream>
+// #include <string>
+// using namespace std;
+
+// int n = 0, l = 0, r = 0;
+// string str;
+
+// long long Find(int x)
+// {
+//     if (x == 0)
+//     {
+//         return 0;
+//     }
+
+//     int left = 0, right = 0;
+//     int hash[26] = {0}, kinds = 0;
+//     long long ret = 0;
+
+//     while (right < n)
+//     {
+//         if (hash[str[right] - 'a']++ == 0)
+//         {
+//             kinds++;
+//         }
+
+//         while (kinds > x)
+//         {
+//             if (hash[str[left] - 'a']-- == 1)
+//             {
+//                 kinds--;
+//             }
+
+//             left++;
+//         }
+
+//         ret += right - left + 1; // 字符的个数等于新多出来的字串的个数
+//         right++;
+//     }
+
+//     return ret;
+// }
+
+// int main()
+// {
+//     cin >> n >> l >> r >> str;
+
+//     cout << Find(r) - Find(l - 1) << endl;
+
+//     return 0;
+// }
