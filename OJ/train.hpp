@@ -2383,3 +2383,39 @@ using namespace std;
 
 //     return 0;
 // }
+
+// kotori�ͳ鿨
+// #include <iostream>
+// using namespace std;
+
+// int main()
+// {
+//     // Cnm
+//     int n = 0, m = 0;
+//     cin >> n >> m;
+
+//     double ret = 1.0;
+//     for (int i = n; i >= n - m + 1; i--)
+//     {
+//         ret *= i;
+//     }
+
+//     for (int i = m; i >= 2; i--)
+//     {
+//         ret /= i;
+//     }
+
+//     for (int i = 0; i < m; i++)
+//     {
+//         ret *= 0.8;
+//     }
+
+//     for (int i = 0; i < n - m; i++)
+//     {
+//         ret *= 0.2;
+//     }
+
+//     printf("%.4lf", ret);
+
+//     return 0;
+// }
