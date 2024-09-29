@@ -2419,3 +2419,47 @@ using namespace std;
 
 //     return 0;
 // }
+
+// ruby和薯条
+// #include <iostream>
+// #include <algorithm>
+// #include <vector>
+// using namespace std;
+
+// int n = 0, l = 0, r = 0;
+// vector<int> arr;
+
+// // 找出差值在[0, x]之间一共有多少对
+// long long Find(int x)
+// {
+//     int left = 0, right = 0;
+//     long long ret = 0;
+//     while (right < n)
+//     {
+//         while (arr[right] - arr[left] > x)
+//         {
+//             left++;
+//         }
+
+//         ret += right - left;
+//         right++;
+//     }
+
+//     return ret;
+// }
+
+// int main()
+// {
+//     cin >> n >> l >> r;
+//     arr.resize(n, 0);
+//     for (auto &x : arr)
+//     {
+//         cin >> x;
+//     }
+
+//     sort(arr.begin(), arr.end());
+
+//     cout << Find(r) - Find(l - 1) << endl;
+
+//     return 0;
+// }
