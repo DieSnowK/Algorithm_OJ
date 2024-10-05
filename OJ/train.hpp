@@ -2463,3 +2463,27 @@ using namespace std;
 
 //     return 0;
 // }
+
+// Ñ­»·ººÅµËþ
+// #include <iostream>
+// using namespace std;
+
+// const int MOD = 1e9 + 7;
+
+// int main()
+// {
+//     int n = 0;
+//     cin >> n;
+
+//     int x = 1, y = 2;
+//     for (int i = 2; i <= n; i++)
+//     {
+//         int prevX = x, prevY = y;
+//         x = (2 * prevY + 1) % MOD;
+//         y = ((2 * prevY) % MOD + 2 + prevX) % MOD;
+//     }
+
+//     cout << x << " " << y << endl;
+
+//     return 0;
+// }
