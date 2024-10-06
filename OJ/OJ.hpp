@@ -9939,3 +9939,34 @@ public:
 
 //     return ret + startValue - target;
 // }
+
+// 合并区间
+// vector<vector<int>> merge(vector<vector<int>> &intervals)
+// {
+//     // 排序
+//     sort(intervals.begin(), intervals.end());
+
+//     // 合并区间
+//     vector<vector<int>> ret;
+//     int left = intervals[0][0], right = intervals[0][1];
+
+//     for (int i = 0; i < intervals.size(); i++)
+//     {
+//         int a = intervals[i][0], b = intervals[i][1];
+//         if (a <= right) // 有重叠
+//         {
+//             right = max(right, b);
+//         }
+//         else // 无重叠
+//         {
+//             ret.push_back({left, right});
+//             left = a;
+//             right = b;
+//         }
+//     }
+
+//     // 最后一个区间
+//     ret.push_back({left, right});
+
+//     return ret;
+// }
