@@ -9970,3 +9970,29 @@ public:
 
 //     return ret;
 // }
+
+// 无重叠区间
+// int eraseOverlapIntervals(vector<vector<int>> &intervals)
+// {
+//     // 排序
+//     sort(intervals.begin(), intervals.end());
+
+//     // 移除区间
+//     int ret = 0;
+//     int left = intervals[0][0], right = intervals[0][1];
+//     for (int i = 1; i < intervals.size(); i++)
+//     {
+//         int a = intervals[i][0], b = intervals[i][1];
+//         if (a < right) // 有重叠
+//         {
+//             ret++;                 // DELETE
+//             right = min(right, b); // 贪心, 删除右端点较大的区间
+//         }
+//         else // 无重叠
+//         {
+//             right = b;
+//         }
+//     }
+
+//     return ret;
+// }
