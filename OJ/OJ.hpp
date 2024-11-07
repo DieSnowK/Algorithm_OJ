@@ -9996,3 +9996,29 @@ public:
 
 //     return ret;
 // }
+
+// 用最少数量的箭引爆气球
+// int findMinArrowShots(vector<vector<int>>& points) 
+// {
+//     // 排序
+//     sort(points.begin(), points.end());
+
+//     // 求互相重叠区间的数量
+//     int right = points[0][1];
+//     int ret = 1;
+//     for(int i = 1; i < points.size(); i++)
+//     {
+//         int a = points[i][0], b = points[i][1];
+//         if(a <= right) // 有重叠
+//         {
+//             right = min(right, b);
+//         }
+//         else // 无重叠
+//         {
+//             ret++;
+//             right = b;
+//         }
+//     }
+
+//     return ret;
+// }
