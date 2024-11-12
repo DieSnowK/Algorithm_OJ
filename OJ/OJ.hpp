@@ -10022,3 +10022,40 @@ public:
 
 //     return ret;
 // }
+
+// ÕûÊıÌæ»»
+// class Solution
+// {
+//     unordered_map<int, int> hash;
+
+// public:
+//     int integerReplacement(int n)
+//     {
+//         return DFS(n);
+//     }
+
+//     int DFS(long long n)
+//     {
+//         if (hash.count(n))
+//         {
+//             return hash[n];
+//         }
+
+//         if (n == 1)
+//         {
+//             hash[1] = 0;
+//             return 0;
+//         }
+
+//         if (n % 2 == 0)
+//         {
+//             hash[n] = 1 + DFS(n / 2);
+//         }
+//         else
+//         {
+//             hash[n] = 1 + min(DFS(n - 1), DFS(n + 1));
+//         }
+
+//         return hash[n];
+//     }
+// };
