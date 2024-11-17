@@ -10059,3 +10059,28 @@ public:
 //         return hash[n];
 //     }
 // };
+
+// 俄罗斯套娃 方法一
+// int maxEnvelopes(vector<vector<int>> &e)
+// {
+//     sort(e.begin(), e.end());
+
+//     int n = e.size();
+//     vector<int> dp(n, 1);
+
+//     int ret = 1;
+//     for (int i = 1; i < n; i++)
+//     {
+//         for (int j = 0; j < i; j++)
+//         {
+//             if (e[i][0] > e[j][0] && e[i][1] > e[j][1])
+//             {
+//                 dp[i] = max(dp[i], dp[j] + 1);
+//             }
+//         }
+
+//         ret = max(ret, dp[i]);
+//     }
+
+//     return ret;
+// }
