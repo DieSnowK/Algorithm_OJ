@@ -38,7 +38,7 @@ using namespace std;
 //    int n = 0;
 //    vector<int> arr;
 //
-//    // ¶ÁÈ¡Êı¾İ
+//    // è¯»å–æ•°æ®
 //    cin >> n;
 //    for (int i = 0; i < n; i++)
 //    {
@@ -53,15 +53,15 @@ using namespace std;
 //    }
 //    else
 //    {
-//        // Ö´ĞĞ
+//        // æ‰§è¡Œ
 //        int index = 1;
 //        int count = 0;
 //        while (index < n)
 //        {
-//            // Ã¿Ò»ÂÖ
+//            // æ¯ä¸€è½®
 //            if (arr[index - 1] < arr[index])
 //            {
-//                // ÆğµãÎªĞ¡ÓÚ
+//                // èµ·ç‚¹ä¸ºå°äº
 //                while (arr[index - 1] <= arr[index])
 //                {
 //                    index++;
@@ -69,7 +69,7 @@ using namespace std;
 //            }
 //            else if(arr[index - 1] > arr[index])
 //            {
-//                // ÆğµãÎª´óÓÚµÈÓÚ
+//                // èµ·ç‚¹ä¸ºå¤§äºç­‰äº
 //                while (arr[index - 1] >= arr[index])
 //                {
 //                    index++;
@@ -77,7 +77,7 @@ using namespace std;
 //            }
 //            else
 //            {
-//                // ÆğµãÎªµÈÓÚ
+//                // èµ·ç‚¹ä¸ºç­‰äº
 //                while (arr[index - 1] == arr[index])
 //                {
 //                    index++;
@@ -113,7 +113,7 @@ using namespace std;
 //#include <iostream>
 //#include <vector>
 //#include <string>
-//#include <cmath> // ÓÃÓÚÈ¡¾ø¶ÔÖµ
+//#include <cmath> // ç”¨äºå–ç»å¯¹å€¼
 //using namespace std;
 //
 //int main()
@@ -123,17 +123,17 @@ using namespace std;
 //    string format;
 //    cin >> M >> N;
 //
-//    // ´¦Àí¸ºÊıÇé¿ö
+//    // å¤„ç†è´Ÿæ•°æƒ…å†µ
 //    bool isNegative = false;
 //    if (M < 0)
 //    {
 //        isNegative = true;
-//        M = abs(M); // È¡¾ø¶ÔÖµ
+//        M = abs(M); // å–ç»å¯¹å€¼
 //    }
 //
 //    if (M == 0)
 //    {
-//        cout << "0" << endl;  // Êä³ö"0"²¢»»ĞĞ
+//        cout << "0" << endl;  // è¾“å‡º"0"å¹¶æ¢è¡Œ
 //    }
 //    else
 //    {
@@ -155,11 +155,11 @@ using namespace std;
 //
 //        if (isNegative)
 //        {
-//            cout << "-" << format << endl;  // Êä³ö¸ººÅºÍ×ª»»½á¹û²¢»»ĞĞ
+//            cout << "-" << format << endl;  // è¾“å‡ºè´Ÿå·å’Œè½¬æ¢ç»“æœå¹¶æ¢è¡Œ
 //        }
 //        else
 //        {
-//            cout << format << endl;  // Êä³ö×ª»»½á¹û²¢»»ĞĞ
+//            cout << format << endl;  // è¾“å‡ºè½¬æ¢ç»“æœå¹¶æ¢è¡Œ
 //        }
 //    }
 //
@@ -175,19 +175,19 @@ using namespace std;
 //
 //int main()
 //{
-//    // »ñÈ¡Á½¸ö×Ö·û´®
+//    // è·å–ä¸¤ä¸ªå­—ç¬¦ä¸²
 //    int count = 0;
 //    string str1, str2;
 //    getline(cin, str1);
 //    getline(cin, str2);
 //
-//    // ³¢ÊÔ´Ó²»Í¬µÄÎ»ÖÃ²åÈë
+//    // å°è¯•ä»ä¸åŒçš„ä½ç½®æ’å…¥
 //    for (int i = 0; i < str1.size(); i++)
 //    {
 //        str1.insert(i, str2);
 //
-//        // ÅĞ¶Ï»ØÎÄ´®
-//        // 1.×Ö·ûÑ¹Õ»
+//        // åˆ¤æ–­å›æ–‡ä¸²
+//        // 1.å­—ç¬¦å‹æ ˆ
 //        stack<char> judge;
 //        bool flag = true;
 //        for (auto& ch : str1)
@@ -195,7 +195,7 @@ using namespace std;
 //            judge.push(ch);
 //        }
 //
-//        // 2.×Ö·û³öÕ»
+//        // 2.å­—ç¬¦å‡ºæ ˆ
 //        for (auto& ch : str1)
 //        {
 //            char tmp = judge.top();
@@ -241,7 +241,7 @@ using namespace std;
 //    {
 //        if (nums[i] < 0)
 //        {
-//            // Óöµ½¸ºÊıÊ±£¬ÔòÒ»ÂÖ½áÊø£¬´ËÊ±sumÒÑµ½±¾ÂÖ×î´ó
+//            // é‡åˆ°è´Ÿæ•°æ—¶ï¼Œåˆ™ä¸€è½®ç»“æŸï¼Œæ­¤æ—¶sumå·²åˆ°æœ¬è½®æœ€å¤§
 //            if (sum > max)
 //            {
 //                max = sum;
@@ -250,7 +250,7 @@ using namespace std;
 //            continue;
 //        }
 //
-//        // Ö»ÒªÓöµ½µÄÊÇÕıÊı£¬ÔòÍùºóÒ»Ö±»á±ä´ó
+//        // åªè¦é‡åˆ°çš„æ˜¯æ­£æ•°ï¼Œåˆ™å¾€åä¸€ç›´ä¼šå˜å¤§
 //        sum += nums[i];
 //    }
 //
@@ -261,11 +261,11 @@ using namespace std;
 //6.
 //int main()
 //{
-//    // ±©Á¦Çî¾Ù
+//    // æš´åŠ›ç©·ä¸¾
 //    int H = 0, W = 0;
 //    cin >> W >> H;
 //
-//    // ÉèÖÃ¶şÎ¬Êı×é£¬²¢³õÊ¼»¯Æä´óĞ¡£¬±ÜÃâºóĞø¶à´ÎÀ©Èİ´øÀ´ĞÔÄÜËğºÄ
+//    // è®¾ç½®äºŒç»´æ•°ç»„ï¼Œå¹¶åˆå§‹åŒ–å…¶å¤§å°ï¼Œé¿å…åç»­å¤šæ¬¡æ‰©å®¹å¸¦æ¥æ€§èƒ½æŸè€—
 //    vector<vector<int>> box(H);
 //    for (auto& e : box)
 //    {
@@ -273,20 +273,20 @@ using namespace std;
 //    }
 //
 //    int count = 0;
-//    for (int i = 0; i < H; i++) // Ã¿ĞĞ
+//    for (int i = 0; i < H; i++) // æ¯è¡Œ
 //    {
-//        for (int j = 0; j < W; j++) // Ã¿ÁĞ
+//        for (int j = 0; j < W; j++) // æ¯åˆ—
 //        {
 //            bool flag = true;
-//            // ÔÙÑ­»·±éÀúÅĞ¶ÏÊÇ·ñÄÜ·Å£¬klÊÇÓÃÀ´¼ìÑéµÄ£¬ijÊÇ×¼±¸·ÅµÄ
+//            // å†å¾ªç¯éå†åˆ¤æ–­æ˜¯å¦èƒ½æ”¾ï¼Œklæ˜¯ç”¨æ¥æ£€éªŒçš„ï¼Œijæ˜¯å‡†å¤‡æ”¾çš„
 //            for (int k = 0; k <= i; k++)
 //            {
 //                for (int l = 0; l <= j; l++)
 //                {
-//                    // µ°¸âkl¿ÉÄÜÒÑ¾­±»·ÅÏÂ£¬ËùÒÔ¿´ijºÍklµÄÅ·¼¸ÀïµÃ¾àÀëÊÇ·ñ·ûºÏÒªÇó
+//                    // è›‹ç³•klå¯èƒ½å·²ç»è¢«æ”¾ä¸‹ï¼Œæ‰€ä»¥çœ‹ijå’Œklçš„æ¬§å‡ é‡Œå¾—è·ç¦»æ˜¯å¦ç¬¦åˆè¦æ±‚
 //                    if (box[k][l] == 1 && (abs(i - k) == 2 && abs(j - l) == 0 || abs(j - l) == 2 && abs(i - k) == 0))
 //                    {
-//                        // ÕâÀïÓĞµ°¸â ÇÒ Å·¼¸ÀïµÃ == 2
+//                        // è¿™é‡Œæœ‰è›‹ç³• ä¸” æ¬§å‡ é‡Œå¾— == 2
 //                        flag = false;
 //                        break;
 //                    }
@@ -298,7 +298,7 @@ using namespace std;
 //                }
 //            } // end of 3
 //
-//            // ×ßµ½ÕâÀï£¬ÒªÃ´²»·ûºÏ£¬ÒªÃ´ÒÑ¾­·ÅÏÂ
+//            // èµ°åˆ°è¿™é‡Œï¼Œè¦ä¹ˆä¸ç¬¦åˆï¼Œè¦ä¹ˆå·²ç»æ”¾ä¸‹
 //            if (flag)
 //            {
 //                box[i][j] = 1;
@@ -320,8 +320,8 @@ using namespace std;
 //
 //int main()
 //{
-//    // stringÖØÔØÁË±È½ÏÔËËã·û:)
-//    // µ±Ê±Õ¦Ã»Ïëµ½ÄØ
+//    // stringé‡è½½äº†æ¯”è¾ƒè¿ç®—ç¬¦:)
+//    // å½“æ—¶å’‹æ²¡æƒ³åˆ°å‘¢
 //    int n = 0;
 //    cin >> n;
 //
@@ -341,7 +341,7 @@ using namespace std;
 //
 //    bool aj_by_len = true, aj_by_alp = true;
 //
-//    // ÏÈÅĞ¶ÏÊÇ·ñÊÇ°´ÕÕË³Ğò
+//    // å…ˆåˆ¤æ–­æ˜¯å¦æ˜¯æŒ‰ç…§é¡ºåº
 //    for (int i = 1; i < n; i++)
 //    {
 //        if (strs[i - 1].size() >= strs[i].size())
@@ -351,7 +351,7 @@ using namespace std;
 //        }
 //    }
 //
-//    // ÔÙÅĞ¶ÏÊÇ·ñ°´ÕÕ×ÖµäË³Ğò
+//    // å†åˆ¤æ–­æ˜¯å¦æŒ‰ç…§å­—å…¸é¡ºåº
 //    for (int i = 1; i < n; i++)
 //    {
 //        if (strs[i - 1] > strs[i])
@@ -393,14 +393,14 @@ using namespace std;
 //        // right = parent*2 + 2
 //        // parent = (child-1) / 2
 //
-//        // ´Ó1¿ªÊ¼ÅĞ¶Ï£¬Èç¹û³öÏÖµÚÒ»¸ö²»ÊÇ¹«¹²×æÏÈµÄ£¬ÔòÉÏÒ»¸ö¾ÍÊÇ×î½ü¹«¹²×æÏÈ
+//        // ä»1å¼€å§‹åˆ¤æ–­ï¼Œå¦‚æœå‡ºç°ç¬¬ä¸€ä¸ªä¸æ˜¯å…¬å…±ç¥–å…ˆçš„ï¼Œåˆ™ä¸Šä¸€ä¸ªå°±æ˜¯æœ€è¿‘å…¬å…±ç¥–å…ˆ
 //        int pa = a - 1, pb = b - 1;
 //        int aa = pa, bb = pb;
 //        stack<int> sta, stb;
 //        sta.push(a);
 //        stb.push(b);
 //
-//        // ÕÒpa
+//        // æ‰¾pa
 //        while (pa > 0)
 //        {
 //            pa = (aa - 1) / 2;
@@ -409,7 +409,7 @@ using namespace std;
 //            aa = pa;
 //        }
 //
-//        // ÕÒpb
+//        // æ‰¾pb
 //        while (pb > 0)
 //        {
 //            pb = (bb - 1) / 2;
@@ -500,16 +500,16 @@ using namespace std;
 //
 //    SepCard(input, card1, card2);
 //
-//    // ÈçºÎÌ½²éÃ¿·ùÊÖÅÆÊÇÔõÑùµÄ£¿
-//    // Ó¦¸ÃÊÇË«·½ÊÖÅÆÃ¿´Î¶¼ÊÇÏàÍ¬µÄÇé¿ö£¬Èç¶¼ÊÇ¶Ô×Ó£¬¶¼ÊÇÍ¬»¨
-//    // µ«Ó¦¸ÃÓĞÌØÀı£¬±ÈÈç¶ÔÍõºÍÕ¨µ¯´æÔÚÊ±
-//    // ¶¼ÊÇÕ¨µ¯Ê±£¬±ÈÕ¨µ¯£¬Ö»ÓĞÕ¨µ¯ÔòÕ¨µ¯´ó
-//    // ÆäÓàÇé¿ö¶¼Ö»ĞèÒª±ÈµÚÒ»ÕÅÅÆ´óĞ¡Ôò¿ÉÒÔ¿´³ö´óĞ¡
-//    // ×Ö·û±È½Ï£¬±ÈµÄÊÇASCIIÖµ£¬ËùÒÔ¿ÉÒÔ½«2Ìæ»»
+//    // å¦‚ä½•æ¢æŸ¥æ¯å¹…æ‰‹ç‰Œæ˜¯æ€æ ·çš„ï¼Ÿ
+//    // åº”è¯¥æ˜¯åŒæ–¹æ‰‹ç‰Œæ¯æ¬¡éƒ½æ˜¯ç›¸åŒçš„æƒ…å†µï¼Œå¦‚éƒ½æ˜¯å¯¹å­ï¼Œéƒ½æ˜¯åŒèŠ±
+//    // ä½†åº”è¯¥æœ‰ç‰¹ä¾‹ï¼Œæ¯”å¦‚å¯¹ç‹å’Œç‚¸å¼¹å­˜åœ¨æ—¶
+//    // éƒ½æ˜¯ç‚¸å¼¹æ—¶ï¼Œæ¯”ç‚¸å¼¹ï¼Œåªæœ‰ç‚¸å¼¹åˆ™ç‚¸å¼¹å¤§
+//    // å…¶ä½™æƒ…å†µéƒ½åªéœ€è¦æ¯”ç¬¬ä¸€å¼ ç‰Œå¤§å°åˆ™å¯ä»¥çœ‹å‡ºå¤§å°
+//    // å­—ç¬¦æ¯”è¾ƒï¼Œæ¯”çš„æ˜¯ASCIIå€¼ï¼Œæ‰€ä»¥å¯ä»¥å°†2æ›¿æ¢
 //
-//    // ½âÎöÊÖÅÆ
-//    // 1.ÏÈÈ¥µô¿Õ¸ñ£¬·½±ã·ÖÇé¿ö
-//    // 2.·ÖÇé¿öÌÖÂÛ
+//    // è§£ææ‰‹ç‰Œ
+//    // 1.å…ˆå»æ‰ç©ºæ ¼ï¼Œæ–¹ä¾¿åˆ†æƒ…å†µ
+//    // 2.åˆ†æƒ…å†µè®¨è®º
 //    string parseCard1 = card1, parseCard2 = card2;
 //    RemoveSpace(parseCard1);
 //    RemoveSpace(parseCard2);
@@ -544,7 +544,7 @@ using namespace std;
 //    {
 //        cout << card2 << endl;
 //    }
-//    else if (parseCard1.size() == parseCard2.size()) // µ¥ÕÅ£¬¶Ô×Ó£¬ÈıÕÅ£¬Ë³×Ó
+//    else if (parseCard1.size() == parseCard2.size()) // å•å¼ ï¼Œå¯¹å­ï¼Œä¸‰å¼ ï¼Œé¡ºå­
 //    {
 //        if (parseCard1[0] > parseCard2[0])
 //        {
@@ -560,10 +560,10 @@ using namespace std;
 //        cout << "ERROR" << endl;
 //    }
 //
-//    // ½áÎ²£ººÃÏñÆäÊµÊÇÒªÅĞ¶Ï³öÃ¿¸±ÅÆÊôÓÚÊ²Ã´ÀàĞÍ£¬²¢²»ÊÇÃ¿´Î¸øµÄ¶¼ÊÇµØÎ»¶ÔµÈµÄ
-//    // ËùÒÔÎÒÕâÑùµÄĞ´·¨Ö»ÄÜËãÊÇ×îºóµÄ½á¹û´¦Àí£¬ÖĞ¼ä»¹ĞèÒª·ÖÎö³ö¶¼ÊôÓÚÊ²Ã´ÀàĞÍµÄÅÆ
-//    // ºÃÊµÏÖ£¬µ«²»ÏëÊµÏÖÁË:P Ğ´ÆğÀ´Æª·ù´ó£¬ÆğÂëÒÔÎÒÏÖÔÚµÄË®Æ½ÄÜÏëµ½µÄ·½·¨ÊÇÕâÑùµÄ
-//    // ´óÖÂË¼Â·£ºĞ´³öÃ¿×éÅÄµÄÅĞ¶Ïº¯Êı£¬ÖÃ±ê¼ÇÎ»Îª¶ÔÓ¦µÄ±êÊ¶£¬È»ºó±È½Ï
+//    // ç»“å°¾ï¼šå¥½åƒå…¶å®æ˜¯è¦åˆ¤æ–­å‡ºæ¯å‰¯ç‰Œå±äºä»€ä¹ˆç±»å‹ï¼Œå¹¶ä¸æ˜¯æ¯æ¬¡ç»™çš„éƒ½æ˜¯åœ°ä½å¯¹ç­‰çš„
+//    // æ‰€ä»¥æˆ‘è¿™æ ·çš„å†™æ³•åªèƒ½ç®—æ˜¯æœ€åçš„ç»“æœå¤„ç†ï¼Œä¸­é—´è¿˜éœ€è¦åˆ†æå‡ºéƒ½å±äºä»€ä¹ˆç±»å‹çš„ç‰Œ
+//    // å¥½å®ç°ï¼Œä½†ä¸æƒ³å®ç°äº†:P å†™èµ·æ¥ç¯‡å¹…å¤§ï¼Œèµ·ç ä»¥æˆ‘ç°åœ¨çš„æ°´å¹³èƒ½æƒ³åˆ°çš„æ–¹æ³•æ˜¯è¿™æ ·çš„
+//    // å¤§è‡´æ€è·¯ï¼šå†™å‡ºæ¯ç»„æ‹çš„åˆ¤æ–­å‡½æ•°ï¼Œç½®æ ‡è®°ä½ä¸ºå¯¹åº”çš„æ ‡è¯†ï¼Œç„¶åæ¯”è¾ƒ
 //
 //    return 0;
 //}
@@ -575,9 +575,9 @@ using namespace std;
 //
 //void YTriangle(vector<vector<int>>& triangle)
 //{
-//    if (triangle.size() > 1) // ´óÓÚÁ½ĞĞµÄÇé¿ö
+//    if (triangle.size() > 1) // å¤§äºä¸¤è¡Œçš„æƒ…å†µ
 //    {
-//        // ÏÈ³õÊ¼»¯vector
+//        // å…ˆåˆå§‹åŒ–vector
 //        for (int i = 0; i < triangle.size(); i++)
 //        {
 //            triangle[i].resize(2 * i + 1);
@@ -612,17 +612,17 @@ using namespace std;
 //            lastRow_limit = row_limit;
 //        }
 //    }
-//    else // Ö»ÓĞÒ»ĞĞµÄÇé¿ö
+//    else // åªæœ‰ä¸€è¡Œçš„æƒ…å†µ
 //    {
 //
-//        triangle[0].push_back(1); // vector[]²»»á¿ª¿Õ¼ä£¬³ıÁË²åÈë²Ù×÷/»òÕßÖ±½ÓÔ¤Áô¿Õ¼ä
+//        triangle[0].push_back(1); // vector[]ä¸ä¼šå¼€ç©ºé—´ï¼Œé™¤äº†æ’å…¥æ“ä½œ/æˆ–è€…ç›´æ¥é¢„ç•™ç©ºé—´
 //    }
 //
 //}
 //
 //int main()
 //{
-//    // Ã¿ĞĞÊıµÄ¸öÊı 2n - 1
+//    // æ¯è¡Œæ•°çš„ä¸ªæ•° 2n - 1
 //    int n = 0;
 //
 //    while (cin >> n)
@@ -630,11 +630,11 @@ using namespace std;
 //        vector<vector<int>> triangle;
 //        triangle.resize(n);
 //
-//        // ÏÈÉú³ÉnĞĞÑî»ÔÈı½Ç
+//        // å…ˆç”Ÿæˆnè¡Œæ¨è¾‰ä¸‰è§’
 //        YTriangle(triangle);
 //        bool flag = false;
 //
-//        // ÅĞ¶¨
+//        // åˆ¤å®š
 //        for (int i = 0; i < triangle[n - 1].size(); i++)
 //        {
 //            if (triangle[n - 1][i] % 2 == 0)
@@ -667,26 +667,26 @@ using namespace std;
 //        return;
 //    }
 //
-//    // ÏÈ·ÖÅÆ
+//    // å…ˆåˆ†ç‰Œ
 //    vector<int> left(arr.begin(), arr.begin() + arr.size() - 1);
 //    vector<int> right(arr.begin() + arr.size(), arr.end());
 //
-//    // Ï´ÅÆ
+//    // æ´—ç‰Œ
 //    vector<int> ret(arr);
 //    auto posL = left.rbegin();
 //    auto posR = right.rbegin();
 //
 //    for (int i = 0; i < ret.size(); i++)
 //    {
-//        // ÏÈ·ÅÓÒÊÖ£¬ÔÙ·Å×óÊÖ
+//        // å…ˆæ”¾å³æ‰‹ï¼Œå†æ”¾å·¦æ‰‹
 //        ret[i++] = *(posR++);
 //        ret[i] = *(posL++);
 //    }
 //
-//    // ·­×ª
+//    // ç¿»è½¬
 //    reverse(ret.begin(), ret.end());
 //
-//    // ¸²¸Ç½á¹û¸øÔ­Êı×é
+//    // è¦†ç›–ç»“æœç»™åŸæ•°ç»„
 //    arr = ret;
 //
 //    Shuffle(arr, --k);
@@ -697,21 +697,21 @@ using namespace std;
 //    int n = 0;
 //    cin >> n;
 //
-//    for (int i = 0; i < n; i++) // ½ÓÊÕn×éÊı¾İ
+//    for (int i = 0; i < n; i++) // æ¥æ”¶nç»„æ•°æ®
 //    {
 //        int n = 0, k = 0;
 //        cin >> n >> k;
 //
 //        vector<int> arr(n, 0);
-//        for (int j = 0; j < arr.size(); j++) // ½ÓÊÕÃ¿×éÊı¾İ
+//        for (int j = 0; j < arr.size(); j++) // æ¥æ”¶æ¯ç»„æ•°æ®
 //        {
 //            cin >> arr[i];
 //        }
 //
-//        // Êı¾İ´¦Àí
+//        // æ•°æ®å¤„ç†
 //        Shuffle(arr, k);
 //
-//        // ´òÓ¡½á¹û
+//        // æ‰“å°ç»“æœ
 //        for (auto& card : arr)
 //        {
 //            cout << card << " ";
@@ -723,7 +723,7 @@ using namespace std;
 //    return 0;
 //}
 
-// day18 -- ×Ö·û´®Í¨Åä·û
+// day18 -- å­—ç¬¦ä¸²é€šé…ç¬¦
 //#include <iostream>
 //#include <vector>
 //#include <string>
@@ -734,28 +734,28 @@ using namespace std;
 //    int m = pattern.length();
 //    int n = text.length();
 //
-//    // ´´½¨¶şÎ¬¶¯Ì¬Êı×éÓÃÓÚ´æ´¢Æ¥Åä½á¹û£¬³õÊ¼»¯Îª false
+//    // åˆ›å»ºäºŒç»´åŠ¨æ€æ•°ç»„ç”¨äºå­˜å‚¨åŒ¹é…ç»“æœï¼Œåˆå§‹åŒ–ä¸º false
 //    vector<vector<bool>> dp(m + 1, vector<bool>(n + 1, false));
 //
-//    // µ± pattern ºÍ text ¶¼Îª¿ÕÊ±£¬Æ¥Åä³É¹¦
+//    // å½“ pattern å’Œ text éƒ½ä¸ºç©ºæ—¶ï¼ŒåŒ¹é…æˆåŠŸ
 //    dp[0][0] = true;
 //
-//    // ´¦ÀíÒÔ '*' ¿ªÍ·µÄÇé¿ö£¬'*' ¿ÉÒÔÆ¥Åä¿Õ´®
+//    // å¤„ç†ä»¥ '*' å¼€å¤´çš„æƒ…å†µï¼Œ'*' å¯ä»¥åŒ¹é…ç©ºä¸²
 //    for (int i = 1; i <= m; ++i) {
 //        if (pattern[i - 1] == '*') {
 //            dp[i][0] = dp[i - 1][0];
 //        }
 //    }
 //
-//    // ¶¯Ì¬¹æ»®Ìî±í
+//    // åŠ¨æ€è§„åˆ’å¡«è¡¨
 //    for (int i = 1; i <= m; ++i) {
 //        for (int j = 1; j <= n; ++j) {
 //            if (pattern[i - 1] == '?' || tolower(pattern[i - 1]) == tolower(text[j - 1])) {
-//                // µ±Ç°×Ö·ûÆ¥Åä£¬È¡¾öÓÚÖ®Ç°µÄ×Ö·ûÊÇ·ñÆ¥Åä
+//                // å½“å‰å­—ç¬¦åŒ¹é…ï¼Œå–å†³äºä¹‹å‰çš„å­—ç¬¦æ˜¯å¦åŒ¹é…
 //                dp[i][j] = dp[i - 1][j - 1];
 //            }
 //            else if (pattern[i - 1] == '*') {
-//                // '*' Æ¥Åä0¸ö×Ö·û£¬»òÕßÆ¥Åä¶à¸ö×Ö·û
+//                // '*' åŒ¹é…0ä¸ªå­—ç¬¦ï¼Œæˆ–è€…åŒ¹é…å¤šä¸ªå­—ç¬¦
 //                dp[i][j] = dp[i - 1][j] || dp[i][j - 1];
 //            }
 //        }
@@ -779,13 +779,13 @@ using namespace std;
 //    return 0;
 //}
 
-// day19 ×î³¤¹«¹²×Ö´®
+// day19 æœ€é•¿å…¬å…±å­—ä¸²
 //#include <iostream>
 //#include <string>
 //#include <vector>
 //using namespace std;
 //
-//// Õâ¸ö¶¯Ì¬¹æ»®ÆäÊµ»¹Ã»ÍêÈ«¸ã¶®£¬ÒÔºóÓĞ»ú»á£¬ÓĞÊ±¼ä¿ÉÒÔ¿¼ÂÇÔÙ¿´¿´ day19
+//// è¿™ä¸ªåŠ¨æ€è§„åˆ’å…¶å®è¿˜æ²¡å®Œå…¨ææ‡‚ï¼Œä»¥åæœ‰æœºä¼šï¼Œæœ‰æ—¶é—´å¯ä»¥è€ƒè™‘å†çœ‹çœ‹ day19
 //string GetComSubstr(string& longStr, string& shortStr)
 //{
 //    int start = 0, maxSize = 0;
@@ -816,7 +816,7 @@ using namespace std;
 //    string longStr, shortStr;
 //    while (cin >> longStr >> shortStr)
 //    {
-//        // Çó³ö³¤¶Ì
+//        // æ±‚å‡ºé•¿çŸ­
 //        if (longStr.size() < shortStr.size())
 //        {
 //            swap(longStr, shortStr);
@@ -828,7 +828,7 @@ using namespace std;
 //    return 0;
 //}
 
-// ¸´Ğ´0
+// å¤å†™0
 //class Solution {
 //public:
 //    void duplicateZeros(vector<int>& arr)
@@ -836,7 +836,7 @@ using namespace std;
 //        int cur = 0, dest = -1;
 //        int n = arr.size();
 //
-//        // ÕÒ×îºóÒ»¸ö"¸´Ğ´"Î»ÖÃ
+//        // æ‰¾æœ€åä¸€ä¸ª"å¤å†™"ä½ç½®
 //        while (cur < n)
 //        {
 //            if (arr[cur])
@@ -856,7 +856,7 @@ using namespace std;
 //            cur++;
 //        }
 //
-//        // ´¦ÀíÒ»ÏÂ±ß½çÇé¿ö
+//        // å¤„ç†ä¸€ä¸‹è¾¹ç•Œæƒ…å†µ
 //        if (dest == n)
 //        {
 //            arr[n - 1] = 0;
@@ -864,7 +864,7 @@ using namespace std;
 //            dest -= 2;
 //        }
 //
-//        // ´ÓºóÍùÇ°¸´Ğ´
+//        // ä»åå¾€å‰å¤å†™
 //        while (cur >= 0)
 //        {
 //            if (arr[cur])
@@ -881,7 +881,7 @@ using namespace std;
 //    }
 //};
 
-// ÒÆ¶¯Áã
+// ç§»åŠ¨é›¶
 //class Solution {
 //public:
 //    void moveZeroes(vector<int>& nums)
@@ -896,7 +896,7 @@ using namespace std;
 //    }
 //};
 
-// ¿ìÀÖÊı
+// å¿«ä¹æ•°
 // class Solution {
 //public:
 //    int BitSum(int n)
@@ -912,7 +912,7 @@ using namespace std;
 //        return sum;
 //    }
 //
-//    // ±¾Ìâ½«Ë«Ö¸ÕëµÄ"Ö¸Õë"³éÏó³ÉÁËÁ½¸öÊı
+//    // æœ¬é¢˜å°†åŒæŒ‡é’ˆçš„"æŒ‡é’ˆ"æŠ½è±¡æˆäº†ä¸¤ä¸ªæ•°
 //    bool isHappy(int n)
 //    {
 //        int slow = n, fast = n;
@@ -922,7 +922,7 @@ using namespace std;
 //    }
 //};
 
-// Ê¢×î¶àË®µÄÈİÆ÷
+// ç››æœ€å¤šæ°´çš„å®¹å™¨
 // class Solution {
 // public:
 //     int maxArea(vector<int>& height) 
@@ -948,27 +948,27 @@ using namespace std;
 //     }
 // };
 
-// ÓĞĞ§Èı½ÇĞÎµÄ¸öÊı
+// æœ‰æ•ˆä¸‰è§’å½¢çš„ä¸ªæ•°
 // class Solution 
 // {
 // public:
 //     int triangleNumber(vector<int>& nums) 
 //     {
-//         // ÓÅ»¯£ºÅÅĞò
+//         // ä¼˜åŒ–ï¼šæ’åº
 //         sort(nums.begin(), nums.end());
 
 //         int count = 0;
-//         for(int max = nums.size() - 1; max >= 2; max--) // ¹Ì¶¨×î´óÊı
+//         for(int max = nums.size() - 1; max >= 2; max--) // å›ºå®šæœ€å¤§æ•°
 //         {
 //             int left = 0, right = max - 1;
 //             while(left < right)
 //             {
-//                 if(nums[left] + nums[right] > nums[max]) // ¿ÉÒÔ×é³É
+//                 if(nums[left] + nums[right] > nums[max]) // å¯ä»¥ç»„æˆ
 //                 {
 //                     count += right - left;
 //                     right--;
 //                 }
-//                 else // ²»¿ÉÒÔ×é³É
+//                 else // ä¸å¯ä»¥ç»„æˆ
 //                 {
 //                     left++;
 //                 }
@@ -979,7 +979,7 @@ using namespace std;
 //     }
 // };
 
-// ²éÕÒ×Ü¼Û¸ñÎªÄ¿±êÖµµÄÁ½¸öÉÌÆ·
+// æŸ¥æ‰¾æ€»ä»·æ ¼ä¸ºç›®æ ‡å€¼çš„ä¸¤ä¸ªå•†å“
 //class Solution
 //{
 //public:
@@ -1007,11 +1007,11 @@ using namespace std;
 //    }
 //};
 
-// ÈıÊıÖ®ºÍ
+// ä¸‰æ•°ä¹‹å’Œ
 // class Solution 
 // {
 // public:
-//     // È¥ÖØ£º1.set 2.Ëã·¨
+//     // å»é‡ï¼š1.set 2.ç®—æ³•
 //     vector<vector<int>> threeSum(vector<int>& nums)
 //     {
 //         sort(nums.begin(), nums.end());
@@ -1028,7 +1028,7 @@ using namespace std;
 //             int left = src + 1;
 //             int right = n - 1;
             
-//             // Ë«Ö¸ÕëÇóºÍ
+//             // åŒæŒ‡é’ˆæ±‚å’Œ
 //             while(left < right)
 //             {
 //                 int sum = nums[left] + nums[right];
@@ -1042,12 +1042,12 @@ using namespace std;
 //                 }
 //                 else
 //                 {
-//                     // Ò»ÂÖÖĞ£¬ÕÒµ½µÚÒ»¸ö²¢²»Í£Ö¹£¬ËõĞ¡Çø¼ä£¬¼ÌĞøÕÒ
+//                     // ä¸€è½®ä¸­ï¼Œæ‰¾åˆ°ç¬¬ä¸€ä¸ªå¹¶ä¸åœæ­¢ï¼Œç¼©å°åŒºé—´ï¼Œç»§ç»­æ‰¾
 //                     ret.push_back({nums[src], nums[left], nums[right]});               
 //                     left++;
 //                     right--;
                     
-//                     // È¥ÖØ && ±ÜÃâÔ½½ç
+//                     // å»é‡ && é¿å…è¶Šç•Œ
 //                     while(left < right && nums[left] == nums[left - 1])
 //                     {
 //                         left++;
@@ -1060,7 +1060,7 @@ using namespace std;
 //                 }
 //             }
             
-//             // È¥ÖØ && ±ÜÃâÔ½½ç
+//             // å»é‡ && é¿å…è¶Šç•Œ
 //             src++;
 //             while(src < n && nums[src] == nums[src - 1])
 //             {
@@ -1072,7 +1072,7 @@ using namespace std;
 //     }
 // };
 
-// ËÄÊıÖ®ºÍ
+// å››æ•°ä¹‹å’Œ
 // class Solution 
 // {
 // public:
@@ -1084,15 +1084,15 @@ using namespace std;
 //         sort(nums.begin(), nums.end());
         
 //         int src1 = 0;
-//         while(src1 < n -3) // ¹Ì¶¨Êı1
+//         while(src1 < n -3) // å›ºå®šæ•°1
 //         {
 //             int src2 = src1 + 1;
-//             while(src2 < n - 2) // ¹Ì¶¨Êı2
+//             while(src2 < n - 2) // å›ºå®šæ•°2
 //             {
 //                 int left = src2 + 1;
 //                 int right = n - 1;
 
-//                 // Ë«Ö¸ÕëÇóºÍ
+//                 // åŒæŒ‡é’ˆæ±‚å’Œ
 //                 while(left < right)
 //                 {
 //                     long long sum = (long long)nums[left] + nums[right] + nums[src1] + nums[src2];
@@ -1109,7 +1109,7 @@ using namespace std;
 //                     {
 //                         ret.push_back({nums[src1], nums[src2], nums[left++], nums[right--]});
                         
-//                         // È¥ÖØ(left + right) && ±ÜÃâÔ½½ç
+//                         // å»é‡(left + right) && é¿å…è¶Šç•Œ
 //                         while(left < right && nums[left] == nums[left - 1])
 //                         {
 //                             left++;
@@ -1122,7 +1122,7 @@ using namespace std;
 //                     }
 //                 } // end of while(left < right)
                 
-//                 // È¥ÖØsrc2 && ±ÜÃâÔ½½ç
+//                 // å»é‡src2 && é¿å…è¶Šç•Œ
 //                 src2++;
 //                 while(src2 < n && nums[src2] == nums[src2 - 1])
 //                 {
@@ -1130,7 +1130,7 @@ using namespace std;
 //                 }
 //             } // end of while(src2)
             
-//             // È¥ÖØsrc1 && ±ÜÃâÔ½½ç
+//             // å»é‡src1 && é¿å…è¶Šç•Œ
 //             src1++;
 //             while(src1 < n && nums[src1] == nums[src1 - 1])
 //             {
@@ -1142,7 +1142,7 @@ using namespace std;
 //     }
 // };
 
-// ³¤¶È×îĞ¡µÄ×ÓÊı×é
+// é•¿åº¦æœ€å°çš„å­æ•°ç»„
 // class Solution {
 // public:
 //     int minSubArrayLen(int target, vector<int>& nums) 
@@ -1150,11 +1150,11 @@ using namespace std;
 //         int sum = 0, len = INT_MAX;
 //         for(int left = 0, right = 0; right < nums.size(); right++)
 //         {
-//             sum += nums[right]; // ½ø´°¿Ú
-//             while(sum >= target) // ÅĞ¶Ï
+//             sum += nums[right]; // è¿›çª—å£
+//             while(sum >= target) // åˆ¤æ–­
 //             {
-//                 len = min(len, right - left + 1); // ¸üĞÂ½á¹û
-//                 sum -= nums[left++]; // ³ö´°¿Ú
+//                 len = min(len, right - left + 1); // æ›´æ–°ç»“æœ
+//                 sum -= nums[left++]; // å‡ºçª—å£
 //             }
 //         }
 
@@ -1162,7 +1162,7 @@ using namespace std;
 //     }
 // };
 
-// ÎŞÖØ¸´×Ö·ûµÄ×î³¤×Ó´®
+// æ— é‡å¤å­—ç¬¦çš„æœ€é•¿å­ä¸²
 // class Solution 
 // {
 // public:
@@ -1170,37 +1170,37 @@ using namespace std;
 //     {
 //         int n = s.size(); 
 //         int ret = 0;
-//         int hash[128] = { 0 }; // ÀûÓÃhash²éÖØ
+//         int hash[128] = { 0 }; // åˆ©ç”¨hashæŸ¥é‡
         
 //         for(int left = 0, right = 0; right < n; right++)
 //         {
-//             hash[s[right]]++; // Èë´°¿Ú
+//             hash[s[right]]++; // å…¥çª—å£
             
 //             while(hash[s[right]] > 1)
 //             {
-//                 hash[s[left++]]--; // ³ö´°¿Ú
+//                 hash[s[left++]]--; // å‡ºçª—å£
 //             }
             
-//             ret = max(ret, right - left + 1); // ¸üĞÂ½á¹û
+//             ret = max(ret, right - left + 1); // æ›´æ–°ç»“æœ
 //         }
         
 //         return ret;
 //     }
 // };
 
-// ×î´óÁ¬ĞøµÄÒ»¸öÊı ¢ó
+// æœ€å¤§è¿ç»­çš„ä¸€ä¸ªæ•° â…¢
 // class Solution 
 // {
 // public:
 //     int longestOnes(vector<int>& nums, int k) 
 //     {
-//         // ÎÊÌâ×ª»¯Îª£¬×ÓÊı×éÄÚ£¬0µÄ¸öÊı²»³¬¹ık
+//         // é—®é¢˜è½¬åŒ–ä¸ºï¼Œå­æ•°ç»„å†…ï¼Œ0çš„ä¸ªæ•°ä¸è¶…è¿‡k
 //         int ret = 0;
 //         for(int left = 0, right = 0, zero = 0; right < nums.size(); right++)
 //         {
 //             if(nums[right] == 0)
 //             {
-//                 zero++; // Èë´°¿Ú
+//                 zero++; // å…¥çª—å£
 //             }
             
 //             while(zero > k)
@@ -1218,13 +1218,13 @@ using namespace std;
 //     }
 // };
 
-// ½«x¼õµ½0µÄ×îĞ¡²Ù×÷Êı
+// å°†xå‡åˆ°0çš„æœ€å°æ“ä½œæ•°
 // class Solution 
 // {
 // public:
 //     int minOperations(vector<int>& nums, int x) 
 //     {
-//         // ½«Ä£ĞÍ×ª»¯Îª×î³¤×ÓÊı×éµÄºÍ == (sumNum - x)
+//         // å°†æ¨¡å‹è½¬åŒ–ä¸ºæœ€é•¿å­æ•°ç»„çš„å’Œ == (sumNum - x)
 //         int sum = 0, ret = -1;
 //         int target = -x;
         
@@ -1233,7 +1233,7 @@ using namespace std;
 //             target += e;
 //         }
         
-//         // Ï¸½Ú´¦Àí£¬µ±targetÎª¸ºÊıÊ±£¬ÔõÃ´¼õ¶¼¼õ²»¹»
+//         // ç»†èŠ‚å¤„ç†ï¼Œå½“targetä¸ºè´Ÿæ•°æ—¶ï¼Œæ€ä¹ˆå‡éƒ½å‡ä¸å¤Ÿ
 //         if(target < 0)
 //         {
 //             return -1;
@@ -1241,16 +1241,16 @@ using namespace std;
         
 //         for(int left = 0, right = 0; right < nums.size(); right++)
 //         {
-//             sum += nums[right]; // Èë´°¿Ú
+//             sum += nums[right]; // å…¥çª—å£
             
-//             while(sum > target) // ÅĞ¶Ï
+//             while(sum > target) // åˆ¤æ–­
 //             {
-//                 sum -= nums[left++]; // ³ö´°¿Ú
+//                 sum -= nums[left++]; // å‡ºçª—å£
 //             }
             
 //             if(sum == target)
 //             {
-//                 ret = max(ret, right - left + 1); // ¸üĞÂ½á¹û
+//                 ret = max(ret, right - left + 1); // æ›´æ–°ç»“æœ
 //             }
 //         }
         
@@ -1258,23 +1258,23 @@ using namespace std;
 //     }
 // };
 
-// // Ë®¹û³ÉÀº v1.0
+// // æ°´æœæˆç¯® v1.0
 // class Solution 
 // {
 // public:
-//     // Ä£ĞÍ×ª»¯Îª£ºÊı×éÖ»ÓĞÁ½¸öÔªËØµÄ×î´ó×ÓÊı×é
+//     // æ¨¡å‹è½¬åŒ–ä¸ºï¼šæ•°ç»„åªæœ‰ä¸¤ä¸ªå…ƒç´ çš„æœ€å¤§å­æ•°ç»„
 //     int totalFruit(vector<int>& fruits) 
 //     {
 //         int ret = 0;
-//         unordered_map<int, int> basket; // <Ë®¹ûÖÖÀà ÊıÁ¿>
+//         unordered_map<int, int> basket; // <æ°´æœç§ç±» æ•°é‡>
         
 //         for(int left = 0, right = 0; right < fruits.size(); right++)
 //         {
-//             basket[fruits[right]]++; // Èë´°¿Ú
+//             basket[fruits[right]]++; // å…¥çª—å£
             
-//             while(basket.size() > 2) // ÅĞ¶Ï
+//             while(basket.size() > 2) // åˆ¤æ–­
 //             {
-//                 // ³ö´°¿Ú
+//                 // å‡ºçª—å£
 //                 basket[fruits[left]]--;
                 
 //                 if(basket[fruits[left]] == 0)
@@ -1285,25 +1285,25 @@ using namespace std;
 //                 left++;
 //             }
             
-//             ret = max(ret, right - left + 1); // ¸üĞÂÊı¾İ
+//             ret = max(ret, right - left + 1); // æ›´æ–°æ•°æ®
 //         }
         
 //         return ret;
 //     }
 // };
 
-// Ë®¹û³ÉÀº v2.0 ÓÅ»¯
+// æ°´æœæˆç¯® v2.0 ä¼˜åŒ–
 // class Solution 
 // {
 // public:
-//     // Ä£ĞÍ×ª»¯Îª£ºÊı×éÖ»ÓĞÁ½¸öÔªËØµÄ×î´ó×ÓÊı×é
-//     // ¸ÄÔì¹şÏ£±í£¬ÒÔ¸ÄÉÆÊ±¼ä¸´ÔÓ¶È
+//     // æ¨¡å‹è½¬åŒ–ä¸ºï¼šæ•°ç»„åªæœ‰ä¸¤ä¸ªå…ƒç´ çš„æœ€å¤§å­æ•°ç»„
+//     // æ”¹é€ å“ˆå¸Œè¡¨ï¼Œä»¥æ”¹å–„æ—¶é—´å¤æ‚åº¦
 //     int totalFruit(vector<int>& fruits) 
 //     {
 //         int ret = 0, kinds = 0;
         
-//         // Ë®¹ûÀàĞÍĞ¡ÓÚÒ»¸ö¶¨Öµ
-//         // ÒÔ¿Õ¼ä»»Ê±¼ä
+//         // æ°´æœç±»å‹å°äºä¸€ä¸ªå®šå€¼
+//         // ä»¥ç©ºé—´æ¢æ—¶é—´
 //         int basket[100001] = { 0 };
         
 //         for(int left = 0, right = 0; right < fruits.size(); right++)
@@ -1312,11 +1312,11 @@ using namespace std;
 //             {
 //                 kinds++;
 //             }
-//             basket[fruits[right]]++; // Èë´°¿Ú
+//             basket[fruits[right]]++; // å…¥çª—å£
             
-//             while(kinds > 2) // ÅĞ¶Ï
+//             while(kinds > 2) // åˆ¤æ–­
 //             {
-//                 // ³ö´°¿Ú
+//                 // å‡ºçª—å£
 //                 basket[fruits[left]]--;
                 
 //                 if(basket[fruits[left]] == 0)
@@ -1327,41 +1327,41 @@ using namespace std;
 //                 left++;
 //             }
             
-//             ret = max(ret, right - left + 1); // ¸üĞÂÊı¾İ
+//             ret = max(ret, right - left + 1); // æ›´æ–°æ•°æ®
 //         }
         
 //         return ret;
 //     }
 // };
 
-// ÕÒµ½×Ö·û´®ÖĞËùÓĞ×ÖÄ¸ÒìÎ»´Ê v1.0
+// æ‰¾åˆ°å­—ç¬¦ä¸²ä¸­æ‰€æœ‰å­—æ¯å¼‚ä½è¯ v1.0
 // class Solution {
 // public:
-//     // ½«ÎÊÌâ×ª»¯Îª£ºpÖĞµÄ×ÖÄ¸³öÏÖµÄ´ÎÊıÓësÖĞÄ³¸ö×Ö´®ÖĞ³öÏÖµÄ´ÎÊıÏàÍ¬
+//     // å°†é—®é¢˜è½¬åŒ–ä¸ºï¼špä¸­çš„å­—æ¯å‡ºç°çš„æ¬¡æ•°ä¸sä¸­æŸä¸ªå­—ä¸²ä¸­å‡ºç°çš„æ¬¡æ•°ç›¸åŒ
 //     vector<int> findAnagrams(string s, string p) 
 //     {
 //         vector<int> ret;
 //         int hashS[26] = { 0 };
 //         int hashP[26] = { 0 };
 
-//         // ½«pÈçhash
+//         // å°†på¦‚hash
 //         for(auto& ch : p)
 //         {
 //             hashP[ch - 'a']++;
 //         }
 
-//         // ´¦Àís
+//         // å¤„ç†s
 //         int len = p.size();
 //         for(int left = 0, right = 0; right < s.size(); right++)
 //         {
-//             hashS[s[right] - 'a']++; // Èë´°¿Ú
+//             hashS[s[right] - 'a']++; // å…¥çª—å£
 
-//             if(right - left + 1 > len) // ÅĞ¶Ï´°¿ÚÊÇ·ñ´óÁË
+//             if(right - left + 1 > len) // åˆ¤æ–­çª—å£æ˜¯å¦å¤§äº†
 //             {
-//                 hashS[s[left++] - 'a']--; // ³ö´°¿Ú
+//                 hashS[s[left++] - 'a']--; // å‡ºçª—å£
 //             }
 
-//             if(right - left + 1 == len) // ³¢ÊÔ¸üĞÂÊı¾İ
+//             if(right - left + 1 == len) // å°è¯•æ›´æ–°æ•°æ®
 //             {
 //                 bool flag = true;
 //                 for(int i = 0; i < 26; i++)
@@ -1384,45 +1384,45 @@ using namespace std;
 //     }
 // };
 
-// ÕÒµ½×Ö·û´®ÖĞËùÓĞ×ÖÄ¸ÒìÎ»´Ê v2.0
-// ÓÅ»¯¸üĞÂ½á¹ûµÄÅĞ¶ÏÌõ¼ş£¬²»ÓÃÃ¿´Î¶¼±éÀúhashÁË
+// æ‰¾åˆ°å­—ç¬¦ä¸²ä¸­æ‰€æœ‰å­—æ¯å¼‚ä½è¯ v2.0
+// ä¼˜åŒ–æ›´æ–°ç»“æœçš„åˆ¤æ–­æ¡ä»¶ï¼Œä¸ç”¨æ¯æ¬¡éƒ½éå†hashäº†
 // class Solution {
 // public:
-//     // ½«ÎÊÌâ×ª»¯Îª£ºpÖĞµÄ×ÖÄ¸³öÏÖµÄ´ÎÊıÓësÖĞÄ³¸ö×Ö´®ÖĞ³öÏÖµÄ´ÎÊıÏàÍ¬
+//     // å°†é—®é¢˜è½¬åŒ–ä¸ºï¼špä¸­çš„å­—æ¯å‡ºç°çš„æ¬¡æ•°ä¸sä¸­æŸä¸ªå­—ä¸²ä¸­å‡ºç°çš„æ¬¡æ•°ç›¸åŒ
 //     vector<int> findAnagrams(string s, string p) 
 //     {
 //         vector<int> ret;
 //         int hashS[26] = { 0 };
 //         int hashP[26] = { 0 };
 
-//         // ½«pÈçhash
+//         // å°†på¦‚hash
 //         for(auto& ch : p)
 //         {
 //             hashP[ch - 'a']++;
 //         }
 
-//         // ´¦Àís
+//         // å¤„ç†s
 //         int count = 0, len = p.size();
 //         for(int left = 0, right = 0; right < s.size(); right++)
 //         {
-//             // Èë´°¿Ú + Î¬»¤count
+//             // å…¥çª—å£ + ç»´æŠ¤count
 //             if(++hashS[s[right] - 'a'] <= hashP[s[right] - 'a'])
 //             {
-//                 count++; // Èë´°¿ÚµÄ×Ö·ûÊÇÒ»¸öÓĞĞ§×Ö·û
+//                 count++; // å…¥çª—å£çš„å­—ç¬¦æ˜¯ä¸€ä¸ªæœ‰æ•ˆå­—ç¬¦
 //             }
 
-//             if(right - left + 1 > len) // ÅĞ¶Ï´°¿ÚÊÇ·ñ´óÁË
+//             if(right - left + 1 > len) // åˆ¤æ–­çª—å£æ˜¯å¦å¤§äº†
 //             {
-//                 // Î¬»¤count
+//                 // ç»´æŠ¤count
 //                 if(hashS[s[left] - 'a']-- <= hashP[s[left] - 'a'])
 //                 {
-//                     count--; // ³ö´°¿ÚµÄÔªËØÊÇÒ»¸öÓĞĞ§×Ö·û
+//                     count--; // å‡ºçª—å£çš„å…ƒç´ æ˜¯ä¸€ä¸ªæœ‰æ•ˆå­—ç¬¦
 //                 }
 
-//                 left++; // ³ö´°¿Ú
+//                 left++; // å‡ºçª—å£
 //             }
 
-//             if(count == len) // ¸üĞÂ½á¹û
+//             if(count == len) // æ›´æ–°ç»“æœ
 //             {
 //                 ret.push_back(left);
 //             }
@@ -1432,7 +1432,7 @@ using namespace std;
 //     }
 // };
 
-// ´®ÁªËùÓĞµ¥´ÊµÄ×Ó´®
+// ä¸²è”æ‰€æœ‰å•è¯çš„å­ä¸²
 // class Solution 
 // {
 // public:
@@ -1448,35 +1448,35 @@ using namespace std;
 //             mapV[str]++;
 //         }
 
-//         for(int i = 0; i < len; i++) // »¬¶¯´°¿ÚµÄÖ´ĞĞ´ÎÊı
+//         for(int i = 0; i < len; i++) // æ»‘åŠ¨çª—å£çš„æ‰§è¡Œæ¬¡æ•°
 //         {
 //             int count = 0;
 //             for(int left = i, right = i; right + len <= s.size(); right += len)
 //             {
-//                 // Èë´°¿Ú£¬½ØÈ¡×Ó´®£¬Î¬»¤count
+//                 // å…¥çª—å£ï¼Œæˆªå–å­ä¸²ï¼Œç»´æŠ¤count
 //                 string str = s.substr(right, len);
 //                 mapS[str]++;
 
-//                 // ¿´¿´mapVÖĞÊÇ·ñ´æÔÚstr£¬ÒÔ±ÜÃâ²åÈë²»ĞèÒªµÄÖµ
+//                 // çœ‹çœ‹mapVä¸­æ˜¯å¦å­˜åœ¨strï¼Œä»¥é¿å…æ’å…¥ä¸éœ€è¦çš„å€¼
 //                 if(mapV.count(str) && mapS[str] <= mapV[str]) 
 //                 {
 //                     count++;
 //                 }
 
-//                 // ÅĞ¶Ï´°¿ÚÊÇ·ñ´óÁË
+//                 // åˆ¤æ–­çª—å£æ˜¯å¦å¤§äº†
 //                 if(((right - left + len) / len) > words.size())
 //                 {
-//                     // Î¬»¤count
+//                     // ç»´æŠ¤count
 //                     string tmp = s.substr(left, len);
 //                     if(mapV.count(tmp) && mapS[tmp]-- <= mapV[tmp])
 //                     {
 //                         count--;
 //                     }
 
-//                     left += len; // ³ö´°¿Ú
+//                     left += len; // å‡ºçª—å£
 //                 }
 
-//                 if(count == words.size()) // ¸üĞÂ½á¹û
+//                 if(count == words.size()) // æ›´æ–°ç»“æœ
 //                 {
 //                     ret.push_back(left);
 //                 }
@@ -1488,13 +1488,13 @@ using namespace std;
 //     }
 // };
 
-// ×îĞ¡¸²¸Ç×Ö´®
+// æœ€å°è¦†ç›–å­—ä¸²
 // class Solution 
 // {
 // public:
 //     string minWindow(string s, string t) 
 //     {
-//         // ½öÓÃÊı×é¿ÉÒÔ±ÜÃâSTLµÄ¿ªÏú£¬Ìá¸ßĞ§ÂÊ
+//         // ä»…ç”¨æ•°ç»„å¯ä»¥é¿å…STLçš„å¼€é”€ï¼Œæé«˜æ•ˆç‡
 //         int hashS[128] = { 0 };
 //         int hashT[128] = { 0 };
         
@@ -1510,25 +1510,25 @@ using namespace std;
 //         int begin = -1, minLen = INT_MAX;
 //         for(int left = 0, right = 0, count = 0; right < s.size(); right++)
 //         {
-//             // Èë´°¿Ú
+//             // å…¥çª—å£
 //             char in = s[right];
             
-//             // Î¬»¤count£¬½öÍ³¼ÆtÖĞÓĞĞ§×Ö·ûµÄÖÖÀà
+//             // ç»´æŠ¤countï¼Œä»…ç»Ÿè®¡tä¸­æœ‰æ•ˆå­—ç¬¦çš„ç§ç±»
 //             if(++hashS[in] == hashT[in])
 //             {
 //                 count++;
 //             }
             
-//             while(count == kinds) // ÅĞ¶Ï
+//             while(count == kinds) // åˆ¤æ–­
 //             {   
-//                 // ¸üĞÂ
+//                 // æ›´æ–°
 //                 if(right - left + 1 < minLen)
 //                 {
 //                     begin = left;    
 //                     minLen = right - left + 1;
 //                 }
                 
-//                 // ³ö´°¿Ú && Î¬»¤count
+//                 // å‡ºçª—å£ && ç»´æŠ¤count
 //                 char out = s[left++];
 //                 if(hashS[out]-- == hashT[out])
 //                 {
@@ -1547,7 +1547,7 @@ using namespace std;
 //     }
 // };
 
-// ¶ş·Ö²éÕÒ
+// äºŒåˆ†æŸ¥æ‰¾
 // class Solution 
 // {
 // public:
@@ -1556,7 +1556,7 @@ using namespace std;
 //         int left = 0, right = nums.size() - 1;
 //         while(left <= right)
 //         {
-//             int mid = left + (right - left) / 2; // ·ÀÖ¹Òç³ö
+//             int mid = left + (right - left) / 2; // é˜²æ­¢æº¢å‡º
 //             if(nums[mid] < target)
 //             {
 //                 left = mid + 1;
@@ -1575,19 +1575,19 @@ using namespace std;
 //     }
 // };
 
-// ÔÚÅÅĞòÊı×éÖĞ²éÕÒÔªËØµÄµÚÒ»¸öºÍ×îºóÒ»¸öÎ»ÖÃ
+// åœ¨æ’åºæ•°ç»„ä¸­æŸ¥æ‰¾å…ƒç´ çš„ç¬¬ä¸€ä¸ªå’Œæœ€åä¸€ä¸ªä½ç½®
 // class Solution 
 // {
 // public:
 //     vector<int> searchRange(vector<int>& nums, int target) 
 //     {
-//         // ´¦Àí±ß½çÇé¿ö
+//         // å¤„ç†è¾¹ç•Œæƒ…å†µ
 //         if(nums.size() == 0)
 //         {
 //             return {-1, -1};
 //         }
 
-//         // ¶ş·Ö×ó¶Ëµã
+//         // äºŒåˆ†å·¦ç«¯ç‚¹
 //         int left = 0, right = nums.size() - 1;
 //         while(left < right)
 //         {
@@ -1605,15 +1605,15 @@ using namespace std;
 //         int begin = 0;
 //         if(nums[left] == target)
 //         {
-//             begin = left; // ±ê¼Ç×ó¶Ëµã
+//             begin = left; // æ ‡è®°å·¦ç«¯ç‚¹
 //         }
 //         else
 //         {
 //             return {-1, -1};
 //         }
 
-//         // ¶ş·ÖÓÒ¶Ëµã
-//         // ÕâÀïÆäÊµleft¿ÉÒÔ²»×ö´¦Àí£¬ËãÒ»¸öĞ¡ÓÅ»¯
+//         // äºŒåˆ†å³ç«¯ç‚¹
+//         // è¿™é‡Œå…¶å®leftå¯ä»¥ä¸åšå¤„ç†ï¼Œç®—ä¸€ä¸ªå°ä¼˜åŒ–
 //         left = 0, right = nums.size() - 1;
 //         while(left < right)
 //         {
@@ -1632,14 +1632,14 @@ using namespace std;
 //     }
 // };
 
-// xµÄÆ½·½¸ù
+// xçš„å¹³æ–¹æ ¹
 // class Solution 
 // {
 // public:
-//     // ¶ş·Ö²éÕÒ
+//     // äºŒåˆ†æŸ¥æ‰¾
 //     int mySqrt(int x) 
 //     {
-//         // ´¦Àí±ß½çÇé¿ö
+//         // å¤„ç†è¾¹ç•Œæƒ…å†µ
 //         if(x < 1)
 //         {
 //             return 0;
@@ -1663,7 +1663,7 @@ using namespace std;
 //     }
 // };
 
-// ËÑË÷²åÈëÎ»ÖÃ
+// æœç´¢æ’å…¥ä½ç½®
 // class Solution 
 // {
 // public:
@@ -1692,11 +1692,11 @@ using namespace std;
 //     }
 // };
 
-// É½ÂöÊı×éµÄ·å¶¥Ë÷Òı
+// å±±è„‰æ•°ç»„çš„å³°é¡¶ç´¢å¼•
 // class Solution 
 // {
 // public:
-//     // Çø¼äÈÔÈ»¾ßÓĞ¶ş¶ÎĞÔ£¬ËùÒÔ¿ÉÒÔÊ¹ÓÃ¶ş·Ö²éÕÒ
+//     // åŒºé—´ä»ç„¶å…·æœ‰äºŒæ®µæ€§ï¼Œæ‰€ä»¥å¯ä»¥ä½¿ç”¨äºŒåˆ†æŸ¥æ‰¾
 //     int peakIndexInMountainArray(vector<int>& arr) 
 //     {
 //         int left = 1, right = arr.size() - 2;
@@ -1717,7 +1717,7 @@ using namespace std;
 //     }
 // };
 
-// Ñ°ÕÒ·åÖµ
+// å¯»æ‰¾å³°å€¼
 // class Solution 
 // {
 // public:
@@ -1741,7 +1741,7 @@ using namespace std;
 //     }
 // };
 
-// Ñ°ÕÒĞı×ªÅÅĞòÊı×éÖĞµÄ×îĞ¡Öµ
+// å¯»æ‰¾æ—‹è½¬æ’åºæ•°ç»„ä¸­çš„æœ€å°å€¼
 // class Solution 
 // {
 // public:
@@ -1766,7 +1766,7 @@ using namespace std;
 //     }
 // };
 
-// 0?n-1 ÖĞÈ±Ê§µÄÊı×Ö
+// 0?n-1 ä¸­ç¼ºå¤±çš„æ•°å­—
 // class Solution 
 // {
 // public:
@@ -1786,11 +1786,11 @@ using namespace std;
 //             }
 //         }
 
-//         return left == records[left] ? (left + 1) : left; // ´¦Àí±ß½çÇé¿ö
+//         return left == records[left] ? (left + 1) : left; // å¤„ç†è¾¹ç•Œæƒ…å†µ
 //     }
 // };
 
-// [Ä£°å] Ç°×ººÍ
+// [æ¨¡æ¿] å‰ç¼€å’Œ
 // #include <iostream>
 // #include <vector>
 // using namespace std;
@@ -1806,14 +1806,14 @@ using namespace std;
 //         cin >> arr[i];
 //     }
 
-//     // Ô¤´¦Àí³öÀ´Ò»¸öÇ°×ººÍÊı×é
+//     // é¢„å¤„ç†å‡ºæ¥ä¸€ä¸ªå‰ç¼€å’Œæ•°ç»„
 //     vector<long long> dp(n + 1);
 //     for(int i = 1; i <= n; i++)
 //     {
 //         dp[i] = dp[i - 1] + arr[i];
 //     }
 
-//     // Ê¹ÓÃÇ°×ººÍÊı×é
+//     // ä½¿ç”¨å‰ç¼€å’Œæ•°ç»„
 //     int l = 0, r = 0;
 //     while(q--)
 //     {
@@ -1824,7 +1824,7 @@ using namespace std;
 //     return 0;
 // }
 
-// [Ä£°å] ¶şÎ¬Ç°×ººÍ
+// [æ¨¡æ¿] äºŒç»´å‰ç¼€å’Œ
 // #include <iostream>
 // #include <vector>
 // using namespace std;
@@ -1834,7 +1834,7 @@ using namespace std;
 //     int n = 0, m = 0, q = 0;
 //     cin >> n >> m >> q;
 
-//     // ¶ÁÈ¡Êı¾İ
+//     // è¯»å–æ•°æ®
 //     vector<vector<int>> arr(n + 1, vector<int>(m + 1));
 //     for(int i = 1; i <= n; i++)
 //     {
@@ -1844,7 +1844,7 @@ using namespace std;
 //         }
 //     }
 
-//     // Ô¤´¦ÀíÇ°×ººÍ¾ØÕó
+//     // é¢„å¤„ç†å‰ç¼€å’ŒçŸ©é˜µ
 //     vector<vector<long long>> dp(n + 1, vector<long long>(m + 1));
 //     for(int i = 1; i <= n; i++)
 //     {
@@ -1854,7 +1854,7 @@ using namespace std;
 //         }
 //     }
 
-//     // Ê¹ÓÃÔ¤´¦ÀíÊı×é
+//     // ä½¿ç”¨é¢„å¤„ç†æ•°ç»„
 //     int x1 = 0, y1 = 0, x2 = 0, y2 = 0;
 //     long long ret = 0;
 //     while(q--)
@@ -1867,7 +1867,7 @@ using namespace std;
 //     return 0;
 // }
 
-// Ñ°ÕÒÊı×éµÄÖĞĞÄÏÂ±ê
+// å¯»æ‰¾æ•°ç»„çš„ä¸­å¿ƒä¸‹æ ‡
 // class Solution 
 // {
 // public:
@@ -1876,20 +1876,20 @@ using namespace std;
 //         int n = nums.size();
 //         vector<int> f(n), g(n);
 
-//         // Ô¤´¦ÀíÇ°×ººÍÊı×éºÍºó×ººÍÊı×é
-//         // f[i] -> [0, i - 1]Çø¼ä£¬ËùÓĞÔªËØµÄºÍ
+//         // é¢„å¤„ç†å‰ç¼€å’Œæ•°ç»„å’Œåç¼€å’Œæ•°ç»„
+//         // f[i] -> [0, i - 1]åŒºé—´ï¼Œæ‰€æœ‰å…ƒç´ çš„å’Œ
 //         for(int i = 1; i < n; i++)
 //         {
 //             f[i] = f[i - 1] + nums[i - 1];
 //         }
 
-//         // g[i] -> [i + 1, n - 1]Çø¼ä£¬ËùÓĞÔªËØµÄºÍ
+//         // g[i] -> [i + 1, n - 1]åŒºé—´ï¼Œæ‰€æœ‰å…ƒç´ çš„å’Œ
 //         for(int i = n - 2; i >= 0; i--)
 //         {
 //             g[i] = g[i + 1] + nums[i + 1];
 //         }
 
-//         // Ê¹ÓÃ Ç°×ººÍ && ºó×ººÍ Êı×é
+//         // ä½¿ç”¨ å‰ç¼€å’Œ && åç¼€å’Œ æ•°ç»„
 //         for(int i = 0; i < n; i++)
 //         {
 //             if(f[i] == g[i])
@@ -1902,7 +1902,7 @@ using namespace std;
 //     }
 // };
 
-// ³ı×ÔÉíÒÔÍâÊı×éµÄ³Ë»ı
+// é™¤è‡ªèº«ä»¥å¤–æ•°ç»„çš„ä¹˜ç§¯
 // class Solution 
 // {
 // public:
@@ -1910,9 +1910,9 @@ using namespace std;
 //     {
 //         int n = nums.size();
 //         vector<int> f(n), g(n);
-//         f[0] = 1, g[n - 1] = 1; // Ï¸½Ú´¦Àí
+//         f[0] = 1, g[n - 1] = 1; // ç»†èŠ‚å¤„ç†
 
-//         // Ô¤´¦ÀíÇ°×º»ıÊı×éºÍºó×º»ıÊı×é
+//         // é¢„å¤„ç†å‰ç¼€ç§¯æ•°ç»„å’Œåç¼€ç§¯æ•°ç»„
 //         for(int i = 1; i < n; i++)
 //         {
 //             f[i] = f[i - 1] * nums[i - 1];
@@ -1923,7 +1923,7 @@ using namespace std;
 //             g[i] = g[i + 1] * nums[i + 1];
 //         }
 
-//         // Ê¹ÓÃ
+//         // ä½¿ç”¨
 //         vector<int> ret(n);
 //         for(int i = 0; i < n; i++)
 //         {
@@ -1934,45 +1934,45 @@ using namespace std;
 //     }
 // };
 
-// ºÍÎªkµÄ×ÓÊı×é
+// å’Œä¸ºkçš„å­æ•°ç»„
 // class Solution 
 // {
 // public:
 //     int subarraySum(vector<int>& nums, int k) 
 //     {
-//         unordered_map<int, int> hash; // <Ç°×ººÍ, ´ÎÊı>
+//         unordered_map<int, int> hash; // <å‰ç¼€å’Œ, æ¬¡æ•°>
 //         hash[0] = 1;
 
-//         int ret = 0, sum = 0; // ±êÊ¶Ç°Ò»¸öÎ»ÖÃµÄÇ°×ººÍ
+//         int ret = 0, sum = 0; // æ ‡è¯†å‰ä¸€ä¸ªä½ç½®çš„å‰ç¼€å’Œ
 //         for(auto& e : nums)
 //         {
-//             sum += e; // ¼ÆËãµ±Ç°Î»ÖÃµÄÇ°×ººÍ
+//             sum += e; // è®¡ç®—å½“å‰ä½ç½®çš„å‰ç¼€å’Œ
 
 //             if(hash.count(sum - k))
 //             {
 //                 ret += hash[sum - k];
 //             }
 
-//             hash[sum]++; // ½«iÎ»ÖÃµÄÇ°×ººÍÈëhash
+//             hash[sum]++; // å°†iä½ç½®çš„å‰ç¼€å’Œå…¥hash
 //         }
 
 //         return ret;
 //     }
 // };
 
-// ºÍ¿É±» K Õû³ıµÄ×ÓÊı×é
+// å’Œå¯è¢« K æ•´é™¤çš„å­æ•°ç»„
 // class Solution 
 // {
 // public:
 //     int subarraysDivByK(vector<int>& nums, int k) 
 //     {
-//         unordered_map<int, int> hash;// <Ç°×ººÍÓàÊı, ´ÎÊı>
+//         unordered_map<int, int> hash;// <å‰ç¼€å’Œä½™æ•°, æ¬¡æ•°>
 //         hash[0] = 1;
         
-//         int sum = 0, ret = 0; // ÓÃÓÚ±ê¼ÇÇ°Ò»¸öÎ»ÖÃµÄÇ°×ººÍ
+//         int sum = 0, ret = 0; // ç”¨äºæ ‡è®°å‰ä¸€ä¸ªä½ç½®çš„å‰ç¼€å’Œ
 //         for(auto& e : nums)
 //         {
-//             sum += e; // ¼ÆËãµ±Ç°Î»ÖÃµÄÇ°×ººÍ
+//             sum += e; // è®¡ç®—å½“å‰ä½ç½®çš„å‰ç¼€å’Œ
 
 //             int tmp = (sum % k + k) % k;
 //             if(hash.count(tmp))
@@ -1980,34 +1980,34 @@ using namespace std;
 //                 ret += hash[tmp];
 //             }
 
-//             hash[tmp]++; // ½«iÎ»ÖÃµÄÇ°×ººÍµÄÓàÊıÈëhash
+//             hash[tmp]++; // å°†iä½ç½®çš„å‰ç¼€å’Œçš„ä½™æ•°å…¥hash
 //         }
 
 //         return ret;
 //     }
 // };
 
-// Á¬ĞøÊı×é
+// è¿ç»­æ•°ç»„
 // class Solution 
 // {
 // public:
 //     int findMaxLength(vector<int>& nums) 
 //     {
-//         unordered_map<int, int> hash; // <Ç°×ººÍ£¬ ÏÂ±ê>
-//         hash[0] = -1; // Ä¬ÈÏÓĞÒ»¸öÇ°×ººÍÎª0µÄÇé¿ö
+//         unordered_map<int, int> hash; // <å‰ç¼€å’Œï¼Œ ä¸‹æ ‡>
+//         hash[0] = -1; // é»˜è®¤æœ‰ä¸€ä¸ªå‰ç¼€å’Œä¸º0çš„æƒ…å†µ
 
-//         int sum = 0, len = 0; // ±ê¼ÇÇ°Ò»´ÎµÄÇ°×ººÍ
+//         int sum = 0, len = 0; // æ ‡è®°å‰ä¸€æ¬¡çš„å‰ç¼€å’Œ
 //         for(int i = 0; i < nums.size(); i++)
 //         {
 //             sum += nums[i] == 0 ? -1 : 1;
 
 //             if(hash.count(sum))
 //             {
-//                 len = max(len, i - hash[sum]); // ¸üĞÂ×î´ó³¤¶È
+//                 len = max(len, i - hash[sum]); // æ›´æ–°æœ€å¤§é•¿åº¦
 //             }
 //             else
 //             {
-//                 hash[sum] = i; // ½«(sum, i)Èëhash
+//                 hash[sum] = i; // å°†(sum, i)å…¥hash
 //             }
 //         }
 
@@ -2015,7 +2015,7 @@ using namespace std;
 //     }
 // };
 
-// ¾ØÕóÇøÓòºÍ
+// çŸ©é˜µåŒºåŸŸå’Œ
 // class Solution 
 // {
 // public:
@@ -2023,24 +2023,24 @@ using namespace std;
 //     {
 //         int row = mat.size(), col = mat[0].size();
 
-//         // Ô¤´¦ÀíÇ°×ººÍÊı×é
+//         // é¢„å¤„ç†å‰ç¼€å’Œæ•°ç»„
 //         vector<vector<int>> dp(row + 1, vector<int>(col + 1));
 //         for(int i = 1; i <= row; i++)
 //         {
 //             for(int j = 1; j <= col; j++)
 //             {
-//                 // ÏÂ±êÓ³Éä¹ØÏµ dp[x, y] -> mat[x - 1][y - 1]
+//                 // ä¸‹æ ‡æ˜ å°„å…³ç³» dp[x, y] -> mat[x - 1][y - 1]
 //                 dp[i][j] = dp[i - 1][j] + dp[i][j - 1] - dp[i - 1][j - 1] + mat[i - 1][j - 1];
 //             }
 //         }
 
-//         // Ê¹ÓÃÇ°×ººÍÊı×é
+//         // ä½¿ç”¨å‰ç¼€å’Œæ•°ç»„
 //         vector<vector<int>> ret(row, vector<int>(col));
 //         for(int i = 0; i < row; i++)
 //         {
 //             for(int j = 0; j < col; j++)
 //             {
-//                 // ÏÂ±êÓ³Éä¹ØÏµ ret[x][y] -> dp[x + 1][y + 1]
+//                 // ä¸‹æ ‡æ˜ å°„å…³ç³» ret[x][y] -> dp[x + 1][y + 1]
 //                 int x1 = max(0, i - k) + 1;
 //                 int y1 = max(0, j - k) + 1;
 //                 int x2 = min(row - 1, i + k) + 1;
@@ -2054,30 +2054,30 @@ using namespace std;
 //     }
 // };
 
-// ÅĞ¶Ï×Ö·ûÊÇ·ñÎ¨Ò»
+// åˆ¤æ–­å­—ç¬¦æ˜¯å¦å”¯ä¸€
 // class Solution 
 // {
 // public:
 //     bool isUnique(string astr) 
 //     {
-//         // ¸ë³²ÓÅ»¯
+//         // é¸½å·¢ä¼˜åŒ–
 //         if(astr.size() > 26)
 //         {
 //             return false;
 //         }
         
-//         int bitset = 0; // Î»Í¼
+//         int bitset = 0; // ä½å›¾
 //         for(auto& ch : astr)
 //         {
 //             int i = ch - 'a';
             
-//             // ÅĞ¶Ï¸Ã×Ö·ûÊÇ·ñ³öÏÖ¹ı
+//             // åˆ¤æ–­è¯¥å­—ç¬¦æ˜¯å¦å‡ºç°è¿‡
 //             if(((bitset >> i) & 1))
 //             {
 //                 return false;
 //             }
             
-//             // ½«¸Ã×Ö·û¼ÓÈëÎ»Í¼ÖĞ
+//             // å°†è¯¥å­—ç¬¦åŠ å…¥ä½å›¾ä¸­
 //             bitset |= 1 << i;
 //         }
         
@@ -2085,7 +2085,7 @@ using namespace std;
 //     }
 // };
 
-// ¶ªÊ§µÄÊı×Ö
+// ä¸¢å¤±çš„æ•°å­—
 // class Solution 
 // {
 // public:
@@ -2102,7 +2102,7 @@ using namespace std;
 //     }
 // };
 
-// Á½ÕûÊıÖ®ºÍ
+// ä¸¤æ•´æ•°ä¹‹å’Œ
 // class Solution 
 // {
 // public:
@@ -2110,8 +2110,8 @@ using namespace std;
 //     {
 //         while(b)
 //         {
-//             int ret = a ^ b; // ÎŞ½øÎ»Ïà¼Ó
-//             int carry = (a & b) << 1; // ½øÎ»
+//             int ret = a ^ b; // æ— è¿›ä½ç›¸åŠ 
+//             int carry = (a & b) << 1; // è¿›ä½
 //             a = ret;
 //             b = carry;
 //         }
@@ -2120,24 +2120,24 @@ using namespace std;
 //     }
 // };
 
-// Ö»³öÏÖÒ»´ÎµÄÊı×Ö¢ò
+// åªå‡ºç°ä¸€æ¬¡çš„æ•°å­—â…¡
 // class Solution 
 // {
 // public:
 //     int singleNumber(vector<int>& nums) 
 //     {
 //         int ret = 0;
-//         for(int i = 0; i < 32; i++) // Ã¶¾ÙÃ¿Ò»Î»
+//         for(int i = 0; i < 32; i++) // æšä¸¾æ¯ä¸€ä½
 //         {
 //             int sum = 0;
-//             for(auto& x : nums) // Í³¼Æ¸÷Î»1µÄ×ÜºÍ
+//             for(auto& x : nums) // ç»Ÿè®¡å„ä½1çš„æ€»å’Œ
 //             {
 //                 if((x >> i) & 1)
 //                 {
 //                     sum++;
 //                 }
 //             }
-//             sum %= 3; // ¿ÉÍÆ¹ãµ½n
+//             sum %= 3; // å¯æ¨å¹¿åˆ°n
             
 //             if(sum)
 //             {
@@ -2149,13 +2149,13 @@ using namespace std;
 //     }
 // };
 
-// ÏûÊ§µÄÁ½¸öÊı×é
+// æ¶ˆå¤±çš„ä¸¤ä¸ªæ•°ç»„
 // class Solution 
 // {
 // public:
 //     vector<int> missingTwo(vector<int>& nums) 
 //     {   
-//         // ½«ËùÓĞµÄÊıÒà»òµ½Ò»Æğ
+//         // å°†æ‰€æœ‰çš„æ•°äº¦æˆ–åˆ°ä¸€èµ·
 //         int tmp = 0;
 //         for(auto& x : nums)
 //         {
@@ -2167,7 +2167,7 @@ using namespace std;
 //             tmp ^= i;       
 //         }
         
-//         // ÕÒ³öÁ½¸öÊıµÚÒ»¸ö²»Í¬µÄbit
+//         // æ‰¾å‡ºä¸¤ä¸ªæ•°ç¬¬ä¸€ä¸ªä¸åŒçš„bit
 //         int diff = 0;
 //         while(1)
 //         {
@@ -2181,7 +2181,7 @@ using namespace std;
 //             }
 //         }
         
-//         // ¸ù¾İdiffÎ»µÄ²»Í¬£¬½«ËùÓĞµÄÊı»®·ÖÎªÁ½ÀàÀ´Òà»ò
+//         // æ ¹æ®diffä½çš„ä¸åŒï¼Œå°†æ‰€æœ‰çš„æ•°åˆ’åˆ†ä¸ºä¸¤ç±»æ¥äº¦æˆ–
 //         int a = 0, b = 0;
 //         for(auto& x : nums)
 //         {
@@ -2211,7 +2211,7 @@ using namespace std;
 //     }
 // };
 
-// Ìæ»»ËùÓĞµÄÎÊºÅ
+// æ›¿æ¢æ‰€æœ‰çš„é—®å·
 // class Solution 
 // {
 // public:
@@ -2223,7 +2223,7 @@ using namespace std;
 //             {
 //                 for(char ch = 'a'; ch <= 'z'; ch++)
 //                 {
-//                     // || ¶ÌÂ·Éè¼Æ±È½Ï¾«Ëè
+//                     // || çŸ­è·¯è®¾è®¡æ¯”è¾ƒç²¾é«“
 //                     if((i == 0 || ch != s[i - 1]) && (i == n - 1 || ch != s[i + 1]))
 //                     {
 //                         s[i] = ch;
@@ -2236,7 +2236,7 @@ using namespace std;
 //     }
 // };
 
-// ÌáÄª¹¥»÷
+// æè«æ”»å‡»
 // class Solution 
 // {
 // public:
@@ -2260,14 +2260,14 @@ using namespace std;
 //     }
 // };
 
-// N×ÖĞÎ±ä»»
+// Nå­—å½¢å˜æ¢
 // class Solution 
 // {
 // public:
-//     // ±¾Ä£ÄâÕÒ¹æÂÉ
+//     // æœ¬æ¨¡æ‹Ÿæ‰¾è§„å¾‹
 //     string convert(string s, int numRows) 
 //     {
-//         // ´¦Àí±ß½çÇé¿ö
+//         // å¤„ç†è¾¹ç•Œæƒ…å†µ
 //         if(numRows == 1)
 //         {
 //             return s;
@@ -2276,14 +2276,14 @@ using namespace std;
 //         string ret;
 //         int n = s.size(), d = 2 * numRows - 2;
 
-//         // µÚÒ»ĞĞ
+//         // ç¬¬ä¸€è¡Œ
 //         for(int i = 0; i < n; i += d)
 //         {
 //             ret += s[i]; 
 //         }
 
-//         // µÚ¶şĞĞ -- µ¹ÊıµÚ¶şĞĞ
-//         for(int k = 1; k < numRows - 1; k++) // Ã¶¾ÙÃ¿Ò»ĞĞ
+//         // ç¬¬äºŒè¡Œ -- å€’æ•°ç¬¬äºŒè¡Œ
+//         for(int k = 1; k < numRows - 1; k++) // æšä¸¾æ¯ä¸€è¡Œ
 //         {
 //             for(int i = k, j = d - k; i < n || j < n; i += d, j += d)
 //             {
@@ -2299,7 +2299,7 @@ using namespace std;
 //             }
 //         }
 
-//         // ×îºóÒ»ĞĞ
+//         // æœ€åä¸€è¡Œ
 //         for(int i = numRows - 1; i < n; i += d)
 //         {
 //             ret += s[i];
@@ -2309,21 +2309,21 @@ using namespace std;
 //     }
 // };
 
-// Íâ¹ÛÊıÁĞ
-// ¿ØÖÆÂß¼­ v1.0
+// å¤–è§‚æ•°åˆ—
+// æ§åˆ¶é€»è¾‘ v1.0
 // class Solution 
 // {
 // public:
 //     string countAndSay(int n) 
 //     {
 //         string src = "1";
-//         for(int i = 2; i <= n; i++) // ¿ØÖÆĞĞ
+//         for(int i = 2; i <= n; i++) // æ§åˆ¶è¡Œ
 //         {
-//             // Ë«Ö¸Õë
+//             // åŒæŒ‡é’ˆ
 //             string ret;
 //             int left = 0, right = 0;
 
-//             // ×Ô¼º¿Ø´úÂëµÄÂß¼­
+//             // è‡ªå·±æ§ä»£ç çš„é€»è¾‘
 //             for(; right < src.size(); right++)
 //             {
 //                 if(src[left] != src[right])
@@ -2333,7 +2333,7 @@ using namespace std;
 //                 }
 //             }
 
-//             // ´¦Àí×îºóµÄÒ»×éÊı
+//             // å¤„ç†æœ€åçš„ä¸€ç»„æ•°
 //             ret += to_string(right - left) + src[left];
 
 //             src = ret;
@@ -2343,16 +2343,16 @@ using namespace std;
 //     }
 // };
 
-// ¿ØÖÆÂß¼­ v2.0
+// æ§åˆ¶é€»è¾‘ v2.0
 // class Solution 
 // {
 // public:
 //     string countAndSay(int n) 
 //     {
 //         string src = "1";
-//         for(int i = 2; i <= n; i++) // ¿ØÖÆĞĞ
+//         for(int i = 2; i <= n; i++) // æ§åˆ¶è¡Œ
 //         {
-//             // Ë«Ö¸Õë
+//             // åŒæŒ‡é’ˆ
 //             string ret;
 //             for(int left = 0, right = 0; right < src.size();)
 //             {
@@ -2372,7 +2372,7 @@ using namespace std;
 //     }
 // };
 
-// ÊıÇàÍÜ
+// æ•°é’è›™
 // class Solution 
 // {
 // public:
@@ -2380,7 +2380,7 @@ using namespace std;
 //     {
 //         string str = "croak";
 //         int n = str.size();
-//         vector<int> hash(n); // ÓÃÊı×éÄ£Äâ¹şÏ£
+//         vector<int> hash(n); // ç”¨æ•°ç»„æ¨¡æ‹Ÿå“ˆå¸Œ
         
 //         unordered_map<char, int> index; // <ch, index>
 //         for(int i = 0; i < n; i++)
@@ -2392,7 +2392,7 @@ using namespace std;
 //         {
 //             if(ch == 'c')
 //             {
-//                 if(hash[n - 1]) // kÒÑ´æÔÚ
+//                 if(hash[n - 1]) // kå·²å­˜åœ¨
 //                 {
 //                     hash[n - 1]--;
 //                 }
@@ -2422,13 +2422,13 @@ using namespace std;
 //     }
 // };
 
-// ÑÕÉ«·ÖÀà
+// é¢œè‰²åˆ†ç±»
 // class Solution 
 // {
 // public:
 //     void SortColors(vector<int>& nums) 
 //     {
-//         int i = 0, left = -1, right = nums.size(); // ÈıÖ¸Õë
+//         int i = 0, left = -1, right = nums.size(); // ä¸‰æŒ‡é’ˆ
 //         while(i < right)
 //         {
 //             if(nums[i] == 0)
@@ -2441,21 +2441,21 @@ using namespace std;
 //             }
 //             else // nums[i] == 2
 //             {
-//                 // ´Ë´¦iÎŞĞèÍùºóµü´ú£¬ÒòÎª´Ë´¦ÔªËØÈÔÊôÓÚÎ´É¨Ãè
+//                 // æ­¤å¤„iæ— éœ€å¾€åè¿­ä»£ï¼Œå› ä¸ºæ­¤å¤„å…ƒç´ ä»å±äºæœªæ‰«æ
 //                 swap(nums[--right], nums[i]);
 //             }
 //         }
 //     }
 // };
 
-// ¿ìËÙÅÅĞò
-// Êı×é·ÖÈı¿é + Ëæ»ú»ù×¼
+// å¿«é€Ÿæ’åº
+// æ•°ç»„åˆ†ä¸‰å— + éšæœºåŸºå‡†
 // class Solution 
 // {
 // public:
 //     vector<int> sortArray(vector<int>& nums) 
 //     {
-//         srand(time(nullptr)); // ÖÖÏÂËæ»úÊıÖÖ×Ó
+//         srand(time(nullptr)); // ç§ä¸‹éšæœºæ•°ç§å­
 //         QuickSort(nums, 0, nums.size() - 1);
 //         return nums;
 //     }
@@ -2468,7 +2468,7 @@ using namespace std;
 //             return ;
 //         }
 
-//         // Êı×é·ÖÈı¿é
+//         // æ•°ç»„åˆ†ä¸‰å—
 //         int key = nums[rand() % (r - l + 1) + l];
 //         int i = l, left = l - 1, right = r + 1;
 //         while(i < right)
@@ -2487,14 +2487,14 @@ using namespace std;
 //             }
 //         }
 
-//         // µİ¹é×óÓÒÇø¼ä
+//         // é€’å½’å·¦å³åŒºé—´
 //         // [l, left] [left + 1, right - 1] [right, r]
 //         QuickSort(nums, l, left);
 //         QuickSort(nums, right, r);
 //     }
 // };
 
-// Êı×éÖĞµÚK¸ö×î´óÔªËØ
+// æ•°ç»„ä¸­ç¬¬Kä¸ªæœ€å¤§å…ƒç´ 
 // class Solution 
 // {
 // public:
@@ -2511,7 +2511,7 @@ using namespace std;
 //             return nums[l];
 //         }
         
-//         // Êı×é·ÖÈı¿é
+//         // æ•°ç»„åˆ†ä¸‰å—
 //         int key = nums[rand() % (r - l + 1) + l];
 //         int i = l, left = l - 1, right = r + 1;
 //         while(i < right)
@@ -2530,7 +2530,7 @@ using namespace std;
 //             }
 //         }
         
-//         // ·ÖÇé¿öÌÖÂÛ
+//         // åˆ†æƒ…å†µè®¨è®º
 //         int c = r - right + 1, b = right - left - 1;
 //         if(c >= k)
 //         {
@@ -2547,7 +2547,7 @@ using namespace std;
 //     }
 // };
 
-// ¿â´æ¹ÜÀí
+// åº“å­˜ç®¡ç†
 // class Solution 
 // {
 // public:
@@ -2584,7 +2584,7 @@ using namespace std;
 //         }
         
 //         // [l, left] [left + 1, right - 1] [right, r]
-//         // ·ÖÇé¿öÌÖÂÛ
+//         // åˆ†æƒ…å†µè®¨è®º
 //         int a = left - l + 1, b = right - left - 1;
 //         if(a > k)
 //         {
@@ -2601,10 +2601,10 @@ using namespace std;
 //     }
 // };
 
-// ÅÅĞòÊı×é
+// æ’åºæ•°ç»„
 // class Solution 
 // {
-//     vector<int> assist; // ¹é²¢Ê±µÄ¸¨ÖúÊı×é
+//     vector<int> assist; // å½’å¹¶æ—¶çš„è¾…åŠ©æ•°ç»„
 // public:
 //     vector<int> SortArray(vector<int>& nums) 
 //     {
@@ -2620,22 +2620,22 @@ using namespace std;
 //             return;
 //         }
 
-//         // 1.Ñ¡ÔñÖĞ¼äµã»®·ÖÇø¼ä
+//         // 1.é€‰æ‹©ä¸­é—´ç‚¹åˆ’åˆ†åŒºé—´
 //         int mid = left + (right - left) / 2;
 
-//         // 2.ÅÅĞò×óÓÒÇø¼ä
+//         // 2.æ’åºå·¦å³åŒºé—´
 //         // [left, mid] [mid + 1, right]
 //         MergeSort(nums, left, mid);
 //         MergeSort(nums, mid + 1, right);
 
-//         // 3.ºÏ²¢Á½¸öÓĞĞòÊı×é
+//         // 3.åˆå¹¶ä¸¤ä¸ªæœ‰åºæ•°ç»„
 //         int cur1 = left, cur2 = mid + 1, i = 0;
 //         while(cur1 <= mid && cur2 <= right)
 //         {
 //             assist[i++] = nums[cur1] <= nums[cur2] ? nums[cur1++] : nums[cur2++];
 //         }
 
-//         // 4.´¦ÀíÃ»ÓĞ±éÀúÍêµÄÊı×é
+//         // 4.å¤„ç†æ²¡æœ‰éå†å®Œçš„æ•°ç»„
 //         while(cur1 <= mid)
 //         {
 //             assist[i++] = nums[cur1++];
@@ -2646,7 +2646,7 @@ using namespace std;
 //             assist[i++] = nums[cur2++];
 //         }
 
-//         // 5.»¹Ô­
+//         // 5.è¿˜åŸ
 //         for(int i = left; i <= right; i++)
 //         {
 //             nums[i] = assist[i - left];
@@ -2654,8 +2654,8 @@ using namespace std;
 //     }
 // };
 
-// ½»Ò×ÄæĞò¶ÔµÄ×ÜÊı
-// v1.0 ÉıĞò
+// äº¤æ˜“é€†åºå¯¹çš„æ€»æ•°
+// v1.0 å‡åº
 // class Solution 
 // {
 //     vector<int> assist;
@@ -2674,15 +2674,15 @@ using namespace std;
 //         }
 
 //         int ret = 0;
-//         // Ñ¡ÔñÖĞµã£¬»®·ÖÊı×é
+//         // é€‰æ‹©ä¸­ç‚¹ï¼Œåˆ’åˆ†æ•°ç»„
 //         int mid = left + (right - left) / 2;
 
-//         // ×ó±ßµÄ¸öÊı + ÅÅĞò + ÓÒ±ßµÄ¸öÊı + ÅÅĞò
+//         // å·¦è¾¹çš„ä¸ªæ•° + æ’åº + å³è¾¹çš„ä¸ªæ•° + æ’åº
 //         // [left, mid] [mid + 1, right]
 //         ret += MergeSort(nums, left, mid);
 //         ret += MergeSort(nums, mid + 1, right);
 
-//         // Ò»×óÒ»ÓÒµÄ¸öÊı + ÅÅĞò
+//         // ä¸€å·¦ä¸€å³çš„ä¸ªæ•° + æ’åº
 //         int cur1 = left, cur2 = mid + 1, i = 0;
 //         while(cur1 <= mid && cur2 <= right)
 //         {
@@ -2697,7 +2697,7 @@ using namespace std;
 //             }
 //         }
 
-//         // ´¦ÀíÎ´±éÀúÍêµÄÊı×é
+//         // å¤„ç†æœªéå†å®Œçš„æ•°ç»„
 //         while(cur1 <= mid)
 //         {
 //             assist[i++] = nums[cur1++];
@@ -2708,7 +2708,7 @@ using namespace std;
 //             assist[i++] = nums[cur2++];
 //         }
 
-//         // »¹Ô­
+//         // è¿˜åŸ
 //         for(int i = left; i <= right; i++)
 //         {
 //             nums[i] = assist[i - left];
@@ -2718,7 +2718,7 @@ using namespace std;
 //     }
 // };
 
-// v2.0 ½µĞò
+// v2.0 é™åº
 // class Solution 
 // {
 //     vector<int> assist;
@@ -2737,15 +2737,15 @@ using namespace std;
 //         }
 
 //         int ret = 0;
-//         // Ñ¡ÔñÖĞµã£¬»®·ÖÊı×é
+//         // é€‰æ‹©ä¸­ç‚¹ï¼Œåˆ’åˆ†æ•°ç»„
 //         int mid = left + (right - left) / 2;
 
-//         // ×ó±ßµÄ¸öÊı + ÅÅĞò + ÓÒ±ßµÄ¸öÊı + ÅÅĞò
+//         // å·¦è¾¹çš„ä¸ªæ•° + æ’åº + å³è¾¹çš„ä¸ªæ•° + æ’åº
 //         // [left, mid] [mid + 1, right]
 //         ret += MergeSort(nums, left, mid);
 //         ret += MergeSort(nums, mid + 1, right);
 
-//         // Ò»×óÒ»ÓÒµÄ¸öÊı + ÅÅĞò
+//         // ä¸€å·¦ä¸€å³çš„ä¸ªæ•° + æ’åº
 //         int cur1 = left, cur2 = mid + 1, i = 0;
 //         while(cur1 <= mid && cur2 <= right)
 //         {
@@ -2760,7 +2760,7 @@ using namespace std;
 //             }
 //         }
 
-//         // ´¦ÀíÎ´±éÀúÍêµÄÊı×é
+//         // å¤„ç†æœªéå†å®Œçš„æ•°ç»„
 //         while(cur1 <= mid)
 //         {
 //             assist[i++] = nums[cur1++];
@@ -2771,7 +2771,7 @@ using namespace std;
 //             assist[i++] = nums[cur2++];
 //         }
 
-//         // »¹Ô­
+//         // è¿˜åŸ
 //         for(int i = left; i <= right; i++)
 //         {
 //             nums[i] = assist[i - left];
@@ -2781,7 +2781,7 @@ using namespace std;
 //     }
 // };
 
-// ¼ÆËãÓÒ²àĞ¡ÓÚµ±Ç°ÔªËØµÄ¸öÊı
+// è®¡ç®—å³ä¾§å°äºå½“å‰å…ƒç´ çš„ä¸ªæ•°
 // class Solution 
 // {
 //     vector<int> ret;
@@ -2797,7 +2797,7 @@ using namespace std;
 //         assistNums.resize(n);
 //         assistIndex.resize(n);
         
-//         // ³õÊ¼»¯index
+//         // åˆå§‹åŒ–index
 //         for(int i = 0; i < n; i++)
 //         {
 //             index[i] = i;
@@ -2815,16 +2815,16 @@ using namespace std;
 //             return;
 //         }
         
-//         // ÖĞ¼äµã£¬»®·ÖÊı×é
+//         // ä¸­é—´ç‚¹ï¼Œåˆ’åˆ†æ•°ç»„
 //         int mid = left + (right - left) / 2;
 //         // [left, mid] [mid + 1, right]
         
-//         // ÏÈ´¦Àí×óÓÒ×ÓÊı×é
+//         // å…ˆå¤„ç†å·¦å³å­æ•°ç»„
 //         MergeSort(nums, left, mid);
 //         MergeSort(nums, mid + 1, right);
         
-//         // ´¦ÀíÒ»×óÒ»ÓÒ + ÅÅĞò(½µĞò)
-//         // ÔªËØºÍÏÂ±êÍ¬²½Ç¨ÒÆ
+//         // å¤„ç†ä¸€å·¦ä¸€å³ + æ’åº(é™åº)
+//         // å…ƒç´ å’Œä¸‹æ ‡åŒæ­¥è¿ç§»
 //         int cur1 = left, cur2 = mid + 1, i = 0;
 //         while(cur1 <= mid && cur2 <= right)
 //         {
@@ -2835,13 +2835,13 @@ using namespace std;
 //             }
 //             else
 //             {
-//                 ret[index[cur1]] += right - cur2 + 1; // Í³¼Æ -> ÖØµã
+//                 ret[index[cur1]] += right - cur2 + 1; // ç»Ÿè®¡ -> é‡ç‚¹
 //                 assistNums[i] = nums[cur1];
 //                 assistIndex[i++] = index[cur1++];
 //             }
 //         }
         
-//         // ´¦ÀíÎ´±éÀúÍêÊı×é
+//         // å¤„ç†æœªéå†å®Œæ•°ç»„
 //         while(cur1 <= mid)
 //         {
 //             assistNums[i] = nums[cur1];
@@ -2854,7 +2854,7 @@ using namespace std;
 //             assistIndex[i++] = index[cur2++];
 //         }
         
-//         // »¹Ô­
+//         // è¿˜åŸ
 //         for(int i = left; i <= right; i++)
 //         {
 //             nums[i] = assistNums[i - left];
@@ -2863,8 +2863,8 @@ using namespace std;
 //     }
 // };
 
-// ·­×ª¶Ô
-// // v1.0 ½µĞò
+// ç¿»è½¬å¯¹
+// // v1.0 é™åº
 // class Solution 
 // {
 //     vector<int> assist;
@@ -2883,17 +2883,17 @@ using namespace std;
 //         }
 
 //         int ret = 0;
-//         // ÖĞ¼äµã£¬»®·ÖÁ½Çø¼ä
+//         // ä¸­é—´ç‚¹ï¼Œåˆ’åˆ†ä¸¤åŒºé—´
 //         int mid = left + (right - left) / 2;
 //         // [left, mid] [mid + 1, right]
     
-//         // ÏÈ¼ÆËã×óÓÒ×ÓÇø¼ä·­×ª¶Ô
+//         // å…ˆè®¡ç®—å·¦å³å­åŒºé—´ç¿»è½¬å¯¹
 //         ret += MergeSort(nums, left, mid);
 //         ret += MergeSort(nums, mid + 1, right);
 
-//         // ¼ÆËãÒ»×óÒ»ÓÒ·­×ª¶ÔµÄÊıÁ¿
+//         // è®¡ç®—ä¸€å·¦ä¸€å³ç¿»è½¬å¯¹çš„æ•°é‡
 //         int cur1 = left, cur2 = mid + 1, i = 0;
-//         while(cur1 <= mid) // ½µĞò ¹Ì¶¨cur1
+//         while(cur1 <= mid) // é™åº å›ºå®šcur1
 //         {
 //             while(cur2 <= right && nums[cur2] >= nums[cur1] / 2.0)
 //             {
@@ -2909,14 +2909,14 @@ using namespace std;
 //             cur1++;
 //         }
 
-//         // ºÏ²¢Á½¸öÓĞĞòÊı×é
+//         // åˆå¹¶ä¸¤ä¸ªæœ‰åºæ•°ç»„
 //         cur1 = left, cur2 = mid + 1;
 //         while(cur1 <= mid && cur2 <= right)
 //         {
 //             assist[i++] = nums[cur1] <= nums[cur2] ? nums[cur2++] : nums[cur1++];
 //         }
 
-//         // ´¦ÀíÎ´±éÀúÍêÊı×é
+//         // å¤„ç†æœªéå†å®Œæ•°ç»„
 //         while(cur1 <= mid)
 //         {
 //             assist[i++] = nums[cur1++];
@@ -2927,7 +2927,7 @@ using namespace std;
 //             assist[i++] = nums[cur2++];
 //         }
 
-//         // »¹Ô­
+//         // è¿˜åŸ
 //         for(int i = left; i <= right; i++)
 //         {
 //             nums[i] = assist[i - left];
@@ -2937,7 +2937,7 @@ using namespace std;
 //     }
 // };
 
-// v2.0 ÉıĞò
+// v2.0 å‡åº
 // class Solution 
 // {
 //     vector<int> assist;
@@ -2956,24 +2956,24 @@ using namespace std;
 //         }
 
 //         int ret = 0;
-//         // ÖĞ¼äµã£¬»®·ÖÁ½Çø¼ä
+//         // ä¸­é—´ç‚¹ï¼Œåˆ’åˆ†ä¸¤åŒºé—´
 //         int mid = left + (right - left) / 2;
 //         // [left, mid] [mid + 1, right]
     
-//         // ÏÈ¼ÆËã×óÓÒ×ÓÇø¼ä·­×ª¶Ô
+//         // å…ˆè®¡ç®—å·¦å³å­åŒºé—´ç¿»è½¬å¯¹
 //         ret += MergeSort(nums, left, mid);
 //         ret += MergeSort(nums, mid + 1, right);
 
-//         // ¼ÆËãÒ»×óÒ»ÓÒ·­×ª¶ÔµÄÊıÁ¿
+//         // è®¡ç®—ä¸€å·¦ä¸€å³ç¿»è½¬å¯¹çš„æ•°é‡
 //         int cur1 = left, cur2 = mid + 1, i = 0;
-//         while(cur2 <= right) // ÉıĞò  ¹Ì¶¨cur2
+//         while(cur2 <= right) // å‡åº  å›ºå®šcur2
 //         {
 //             while(cur1 <= mid && nums[cur2] >= nums[cur1] / 2.0)
 //             {
 //                 cur1++;
 //             }
 
-//             // ÓÅ»¯
+//             // ä¼˜åŒ–
 //             if(cur1 > mid)
 //             {
 //                 break;
@@ -2983,14 +2983,14 @@ using namespace std;
 //             cur2++;
 //         }
 
-//         // ºÏ²¢Á½¸öÓĞĞòÊı×é
+//         // åˆå¹¶ä¸¤ä¸ªæœ‰åºæ•°ç»„
 //         cur1 = left, cur2 = mid + 1;
 //         while(cur1 <= mid && cur2 <= right)
 //         {
 //             assist[i++] = nums[cur1] <= nums[cur2] ? nums[cur1++] : nums[cur2++];
 //         }
 
-//         // ´¦ÀíÎ´±éÀúÍêÊı×é
+//         // å¤„ç†æœªéå†å®Œæ•°ç»„
 //         while(cur1 <= mid)
 //         {
 //             assist[i++] = nums[cur1++];
@@ -3001,7 +3001,7 @@ using namespace std;
 //             assist[i++] = nums[cur2++];
 //         }
 
-//         // »¹Ô­
+//         // è¿˜åŸ
 //         for(int i = left; i <= right; i++)
 //         {
 //             nums[i] = assist[i - left];
@@ -3011,7 +3011,7 @@ using namespace std;
 //     }
 // };
 
-// Á½ÊıÏà¼Ó
+// ä¸¤æ•°ç›¸åŠ 
 /**
  * Definition for singly-linked list.
  * struct ListNode {
@@ -3029,9 +3029,9 @@ using namespace std;
 //     {
 //         ListNode* head = new ListNode(0);
 //         ListNode* cur1 = l1, *cur2 = l2;
-//         ListNode* tail = head; // Î²Ö¸Õë
+//         ListNode* tail = head; // å°¾æŒ‡é’ˆ
 
-//         int carry = 0; // ¼ÇÂ¼½øÎ» & ÁÙÊ±Êı¾İ
+//         int carry = 0; // è®°å½•è¿›ä½ & ä¸´æ—¶æ•°æ®
 //         while(cur1 || cur2 || carry)
 //         {
 //             if(cur1)
@@ -3059,13 +3059,13 @@ using namespace std;
 //     }
 // };
 
-// Á½Á½½»»»Á´±íÖĞµÄ½áµã
+// ä¸¤ä¸¤äº¤æ¢é“¾è¡¨ä¸­çš„ç»“ç‚¹
 // class Solution 
 // {
 // public:
 //     ListNode* swapPairs(ListNode* list) 
 //     {
-//         // ±ß½ç´¦Àí
+//         // è¾¹ç•Œå¤„ç†
 //         if(list == nullptr || list->next == nullptr)
 //         {
 //             return list;
@@ -3103,30 +3103,30 @@ using namespace std;
 //     }
 // };
 
-// ÖØÅÅÁ´±í
+// é‡æ’é“¾è¡¨
 // class Solution 
 // {
 // public:
 //     void reorderList(ListNode* head) 
 //     {
-//         // ±ß½ç´¦Àí
+//         // è¾¹ç•Œå¤„ç†
 //         if(!(head || head->next || head->next->next))
 //         {
 //             return;
 //         }
 
-//         // 1.ÕÒµ½Á´±íµÄÖĞ¼ä½áµã -> ¿ìÂıÖ¸Õë
+//         // 1.æ‰¾åˆ°é“¾è¡¨çš„ä¸­é—´ç»“ç‚¹ -> å¿«æ…¢æŒ‡é’ˆ
 //         ListNode *slow = head, *fast = head;
-//         while(fast && fast->next) // Å¼ && Ææ
+//         while(fast && fast->next) // å¶ && å¥‡
 //         {
 //             slow = slow->next;
 //             fast = fast->next->next;
 //         }
 
-//         // 2.ÄæĞòºó°ë²¿·Ö -> Í·²å
+//         // 2.é€†åºååŠéƒ¨åˆ† -> å¤´æ’
 //         ListNode *head2 = new ListNode(0);
 //         ListNode *cur = slow->next;
-//         slow->next = nullptr; // ¶Ï¿ªÁ½¸öÁ´±í
+//         slow->next = nullptr; // æ–­å¼€ä¸¤ä¸ªé“¾è¡¨
 //         while(cur)
 //         {
 //             ListNode *next = cur->next;
@@ -3135,18 +3135,18 @@ using namespace std;
 //             cur = next;
 //         }
 
-//         // 3.ºÏ²¢Á½¸öÁ´±í -> Î²²å -> Ë«Ö¸Õë
+//         // 3.åˆå¹¶ä¸¤ä¸ªé“¾è¡¨ -> å°¾æ’ -> åŒæŒ‡é’ˆ
 //         ListNode *ret = new ListNode(0);
 //         ListNode *tail = ret;
 //         ListNode *cur1 = head, *cur2 = head2->next;
 //         while(cur1)
 //         {
-//             // ÏÈÁ¬µÚÒ»¸öÁ´±í
+//             // å…ˆè¿ç¬¬ä¸€ä¸ªé“¾è¡¨
 //             tail->next = cur1;
 //             tail = tail->next;
 //             cur1 = cur1->next;
 
-//             // ÔÙÁ¬µÚ¶ş¸öÁ´±í
+//             // å†è¿ç¬¬äºŒä¸ªé“¾è¡¨
 //             if(cur2)
 //             {
 //                 tail->next = cur2;
@@ -3160,8 +3160,8 @@ using namespace std;
 //     }
 // };
 
-// ºÏ²¢K¸öÉıĞòÁ´±í
-// v1.0 ¶Ñ
+// åˆå¹¶Kä¸ªå‡åºé“¾è¡¨
+// v1.0 å †
 // class Solution 
 // {
 //     struct Cmp
@@ -3174,10 +3174,10 @@ using namespace std;
 // public:
 //     ListNode* mergeKLists(vector<ListNode*>& lists) 
 //     {
-//         // ´´½¨Ò»¸öĞ¡¸ù¶Ñ
+//         // åˆ›å»ºä¸€ä¸ªå°æ ¹å †
 //         priority_queue<ListNode*, vector<ListNode*>, Cmp> heap;
 
-//         // ÈÃËùÓĞÍ·½áµãÈë¶Ñ
+//         // è®©æ‰€æœ‰å¤´ç»“ç‚¹å…¥å †
 //         for(auto& list : lists)
 //         {
 //             if(list)
@@ -3186,7 +3186,7 @@ using namespace std;
 //             }
 //         }
 
-//         // ºÏ²¢K¸öÓĞĞòÁ´±í
+//         // åˆå¹¶Kä¸ªæœ‰åºé“¾è¡¨
 //         ListNode* ret = new ListNode(0);
 //         ListNode* tail = ret;
 //         while(!heap.empty())
@@ -3210,7 +3210,7 @@ using namespace std;
 //     }
 // };
 
-// v2.0 µİ¹é/·ÖÖÎ
+// v2.0 é€’å½’/åˆ†æ²»
 // class Solution 
 // {
 // public:
@@ -3221,7 +3221,7 @@ using namespace std;
 
 //     ListNode* Merge(vector<ListNode*>& lists, int left, int right)
 //     {
-//         // ±ß½çÇé¿ö´¦Àí
+//         // è¾¹ç•Œæƒ…å†µå¤„ç†
 //         if(left > right)
 //         {
 //             return nullptr;
@@ -3232,21 +3232,21 @@ using namespace std;
 //             return lists[left];
 //         }
 
-//         // ÖĞ¼äµã»®·ÖÊı×é
+//         // ä¸­é—´ç‚¹åˆ’åˆ†æ•°ç»„
 //         int mid = left + (right - left) / 2;
 //         // [left, mid] [mid + 1, right]
 
-//         // µİ¹é´¦Àí×óÓÒÇø¼ä
+//         // é€’å½’å¤„ç†å·¦å³åŒºé—´
 //         ListNode* l1 = Merge(lists, left, mid);
 //         ListNode* l2 = Merge(lists, mid + 1, right);
 
-//         // ºÏ²¢Á½¸öÓĞĞòÁ´±í
+//         // åˆå¹¶ä¸¤ä¸ªæœ‰åºé“¾è¡¨
 //         return MergeTwoLists(l1, l2);
 //     }
 
 //     ListNode* MergeTwoLists(ListNode* l1, ListNode* l2)
 //     {
-//         // ±ß½çÇé¿ö´¦Àí
+//         // è¾¹ç•Œæƒ…å†µå¤„ç†
 //         if(l1 == nullptr)
 //         {
 //             return l2;
@@ -3257,7 +3257,7 @@ using namespace std;
 //             return l1;
 //         }
 
-//         // ºÏ²¢Á½ÓĞĞòÁ´±í
+//         // åˆå¹¶ä¸¤æœ‰åºé“¾è¡¨
 //         ListNode head(0);
 //         ListNode *cur1 = l1, *cur2 = l2, *tail = &head;
 //         while(cur1 && cur2)
@@ -3293,10 +3293,10 @@ using namespace std;
 //     }
 // };
 
-// K¸öÒ»×é·­×ªÁ´±í
+// Kä¸ªä¸€ç»„ç¿»è½¬é“¾è¡¨
 // ListNode* ReverseKGroup(ListNode* head, int k) 
 // {
-//     // ±éÀúÇón
+//     // éå†æ±‚n
 //     int n = 0;
 //     ListNode* cur = head;
 //     while(cur)
@@ -3306,7 +3306,7 @@ using namespace std;
 //     }
 //     n /= k;
 
-//     // ÖØ¸´n´ÎÄæĞò³¤¶ÈÎªkµÄÁ´±í -> Í·²å
+//     // é‡å¤næ¬¡é€†åºé•¿åº¦ä¸ºkçš„é“¾è¡¨ -> å¤´æ’
 //     ListNode ret(0);
 //     ListNode *prev = &ret;
 //     cur = head;
@@ -3320,16 +3320,16 @@ using namespace std;
 //             prev->next = cur;
 //             cur = next;
 //         }
-//         prev = back; // ¸ü´ÎÃ¿´ÎÍ·²åµÄ"Í·"
+//         prev = back; // æ›´æ¬¡æ¯æ¬¡å¤´æ’çš„"å¤´"
 //     }
 
-//     // Á´½ÓÊ£ÏÂµÄ½áµã
+//     // é“¾æ¥å‰©ä¸‹çš„ç»“ç‚¹
 //     prev->next = cur;
 
 //     return ret.next;
 // }
 
-// Á½ÊıÏà¼Ó
+// ä¸¤æ•°ç›¸åŠ 
 // class Solution 
 // {
 // public:
@@ -3351,7 +3351,7 @@ using namespace std;
 //     }
 // };
 
-// ÅĞ¶ÏÊÇ·ñ»¥Îª×Ö·ûÖØÅÅ
+// åˆ¤æ–­æ˜¯å¦äº’ä¸ºå­—ç¬¦é‡æ’
 // class Solution 
 // {
 // public:
@@ -3381,7 +3381,7 @@ using namespace std;
 //     }
 // };
 
-// ´æÔÚÖØ¸´ÔªËØ
+// å­˜åœ¨é‡å¤å…ƒç´ 
 // class Solution 
 // {
 // public:
@@ -3404,7 +3404,7 @@ using namespace std;
 //     }
 // };
 
-// ´æÔÚÖØ¸´ÔªËØ¢ò
+// å­˜åœ¨é‡å¤å…ƒç´ â…¡
 // class Solution 
 // {
 // public:
@@ -3425,7 +3425,7 @@ using namespace std;
 //     }
 // };
 
-// ×ÖÄ¸ÒìÎ»´Ê·Ö×é
+// å­—æ¯å¼‚ä½è¯åˆ†ç»„
 // class Solution 
 // {
 // public:
@@ -3440,7 +3440,7 @@ using namespace std;
 //         }
 
 //         vector<vector<string>> ret;
-//         for(auto& [x, y] : hash) // ÕâÖÖĞ´·¨»ıÀÛÏÂÀ´
+//         for(auto& [x, y] : hash) // è¿™ç§å†™æ³•ç§¯ç´¯ä¸‹æ¥
 //         {
 //             ret.push_back(y);
 //         }
@@ -3449,8 +3449,8 @@ using namespace std;
 //     }
 // };
 
-// ×î³¤¹«¹²×Ó´®
-// v1.0 Á½Á½±È½Ï
+// æœ€é•¿å…¬å…±å­ä¸²
+// v1.0 ä¸¤ä¸¤æ¯”è¾ƒ
 // class Solution 
 // {
 // public:
@@ -3477,20 +3477,20 @@ using namespace std;
 //     }
 // };
 
-// v2.0 Í³Ò»±È½Ï
+// v2.0 ç»Ÿä¸€æ¯”è¾ƒ
 // class Solution 
 // {
 // public:
 //     string longestCommonPrefix(vector<string>& strs) 
 //     {
-//         for(int i = 0; i < strs[0].size(); i++) // ¿ØÖÆµÚ¼¸¸ö×Ö·û
+//         for(int i = 0; i < strs[0].size(); i++) // æ§åˆ¶ç¬¬å‡ ä¸ªå­—ç¬¦
 //         {
 //             char tmp = strs[0][i];
-//             for(int j = 1; j < strs.size(); j++) // ¿ØÖÆµÚ¼¸¸östring
+//             for(int j = 1; j < strs.size(); j++) // æ§åˆ¶ç¬¬å‡ ä¸ªstring
 //             {
 //                 if(i == strs[j].size() || tmp != strs[j][i])
 //                 {
-//                     return strs[0].substr(0, i); // °üº¬ÁË¿Õ´®µÄÇé¿ö
+//                     return strs[0].substr(0, i); // åŒ…å«äº†ç©ºä¸²çš„æƒ…å†µ
 //                 }
 //             }
 //         }
@@ -3499,16 +3499,16 @@ using namespace std;
 //     }
 // };
 
-// ×î³¤»ØÎÄ×Ó´®
+// æœ€é•¿å›æ–‡å­ä¸²
 // class Solution 
 // {
 // public:
 //     string longestPalindrome(string s) 
 //     {
 //         int begin = 0, len = 0, n = s.size();
-//         for(int i = 0; i < n; i++) // Ã¶¾ÙËùÓĞµÄµã
+//         for(int i = 0; i < n; i++) // æšä¸¾æ‰€æœ‰çš„ç‚¹
 //         {
-//             // ÆæÊı³¤¶ÈÀ©Õ¹
+//             // å¥‡æ•°é•¿åº¦æ‰©å±•
 //             int left = i, right = i;
 //             while(left >= 0 && right < n && s[left] == s[right])
 //             {
@@ -3522,7 +3522,7 @@ using namespace std;
 //                 len = right - left - 1;
 //             }
 
-//             // Å¼Êı³¤¶ÈÀ©Õ¹
+//             // å¶æ•°é•¿åº¦æ‰©å±•
 //             left = i, right = i + 1;
 //             while(left >= 0 && right < n && s[left] == s[right])
 //             {
@@ -3541,7 +3541,7 @@ using namespace std;
 //     }
 // };
 
-// ¶ş½øÖÆÇóºÍ
+// äºŒè¿›åˆ¶æ±‚å’Œ
 // class Solution 
 // {
 // public:
@@ -3571,7 +3571,7 @@ using namespace std;
 //     }
 // };
 
-// ×Ö·û´®Ïà³Ë
+// å­—ç¬¦ä¸²ç›¸ä¹˜
 // class Solution 
 // {
 // public:
@@ -3579,11 +3579,11 @@ using namespace std;
 //     {
 //         int n = num1.size(), m = num2.size();
 
-//         // ÄæĞò×Ö·û´®£¬±ãÓÚÔËËã
+//         // é€†åºå­—ç¬¦ä¸²ï¼Œä¾¿äºè¿ç®—
 //         reverse(num1.begin(), num1.end());
 //         reverse(num2.begin(), num2.end());
 
-//         // ÎŞ½øÎ»Ïà¼Ó
+//         // æ— è¿›ä½ç›¸åŠ 
 //         vector<int> tmp(n + m - 1);
 //         for(int i = 0; i < n; i++)
 //         {
@@ -3593,7 +3593,7 @@ using namespace std;
 //             }
 //         }
 
-//         // ½øÎ»
+//         // è¿›ä½
 //         int cur = 0, carry = 0;
 //         string ret;
 //         while(cur < n + m - 1 || carry)
@@ -3607,7 +3607,7 @@ using namespace std;
 //             carry /= 10;
 //         }
 
-//         // ´¦ÀíÇ°µ¼0
+//         // å¤„ç†å‰å¯¼0
 //         while(ret.size() > 1 && ret.back() == '0')
 //         {
 //             ret.pop_back();
@@ -3619,13 +3619,13 @@ using namespace std;
 //     }
 // };
 
-// É¾³ı×Ö·û´®ÖĞµÄËùÓĞÏàÁÚÖØ¸´Ïî
+// åˆ é™¤å­—ç¬¦ä¸²ä¸­çš„æ‰€æœ‰ç›¸é‚»é‡å¤é¡¹
 // class Solution 
 // {
 // public:
 //     string removeDuplicates(string s) 
 //     {
-//         string ret; // stringÄ£Äâstack
+//         string ret; // stringæ¨¡æ‹Ÿstack
 //         for(auto& ch : s)
 //         {
 //             if(!ret.empty() && ret.back() == ch)
@@ -3642,7 +3642,7 @@ using namespace std;
 //     }
 // };
 
-// ±È½Ïº¬ÍË¸ñµÄ×Ö·û´®
+// æ¯”è¾ƒå«é€€æ ¼çš„å­—ç¬¦ä¸²
 // class Solution 
 // {
 // public:
@@ -3677,7 +3677,7 @@ using namespace std;
 //     }
 // };
 
-// »ù±¾¼ÆËãÆ÷¢ò
+// åŸºæœ¬è®¡ç®—å™¨â…¡
 // class Solution 
 // {
 // public:
@@ -3685,7 +3685,7 @@ using namespace std;
 //     {
 //         char op = '+';
 //         int n = s.size();
-//         vector<int> st; // vectorÄ£Äâstack
+//         vector<int> st; // vectoræ¨¡æ‹Ÿstack
 
 //         int i = 0;
 //         while(i < n)
@@ -3696,14 +3696,14 @@ using namespace std;
 //             }
 //             else if(s[i] >= '0' && s[i] <= '9')
 //             {
-//                 // ÌáÈ¡Êı×Ö
+//                 // æå–æ•°å­—
 //                 int num = 0;
 //                 while(i < n && s[i] >= '0' && s[i] <= '9')
 //                 {
-//                     num = num * 10 + (s[i++] - '0'); // ()·ÀÖ¹intÒç³ö
+//                     num = num * 10 + (s[i++] - '0'); // ()é˜²æ­¢intæº¢å‡º
 //                 }
 
-//                 // ·ÖÇé¿öÌÖÂÛ
+//                 // åˆ†æƒ…å†µè®¨è®º
 //                 if(op == '+')
 //                 {
 //                     st.push_back(num);
@@ -3738,7 +3738,7 @@ using namespace std;
 //     }
 // };
 
-// ×Ö·û´®½âÂë
+// å­—ç¬¦ä¸²è§£ç 
 // class Solution 
 // {
 // public:
@@ -3746,14 +3746,14 @@ using namespace std;
 //     {
 //         stack<int> numSt;
 //         stack<string> strSt;
-//         strSt.push(""); // Ï¸½Ú£¬·ÅÒç³ö:P
+//         strSt.push(""); // ç»†èŠ‚ï¼Œæ”¾æº¢å‡º:P
 
 //         int i = 0, n = s.size();
 //         while(i < n)
 //         {
 //             if(isdigit(s[i]))
 //             {
-//                 // ÌáÈ¡Êı×Ö
+//                 // æå–æ•°å­—
 //                 int num = s[i++] - '0';
 //                 while(isdigit(s[i]))
 //                 {
@@ -3766,7 +3766,7 @@ using namespace std;
 //             {
 //                 i++;
                 
-//                 // ÌáÈ¡×Ö·û´®£¬ÈëÕ»
+//                 // æå–å­—ç¬¦ä¸²ï¼Œå…¥æ ˆ
 //                 string tmp;
 //                 while(isalpha(s[i]))
 //                 {
@@ -3779,7 +3779,7 @@ using namespace std;
 //             {
 //                 i++;
 
-//                 // ½âÎö£¬¼ÓÈëµ½Õ»¶¥ºóÃæ
+//                 // è§£æï¼ŒåŠ å…¥åˆ°æ ˆé¡¶åé¢
 //                 int k = numSt.top();
 //                 numSt.pop();
 //                 string tmp = strSt.top();
@@ -3795,7 +3795,7 @@ using namespace std;
 //             }
 //             else
 //             {
-//                 // ÌáÈ¡×Ö·û´®£¬ÈëÕ»
+//                 // æå–å­—ç¬¦ä¸²ï¼Œå…¥æ ˆ
 //                 string tmp;
 //                 while(i < n && isalpha(s[i]))
 //                 {
@@ -3810,7 +3810,7 @@ using namespace std;
 //     }
 // };
 
-// ÑéÖ¤Õ»ĞòÁĞ
+// éªŒè¯æ ˆåºåˆ—
 // class Solution 
 // {
 // public:
@@ -3834,7 +3834,7 @@ using namespace std;
 //     }
 // };
 
-// N²æÊ÷µÄ²ãĞò±éÀú
+// Nå‰æ ‘çš„å±‚åºéå†
 /*
 // Definition for a Node.
 class Node {
@@ -3859,8 +3859,8 @@ public:
 // public:
 //     vector<vector<int>> levelOrder(Node* root) 
 //     {
-//         vector<vector<int>> ret; // ¼ÇÂ¼×îÖÕ½á¹û
-//         queue<Node*> q; // ²ãĞò±éÀúĞèÒªµÄ¶ÓÁĞ
+//         vector<vector<int>> ret; // è®°å½•æœ€ç»ˆç»“æœ
+//         queue<Node*> q; // å±‚åºéå†éœ€è¦çš„é˜Ÿåˆ—
         
 //         if(root == nullptr)
 //         {
@@ -3870,8 +3870,8 @@ public:
 //         q.push(root);
 //         while(q.size())
 //         {
-//             int sz = q.size(); // ÌáÈ¡±¾²ãÔªËØ¸öÊı
-//             vector<int> tmp; // Í³¼Æ±¾²ãÔªËØ
+//             int sz = q.size(); // æå–æœ¬å±‚å…ƒç´ ä¸ªæ•°
+//             vector<int> tmp; // ç»Ÿè®¡æœ¬å±‚å…ƒç´ 
             
 //             while(sz--)
 //             {
@@ -3880,7 +3880,7 @@ public:
                 
 //                 tmp.push_back(node->val);
                 
-//                 // ½«¸Ã½áµãÏÂÒ»²ãÈë¶ÓÁĞ
+//                 // å°†è¯¥ç»“ç‚¹ä¸‹ä¸€å±‚å…¥é˜Ÿåˆ—
 //                 for(auto& child : node->children)
 //                 {
 //                     if(child != nullptr)
@@ -3897,7 +3897,7 @@ public:
 //     }
 // };
 
-// ¶ş²æÊ÷µÄ¾â³İĞÎ²ãĞò±éÀú
+// äºŒå‰æ ‘çš„é”¯é½¿å½¢å±‚åºéå†
 /**
  * Definition for a binary tree node.
  * struct TreeNode {
@@ -3926,8 +3926,8 @@ public:
 //         bool rvs = false; // reverse
 //         while(q.size())
 //         {
-//             int sz = q.size(); // ±¾²ãÔªËØ¸öÊı
-//             vector<int> tmp; // Í³¼Æ±¾²ãÔªËØ
+//             int sz = q.size(); // æœ¬å±‚å…ƒç´ ä¸ªæ•°
+//             vector<int> tmp; // ç»Ÿè®¡æœ¬å±‚å…ƒç´ 
             
 //             while(sz--)
 //             {
@@ -3936,7 +3936,7 @@ public:
                 
 //                 tmp.push_back(node->val);
                 
-//                 // º¢×Ó½ÚµãÈë¶ÓÁĞ
+//                 // å­©å­èŠ‚ç‚¹å…¥é˜Ÿåˆ—
 //                 if(node->left)
 //                 {
 //                     q.push(node->left);    
@@ -3961,24 +3961,24 @@ public:
 //     }
 // };
 
-// ¶ş²æÊ÷µÄ×î´ó¿í¶È
+// äºŒå‰æ ‘çš„æœ€å¤§å®½åº¦
 // class Solution 
 // {
 // public:
 //     int widthOfBinaryTree(TreeNode* root) 
 //     {
-//         vector<pair<TreeNode*, size_t>> q; // ÓÃvectorÄ£Äâqueue
+//         vector<pair<TreeNode*, size_t>> q; // ç”¨vectoræ¨¡æ‹Ÿqueue
 //         q.push_back({root, 1});
         
 //         size_t ret = 0;        
 //         while(q.size())
 //         {
-//             auto& [x1, y1] = q[0]; // ¶ÓÍ·
-//             auto& [x2, y2] = q.back(); // ¶ÓÎ²
+//             auto& [x1, y1] = q[0]; // é˜Ÿå¤´
+//             auto& [x2, y2] = q.back(); // é˜Ÿå°¾
             
 //             ret = max(ret, y2 - y1 + 1);
             
-//             // ½«ÏÂÒ»²ãÈë¶ÓÁĞ
+//             // å°†ä¸‹ä¸€å±‚å…¥é˜Ÿåˆ—
 //             vector<pair<TreeNode*, size_t>> tmp;
 //             for(auto& [x, y] : q)
 //             {
@@ -3992,14 +3992,14 @@ public:
 //                     tmp.push_back({x->right, 2 * y + 1});
 //                 }
 //             }
-//             q = tmp; // ¸²¸ÇÔ­¶ÓÁĞ£¬±ÜÃâÁË¶ÓÁĞµÄÍ·É¾
+//             q = tmp; // è¦†ç›–åŸé˜Ÿåˆ—ï¼Œé¿å…äº†é˜Ÿåˆ—çš„å¤´åˆ 
 //         }
         
 //         return ret;
 //     }
 // };
 
-// ÔÚÃ¿¸öÊ÷?ÖĞÕÒ×î?Öµ
+// åœ¨æ¯ä¸ªæ ‘?ä¸­æ‰¾æœ€?å€¼
 // class Solution 
 // {
 // public:
@@ -4024,7 +4024,7 @@ public:
                 
 //                 maxV = max(maxV, node->val);
                 
-//                 // ½«ÏÂÒ»²ãÈë¶ÓÁĞ
+//                 // å°†ä¸‹ä¸€å±‚å…¥é˜Ÿåˆ—
 //                 if(node->left)
 //                 {
 //                     q.push(node->left);
@@ -4043,19 +4043,19 @@ public:
 //     }
 // };
 
-// ×îºóÒ»¿éÊ¯Í·µÄÖØÁ¿
+// æœ€åä¸€å—çŸ³å¤´çš„é‡é‡
 // class Solution 
 // {
 // public:
 //     int lastStoneWeight(vector<int>& stones) 
 //     {
-//         priority_queue<int> heap; // STLÄ¬ÈÏ´ó¸ù¶Ñ
+//         priority_queue<int> heap; // STLé»˜è®¤å¤§æ ¹å †
 //         for(auto& x : stones)
 //         {
 //             heap.push(x);
 //         }
 
-//         // Ä£Äâ¹ı³Ì
+//         // æ¨¡æ‹Ÿè¿‡ç¨‹
 //         while(heap.size() > 1)
 //         {
 //             int a = heap.top();
@@ -4073,10 +4073,10 @@ public:
 //     }
 // };
 
-// Êı¾İÁ÷ÖĞµÄµÚK´óÔªËØ
+// æ•°æ®æµä¸­çš„ç¬¬Kå¤§å…ƒç´ 
 // class KthLargest 
 // {
-//     // ´´½¨Ò»¸ö´óĞ¡ÎªkµÄĞ¡¸ù¶Ñ
+//     // åˆ›å»ºä¸€ä¸ªå¤§å°ä¸ºkçš„å°æ ¹å †
 //     priority_queue<int, vector<int>, greater<int>> heap;
 //     int _k = 0;
 // public:
@@ -4111,7 +4111,7 @@ public:
  * int param_1 = obj->add(val);
  */
 
-// Ç°k¸ö¸ßÆµµ¥´Ê
+// å‰kä¸ªé«˜é¢‘å•è¯
 //  class Solution 
 // {
 //     typedef pair<string, int> PSI;
@@ -4120,27 +4120,27 @@ public:
 //     {
 //         bool operator()(PSI& a, PSI& b)
 //         {
-//             // Æµ´ÎÏàÍ¬£¬×ÖµäĞò°´´ó¸ù¶ÑÅÅĞò
+//             // é¢‘æ¬¡ç›¸åŒï¼Œå­—å…¸åºæŒ‰å¤§æ ¹å †æ’åº
 //             if(a.second == b.second)
 //             {
 //                 return a.first < b.first;
 //             }
 
-//             // Æµ´Î°´Ğ¡¸ù¶ÑÅÅĞò
+//             // é¢‘æ¬¡æŒ‰å°æ ¹å †æ’åº
 //             return a.second > b.second;
 //         }
 //     };
 // public:
 //     vector<string> topKFrequent(vector<string>& words, int k) 
 //     {
-//         // Í³¼ÆÃ¿¸öµ¥´Ê³öÏÖµÄ´ÎÊı
+//         // ç»Ÿè®¡æ¯ä¸ªå•è¯å‡ºç°çš„æ¬¡æ•°
 //         unordered_map<string, int> hash;
 //         for(auto& str : words)
 //         {
 //             hash[str]++;
 //         }
 
-//         // ´´½¨Ò»¸ö´óĞ¡ÎªkµÄ¶Ñ
+//         // åˆ›å»ºä¸€ä¸ªå¤§å°ä¸ºkçš„å †
 //         priority_queue<PSI, vector<PSI>, Cmp> heap;
 
 //         // TOP-K
@@ -4153,7 +4153,7 @@ public:
 //             }
 //         }
 
-//         // ÌáÈ¡½á¹û£¬ÄæĞòheap
+//         // æå–ç»“æœï¼Œé€†åºheap
 //         vector<string> ret(k);
 //         for(int i = k - 1; i >= 0; i--)
 //         {
@@ -4165,11 +4165,11 @@ public:
 //     }
 // };
 
-// Êı¾İÁ÷µÄÖĞÎ»Êı
+// æ•°æ®æµçš„ä¸­ä½æ•°
 // class MedianFinder 
 // {
-//     priority_queue<int> left; // ´ó¸ù¶Ñ
-//     priority_queue<int, vector<int>, greater<int>> right; // Ğ¡¸ù¶Ñ
+//     priority_queue<int> left; // å¤§æ ¹å †
+//     priority_queue<int, vector<int>, greater<int>> right; // å°æ ¹å †
 // public:
 //     MedianFinder() 
 //     {}
@@ -4224,17 +4224,17 @@ public:
  * double param_2 = obj->findMedian();
  */
 
- // Í¼ÏñäÖÈ¾
+ // å›¾åƒæ¸²æŸ“
 // class Solution 
 // {
-//     // "·½Ïò"ÏòÁ¿Êı×é 
+//     // "æ–¹å‘"å‘é‡æ•°ç»„ 
 //     int dx[4] = {0, 0, 1, -1};
 //     int dy[4] = {1, -1, 0, 0};
 // public:
 //     vector<vector<int>> floodFill(vector<vector<int>>& image, int sr, int sc, int color) 
 //     {
 //         int target = image[sr][sc];
-//         if(color == target) // ±ß½çÇé¿ö´¦Àí
+//         if(color == target) // è¾¹ç•Œæƒ…å†µå¤„ç†
 //         {
 //             return image;
 //         }
@@ -4249,12 +4249,12 @@ public:
 //             q.pop();
 //             image[a][b] = color;
             
-//             // ½«ÏÂÒ»²ãÈë¶ÓÁĞ
+//             // å°†ä¸‹ä¸€å±‚å…¥é˜Ÿåˆ—
 //             for(int i = 0; i < 4; i++)
 //             {
 //                 int x = a + dx[i], y = b + dy[i];
                 
-//                 // ·ÀÖ¹Ô½½ç && ÑÕÉ«·ûºÏ
+//                 // é˜²æ­¢è¶Šç•Œ && é¢œè‰²ç¬¦åˆ
 //                 if(x >= 0 && x < n && y >= 0 && y < m && image[x][y] == target)
 //                 {
 //                     q.push({x, y});    
@@ -4266,13 +4266,13 @@ public:
 //     }
 // };
 
-// µºÓìÊıÁ¿
+// å²›å±¿æ•°é‡
 //class Solution
 //{
 //    int n, m;
 //    vector<vector<bool>> visit;
 //
-//    // "·½Ïò"ÏòÁ¿Êı×é
+//    // "æ–¹å‘"å‘é‡æ•°ç»„
 //    int dx[4] = { 1, -1, 0, 0 };
 //    int dy[4] = { 0, 0, 1, -1 };
 //public:
@@ -4289,7 +4289,7 @@ public:
 //                if (grid[i][j] == '1' && !visit[i][j])
 //                {
 //                    ret++;
-//                    BFS(grid, i, j); // ±ê¼ÇÕâÕû¿éÂ½µØ
+//                    BFS(grid, i, j); // æ ‡è®°è¿™æ•´å—é™†åœ°
 //                }
 //            }
 //        }
@@ -4303,13 +4303,13 @@ public:
 //        queue<pair<int, int>> q;
 //        q.push({ row, col });
 //
-//        // BFSÖ÷Âß¼­
+//        // BFSä¸»é€»è¾‘
 //        while (q.size())
 //        {
 //            auto [a, b] = q.front();
 //            q.pop();
 //
-//            // ½«ÏÂÒ»²ãÈë¶ÓÁĞ
+//            // å°†ä¸‹ä¸€å±‚å…¥é˜Ÿåˆ—
 //            for (int i = 0; i < 4; i++)
 //            {
 //                int x = a + dx[i], y = b + dy[i];
@@ -4325,13 +4325,13 @@ public:
 //    }
 //};
 
-// µºÓìµÄ×î´óÃæ»ı
+// å²›å±¿çš„æœ€å¤§é¢ç§¯
 // class Solution 
 // {
 //     int n, m;
 //     vector<vector<bool>> visit;
 
-//     // ·½ÏòÏòÁ¿Êı×é
+//     // æ–¹å‘å‘é‡æ•°ç»„
 //     int dx[4] = {1, -1, 0, 0};
 //     int dy[4] = {0, 0, 1, -1};
 // public:
@@ -4368,7 +4368,7 @@ public:
 //             auto [a, b] = q.front();
 //             q.pop();
 
-//             // ½«ÏÂÒ»²ãÈë¶ÓÁĞ
+//             // å°†ä¸‹ä¸€å±‚å…¥é˜Ÿåˆ—
 //             for(int i = 0; i < 4; i++)
 //             {
 //                 int x = a + dx[i], y = b + dy[i];
@@ -4387,12 +4387,12 @@ public:
 //     }
 // };
 
-// ±»Î§ÈÆµÄÇøÓò
+// è¢«å›´ç»•çš„åŒºåŸŸ
 // class Solution 
 // {
 //     int n, m;
 
-//     // ·½ÏòÏòÁ¿Êı×é
+//     // æ–¹å‘å‘é‡æ•°ç»„
 //     int dx[4] = {1, -1, 0, 0};
 //     int dy[4] = {0, 0, 1, -1};
 // public:
@@ -4400,7 +4400,7 @@ public:
 //     {
 //         n = board.size(), m = board[0].size();
 
-//         // ÏÈ´¦Àí±ß½çÇé¿ö
+//         // å…ˆå¤„ç†è¾¹ç•Œæƒ…å†µ
 //         for(int i = 0; i < n; i++)
 //         {
 //             if(board[i][0] == 'O')
@@ -4427,7 +4427,7 @@ public:
 //             }
 //         }
 
-//         // »¹Ô­
+//         // è¿˜åŸ
 //         for(int i = 0; i < n; i++)
 //         {
 //             for(int j = 0; j < m; j++)
@@ -4456,7 +4456,7 @@ public:
 //             auto [a, b] = q.front();
 //             q.pop();
 
-//             // ½«ÏÂÒ»²ãÈë¶ÓÁĞ
+//             // å°†ä¸‹ä¸€å±‚å…¥é˜Ÿåˆ—
 //             for(int i = 0; i < 4; i++)
 //             {
 //                 int x = a + dx[i], y = b + dy[i];
@@ -4471,7 +4471,7 @@ public:
 //     }
 // };
 
-// ÃÔ¹¬ÖĞÀëÈë¿Ú×î½üµÄ³ö¿Ú
+// è¿·å®«ä¸­ç¦»å…¥å£æœ€è¿‘çš„å‡ºå£
 // class Solution 
 // {
 //     int dx[4] = {1, -1, 0, 0};
@@ -4493,12 +4493,12 @@ public:
 //             step++;
 
 //             int sz = q.size();
-//             while(sz--) // ±¾²ã
+//             while(sz--) // æœ¬å±‚
 //             {
 //                 auto [a, b] = q.front();
 //                 q.pop();
 
-//                 // ½«ÏÂÒ»²ãÈë¶ÓÁĞ
+//                 // å°†ä¸‹ä¸€å±‚å…¥é˜Ÿåˆ—
 //                 for(int i = 0; i < 4; i++)
 //                 {
 //                     int x = a + dx[i], y = b + dy[i];
@@ -4506,7 +4506,7 @@ public:
 //                     if(x >= 0 && x < n && y >= 0 && y < m \
 //                         && maze[x][y] == '.' && !visit[x][y])
 //                     {
-//                         // ÅĞ¶ÏÊÇ·ñÓöµ½³ö¿Ú
+//                         // åˆ¤æ–­æ˜¯å¦é‡åˆ°å‡ºå£
 //                         if(x == 0 || x == n - 1 || y == 0 || y == m - 1)
 //                         {
 //                             return step;
@@ -4523,17 +4523,17 @@ public:
 //     }
 // };
 
-// ×îĞ¡»ùÒò±ä»¯
+// æœ€å°åŸºå› å˜åŒ–
 // class Solution 
 // {
 // public:
 //     int minMutation(string startGene, string endGene, vector<string>& bank) 
 //     {
-//         unordered_set<string> visit; // ÓÃÀ´±ê¼ÇÒÑ¾­ËÑË÷¹ıµÄ×´Ì¬
-//         unordered_set<string> hash(bank.begin(), bank.end()); // ´æ´¢»ùÒò¿â
+//         unordered_set<string> visit; // ç”¨æ¥æ ‡è®°å·²ç»æœç´¢è¿‡çš„çŠ¶æ€
+//         unordered_set<string> hash(bank.begin(), bank.end()); // å­˜å‚¨åŸºå› åº“
 //         string change = "ACGT"; // hash
 
-//         // ±ß½çÇé¿ö´¦Àí
+//         // è¾¹ç•Œæƒ…å†µå¤„ç†
 //         if(startGene == endGene)
 //         {
 //             return 0;
@@ -4560,11 +4560,11 @@ public:
 //                 string str = q.front();
 //                 q.pop();
 
-//                 // ½«ÏÂÒ»²ãÈë¶ÓÁĞ
-//                 // ±©Á¦Çî¾ÙËùÓĞµÄ±ä»¯Çé¿ö:P
+//                 // å°†ä¸‹ä¸€å±‚å…¥é˜Ÿåˆ—
+//                 // æš´åŠ›ç©·ä¸¾æ‰€æœ‰çš„å˜åŒ–æƒ…å†µ:P
 //                 for(int i = 0; i < 8; i++)
 //                 {
-//                     string tmp = str; // Ï¸½Ú£ºÈ·±£Ã¿´ÎÖ»±ä»¯Ò»¸öÎ»ÖÃ
+//                     string tmp = str; // ç»†èŠ‚ï¼šç¡®ä¿æ¯æ¬¡åªå˜åŒ–ä¸€ä¸ªä½ç½®
 //                     for(int j = 0; j < 4; j++)
 //                     {
 //                         tmp[i] = change[j];
@@ -4588,7 +4588,7 @@ public:
 //     }
 // };
 
-// µ¥´Ê½ÓÁú
+// å•è¯æ¥é¾™
 // class Solution 
 // {
 // public:
@@ -4618,11 +4618,11 @@ public:
 //                 string str = q.front();
 //                 q.pop();
                 
-//                 // ½«ÏÂÒ»²ãÈë¶ÓÁĞ
-//                 // ±©Á¦Ã¶¾ÙËùÓĞ¿ÉÄÜÇé¿ö:P
+//                 // å°†ä¸‹ä¸€å±‚å…¥é˜Ÿåˆ—
+//                 // æš´åŠ›æšä¸¾æ‰€æœ‰å¯èƒ½æƒ…å†µ:P
 //                 for(int i = 0; i < beginWord.size(); i++)
 //                 {
-//                     string tmp = str; // Ï¸½Ú£ºÈ·±£Ã¿´ÎÖ»¸ü¸ÄÒ»¸öÎ»ÖÃ
+//                     string tmp = str; // ç»†èŠ‚ï¼šç¡®ä¿æ¯æ¬¡åªæ›´æ”¹ä¸€ä¸ªä½ç½®
 //                     for(char j = 'a'; j <= 'z'; j++)
 //                     {
 //                         tmp[i] = j;
@@ -4646,14 +4646,14 @@ public:
 //     }
 // };
 
-// Îª¸ß¶û·ò±ÈÈü¿³Ê÷
+// ä¸ºé«˜å°”å¤«æ¯”èµ›ç æ ‘
 // class Solution 
 // {
 //     typedef pair<int, int> PII;
 //     int n, m;
 //     bool visit[50][50];
     
-//     // ·½ÏòÏòÁ¿Êı×é
+//     // æ–¹å‘å‘é‡æ•°ç»„
 //     int dx[4] = {1, -1, 0, 0};
 //     int dy[4] = {0, 0, 1, -1};
 // public:
@@ -4661,7 +4661,7 @@ public:
 //     {
 //         n = forest.size(), m = forest[0].size();
         
-//         // ÕÒ³ö¿³Ê÷µÄË³Ğò
+//         // æ‰¾å‡ºç æ ‘çš„é¡ºåº
 //         vector<PII> trees;
 //         for(int i = 0; i < n; i++)
 //         {
@@ -4679,7 +4679,7 @@ public:
 //             return forest[p1.first][p1.second] < forest[p2.first][p2.second];
 //         });
         
-//         // °´ÕÕË³Ğò¿³Ê÷
+//         // æŒ‰ç…§é¡ºåºç æ ‘
 //         int ret = 0;
 //         int beginX = 0, beginY = 0;
 //         for(auto& [a, b] : trees)
@@ -4697,16 +4697,16 @@ public:
 //         return ret;
 //     }
     
-//     // ½â¾öµ¥Ô´È¨ÖµÎªÒ»µÄ×î¶ÌÂ·¾¶ÎÊÌâ
+//     // è§£å†³å•æºæƒå€¼ä¸ºä¸€çš„æœ€çŸ­è·¯å¾„é—®é¢˜
 //     int BFS(vector<vector<int>>& forest, int beginX, int beginY, int endX, int endY)
 //     {
-//         // ±ß½çÇé¿ö´¦Àí
+//         // è¾¹ç•Œæƒ…å†µå¤„ç†
 //         if(beginX == endX && beginY == endY)
 //         {
 //             return 0;
 //         }
         
-//         memset(visit, false, sizeof visit); // Ã¿´Îµ÷ÓÃBFS¶¼ĞèÒªÖ´ĞĞ£¬·ñÔòÓ°ÏìÏÂ´ÎBFS
+//         memset(visit, false, sizeof visit); // æ¯æ¬¡è°ƒç”¨BFSéƒ½éœ€è¦æ‰§è¡Œï¼Œå¦åˆ™å½±å“ä¸‹æ¬¡BFS
 //         visit[beginX][beginY] = true;
         
 //         queue<PII> q;
@@ -4723,7 +4723,7 @@ public:
 //                 auto [a, b] = q.front();
 //                 q.pop();
                 
-//                 // ½«ÏÂÒ»²ãÈë¶ÓÁĞ
+//                 // å°†ä¸‹ä¸€å±‚å…¥é˜Ÿåˆ—
 //                 for(int i = 0; i < 4; i++)
 //                 {
 //                     int x = a + dx[i], y = b + dy[i];
@@ -4747,7 +4747,7 @@ public:
 //     }
 // };
 
-// ¾ØÕó
+// çŸ©é˜µ
 // class Solution 
 // {
 //     int dx[4] = {1, -1, 0, 0};
@@ -4757,12 +4757,12 @@ public:
 //     {
 //         int n = mat.size(), m = mat[0].size();
 
-//         // dist[i][j] == -1 Î´ËÑË÷¹ı
-//         // dist[i][j] != -1 ×î¶Ì¾àÀë
+//         // dist[i][j] == -1 æœªæœç´¢è¿‡
+//         // dist[i][j] != -1 æœ€çŸ­è·ç¦»
 //         vector<vector<int>> dist(n, vector<int>(m, -1));
 //         queue<pair<int, int>> q;
 
-//         // ½«ËùÓĞÔ´µã¼ÓÈëµ½¶ÓÁĞÖĞ
+//         // å°†æ‰€æœ‰æºç‚¹åŠ å…¥åˆ°é˜Ÿåˆ—ä¸­
 //         for(int i = 0; i < n; i++)
 //         {
 //             for(int j = 0; j < m; j++)
@@ -4775,13 +4775,13 @@ public:
 //             }
 //         }
 
-//         // ¶àÔ´BFS
+//         // å¤šæºBFS
 //         while(q.size())
 //         {
 //             auto [a, b] = q.front();
 //             q.pop();
 
-//             // ½«ÏÂÒ»²ãÈë¶ÓÁĞ
+//             // å°†ä¸‹ä¸€å±‚å…¥é˜Ÿåˆ—
 //             for(int i = 0; i < 4; i++)
 //             {
 //                 int x = a + dx[i], y = b + dy[i];
@@ -4798,7 +4798,7 @@ public:
 //     }
 // };
 
-// ·ÉµØµÄÊıÁ¿
+// é£åœ°çš„æ•°é‡
 // class Solution 
 // {
 //     int dx[4] = {1, -1, 0, 0};
@@ -4810,7 +4810,7 @@ public:
 //         vector<vector<bool>> visit(n, vector<bool>(m, false));
 //         queue<pair<int, int>> q;
 
-//         // ½«ËùÓĞ±ß½ç1Èë¶ÓÁĞ
+//         // å°†æ‰€æœ‰è¾¹ç•Œ1å…¥é˜Ÿåˆ—
 //         for(int i = 0; i < n; i++)
 //         {
 //             if(grid[i][0] == 1)
@@ -4841,13 +4841,13 @@ public:
 //             }
 //         }
 
-//         // ¶àÔ´BFS
+//         // å¤šæºBFS
 //         while(q.size())
 //         {
 //             auto [a, b] = q.front();
 //             q.pop();
 
-//             // ÏÂÒ»²ãÈë¶ÓÁĞ
+//             // ä¸‹ä¸€å±‚å…¥é˜Ÿåˆ—
 //             for(int i = 0; i < 4; i++)
 //             {
 //                 int x = a + dx[i], y = b + dy[i];
@@ -4861,7 +4861,7 @@ public:
 //             }
 //         }
 
-//         // ±éÀú¼ÆÊı
+//         // éå†è®¡æ•°
 //         int count = 0;
 //         for(int i = 0; i < n; i++)
 //         {
@@ -4878,7 +4878,7 @@ public:
 //     }
 // };
 
-// µØÍ¼ÖĞµÄ×î¸ßµã
+// åœ°å›¾ä¸­çš„æœ€é«˜ç‚¹
 // class Solution 
 // {
 //     int dx[4] = {1, -1, 0, 0};
@@ -4890,7 +4890,7 @@ public:
 //         vector<vector<int>> dist(n, vector<int>(m, -1));
 //         queue<pair<int, int>> q;
         
-//         // ½«±ß½çË®ÓòÈë¶ÓÁĞ
+//         // å°†è¾¹ç•Œæ°´åŸŸå…¥é˜Ÿåˆ—
 //         for(int i = 0; i < n; i++)
 //         {
 //             for(int j = 0; j < m; j++)
@@ -4903,13 +4903,13 @@ public:
 //             }
 //         }
 
-//         // ¶àÔ´BFS
+//         // å¤šæºBFS
 //         while(q.size())
 //         {
 //             auto [a, b] = q.front();
 //             q.pop();
 
-//             // ÏÂÒ»²ãÈë¶ÓÁĞ
+//             // ä¸‹ä¸€å±‚å…¥é˜Ÿåˆ—
 //             for(int i = 0; i < 4; i++)
 //             {
 //                 int x = a + dx[i], y = b + dy[i];
@@ -4926,7 +4926,7 @@ public:
 //     }
 // };
 
-// µØÍ¼·ÖÎö
+// åœ°å›¾åˆ†æ
 // class Solution 
 // {
 //     int dx[4] = {1, -1, 0, 0};
@@ -4938,7 +4938,7 @@ public:
 //         vector<vector<int>> dist(n, vector(n, -1));
 //         queue<pair<int, int>> q;
 
-//         // ½«Â½µØÈë¶ÓÁĞ
+//         // å°†é™†åœ°å…¥é˜Ÿåˆ—
 //         for(int i = 0; i < n; i++)
 //         {
 //             for(int j = 0; j < n; j++)
@@ -4951,14 +4951,14 @@ public:
 //             }
 //         }
 
-//         // ¶àÔ´BFS
+//         // å¤šæºBFS
 //         int ret = -1;
 //         while(q.size())
 //         {
 //             auto [a, b] = q.front();
 //             q.pop();
 
-//             // ÏÂ²ãÈë¶ÓÁĞ
+//             // ä¸‹å±‚å…¥é˜Ÿåˆ—
 //             for(int i = 0; i < 4; i++)
 //             {
 //                 int x = a + dx[i], y = b + dy[i];
@@ -4976,25 +4976,25 @@ public:
 //     }
 // };
 
-// ¿Î³Ì±í
+// è¯¾ç¨‹è¡¨
 // class Solution 
 // {
 // public:
 //     bool canFinish(int n, vector<vector<int>>& prerequisites) 
 //     {
-//         unordered_map<int, vector<int>> edges; // ÁÚ½Ó±í
-//         vector<int> in(n); // ´æ´¢Ã¿Ò»¸ö½áµãµÄÈë¶È
+//         unordered_map<int, vector<int>> edges; // é‚»æ¥è¡¨
+//         vector<int> in(n); // å­˜å‚¨æ¯ä¸€ä¸ªç»“ç‚¹çš„å…¥åº¦
 
-//         // 1.½¨Í¼
+//         // 1.å»ºå›¾
 //         for(auto& e : prerequisites)
 //         {
 //             int a = e[0], b = e[1]; // b -> a
-//             edges[b].push_back(a); // ¹¹½¨Í¼µÄÂß¼­½á¹¹
-//             in[a]++; // Èë¶È±í
+//             edges[b].push_back(a); // æ„å»ºå›¾çš„é€»è¾‘ç»“æ„
+//             in[a]++; // å…¥åº¦è¡¨
 //         }
 
-//         // 2.ÍØÆËÅÅĞòBFS
-//         // (1) °ÑËùÓĞÈë¶ÈÎª0µÄ½áµã¼ÓÈë¶ÓÁĞ
+//         // 2.æ‹“æ‰‘æ’åºBFS
+//         // (1) æŠŠæ‰€æœ‰å…¥åº¦ä¸º0çš„ç»“ç‚¹åŠ å…¥é˜Ÿåˆ—
 //         queue<int> q;
 //         for(int i = 0; i < n; i++)
 //         {
@@ -5010,7 +5010,7 @@ public:
 //             int tmp = q.front();
 //             q.pop();
 
-//             // ĞŞ¸ÄÏàÁ¬½áµãµÄ±ß
+//             // ä¿®æ”¹ç›¸è¿ç»“ç‚¹çš„è¾¹
 //             for(auto& e : edges[tmp])
 //             {
 //                 in[e]--;
@@ -5021,7 +5021,7 @@ public:
 //             }
 //         }
 
-//         // 3.ÅĞ¶ÏÊÇ·ñÓĞ»·
+//         // 3.åˆ¤æ–­æ˜¯å¦æœ‰ç¯
 //         for(auto& e : in)
 //         {
 //             if(e)
@@ -5034,7 +5034,7 @@ public:
 //     }
 // };
 
-// ¿Î³Ì±í¢ò
+// è¯¾ç¨‹è¡¨â…¡
 // class Solution 
 // {
 // public:
@@ -5043,7 +5043,7 @@ public:
 //         vector<vector<int>> edges(n);
 //         vector<int> in(n);
 
-//         // 1.½¨Í¼
+//         // 1.å»ºå›¾
 //         for(auto& v : prerequisites)
 //         {
 //             int a = v[0], b = v[1]; // b -> a
@@ -5051,11 +5051,11 @@ public:
 //             in[a]++;
 //         }
 
-//         // 2.ÍØÆËÅÅĞò
+//         // 2.æ‹“æ‰‘æ’åº
 //         vector<int> ret;
 //         queue<int> q;
 
-//         // (1) ½«ËùÓĞÈë¶ÈÎª0µÄµãÈë¶ÓÁĞ
+//         // (1) å°†æ‰€æœ‰å…¥åº¦ä¸º0çš„ç‚¹å…¥é˜Ÿåˆ—
 //         for(int i = 0 ; i < n; i++)
 //         {
 //             if(in[i] == 0)
@@ -5071,7 +5071,7 @@ public:
 //             q.pop();
 //             ret.push_back(tmp);
 
-//             // ĞŞ¸ÄÏàÁ¬½áµãµÄ±ß
+//             // ä¿®æ”¹ç›¸è¿ç»“ç‚¹çš„è¾¹
 //             for(auto& e : edges[tmp])
 //             {
 //                 in[e]--;
@@ -5082,7 +5082,7 @@ public:
 //             }
 //         }
 
-//         // ÅĞ¶Ï½á¹û²¢·µ»Ø
+//         // åˆ¤æ–­ç»“æœå¹¶è¿”å›
 //         if(ret.size() == n)
 //         {
 //             return ret;
@@ -5094,16 +5094,16 @@ public:
 //     }
 // };
 
-// »ğĞÇ´Êµä
+// ç«æ˜Ÿè¯å…¸
 // class Solution 
 // {
-//     unordered_map<char, unordered_set<char>> edges; // ÁÚ½Ó±í
-//     unordered_map<char, int> in; // Èë¶È±í
-//     bool check = false; // ´¦Àí±ß½çÇé¿ö
+//     unordered_map<char, unordered_set<char>> edges; // é‚»æ¥è¡¨
+//     unordered_map<char, int> in; // å…¥åº¦è¡¨
+//     bool check = false; // å¤„ç†è¾¹ç•Œæƒ…å†µ
 // public:
 //     string alienOrder(vector<string>& words) 
 //     {
-//         // 1.³õÊ¼»¯Èë¶È±í
+//         // 1.åˆå§‹åŒ–å…¥åº¦è¡¨
 //         for(auto& str : words)
 //         {
 //             for(auto& ch : str)
@@ -5112,7 +5112,7 @@ public:
 //             }
 //         }
 
-//         // 2.Ã¶¾ÙËÑ¼¯×ÖµäĞÅÏ¢ + ½¨Í¼
+//         // 2.æšä¸¾æœé›†å­—å…¸ä¿¡æ¯ + å»ºå›¾
 //         int n = words.size();
 //         for(int i = 0; i < n; i++)
 //         {
@@ -5126,11 +5126,11 @@ public:
 //             }
 //         }
 
-//         // 3. ÍØÆËÅÅĞò
+//         // 3. æ‹“æ‰‘æ’åº
 //         string ret;
 //         queue<char> q;
 
-//         // (1) Èë¶ÈÎª0µÄÈë¶ÓÁĞ
+//         // (1) å…¥åº¦ä¸º0çš„å…¥é˜Ÿåˆ—
 //         for(auto& [ch, count] : in)
 //         {
 //             if(count == 0)
@@ -5146,7 +5146,7 @@ public:
 //             q.pop();
 //             ret += tmp;
 
-//             // ĞŞ¸ÄÏàÁÚµãµÄ±ß
+//             // ä¿®æ”¹ç›¸é‚»ç‚¹çš„è¾¹
 //             for(auto& ch : edges[tmp])
 //             {
 //                 if(--in[ch] == 0)
@@ -5156,7 +5156,7 @@ public:
 //             }
 //         }
 
-//         // ¼ìÑéÊÇ·ñÓĞ»·
+//         // æ£€éªŒæ˜¯å¦æœ‰ç¯
 //         for(auto& [ch, count] : in)
 //         {
 //             if(count != 0)
@@ -5179,7 +5179,7 @@ public:
 //             {
 //                 char a = s1[i], b = s2[i];
                 
-//                 // ±ÜÃâÊı¾İÈßÓà
+//                 // é¿å…æ•°æ®å†—ä½™
 //                 if(!edges.count(a) || !edges[a].count(b))
 //                 {
 //                     edges[a].insert(b);  // s1[i] -> s2[i]
@@ -5192,7 +5192,7 @@ public:
 //             i++;
 //         }
 
-//         // ±ß½çÇé¿ö´¦Àí
+//         // è¾¹ç•Œæƒ…å†µå¤„ç†
 //         if(i == s2.size() && i < s1.size())
 //         {
 //             check = true;
@@ -5200,7 +5200,7 @@ public:
 //     }
 // };
 
-// ººÅµËş
+// æ±‰è¯ºå¡”
 // class Solution 
 // {
 // public:
@@ -5225,7 +5225,7 @@ public:
 //     }
 // };
 
-// ºÏ²¢Á½¸öÓĞĞòÁ´±í (µİ¹é)
+// åˆå¹¶ä¸¤ä¸ªæœ‰åºé“¾è¡¨ (é€’å½’)
 /**
  * Definition for singly-linked list.
  * struct ListNode {
@@ -5263,7 +5263,7 @@ public:
 //     }
 // };
 
-// ÄæĞòÁ´±í(µİ¹é)
+// é€†åºé“¾è¡¨(é€’å½’)
 /**
  * Definition for singly-linked list.
  * struct ListNode {
@@ -5279,7 +5279,7 @@ public:
 // public:
 //     ListNode* reverseList(ListNode* head) 
 //     {
-//         // ³ö¿Ú -> Ò¶×Ó½áµã
+//         // å‡ºå£ -> å¶å­ç»“ç‚¹
 //         if(head == nullptr || head->next == nullptr)
 //         {
 //             return head;
@@ -5293,7 +5293,7 @@ public:
 //     }
 // };
 
-// Á½Á½½»»»Á´±íÖĞµÄ½áµã(µİ¹é)
+// ä¸¤ä¸¤äº¤æ¢é“¾è¡¨ä¸­çš„ç»“ç‚¹(é€’å½’)
 /**
  * Definition for singly-linked list.
  * struct ListNode {
@@ -5309,7 +5309,7 @@ public:
 // public:
 //     ListNode* swapPairs(ListNode* head) 
 //     {
-//         // º¯Êı³ö¿Ú
+//         // å‡½æ•°å‡ºå£
 //         if(head == nullptr || head->next == nullptr)
 //         {
 //             return head;
@@ -5336,7 +5336,7 @@ public:
 
 //     double Pow(double x, long long n)
 //     {
-//         // º¯Êı³ö¿Ú
+//         // å‡½æ•°å‡ºå£
 //         if(n == 0)
 //         {
 //             return 1;
@@ -5348,7 +5348,7 @@ public:
 //     }
 // };
 
-// ¼ÆËã²¼¶û¶ş²æÊ÷µÄÖµ
+// è®¡ç®—å¸ƒå°”äºŒå‰æ ‘çš„å€¼
 /**
  * Definition for a binary tree node.
  * struct TreeNode {
@@ -5365,7 +5365,7 @@ public:
 // public:
 //     bool evaluateTree(TreeNode* root) 
 //     {
-//         // º¯Êı³ö¿Ú
+//         // å‡½æ•°å‡ºå£
 //         if(root->left == nullptr)
 //         {
 //             return root->val;
@@ -5385,7 +5385,7 @@ public:
 //     }
 // };
 
-// Çó¸ù½Úµãµ½Ò¶½ÚµãÊı×ÖÖ®ºÍ
+// æ±‚æ ¹èŠ‚ç‚¹åˆ°å¶èŠ‚ç‚¹æ•°å­—ä¹‹å’Œ
 /**
  * Definition for a binary tree node.
  * struct TreeNode {
@@ -5423,7 +5423,7 @@ public:
 //     }
 // };
 
-// ¶ş²æÊ÷¼ôÖ¦
+// äºŒå‰æ ‘å‰ªæ
 /**
  * Definition for a binary tree node.
  * struct TreeNode {
@@ -5450,7 +5450,7 @@ public:
 
 //         if(!root->val && !root->left && !root->right)
 //         {
-//             delete root; // ·ÀÖ¹ÄÚ´æĞ¹Â©
+//             delete root; // é˜²æ­¢å†…å­˜æ³„æ¼
 //             root = nullptr;
 //         }
 
@@ -5458,7 +5458,7 @@ public:
 //     }
 // };
 
-// ÑéÖ¤¶ş²æËÑË÷Ê÷
+// éªŒè¯äºŒå‰æœç´¢æ ‘
 /**
  * Definition for a binary tree node.
  * struct TreeNode {
@@ -5471,7 +5471,7 @@ public:
  * };
  */
 
-// v1.0 ±©Á¦ÅĞ¶Ï
+// v1.0 æš´åŠ›åˆ¤æ–­
 // class Solution 
 // {
 //     long prev = LONG_MIN;
@@ -5483,10 +5483,10 @@ public:
 //             return true;
 //         }
 
-//         // ÅĞ¶Ï×ó×ÓÊ÷
+//         // åˆ¤æ–­å·¦å­æ ‘
 //         bool left = isValidBST(root->left);
 
-//         // ÅĞ¶Ï×Ô¼º
+//         // åˆ¤æ–­è‡ªå·±
 //         bool cur = false;
 //         if(root->val > prev)
 //         {
@@ -5494,14 +5494,14 @@ public:
 //         }
 //         prev = root->val;
 
-//         // ÅĞ¶ÏÓÒ×ÓÊ÷
+//         // åˆ¤æ–­å³å­æ ‘
 //         bool right = isValidBST(root->right);
 
 //         return left && right && cur;
 //     }
 // };
 
-// v2.0 ¼ôÖ¦
+// v2.0 å‰ªæ
 // class Solution 
 // {
 //     long prev = LONG_MIN;
@@ -5513,14 +5513,14 @@ public:
 //             return true;
 //         }
 
-//         // 1.ÅĞ¶Ï×ó×ÓÊ÷
+//         // 1.åˆ¤æ–­å·¦å­æ ‘
 //         bool left = isValidBST(root->left);
-//         if(!left) // ¼ôÖ¦
+//         if(!left) // å‰ªæ
 //         {
 //             return false;
 //         }
 
-//         // 2.ÅĞ¶Ï×Ô¼º
+//         // 2.åˆ¤æ–­è‡ªå·±
 //         bool cur = false;
 //         if(root->val > prev)
 //         {
@@ -5528,19 +5528,19 @@ public:
 //         }
 //         prev = root->val;
 
-//         if(!cur) // ¼ôÖ¦
+//         if(!cur) // å‰ªæ
 //         {
 //             return false;
 //         }
 
-//         // 3.ÅĞ¶ÏÓÒ×ÓÊ÷
+//         // 3.åˆ¤æ–­å³å­æ ‘
 //         bool right = isValidBST(root->right);
 
 //         return left && right && cur;
 //     }
 // };
 
-// ¶ş²æËÑË÷Ê÷ÖĞµÚKĞ¡µÄÔªËØ
+// äºŒå‰æœç´¢æ ‘ä¸­ç¬¬Kå°çš„å…ƒç´ 
 /**
  * Definition for a binary tree node.
  * struct TreeNode {
@@ -5565,7 +5565,7 @@ public:
 
 //     void DFS(TreeNode* root)
 //     {
-//         // º¯Êı³ö¿Ú + ¼ôÖ¦
+//         // å‡½æ•°å‡ºå£ + å‰ªæ
 //         if(root == nullptr || count == 0)
 //         {
 //             return;
@@ -5582,7 +5582,7 @@ public:
 //     }
 // };
 
-// ¶ş²æÊ÷µÄËùÓĞÂ·¾¶
+// äºŒå‰æ ‘çš„æ‰€æœ‰è·¯å¾„
 /**
  * Definition for a binary tree node.
  * struct TreeNode {
@@ -5604,12 +5604,12 @@ public:
 //         return ret;
 //     }
 
-//     // ²ÎÊıpathÊµÏÖ»ØËİ
+//     // å‚æ•°pathå®ç°å›æº¯
 //     void DFS(TreeNode* root, string path)
 //     {
 //         path += to_string(root->val);
 
-//         // Ò¶×Ó½áµã + º¯Êı³ö¿Ú
+//         // å¶å­ç»“ç‚¹ + å‡½æ•°å‡ºå£
 //         if(!root->left && !root->right)
 //         {
 //             ret.push_back(path);
@@ -5617,7 +5617,7 @@ public:
 
 //         path += "->";
 
-//         // ·ÇÒ¶×Ó½áµã + ¼ôÖ¦
+//         // éå¶å­ç»“ç‚¹ + å‰ªæ
 //         if(root->left)
 //         {
 //             DFS(root->left, path);
@@ -5630,12 +5630,12 @@ public:
 //     }
 // };
 
-// È«ÅÅÁĞ
+// å…¨æ’åˆ—
 // class Solution 
 // {
 //     vector<vector<int>> ret;
 //     vector<int> path;
-//     vector<bool> check; // ÊµÏÖ¼ôÖ¦
+//     vector<bool> check; // å®ç°å‰ªæ
 // public:
 //     vector<vector<int>> permute(vector<int>& nums) 
 //     {
@@ -5660,7 +5660,7 @@ public:
 //                 check[i] = true;
 //                 DFS(nums);
 
-//                 // »ØËİ -> »Ö¸´ÏÖ³¡
+//                 // å›æº¯ -> æ¢å¤ç°åœº
 //                 path.pop_back();
 //                 check[i] = false;
 //             }
@@ -5668,8 +5668,8 @@ public:
 //     }
 // };
 
-// ×Ó¼¯
-// v1.0 Ã¿´Î¶¢×ÅÒ»¸öÊı£¬Ñ¡»òÊÇ²»Ñ¡
+// å­é›†
+// v1.0 æ¯æ¬¡ç›¯ç€ä¸€ä¸ªæ•°ï¼Œé€‰æˆ–æ˜¯ä¸é€‰
 // class Solution 
 // {
 //     vector<vector<int>> ret;
@@ -5689,17 +5689,17 @@ public:
 //             return;
 //         }
 
-//         // Ñ¡
+//         // é€‰
 //         path.push_back(nums[i]);
 //         DFS(nums, i + 1);
-//         path.pop_back(); // »ØËİ£¬»Ö¸´ÏÖ³¡
+//         path.pop_back(); // å›æº¯ï¼Œæ¢å¤ç°åœº
 
-//         // ²»Ñ¡
+//         // ä¸é€‰
 //         DFS(nums, i + 1);
 //     }
 // };
 
-// v2.0 Ã¿´Î¶¼Ö»Ñ¡Ò»¸öÊı£¬´ËºóÖ»ÄÜÑ¡ËüºóÃæµÄÊı
+// v2.0 æ¯æ¬¡éƒ½åªé€‰ä¸€ä¸ªæ•°ï¼Œæ­¤ååªèƒ½é€‰å®ƒåé¢çš„æ•°
 // class Solution 
 // {
 //     vector<vector<int>> ret;
@@ -5719,12 +5719,12 @@ public:
 //         {
 //             path.push_back(nums[i]);
 //             DFS(nums, i + 1);
-//             path.pop_back(); // »ØËİ£¬»Ö¸´ÏÖ³¡
+//             path.pop_back(); // å›æº¯ï¼Œæ¢å¤ç°åœº
 //         }
 //     }
 // };
 
-// ÕÒ³öËùÓĞ×Ó¼¯µÄÒì»ò×ÜºÍÔÙÇóºÍ
+// æ‰¾å‡ºæ‰€æœ‰å­é›†çš„å¼‚æˆ–æ€»å’Œå†æ±‚å’Œ
 // class Solution 
 // {
 //     int sum = 0;
@@ -5744,13 +5744,13 @@ public:
 //         {
 //             path ^= nums[i];
 //             DFS(nums, i + 1);
-//             path ^= nums[i]; // »ØËİ£¬»Ö¸´ÏÖ³¡
+//             path ^= nums[i]; // å›æº¯ï¼Œæ¢å¤ç°åœº
 //         }
 //     }
 // };
 
-// È«ÅÅÁĞ¢ò
-// ¼ôÖ¦v1.0
+// å…¨æ’åˆ—â…¡
+// å‰ªæv1.0
 // class Solution 
 // {
 //     vector<vector<int>> ret;
@@ -5776,27 +5776,27 @@ public:
         
 //         for(int i = 0; i < nums.size(); i++)
 //         {
-//             // ¼ôÖ½ - ºÎÊ±²»½ø£¿
+//             // å‰ªçº¸ - ä½•æ—¶ä¸è¿›ï¼Ÿ
 //             if(check[i] == true || \
 //               (i != 0 && nums[i]== nums[i - 1] && check[i - 1] == false))
 //             {
 //                 continue;
 //             }
             
-//             // ½ø
+//             // è¿›
 //             path.push_back(nums[i]);
 //             check[i] = true;
             
 //             DFS(nums);
             
-//             path.pop_back(); // »ØËİ£¬»Ö¸´ÏÖ³¡
+//             path.pop_back(); // å›æº¯ï¼Œæ¢å¤ç°åœº
 //             check[i] = false;
             
 //         }
 //     }
 // };
 
-// ¼ôÖ¦v2.0
+// å‰ªæv2.0
 // class Solution 
 // {
 //     vector<vector<int>> ret;
@@ -5822,7 +5822,7 @@ public:
         
 //         for(int i = 0; i < nums.size(); i++)
 //         {
-//             // ¼ôÖ½ - ºÎÊ±½ø£¿
+//             // å‰ªçº¸ - ä½•æ—¶è¿›ï¼Ÿ
 //             if(check[i] == false && \
 //               (i == 0 || nums[i] != nums[i - 1] || check[i - 1] == true))
 //             {
@@ -5831,20 +5831,20 @@ public:
                 
 //                 DFS(nums);
                 
-//                 path.pop_back(); // »ØËİ£¬»Ö¸´ÏÖ³¡
+//                 path.pop_back(); // å›æº¯ï¼Œæ¢å¤ç°åœº
 //                 check[i] = false;
 //             }
 //         }
 //     }
 // };
 
-// µç»°ºÅÂëµÄ×ÖÄ¸×éºÏ
+// ç”µè¯å·ç çš„å­—æ¯ç»„åˆ
 // class Solution 
 // {
 //     vector<string> ret;
 //     string path;
     
-//     // °´¼üÓ³Éä×ÖÄ¸
+//     // æŒ‰é”®æ˜ å°„å­—æ¯
 //     string str[10] = {"", "", "abc", "def", \
 //         "ghi", "jkl", "mno", "pqrs", "tuv", "wxyz"};
 // public:
@@ -5871,12 +5871,12 @@ public:
 //         {
 //             path += ch;
 //             DFS(digits, pos + 1);
-//             path.pop_back(); // »ØËİ£¬»Ö¸´ÏÖ³¡
+//             path.pop_back(); // å›æº¯ï¼Œæ¢å¤ç°åœº
 //         }
 //     }
 // };
 
-// À¨ºÅÉú³É
+// æ‹¬å·ç”Ÿæˆ
 // class Solution 
 // {
 //     int left;
@@ -5900,7 +5900,7 @@ public:
 //             ret.push_back(path);
 //         }
 
-//         // µİ¹é + ¼ôÖ¦
+//         // é€’å½’ + å‰ªæ
 //         if(left < total)
 //         {
 //             path += '(';
@@ -5908,7 +5908,7 @@ public:
 
 //             DFS();
             
-//             // »ØËİ£¬»Ö¸´ÏÖ³¡
+//             // å›æº¯ï¼Œæ¢å¤ç°åœº
 //             path.pop_back();
 //             left--;
 //         }
@@ -5920,14 +5920,14 @@ public:
 
 //             DFS();
 
-//             // »ØËİ£¬»Ö¸´ÏÖ³¡
+//             // å›æº¯ï¼Œæ¢å¤ç°åœº
 //             path.pop_back(); 
 //             right--;
 //         }
 //     }
 // };
 
-// ×éºÏ
+// ç»„åˆ
 // class Solution 
 // {
 //     int _n;
@@ -5951,18 +5951,18 @@ public:
 //             ret.push_back(path);
 //         }
 
-//         // µİ¹é + ¼ôÖ¦
+//         // é€’å½’ + å‰ªæ
 //         for(int i = start; i <= _n; i++)
 //         {
 //             path.push_back(i);
 //             DFS(i + 1);
-//             path.pop_back(); // »ØËİ£¬»Ö¸´ÏÖ³¡
+//             path.pop_back(); // å›æº¯ï¼Œæ¢å¤ç°åœº
 //         }
 //     }
 // };
 
-// Ä¿±êºÍ
-// v1.0 Ğ§ÂÊµÍ£¬¿ÉÄÜ»á³¬Ê±
+// ç›®æ ‡å’Œ
+// v1.0 æ•ˆç‡ä½ï¼Œå¯èƒ½ä¼šè¶…æ—¶
 // class Solution 
 // {
 //     int ret = 0;
@@ -5988,19 +5988,19 @@ public:
 //             return;
 //         }
 
-//         // ¼Ó
+//         // åŠ 
 //         path += nums[pos];
 //         DFS(nums, pos + 1);
-//         path -= nums[pos]; // »ØËİ£¬»Ö¸´ÏÖ³¡
+//         path -= nums[pos]; // å›æº¯ï¼Œæ¢å¤ç°åœº
 
-//         // ¼õ
+//         // å‡
 //         path -= nums[pos];
 //         DFS(nums, pos + 1);
-//         path += nums[pos]; // »ØËİ£¬»Ö¸´ÏÖ³¡
+//         path += nums[pos]; // å›æº¯ï¼Œæ¢å¤ç°åœº
 //     }
 // };
 
-// v2.0£¬Ğ§ÂÊÓĞËù¸ÄÉÆ
+// v2.0ï¼Œæ•ˆç‡æœ‰æ‰€æ”¹å–„
 // class Solution 
 // {
 //     int ret = 0;
@@ -6025,16 +6025,16 @@ public:
 //             return;
 //         }
 
-//         // ¼Ó
+//         // åŠ 
 //         DFS(nums, pos + 1, path + nums[pos]);
 
-//         // ¼õ
+//         // å‡
 //         DFS(nums, pos + 1, path - nums[pos]);
 //     }
 // };
 
-// ×éºÏ×ÜÊı
-// v1.0 Ã¿´Î¶¼Ö»Ñ¡Ò»¸öÊı£¬´ËºóÖ»ÄÜÑ¡Ëü¼°ËüºóÃæµÄÊı
+// ç»„åˆæ€»æ•°
+// v1.0 æ¯æ¬¡éƒ½åªé€‰ä¸€ä¸ªæ•°ï¼Œæ­¤ååªèƒ½é€‰å®ƒåŠå®ƒåé¢çš„æ•°
 // class Solution 
 // {
 //     int _target;
@@ -6061,17 +6061,17 @@ public:
 //             return;
 //         }
         
-//         // µİ¹é¾ö²ß + ¼ôÖ¦
+//         // é€’å½’å†³ç­– + å‰ªæ
 //         for(int i = pos; i < nums.size(); i++)
 //         {
 //             path.push_back(nums[i]);
 //             DFS(nums, i, sum + nums[i]);
-//             path.pop_back(); // »ØËİ£¬»Ö¸´ÏÖ³¡
+//             path.pop_back(); // å›æº¯ï¼Œæ¢å¤ç°åœº
 //         }
 //     }
 // };
 
-// v2.0 Ã¿´ÎÃ¶¾ÙÒ»¸öÊı£¬³öÏÖ¼¸´Î
+// v2.0 æ¯æ¬¡æšä¸¾ä¸€ä¸ªæ•°ï¼Œå‡ºç°å‡ æ¬¡
 // class Solution 
 // {
 //     int _target;
@@ -6098,7 +6098,7 @@ public:
 //             return;
 //         }
         
-//         // Ã¶¾Ù¸öÊı + ¼ôÖ¦
+//         // æšä¸¾ä¸ªæ•° + å‰ªæ
 //         for(int i = 0; i * nums[pos] + sum <= _target; i++)
 //         {
 //             if(i)
@@ -6109,7 +6109,7 @@ public:
 //             DFS(nums, pos + 1, i * nums[pos] + sum);
 //         }
         
-//         // »ØËİ£¬»Ö¸´ÏÖ³¡
+//         // å›æº¯ï¼Œæ¢å¤ç°åœº
 //         for(int i = 1; i * nums[pos] + sum <= _target; i++)
 //         {
 //             path.pop_back();
@@ -6117,7 +6117,7 @@ public:
 //     }
 // };
 
-// ×ÖÄ¸´óĞ¡Ğ´È«ÅÅÁĞ
+// å­—æ¯å¤§å°å†™å…¨æ’åˆ—
 // class Solution 
 // {
 //     string path;
@@ -6139,18 +6139,18 @@ public:
         
 //         char ch = s[pos];
         
-//         // ²»¸Ä±ä
+//         // ä¸æ”¹å˜
 //         path += ch;
 //         DFS(s, pos + 1);
-//         path.pop_back(); // »ØËİ£¬»Ö¸´ÏÖ³¡
+//         path.pop_back(); // å›æº¯ï¼Œæ¢å¤ç°åœº
         
-//         // ¸Ä±ä
+//         // æ”¹å˜
 //         if(ch < '0' || ch > '9')
 //         {
 //             ch = Change(ch);
 //             path += ch;
 //             DFS(s, pos + 1);
-//             path.pop_back(); // »ØËİ£¬»Ö¸´ÏÖ³¡
+//             path.pop_back(); // å›æº¯ï¼Œæ¢å¤ç°åœº
 //         }
 //     }
     
@@ -6169,7 +6169,7 @@ public:
 //     }
 // };
 
-// ÓÅÃÀµÄÅÅÁĞ
+// ä¼˜ç¾çš„æ’åˆ—
 // class Solution 
 // {
 //     int ret = 0;
@@ -6196,13 +6196,13 @@ public:
 //             {
 //                 check[i] = true;
 //                 DFS(pos + 1, n);
-//                 check[i] = false; // »ØËİ£¬»Ö¸´ÏÖ³¡
+//                 check[i] = false; // å›æº¯ï¼Œæ¢å¤ç°åœº
 //             }
 //         }
 //     }
 // };
 
-// N»Êºó
+// Nçš‡å
 // class Solution 
 // {
 //     int _n = 0;
@@ -6228,30 +6228,30 @@ public:
 
 //     void DFS(int row)
 //     {
-//         // µİ¹é³ö¿Ú
+//         // é€’å½’å‡ºå£
 //         if(row == _n)
 //         {
 //             ret.push_back(path);
 //             return;
 //         }
 
-//         // ¶ÔÓÚÃ¿Ò»ĞĞ£¬Ã¶¾ÙÃ¿Ò»ÁĞ
+//         // å¯¹äºæ¯ä¸€è¡Œï¼Œæšä¸¾æ¯ä¸€åˆ—
 //         for(int i = 0; i < _n; i++)
 //         {
-//             // ¼ôÖ¦
+//             // å‰ªæ
 //             if(!checkCol[i] && !checkDig1[row - i + _n] && !checkDig2[row + i])
 //             {
 //                 checkCol[i] = checkDig1[row - i + _n] = checkDig2[row + i] = true;
 //                 path[row][i] = 'Q';
 //                 DFS(row + 1);
-//                 checkCol[i] = checkDig1[row - i + _n] = checkDig2[row + i] = false; // »ØËİ
+//                 checkCol[i] = checkDig1[row - i + _n] = checkDig2[row + i] = false; // å›æº¯
 //                 path[row][i] = '.';
 //             }
 //         }
 //     }
 // };
 
-// ÓĞĞ§µÄÊı¶À
+// æœ‰æ•ˆçš„æ•°ç‹¬
 // class Solution 
 // {
 // public:
@@ -6283,7 +6283,7 @@ public:
 //     }
 // };
 
-// ½âÊı¶À
+// è§£æ•°ç‹¬
 // class Solution 
 // {
 //     bool row[9][10] = {false};
@@ -6299,7 +6299,7 @@ public:
 //             {
 //                 if(board[i][j] != '.')
 //                 {
-//                     int num = board[i][j] - '0'; // ÏÂ±êÓ³Éä
+//                     int num = board[i][j] - '0'; // ä¸‹æ ‡æ˜ å°„
 //                     row[i][num] = col[j][num] = grid[i / 3][j / 3][num] = true;
 //                 }
 //             }
@@ -6314,46 +6314,46 @@ public:
 //         {
 //             for(int j = 0; j < 9; j++)
 //             {
-//                 if(board[i][j] == '.') // ´Ë´¦ÎŞÊı×Ö
+//                 if(board[i][j] == '.') // æ­¤å¤„æ— æ•°å­—
 //                 {
-//                     for(int num = 1; num <= 9; num++) // Ã¶¾ÙÃ¿Ò»¸öÊı×Ö
+//                     for(int num = 1; num <= 9; num++) // æšä¸¾æ¯ä¸€ä¸ªæ•°å­—
 //                     {
-//                         if(!row[i][num] && !col[j][num] && !grid[i / 3][j / 3][num]) // ºÏ·¨ĞÔ¼ìÑé
+//                         if(!row[i][num] && !col[j][num] && !grid[i / 3][j / 3][num]) // åˆæ³•æ€§æ£€éªŒ
 //                         {
 //                             board[i][j] = num + '0';
 //                             row[i][num] = col[j][num] = grid[i / 3][j / 3][num] = true;
                         
 //                             if(DFS(board) == true)
 //                             {
-//                                 // µ±µÃµ½×îÖÕ½âºó£¬¾ÍÃ»±ØÒªÍùºóÃ¶¾ÙÁË
-//                                 return true; // ÖØµãÀí½â
+//                                 // å½“å¾—åˆ°æœ€ç»ˆè§£åï¼Œå°±æ²¡å¿…è¦å¾€åæšä¸¾äº†
+//                                 return true; // é‡ç‚¹ç†è§£
 //                             }
                         
-//                             // ÈôÃ»ÓĞ×îÖÕ½â£¬ËµÃ÷ÉÏÊöÇé¿ö²»ĞĞ£¬ĞèÒª»ØËİ
+//                             // è‹¥æ²¡æœ‰æœ€ç»ˆè§£ï¼Œè¯´æ˜ä¸Šè¿°æƒ…å†µä¸è¡Œï¼Œéœ€è¦å›æº¯
 //                             board[i][j] = '.';
 //                             row[i][num] = col[j][num] = grid[i / 3][j / 3][num] = false;
 //                         }
 //                     }
                     
-//                     // µ±È«²¿Êı×Ö¶¼³¢ÊÔÎŞ¹ûºó£¬±êÊ¶ÕâÖÖÇé¿öÎŞ½â
-//                     return false; // ÖØµãÀí½â
+//                     // å½“å…¨éƒ¨æ•°å­—éƒ½å°è¯•æ— æœåï¼Œæ ‡è¯†è¿™ç§æƒ…å†µæ— è§£
+//                     return false; // é‡ç‚¹ç†è§£
 //                 }
 //             }
 //         }
         
-//         // ÎŞÊı×Ö¿ÉÌî£¬±íÃ÷½â³ö×îÖÕ½â
-//         return true; // ÖØµãÀí½â
+//         // æ— æ•°å­—å¯å¡«ï¼Œè¡¨æ˜è§£å‡ºæœ€ç»ˆè§£
+//         return true; // é‡ç‚¹ç†è§£
 //     }
 // };
 
-// µ¥´ÊËÑË÷
+// å•è¯æœç´¢
 // class Solution 
 // {
 //     int n = 0, m = 0;
 //     string _word;
 //     vector<vector<bool>> visit;
     
-//     // "·½Ïò"ÏòÁ¿Æ«ÒÆÊı×é
+//     // "æ–¹å‘"å‘é‡åç§»æ•°ç»„
 //     int dx[4] = {1, -1, 0, 0};
 //     int dy[4] = {0, 0, 1, -1};
 // public:
@@ -6363,12 +6363,12 @@ public:
 //         visit.resize(n, vector(m, false));
 //         _word = word;
         
-//         // Ã¶¾ÙÕÒÔ´
+//         // æšä¸¾æ‰¾æº
 //         for(int i = 0; i < n; i++)
 //         {
 //             for(int j = 0; j < m; j++)
 //             {
-//                 // ÕÒµ½Ô´ºó£¬DFS¼ìÑéÊÇ·ñ´æÔÚ
+//                 // æ‰¾åˆ°æºåï¼ŒDFSæ£€éªŒæ˜¯å¦å­˜åœ¨
 //                 if(board[i][j] == word[0])
 //                 {
 //                     visit[i][j] = true;
@@ -6402,7 +6402,7 @@ public:
 //                 {
 //                     return true;
 //                 }
-//                 visit[x][y] = false; // »ØËİ£¬»Ö¸´ÏÖ³¡
+//                 visit[x][y] = false; // å›æº¯ï¼Œæ¢å¤ç°åœº
 //             }
 //         }
         
@@ -6410,13 +6410,13 @@ public:
 //     }
 // };
 
-// »Æ½ğ¿ó¹¤
+// é»„é‡‘çŸ¿å·¥
 // class Solution 
 // {
 //     int n = 0, m = 0, ret = 0;
 //     vector<vector<bool>> visit;
 
-//     // "·½Ïò"ÏòÁ¿Æ«ÒÆÊı×é
+//     // "æ–¹å‘"å‘é‡åç§»æ•°ç»„
 //     int dx[4] = {1, -1, 0, 0};
 //     int dy[4] = {0, 0, 1, -1};
 // public:
@@ -6433,7 +6433,7 @@ public:
 //                 {
 //                     visit[i][j] = true;
 //                     DFS(grid, i, j, grid[i][j]);
-//                     visit[i][j] = false; // »ØËİ
+//                     visit[i][j] = false; // å›æº¯
 //                 }
 //             }
 //         }
@@ -6458,13 +6458,13 @@ public:
 //     }
 // };
 
-// ²»Í¬Â·¾¶¢ó
+// ä¸åŒè·¯å¾„â…¢
 // class Solution 
 // {
 //     int n, m, ret = 0, step = 2;
 //     vector<vector<bool>> visit;
 
-//     // "·½Ïò"ÏòÁ¿Æ«ÒÆÊı×é
+//     // "æ–¹å‘"å‘é‡åç§»æ•°ç»„
 //     int dx[4] = {1, -1, 0, 0};
 //     int dy[4] = {0, 0, 1, -1};
 // public:
@@ -6516,18 +6516,18 @@ public:
 //             {
 //                 visit[x][y] = true;
 //                 DFS(grid, x, y, count + 1);
-//                 visit[x][y] = false; // »ØËİ
+//                 visit[x][y] = false; // å›æº¯
 //             }
 //         }
 //     }
 // };
 
-// äÖÈ¾Í¼Ïñ DFS
+// æ¸²æŸ“å›¾åƒ DFS
 // class Solution 
 // {
 //     int n, m, ori;
 
-//     // "·½Ïò"ÏòÁ¿Êı×é
+//     // "æ–¹å‘"å‘é‡æ•°ç»„
 //     int dx[4] = {1, -1, 0, 0};
 //     int dy[4] = {0, 0, 1, -1};
 // public:
@@ -6561,13 +6561,13 @@ public:
 //     }
 // };
 
-// µºÓìÊıÁ¿ DFS
+// å²›å±¿æ•°é‡ DFS
 // class Solution 
 // {
 //     int n, m;
 //     vector<vector<bool>> visit;
 
-//     // "·½Ïò"ÏòÁ¿Êı×é
+//     // "æ–¹å‘"å‘é‡æ•°ç»„
 //     int dx[4] = {1, -1, 0, 0};
 //     int dy[4] = {0, 0, 1, -1};
 // public:
@@ -6607,13 +6607,13 @@ public:
 //     }
 // };
 
-// µºÓìµÄ×î´óÃæ»ı DFS
+// å²›å±¿çš„æœ€å¤§é¢ç§¯ DFS
 // class Solution 
 // {
 //     int n, m, count = 0;
 //     vector<vector<bool>> visit;
 
-//     // "·½Ïò"ÏòÁ¿Êı×é
+//     // "æ–¹å‘"å‘é‡æ•°ç»„
 //     int dx[4] = {1, -1, 0, 0};
 //     int dy[4] = {0, 0, 1, -1};
 // public:
@@ -6655,12 +6655,12 @@ public:
 //     }
 // };
 
-// ±»Î§ÈÆµÄÇøÓò DFS
+// è¢«å›´ç»•çš„åŒºåŸŸ DFS
 // class Solution 
 // {
 //     int n, m;
 
-//     // ·½ÏòÏòÁ¿Êı×é
+//     // æ–¹å‘å‘é‡æ•°ç»„
 //     int dx[4] = {1, -1, 0, 0};
 //     int dy[4] = {0, 0, 1, -1};
 // public:
@@ -6668,7 +6668,7 @@ public:
 //     {
 //         n = board.size(), m = board[0].size();
 
-//         // ÏÈ´¦Àí±ß½çÇé¿ö
+//         // å…ˆå¤„ç†è¾¹ç•Œæƒ…å†µ
 //         for(int i = 0; i < n; i++)
 //         {
 //             if(board[i][0] == 'O')
@@ -6695,7 +6695,7 @@ public:
 //             }
 //         }
 
-//         // »¹Ô­
+//         // è¿˜åŸ
 //         for(int i = 0; i < n; i++)
 //         {
 //             for(int j = 0; j < m; j++)
@@ -6728,12 +6728,12 @@ public:
 
 // };
 
-// Ì«Æ½Ñó´óÎ÷ÑóË®Á÷ÎÊÌâ
+// å¤ªå¹³æ´‹å¤§è¥¿æ´‹æ°´æµé—®é¢˜
 // class Solution 
 // {
 //     int n, m;
 
-//     // "·½Ïò"ÏòÁ¿Êı×é
+//     // "æ–¹å‘"å‘é‡æ•°ç»„
 //     int dx[4] = {1, -1, 0, 0};
 //     int dy[4] = {0, 0, 1, -1};
 // public:
@@ -6743,7 +6743,7 @@ public:
 //         vector<vector<bool>> pac(n, vector(m, false));
 //         vector<vector<bool>> atl(n, vector(m, false));
 
-//         // ¿´¿´¸÷ÄÜÅÀ¶à¸ß:P
+//         // çœ‹çœ‹å„èƒ½çˆ¬å¤šé«˜:P
 //         for(int i = 0; i < n; i++)
 //         {
 //             DFS(h, i, 0, pac);
@@ -6756,7 +6756,7 @@ public:
 //             DFS(h, n - 1, i, atl);
 //         }
 
-//         // ÓÉÖØµşÕÒ´ğ°¸
+//         // ç”±é‡å æ‰¾ç­”æ¡ˆ
 //         vector<vector<int>> ret;
 //         for(int i = 0; i < n; i++)
 //         {
@@ -6788,12 +6788,12 @@ public:
 //     }
 // };
 
-// µØÀ×ÓÎÏ·
+// åœ°é›·æ¸¸æˆ
 // class Solution 
 // {
 //     int n, m;
 
-//     // "·½Ïò"ÏòÁ¿Êı×é
+//     // "æ–¹å‘"å‘é‡æ•°ç»„
 //     int dx[8] = {1, -1, 0, 0, -1, 1, -1, 1};
 //     int dy[8] = {0, 0, 1, -1, -1, -1, 1, 1};
 // public:
@@ -6802,7 +6802,7 @@ public:
 //         n = board.size(), m = board[0].size();
 //         int x = click[0], y = click[1];
 
-//         // Ö±½Óµãµ½µØÀ×
+//         // ç›´æ¥ç‚¹åˆ°åœ°é›·
 //         if(board[x][y] == 'M')
 //         {
 //             board[x][y] = 'X';
@@ -6817,7 +6817,7 @@ public:
 
 //     void DFS(vector<vector<char>>& board, int i, int j)
 //     {
-//         // Í³¼ÆÖÜÎ§µØÀ×µÄÊıÁ¿
+//         // ç»Ÿè®¡å‘¨å›´åœ°é›·çš„æ•°é‡
 //         int count = 0;
 //         for(int k = 0; k < 8; k++)
 //         {
@@ -6828,12 +6828,12 @@ public:
 //             }
 //         }
 
-//         if(count) // ÖÜÎ§ÓĞµØÀ×
+//         if(count) // å‘¨å›´æœ‰åœ°é›·
 //         {
 //             board[i][j] = count + '0';
 //             return;
 //         }
-//         else // ÖÜÎ§ÎŞµØÀ×
+//         else // å‘¨å›´æ— åœ°é›·
 //         {
 //             board[i][j] = 'B';
 
@@ -6849,14 +6849,14 @@ public:
 //     }
 // };
 
-// ÒÂ³÷ÕûÀí
+// è¡£æ©±æ•´ç†
 // class Solution 
 // {
 //     int _n, _m, _cnt;
 //     int ret = 0;
 //      vector<vector<bool>> visit;
 
-//     // "·½Ïò"ÏòÁ¿Êı×é
+//     // "æ–¹å‘"å‘é‡æ•°ç»„
 //     int dx[2] = {1, 0};
 //     int dy[2] = {0, 1};
 // public:
@@ -6897,8 +6897,8 @@ public:
 //     }
 // };
 
-// ì³²¨ÄÇÆõÊıÁĞ 
-// v1.0 µİ¹é
+// æ–æ³¢é‚£å¥‘æ•°åˆ— 
+// v1.0 é€’å½’
 // class Solution 
 // {
 // public:
@@ -6913,20 +6913,20 @@ public:
 //     }
 // };
 
-// v2.0 ¼ÇÒä»¯ËÑË÷
+// v2.0 è®°å¿†åŒ–æœç´¢
 // class Solution 
 // {
-//     vector<int> mem; // ±¸ÍüÂ¼
+//     vector<int> mem; // å¤‡å¿˜å½•
 // public:
 //     int fib(int n) 
 //     {
-//         mem.resize(n + 1, -1); // ³õÊ¼»¯
+//         mem.resize(n + 1, -1); // åˆå§‹åŒ–
 //         return DFS(n);
 //     }
 
 //     int DFS(int n)
 //     {
-//         // Íü±¸ÍüÂ¼ÀïÃæ³ò³ò:P
+//         // å¿˜å¤‡å¿˜å½•é‡Œé¢ç…ç…:P
 //         if(mem[n] != -1)
 //         {
 //             return mem[n];
@@ -6937,12 +6937,12 @@ public:
 //             return n;
 //         }
 
-//         mem[n] = DFS(n - 1) + DFS(n - 2); // ¼Çµ½±¸ÍüÂ¼ÀïÃæ
+//         mem[n] = DFS(n - 1) + DFS(n - 2); // è®°åˆ°å¤‡å¿˜å½•é‡Œé¢
 //         return mem[n];
 //     }
 // };
 
-// v3.0 ¶¯Ì¬¹æ»®
+// v3.0 åŠ¨æ€è§„åˆ’
 // class Solution 
 // {
 //     vector<int> dp;
@@ -6961,8 +6961,8 @@ public:
 //     }
 // };
 
-// ²»Í¬Â·¾¶
-// // v1.0 ±©ËÑ -> »á³¬Ê±
+// ä¸åŒè·¯å¾„
+// // v1.0 æš´æœ -> ä¼šè¶…æ—¶
 // int uniquePaths(int n, int m) 
 // {
 //     if(n == 0 || m == 0)
@@ -6978,10 +6978,10 @@ public:
 //     return uniquePaths(n - 1, m) + uniquePaths(n, m - 1);
 // }
 
-// v2.0 ¼ÇÒä»¯ËÑË÷
+// v2.0 è®°å¿†åŒ–æœç´¢
 // class Solution 
 // {
-//     vector<vector<int>> mem; // ±¸ÍüÂ¼
+//     vector<vector<int>> mem; // å¤‡å¿˜å½•
 // public:
 //     int uniquePaths(int n, int m) 
 //     {
@@ -7012,7 +7012,7 @@ public:
 //     }
 // };
 
-// v3.0 ¶¯Ì¬¹æ»®
+// v3.0 åŠ¨æ€è§„åˆ’
 // int uniquePaths(int n, int m) 
 // {
 //     vector<vector<int>> dp(n + 1, vector<int>(m + 1, 0));
@@ -7034,8 +7034,8 @@ public:
 //     return dp[n][m];
 // }
 
-// ×î³¤µİÔö×ÓĞòÁĞ
-// v1.0 ±©ËÑ
+// æœ€é•¿é€’å¢å­åºåˆ—
+// v1.0 æš´æœ
 // class Solution 
 // {
 // public:
@@ -7052,7 +7052,7 @@ public:
 
 //     int DFS(vector<int>& nums, int pos)
 //     {
-//         int ret = 1; // Ï¸½Ú£º³õÖµÎª1
+//         int ret = 1; // ç»†èŠ‚ï¼šåˆå€¼ä¸º1
 
 //         for(int i = pos + 1; i < nums.size(); i++)
 //         {
@@ -7066,7 +7066,7 @@ public:
 //     }
 // };
 
-// v2.0 ¼ÇÒä»¯ËÑË÷
+// v2.0 è®°å¿†åŒ–æœç´¢
 // class Solution 
 // {
 //     vector<int> mem;
@@ -7091,7 +7091,7 @@ public:
 //             return mem[pos];
 //         }
 
-//         int ret = 1; // Ï¸½Ú£º³õÖµÎª1
+//         int ret = 1; // ç»†èŠ‚ï¼šåˆå€¼ä¸º1
 //         for(int i = pos + 1; i < nums.size(); i++)
 //         {
 //             if(nums[i] > nums[pos])
@@ -7105,16 +7105,16 @@ public:
 //     }
 // };
 
-// v3.0 ¶¯Ì¬¹æ»®
+// v3.0 åŠ¨æ€è§„åˆ’
 // int lengthOfLIS(vector<int>& nums) 
 // {
 //     int n = nums.size();
 //     vector<int> dp(n, 1);
 
 //     int ret = 0;
-//     for(int i = n - 1; i >= 0; i--) // Ã¶¾ÙÃ¿¸öÎ»ÖÃ
+//     for(int i = n - 1; i >= 0; i--) // æšä¸¾æ¯ä¸ªä½ç½®
 //     {
-//         for(int j = i + 1; j < n; j++) // ÒÀ´ÎÃ¶¾ÙºóÃæµÄÖµµÄ×î³¤×ÓĞòÁĞ
+//         for(int j = i + 1; j < n; j++) // ä¾æ¬¡æšä¸¾åé¢çš„å€¼çš„æœ€é•¿å­åºåˆ—
 //         {
 //             if(nums[j] > nums[i])
 //             {
@@ -7128,8 +7128,8 @@ public:
 //     return ret;
 // }
 
-// ²ÂÊı×Ö´óĞ¡
-// v1.0 ±©ËÑ
+// çŒœæ•°å­—å¤§å°
+// v1.0 æš´æœ
 // class Solution 
 // {
 // public:
@@ -7146,7 +7146,7 @@ public:
 //         }
 
 //         int ret = INT_MAX;
-//         for(int i = left; i <= right; i++) // Ñ¡ÔñÍ·½áµã
+//         for(int i = left; i <= right; i++) // é€‰æ‹©å¤´ç»“ç‚¹
 //         {
 //             int x = DFS(left, i - 1);
 //             int y = DFS(i + 1, right);
@@ -7157,7 +7157,7 @@ public:
 //     }
 // };
 
-// v2.0 ¼ÇÒä»¯ËÑË÷
+// v2.0 è®°å¿†åŒ–æœç´¢
 // class Solution 
 // {
 //     vector<vector<int>> mem;
@@ -7182,7 +7182,7 @@ public:
 
 
 //         int ret = INT_MAX;
-//         for(int i = left; i <= right; i++) // Ñ¡ÔñÍ·½áµã
+//         for(int i = left; i <= right; i++) // é€‰æ‹©å¤´ç»“ç‚¹
 //         {
 //             int x = DFS(left, i - 1);
 //             int y = DFS(i + 1, right);
@@ -7194,13 +7194,13 @@ public:
 //     }
 // };
 
-// ¾ØÕóÖĞµÄ×î³¤µİÔöÂ·¾¶
-// v1.0 ±©ËÑ
+// çŸ©é˜µä¸­çš„æœ€é•¿é€’å¢è·¯å¾„
+// v1.0 æš´æœ
 // class Solution 
 // {
 //     int n, m;
 
-//     // "·½Ïò"ÏòÁ¿Êı×é
+//     // "æ–¹å‘"å‘é‡æ•°ç»„
 //     int dx[4] = {1, -1, 0, 0};
 //     int dy[4] = {0, 0, 1, -1};
 // public:
@@ -7236,13 +7236,13 @@ public:
 //     }
 // };
 
-// v2.0 ¼ÇÒä»¯ËÑË÷
+// v2.0 è®°å¿†åŒ–æœç´¢
 // class Solution 
 // {
 //     int n, m;
 //     vector<vector<int>> mem;
 
-//     // "·½Ïò"ÏòÁ¿Êı×é
+//     // "æ–¹å‘"å‘é‡æ•°ç»„
 //     int dx[4] = {1, -1, 0, 0};
 //     int dy[4] = {0, 0, 1, -1};
 // public:
@@ -7283,11 +7283,11 @@ public:
 //     }
 // };
 
-// µÚ N ¸öÌ©²¨ÄÇÆõÊı
-// v1.0 ¶¯Ì¬¹æ»®
+// ç¬¬ N ä¸ªæ³°æ³¢é‚£å¥‘æ•°
+// v1.0 åŠ¨æ€è§„åˆ’
 // int tribonacci(int n) 
 // {
-//     // ±ß½çÇé¿ö´¦Àí
+//     // è¾¹ç•Œæƒ…å†µå¤„ç†
 //     if(n == 0 || n == 1) return n;
 
 //     vector<int> dp(n + 1, 0);
@@ -7301,26 +7301,26 @@ public:
 //     return dp[n];
 // }
 
-// v2.0 ¶¯Ì¬¹æ»® + ¹ö¶¯Êı×é¿Õ¼äÓÅ»¯
+// v2.0 åŠ¨æ€è§„åˆ’ + æ»šåŠ¨æ•°ç»„ç©ºé—´ä¼˜åŒ–
 // int tribonacci(int n) 
 // {
-//     // ±ß½çÇé¿ö´¦Àí
+//     // è¾¹ç•Œæƒ…å†µå¤„ç†
 //     if(n == 0 || n == 1) return n;
 
 //     int a = 0, b = 1, c = 1, ret = 1;
 //     for(int i = 3; i <= n; i++)
 //     {
 //         ret = a + b + c;
-//         a = b, b = c, c = ret; // ¹ö¶¯Êı×é
+//         a = b, b = c, c = ret; // æ»šåŠ¨æ•°ç»„
 //     }
 
 //     return ret;
 // }
 
-// Èı²½ÎÊÌâ
+// ä¸‰æ­¥é—®é¢˜
 // int waysToStep(int n) 
 // {
-//     // ±ß½çÇé¿ö´¦Àí
+//     // è¾¹ç•Œæƒ…å†µå¤„ç†
 //     if(n == 1 || n == 2) return n;
 //     if(n == 3) return 4;
 
@@ -7337,8 +7337,8 @@ public:
 //     return dp[n];
 // }
 
-// Ê¹ÓÃ×îĞ¡»¨·ÑÅÀÂ¥Ìİ
-// v1.0 ÒÔiÎ»ÖÃÎª½áÎ²
+// ä½¿ç”¨æœ€å°èŠ±è´¹çˆ¬æ¥¼æ¢¯
+// v1.0 ä»¥iä½ç½®ä¸ºç»“å°¾
 // int minCostClimbingStairs(vector<int>& cost) 
 // {
 //     int n = cost.size();
@@ -7352,7 +7352,7 @@ public:
 //     return dp[n];
 // }
 
-// v2.0 ÒÔiÎ»ÖÃÎªÆğµã
+// v2.0 ä»¥iä½ç½®ä¸ºèµ·ç‚¹
 // int minCostClimbingStairs(vector<int>& cost) 
 // {
 //     int n = cost.size();
@@ -7368,7 +7368,7 @@ public:
 //     return min(dp[0], dp[1]);
 // }
 
-// ½âÂë·½·¨
+// è§£ç æ–¹æ³•
 // v1.0
 // int numDecodings(string s) 
 // {
@@ -7377,16 +7377,16 @@ public:
 
 //     dp[0] = s[0] != '0';
 
-//     // ´¦Àí±ß½çÇé¿ö
+//     // å¤„ç†è¾¹ç•Œæƒ…å†µ
 //     if(s.size() == 1) return dp[0];
 
-//     // Ò»¸öÎ»ÖÃ½âÂë³öÀ´Ò»¸ö
+//     // ä¸€ä¸ªä½ç½®è§£ç å‡ºæ¥ä¸€ä¸ª
 //     if(s[0] != '0' && s[1] != '0')
 //     {
 //         dp[1]++;
 //     }
 
-//     // Á½¸öÎ»ÖÃ½âÂë³öÀ´Ò»¸ö
+//     // ä¸¤ä¸ªä½ç½®è§£ç å‡ºæ¥ä¸€ä¸ª
 //     int tmp = (s[0] - '0') * 10 + s[1] - '0';
 //     if(tmp >= 10 && tmp <= 26)
 //     {
@@ -7396,13 +7396,13 @@ public:
 //     // Dynamic Plan
 //     for(int i = 2; i < n; i++)
 //     {
-//         // Ò»¸öÎ»ÖÃ½âÂë³öÀ´Ò»¸ö
+//         // ä¸€ä¸ªä½ç½®è§£ç å‡ºæ¥ä¸€ä¸ª
 //         if(s[i] != '0')
 //         {
 //             dp[i] += dp[i - 1];
 //         }
 
-//         // Á½¸öÎ»ÖÃ½âÂë³öÀ´Ò»¸ö
+//         // ä¸¤ä¸ªä½ç½®è§£ç å‡ºæ¥ä¸€ä¸ª
 //         int tmp = (s[i - 1] - '0') * 10 + s[i] - '0';
 //         if(tmp >= 10 && tmp <= 26)
 //         {
@@ -7413,7 +7413,7 @@ public:
 //     return dp[n - 1];
 // }
 
-// v2.0 ÓÅ»¯
+// v2.0 ä¼˜åŒ–
 // int numDecodings(string s) 
 // {
 //     int n = s.size();
@@ -7425,13 +7425,13 @@ public:
 //     // Dynamic Plan
 //     for(int i = 2; i <= n; i++)
 //     {
-//         // Ò»¸öÎ»ÖÃ½âÂë³öÀ´Ò»¸ö
+//         // ä¸€ä¸ªä½ç½®è§£ç å‡ºæ¥ä¸€ä¸ª
 //         if(s[i - 1] != '0')
 //         {
 //             dp[i] += dp[i - 1];
 //         }
 
-//         // Á½¸öÎ»ÖÃ½âÂë³öÀ´Ò»¸ö
+//         // ä¸¤ä¸ªä½ç½®è§£ç å‡ºæ¥ä¸€ä¸ª
 //         int tmp = (s[i - 2] - '0') * 10 + s[i - 1] - '0';
 //         if(tmp >= 10 && tmp <= 26)
 //         {
@@ -7442,7 +7442,7 @@ public:
 //     return dp[n];
 // }
 
-// ²»Í¬Â·¾¶
+// ä¸åŒè·¯å¾„
 // int uniquePaths(int n, int m) 
 // {
 //     vector<vector<int>> dp(n + 1, vector<int>(m + 1, 0));
@@ -7459,7 +7459,7 @@ public:
 //     return dp[n][m];
 // }
 
-// ²»Í¬Â·¾¶¢ò
+// ä¸åŒè·¯å¾„â…¡
 // int uniquePathsWithObstacles(vector<vector<int>>& ob) 
 // {
 //     int n = ob.size(), m = ob[0].size();
@@ -7470,7 +7470,7 @@ public:
 //     {
 //         for(int j = 1; j <= m; j++)
 //         {
-//             if(ob[i - 1][j - 1] == 0) // ×¢ÒâÏÂ±íÓ³Éä¹ØÏµ
+//             if(ob[i - 1][j - 1] == 0) // æ³¨æ„ä¸‹è¡¨æ˜ å°„å…³ç³»
 //             {
 //                 dp[i][j] = dp[i - 1][j] + dp[i][j - 1];
 //             }
@@ -7480,7 +7480,7 @@ public:
 //     return dp[n][m];
 // }
 
-// Öé±¦µÄ×î¸ß¼ÛÖµ
+// ç å®çš„æœ€é«˜ä»·å€¼
 // int jewelleryValue(vector<vector<int>>& frame) 
 // {
 //     int n = frame.size(), m = frame[0].size();
@@ -7497,7 +7497,7 @@ public:
 //     return dp[n][m];
 // }
 
-// ÏÂ½µÂ·¾¶×îĞ¡ºÍ
+// ä¸‹é™è·¯å¾„æœ€å°å’Œ
 // int minFallingPathSum(vector<vector<int>>& matrix) 
 // {
 //     // Init
@@ -7518,7 +7518,7 @@ public:
 //         }
 //     }
 
-//     // ÕÒ×îĞ¡Öµ
+//     // æ‰¾æœ€å°å€¼
 //     int ret = INT_MAX;
 //     for(int i = 0; i < n + 2; i++)
 //     {
@@ -7528,7 +7528,7 @@ public:
 //     return ret;
 // }
 
-// ×îĞ¡Â·¾¶ºÍ
+// æœ€å°è·¯å¾„å’Œ
 // int minPathSum(vector<vector<int>>& grid) 
 // {
 //     // Init
@@ -7548,7 +7548,7 @@ public:
 //     return dp[n][m];
 // }
 
-// µØÏÂ³ÇÓÎÏ·
+// åœ°ä¸‹åŸæ¸¸æˆ
 // int calculateMinimumHP(vector<vector<int>>& d) 
 // {
 //     // Init
@@ -7562,14 +7562,14 @@ public:
 //         for(int j = m - 1; j >= 0; j--)
 //         {
 //             dp[i][j] = min(dp[i + 1][j], dp[i][j + 1]) - d[i][j];
-//             dp[i][j] = max(1, dp[i][j]); // ·ÀÖ¹"ËÀÁË»¹ÄÜµ½":P
+//             dp[i][j] = max(1, dp[i][j]); // é˜²æ­¢"æ­»äº†è¿˜èƒ½åˆ°":P
 //         }
 //     }
 
 //     return dp[0][0];
 // }
 
-// °´Ä¦Ê¦
+// æŒ‰æ‘©å¸ˆ
 // int massage(vector<int>& nums) 
 // {
 //     int n = nums.size();
@@ -7588,7 +7588,7 @@ public:
 //     return max(f[n - 1], g[n - 1]);
 // }
 
-// ´ò¼Ò½ÙÉá¢ò
+// æ‰“å®¶åŠ«èˆâ…¡
 // class Solution
 // {
 // public:
@@ -7596,7 +7596,7 @@ public:
 //     {
 //         int n = nums.size();
         
-//         // ·ÖÀàÌÖÂÛ£¬È¡Á½ÖÖÇé¿öÖĞµÄ×î´óÖµ
+//         // åˆ†ç±»è®¨è®ºï¼Œå–ä¸¤ç§æƒ…å†µä¸­çš„æœ€å¤§å€¼
 //         return max(nums[0] + _rob(nums, 2, n - 2), _rob(nums, 1, n - 1));
 //     }
     
@@ -7605,8 +7605,8 @@ public:
 //         if(left > right) return 0;
         
 //         int n = nums.size();
-//         vector<int> f(n); // Ñ¡
-//         vector<int> g(n); // ²»Ñ¡
+//         vector<int> f(n); // é€‰
+//         vector<int> g(n); // ä¸é€‰
 //         f[left] = nums[left];
         
 //         for(int i = left + 1; i <= right; i++)
@@ -7619,7 +7619,7 @@ public:
 //     }
 // };
 
-// É¾³ı²¢»ñµÃµãÊı
+// åˆ é™¤å¹¶è·å¾—ç‚¹æ•°
 // int deleteAndEarn(vector<int>& nums) 
 // {
 //     sort(nums.begin(), nums.end());
@@ -7642,7 +7642,7 @@ public:
 //     return max(f[n], g[n]);
 // }
 
-// ·ÛË¢·¿×Ó
+// ç²‰åˆ·æˆ¿å­
 // int minCost(vector<vector<int>>& costs) 
 // {
 //     int n = costs.size();
@@ -7658,7 +7658,7 @@ public:
 //     return min(dp[n][0], min(dp[n][1], dp[n][2]));
 // }
 
-// ÂòÂô¹ÉÆ±µÄ×î¼ÑÊ±»úº¬Àä¶³ÆÚ
+// ä¹°å–è‚¡ç¥¨çš„æœ€ä½³æ—¶æœºå«å†·å†»æœŸ
 // int maxProfit(vector<int>& prices) 
 // {
 //     int n = prices.size();
@@ -7675,12 +7675,12 @@ public:
 //     return max(dp[n - 1][1], dp[n - 1][2]);
 // }
 
-// ÂòÂô¹ÉÆ±µÄ×î¼ÑÊ±»úº¬ÊÖĞø·Ñ
+// ä¹°å–è‚¡ç¥¨çš„æœ€ä½³æ—¶æœºå«æ‰‹ç»­è´¹
 // int maxProfit(vector<int>& prices, int fee) 
 // {
 //     int n = prices.size();
-//     vector<int> f(n); // ÂòÈë
-//     vector<int> g(n); // Âô³ö
+//     vector<int> f(n); // ä¹°å…¥
+//     vector<int> g(n); // å–å‡º
 //     f[0] = -prices[0];
 
 //     for(int i = 1; i < n; i++)
@@ -7692,10 +7692,10 @@ public:
 //     return g[n - 1];
 // }
 
-// ÂòÂô¹ÉÆ±µÄ×î¼ÑÊ±»ú¢ó
+// ä¹°å–è‚¡ç¥¨çš„æœ€ä½³æ—¶æœºâ…¢
 // int maxProfit(vector<int>& prices) 
 // {
-//     const int INF = -0x3f3f3f3f; // ³äµ±"INT_MIN"µÄ½ÇÉ«
+//     const int INF = -0x3f3f3f3f; // å……å½“"INT_MIN"çš„è§’è‰²
 
 //     int n = prices.size();
 //     vector<vector<int>> f(n, vector<int>(3, INF));
@@ -7708,7 +7708,7 @@ public:
 //         {
 //             f[i][j] = max(f[i - 1][j], g[i - 1][j] - prices[i]);
 
-//             // ´¦Àíg[i][j]Ê±£¬Òª·ÀÖ¹Ô½½ç
+//             // å¤„ç†g[i][j]æ—¶ï¼Œè¦é˜²æ­¢è¶Šç•Œ
 //             g[i][j] = g[i - 1][j];
 //             if(j - 1 >= 0)
 //             {
@@ -7726,13 +7726,13 @@ public:
 //     return ret;
 // }
 
-// ÂòÂô¹ÉÆ±µÄ×î¼ÑÊ±»ú¢ô
+// ä¹°å–è‚¡ç¥¨çš„æœ€ä½³æ—¶æœºâ…£
 // int maxProfit(int k, vector<int>& prices) 
 // {
-//     const int INF = -0x3f3f3f3f; // Ìæ´ú"INT_MIN"µÄ¹¦ÄÜ
+//     const int INF = -0x3f3f3f3f; // æ›¿ä»£"INT_MIN"çš„åŠŸèƒ½
 //     int n = prices.size();
 
-//     // ÓÅ»¯´¦ÀíÏ¸½Ú£¬±ÜÃâ¿Õ¼äÀË·Ñ
+//     // ä¼˜åŒ–å¤„ç†ç»†èŠ‚ï¼Œé¿å…ç©ºé—´æµªè´¹
 //     k = min(k, n / 2);
 
 //     vector<vector<int>> f(n, vector<int>(k + 1, INF));
@@ -7745,7 +7745,7 @@ public:
 //         {
 //             f[i][j] = max(f[i - 1][j], g[i - 1][j] - prices[i]);
 
-//             // ´¦ÀígÊ±£¬Òª±ÜÃâÔ½½ç
+//             // å¤„ç†gæ—¶ï¼Œè¦é¿å…è¶Šç•Œ
 //             g[i][j] = g[i - 1][j];
 //             if(j - 1 >= 0)
 //             {
@@ -7763,7 +7763,7 @@ public:
 //     return ret;
 // }
 
-// ×î´ó×ÓÊı×éºÍ
+// æœ€å¤§å­æ•°ç»„å’Œ
 // int maxSubArray(vector<int>& nums) 
 // {
 //     int n = nums.size();
@@ -7780,7 +7780,7 @@ public:
 //     return ret;
 // }
 
-// »·ĞÎ×ÓÊı×éµÄ×î´óºÍ
+// ç¯å½¢å­æ•°ç»„çš„æœ€å¤§å’Œ
 // int maxSubarraySumCircular(vector<int>& nums) 
 // {
 //     int n = nums.size();
@@ -7803,7 +7803,7 @@ public:
 //     return sum == gmin ? fmax : max(fmax, sum - gmin);
 // }
 
-// ³Ë»ı×î´ó×ÓÊı×é
+// ä¹˜ç§¯æœ€å¤§å­æ•°ç»„
 // int maxProduct(vector<int>& nums) 
 // {
 //     int n = nums.size();
@@ -7821,7 +7821,7 @@ public:
 //     return ret;
 // }
 
-// ³Ë»ıÎªÕıÊıµÄ×î³¤×ÓÊı×é³¤¶È
+// ä¹˜ç§¯ä¸ºæ­£æ•°çš„æœ€é•¿å­æ•°ç»„é•¿åº¦
 // int getMaxLen(vector<int>& nums) 
 // {
 //     int n = nums.size();
@@ -7847,7 +7847,7 @@ public:
 //     return ret;
 // }
 
-// µÈ²îÊıÁĞ»®·Ö
+// ç­‰å·®æ•°åˆ—åˆ’åˆ†
 // int numberOfArithmeticSlices(vector<int>& nums) 
 // {
 //     int n = nums.size();
@@ -7863,7 +7863,7 @@ public:
 //     return sum;
 // }
 
-// ×î³¤ÍÄÁ÷×ÓÊı×é
+// æœ€é•¿æ¹æµå­æ•°ç»„
 // int maxTurbulenceSize(vector<int>& arr) 
 // {
 //     int n = arr.size();
@@ -7887,10 +7887,10 @@ public:
 //     return ret;
 // }
 
-// µ¥´Ê²ğ·Ö
+// å•è¯æ‹†åˆ†
 // bool wordBreak(string s, vector<string>& wordDict) 
 // {
-//     // ÓÅ»¯
+//     // ä¼˜åŒ–
 //     unordered_set<string> hash;
 //     for(auto& str : wordDict)
 //     {
@@ -7901,12 +7901,12 @@ public:
 //     int n = s.size();
 //     vector<bool> dp(n + 1, false);
 //     dp[0] = true;
-//     s = ' ' + s; // ¸øÔ­Ê¼×Ö·û´®ÏÂ±êÍ³Ò»+1
+//     s = ' ' + s; // ç»™åŸå§‹å­—ç¬¦ä¸²ä¸‹æ ‡ç»Ÿä¸€+1
 
 //     // DP
 //     for(int i = 1; i <= n; i++)
 //     {
-//         for(int j = i; j >= 1; j--) // ÕÒ´ËÊ±µÄ×îºóÒ»¸öµ¥´Ê
+//         for(int j = i; j >= 1; j--) // æ‰¾æ­¤æ—¶çš„æœ€åä¸€ä¸ªå•è¯
 //         {
 //             if(dp[j - 1] && hash.count(s.substr(j, i - j + 1)))
 //             {
@@ -7919,11 +7919,11 @@ public:
 //     return dp[n];
 // }
 
-// »·ÈÆ×Ö·û´®ÖĞÎ¨Ò»µÄ×Ó×Ö·û´®
+// ç¯ç»•å­—ç¬¦ä¸²ä¸­å”¯ä¸€çš„å­å­—ç¬¦ä¸²
 // int findSubstringInWraproundString(string s) 
 // {
 //     int n = s.size();
-//     vector<int> dp(n, 1); // ´´½¨dp±í + ³õÊ¼»¯
+//     vector<int> dp(n, 1); // åˆ›å»ºdpè¡¨ + åˆå§‹åŒ–
 
 //     for(int i = 1; i < n; i++)
 //     {
@@ -7933,14 +7933,14 @@ public:
 //         }
 //     }
 
-//     // ½á¹ûÈ¥ÖØ
+//     // ç»“æœå»é‡
 //     int hash[26] = {0};
 //     for(int i = 0; i < n; i++)
 //     {
 //         hash[s[i] - 'a'] = max(hash[s[i] - 'a'], dp[i]);
 //     }
 
-//     // ÇóºÍ·µ»Ø
+//     // æ±‚å’Œè¿”å›
 //     int sum = 0;
 //     for(auto& x : hash)
 //     {
@@ -7950,7 +7950,7 @@ public:
 //     return sum;
 // }
 
-// ×î³¤µİÔö×ÓĞòÁĞ
+// æœ€é•¿é€’å¢å­åºåˆ—
 // int lengthOfLIS(vector<int>& nums) 
 // {
 //     int n = nums.size();
@@ -7973,7 +7973,7 @@ public:
 //     return ret;
 // }
 
-// °Ú¶¯ĞòÁĞ
+// æ‘†åŠ¨åºåˆ—
 // int wiggleMaxLength(vector<int>& nums) 
 // {
 //     int n = nums.size();
@@ -8000,7 +8000,7 @@ public:
 //     return ret;
 // }
 
-// ×î³¤µİÔö×ÓĞòÁĞµÄ¸öÊı
+// æœ€é•¿é€’å¢å­åºåˆ—çš„ä¸ªæ•°
 // int findNumberOfLIS(vector<int>& nums) 
 // {
 //     int n = nums.size();
@@ -8039,10 +8039,10 @@ public:
 //     return retCount;
 // }
 
-// ×î³¤Êı¶ÔÁ´
+// æœ€é•¿æ•°å¯¹é“¾
 // int findLongestChain(vector<vector<int>>& pairs) 
 // {
-//     sort(pairs.begin(), pairs.end()); // Ô¤´¦Àí
+//     sort(pairs.begin(), pairs.end()); // é¢„å¤„ç†
 
 //     int n = pairs.size();
 //     vector<int> dp(n, 1);
@@ -8064,7 +8064,7 @@ public:
 //     return ret;
 // }
 
-// ×î³¤¶¨²î×ÓĞòÁĞ
+// æœ€é•¿å®šå·®å­åºåˆ—
 // int longestSubsequence(vector<int>& arr, int difference) 
 // {
 //     unordered_map<int, int> hash; // <arr[i], dp[i]>
@@ -8073,8 +8073,8 @@ public:
 //     int ret = 0;
 //     for(int i = 1; i < arr.size(); i++)
 //     {
-//         // 1.Èç¹ûarr[j]²»´æÔÚ£¬ÄÇÃ´arr[i]¾Í»á±»³õÊ¼»¯Îª1
-//         // 2.Èç¹û³öÏÖÖØ¸´µÄÖµ£¬ÄÇÃ´ºóÃæ³öÏÖµÄÖµ»á¸²¸ÇµôÇ°ÃæµÄÖµ
+//         // 1.å¦‚æœarr[j]ä¸å­˜åœ¨ï¼Œé‚£ä¹ˆarr[i]å°±ä¼šè¢«åˆå§‹åŒ–ä¸º1
+//         // 2.å¦‚æœå‡ºç°é‡å¤çš„å€¼ï¼Œé‚£ä¹ˆåé¢å‡ºç°çš„å€¼ä¼šè¦†ç›–æ‰å‰é¢çš„å€¼
 //         hash[arr[i]] = hash[arr[i] - difference] + 1; 
 //         ret = max(ret, hash[arr[i]]);
 //     }
@@ -8082,12 +8082,12 @@ public:
 //     return ret;
 // }
 
-// ×î³¤µÄì³²¨ÄÇÆõ×ÓĞòÁĞµÄ³¤¶È
+// æœ€é•¿çš„æ–æ³¢é‚£å¥‘å­åºåˆ—çš„é•¿åº¦
 // int lenLongestFibSubseq(vector<int>& arr) 
 // {
 //     int n = arr.size();
 
-//     // ÓÅ»¯
+//     // ä¼˜åŒ–
 //     unordered_map<int, int> hash; // <arr[i], i>
 //     for(int i = 0; i < n; i++)
 //     {
@@ -8097,9 +8097,9 @@ public:
 //     vector<vector<int>> dp(n, vector<int>(n, 2));
 
 //     int ret = 2;
-//     for(int j = 2; j < n; j++) // ¹Ì¶¨µÚÒ»¸öÎ»ÖÃ
+//     for(int j = 2; j < n; j++) // å›ºå®šç¬¬ä¸€ä¸ªä½ç½®
 //     {
-//         for(int i = 1; i < j; i++) // ¹Ì¶¨µÚ¶ş¸öÎ»ÖÃ
+//         for(int i = 1; i < j; i++) // å›ºå®šç¬¬äºŒä¸ªä½ç½®
 //         {
 //             int a = arr[j] - arr[i];
 //             if(a < arr[i] && hash.count(a))
@@ -8113,7 +8113,7 @@ public:
 //     return ret < 3 ? 0 : ret;
 // }
 
-// ×î³¤µÈ²îÊıÁĞ
+// æœ€é•¿ç­‰å·®æ•°åˆ—
 // int longestArithSeqLength(vector<int>& nums) 
 // {
 //     unordered_map<int, int> hash; // <nums[i], i>
@@ -8123,30 +8123,30 @@ public:
 //     vector<vector<int>> dp(n, vector<int>(n, 2));
 
 //     int ret = 2;
-//     for(int i = 1; i < n; i++) // ¹Ì¶¨µ¹ÊıµÚ¶ş¸öÊı
+//     for(int i = 1; i < n; i++) // å›ºå®šå€’æ•°ç¬¬äºŒä¸ªæ•°
 //     {
-//         for(int j = i + 1; j < n; j++) // Ã¶¾Ùµ¹ÊıµÚÒ»¸öÊı
+//         for(int j = i + 1; j < n; j++) // æšä¸¾å€’æ•°ç¬¬ä¸€ä¸ªæ•°
 //         {
 //             int a = 2 * nums[i] - nums[j];
-//             if(hash.count(a)) // ÒÑ¾­°üº¬ÁËÅĞ¶Ï k < i
+//             if(hash.count(a)) // å·²ç»åŒ…å«äº†åˆ¤æ–­ k < i
 //             {
 //                 dp[i][j] = dp[hash[a]][i] + 1;
 //                 ret = max(ret, dp[i][j]);
 //             }
 //         }
 
-//         hash[nums[i]] = i; // ´æÈëµ±Ç°ÏÂ±ê£¬¶ÔÓ¦ÏÂÒ»´ÎµÄ×î½üÔªËØµÄÏÂ±ê
+//         hash[nums[i]] = i; // å­˜å…¥å½“å‰ä¸‹æ ‡ï¼Œå¯¹åº”ä¸‹ä¸€æ¬¡çš„æœ€è¿‘å…ƒç´ çš„ä¸‹æ ‡
 //     }
 
 //     return ret;
 // }
 
-// µÈ²îÊıÁĞ»®·Ö II - ×ÓĞòÁĞ
+// ç­‰å·®æ•°åˆ—åˆ’åˆ† II - å­åºåˆ—
 // int numberOfArithmeticSlices(vector<int>& nums) 
 // {
 //     int n = nums.size();
 
-//     // ÓÅ»¯£¬<nums[i], vector<int> index()>
+//     // ä¼˜åŒ–ï¼Œ<nums[i], vector<int> index()>
 //     unordered_map<long long, vector<int>> hash;
 //     for(int i = 0; i < n; i++)
 //     {
@@ -8156,9 +8156,9 @@ public:
 //     vector<vector<int>> dp(n, vector<int>(n));
 
 //     int ret = 0;
-//     for(int j = 2; j < n; j++) // ¹Ì¶¨µÚÒ»¸öÊı
+//     for(int j = 2; j < n; j++) // å›ºå®šç¬¬ä¸€ä¸ªæ•°
 //     {
-//         for(int i = 1; i < j; i++) // Ã¶¾ÙµÚ¶ş¸öÊı
+//         for(int i = 1; i < j; i++) // æšä¸¾ç¬¬äºŒä¸ªæ•°
 //         {
 //             long long a = (long long)2 * nums[i] - nums[j];
 //             if(hash.count(a))
@@ -8179,7 +8179,7 @@ public:
 //     return ret;
 // }
 
-// »ØÎÄ×Ó´®
+// å›æ–‡å­ä¸²
 // int countSubstrings(string s) 
 // {
 //     int n = s.size();
@@ -8205,7 +8205,7 @@ public:
 //     return ret;
 // }
 
-// ×î³¤»ØÎÄ×Ó´®
+// æœ€é•¿å›æ–‡å­ä¸²
 // string longestPalindrome(string s) 
 // {
 //     int n = s.size();
@@ -8232,10 +8232,10 @@ public:
 //     return s.substr(begin, len);
 // }
 
-// ·Ö¸î»ØÎÄ´® IV
+// åˆ†å‰²å›æ–‡ä¸² IV
 // bool checkPartitioning(string s) 
 // {
-//     // Ô¤´¦Àí£º´¦Àí»ØÎÄĞÅÏ¢
+//     // é¢„å¤„ç†ï¼šå¤„ç†å›æ–‡ä¿¡æ¯
 //     int n = s.size();
 //     vector<vector<bool>> dp(n, vector<bool>(n));
 
@@ -8250,7 +8250,7 @@ public:
 //         }
 //     }
 
-//     // ÅĞ¶ÏÈıÇø¼ä£¬Ã¶¾ÙÖĞ¼äÇø¼ä
+//     // åˆ¤æ–­ä¸‰åŒºé—´ï¼Œæšä¸¾ä¸­é—´åŒºé—´
 //     for(int i = 1; i < n - 1; i++)
 //     {
 //         for(int j = i; j < n - 1; j++)
@@ -8265,12 +8265,12 @@ public:
 //     return false;
 // }
 
-// ·Ö¸î»ØÎÄ´® II
+// åˆ†å‰²å›æ–‡ä¸² II
 // int minCut(string s) 
 // {
 //     int n = s.size();
 
-//     // Ô¤´¦Àí
+//     // é¢„å¤„ç†
 //     vector<vector<bool>> isPal(n, vector<bool>(n));
 //     for(int i = n - 1; i >= 0; i--)
 //     {
@@ -8306,7 +8306,7 @@ public:
 //     return dp[n - 1];
 // }
 
-// ×î³¤»ØÎÄ×ÓĞòÁĞ
+// æœ€é•¿å›æ–‡å­åºåˆ—
 // int longestPalindromeSubseq(string s) 
 // {
 //     int n = s.size();
@@ -8331,7 +8331,7 @@ public:
 //     return dp[0][n - 1];
 // }
 
-// ÈÃ×Ö·û´®³ÉÎª»ØÎÄ´®µÄ×îÉÙ²åÈë´ÎÊı
+// è®©å­—ç¬¦ä¸²æˆä¸ºå›æ–‡ä¸²çš„æœ€å°‘æ’å…¥æ¬¡æ•°
 // int minInsertions(string s) 
 // {
 //     int n = s.size();
@@ -8354,7 +8354,7 @@ public:
 //     return dp[0][n - 1];
 // }
 
-// ×î³¤¹«¹²×ÓĞòÁĞ
+// æœ€é•¿å…¬å…±å­åºåˆ—
 // int longestCommonSubsequence(string s1, string s2) 
 // {
 //     int n = s1.size(), m = s2.size();
@@ -8379,7 +8379,7 @@ public:
 //     return dp[n][m];
 // }
 
-// ²»Ïà½»µÄÏß
+// ä¸ç›¸äº¤çš„çº¿
 // int maxUncrossedLines(vector<int>& nums1, vector<int>& nums2) 
 // {
 //     int n = nums1.size(), m = nums2.size();
@@ -8403,7 +8403,7 @@ public:
 //     return dp[n][m];
 // }
 
-// ²»Í¬µÄ×ÓĞòÁĞ
+// ä¸åŒçš„å­åºåˆ—
 // int numDistinct(string s, string t) 
 // {
 //     const int MOD = 1e9 + 7;
@@ -8432,7 +8432,7 @@ public:
 //     return dp[m][n];
 // }
 
-// Í¨Åä·ûÆ¥Åä
+// é€šé…ç¬¦åŒ¹é…
 // bool isMatch(string s, string p) 
 // {
 //     int n = s.size(), m = p.size();
@@ -8472,7 +8472,7 @@ public:
 //     return dp[n][m];
 // }
 
-// ÕıÔò±í´ïÊ½Æ¥Åä
+// æ­£åˆ™è¡¨è¾¾å¼åŒ¹é…
 // bool isMatch(string s, string p) 
 // {
 //     int n = s.size(), m = p.size();
@@ -8512,7 +8512,7 @@ public:
 //     return dp[n][m];
 // }
 
-// ½»´í×Ö·û´®
+// äº¤é”™å­—ç¬¦ä¸²
 // bool isInterleave(string s1, string s2, string s3) 
 // {
 //     int n = s1.size(), m = s2.size();
@@ -8523,7 +8523,7 @@ public:
 
 //     // Init
 //     dp[0][0] = true;
-//     for(int i = 1; i <= m; i++) // µÚÒ»ĞĞ
+//     for(int i = 1; i <= m; i++) // ç¬¬ä¸€è¡Œ
 //     {
 //         if(s2[i] == s3[i])
 //         {
@@ -8535,7 +8535,7 @@ public:
 //         }
 //     }
 
-//     for(int i = 1; i <= n; i++) // µÚÒ»ÁĞ
+//     for(int i = 1; i <= n; i++) // ç¬¬ä¸€åˆ—
 //     {
 //         if(s1[i] == s3[i])
 //         {
@@ -8560,7 +8560,7 @@ public:
 //     return dp[n][m];
 // }
 
-// Á½¸ö×Ö·û´®µÄ×îĞ¡ASCIIÉ¾³ıºÍ
+// ä¸¤ä¸ªå­—ç¬¦ä¸²çš„æœ€å°ASCIIåˆ é™¤å’Œ
 // int minimumDeleteSum(string s1, string s2) 
 // {
 //     int n = s1.size(), m = s2.size();
@@ -8592,7 +8592,7 @@ public:
 //     return ret - dp[n][m] * 2;
 // }
 
-// ×î³¤ÖØ¸´×ÓÊı×é
+// æœ€é•¿é‡å¤å­æ•°ç»„
 // int findLength(vector<int>& nums1, vector<int>& nums2) 
 // {
 //     int n = nums1.size(), m = nums2.size();
@@ -8614,7 +8614,7 @@ public:
 //     return ret;
 // }
 
-// 01±³°ü
+// 01èƒŒåŒ…
 // int main()
 // {
 //     int n = 0, V = 0;
@@ -8665,7 +8665,7 @@ public:
 //     return 0;
 // }
 
-// v2.0 ¹ö¶¯Êı×éÓÅ»¯
+// v2.0 æ»šåŠ¨æ•°ç»„ä¼˜åŒ–
 // int main()
 // {
 //     int n = 0, V = 0;
@@ -8711,7 +8711,7 @@ public:
 //     return 0;
 // }
 
-// ·Ö¸îµÈºÍ×Ó¼¯
+// åˆ†å‰²ç­‰å’Œå­é›†
 // v1.0
 // bool canPartition(vector<int>& nums) 
 // {
@@ -8748,7 +8748,7 @@ public:
 //     return dp[n][aim];
 // }
 
-// v2.0 ¹ö¶¯Êı×éÓÅ»¯
+// v2.0 æ»šåŠ¨æ•°ç»„ä¼˜åŒ–
 // bool canPartition(vector<int>& nums) 
 // {
 //     int n = nums.size(), sum = 0;
@@ -8775,11 +8775,11 @@ public:
 //     return dp[aim];
 // }
 
-// Ä¿±êºÍ
+// ç›®æ ‡å’Œ
 // v1.0
 // int findTargetSumWays(vector<int>& nums, int target) 
 // {
-//     // ÎÊÌâ×ª»»
+//     // é—®é¢˜è½¬æ¢
 //     int sum = 0;
 //     for(auto& x : nums)
 //     {
@@ -8787,7 +8787,7 @@ public:
 //     }
 //     int aim = (sum + target) / 2;
 
-//     // ±ß½ç´¦Àí
+//     // è¾¹ç•Œå¤„ç†
 //     if(aim < 0 || (sum + target) % 2) return 0;
 
 //     int n = nums.size();
@@ -8796,7 +8796,7 @@ public:
 //     dp[0][0] = 1;
 //     for(int i = 1; i <= n; i++)
 //     {
-//         for(int j = 0; j <= aim; j++) // µÚÒ»ÁĞÃ»ÓĞ³õÊ¼»¯£¬Ò²ÔÚDP½×¶Î´¦Àí
+//         for(int j = 0; j <= aim; j++) // ç¬¬ä¸€åˆ—æ²¡æœ‰åˆå§‹åŒ–ï¼Œä¹Ÿåœ¨DPé˜¶æ®µå¤„ç†
 //         {
 //             dp[i][j] = dp[i - 1][j];
 //             if(j >= nums[i - 1])
@@ -8809,10 +8809,10 @@ public:
 //     return dp[n][aim];
 // }
 
-// v2.0 ¹ö¶¯Êı×éÓÅ»¯
+// v2.0 æ»šåŠ¨æ•°ç»„ä¼˜åŒ–
 // int findTargetSumWays(vector<int>& nums, int target) 
 // {
-//     // ÎÊÌâ×ª»»
+//     // é—®é¢˜è½¬æ¢
 //     int sum = 0;
 //     for(auto& x : nums)
 //     {
@@ -8820,7 +8820,7 @@ public:
 //     }
 //     int aim = (sum + target) / 2;
 
-//     // ±ß½ç´¦Àí
+//     // è¾¹ç•Œå¤„ç†
 //     if(aim < 0 || (sum + target) % 2) return 0;
 
 //     int n = nums.size();
@@ -8838,7 +8838,7 @@ public:
 //     return dp[aim];
 // }
 
-// ×îºóÒ»¿éÊ¯Í·µÄÖØÁ¿ II
+// æœ€åä¸€å—çŸ³å¤´çš„é‡é‡ II
 // v1.0
 // int lastStoneWeightII(vector<int>& stones) 
 // {
@@ -8866,7 +8866,7 @@ public:
 //     return sum - 2 * dp[n][m];
 // }
 
-// v2.0 ¹ö¶¯Êı×éÓÅ»¯
+// v2.0 æ»šåŠ¨æ•°ç»„ä¼˜åŒ–
 // int lastStoneWeightII(vector<int>& stones) 
 // {
 //     int sum = 0;
@@ -8889,7 +8889,7 @@ public:
 //     return sum - 2 * dp[m];
 // }
 
-// ÍêÈ«±³°ü
+// å®Œå…¨èƒŒåŒ…
 // v1.0
 // int main()
 // {
@@ -8927,7 +8927,7 @@ public:
 
 //     for(int i = 1; i <= n; i++)
 //     {
-//         for(int j = 0; j <= V; j++) // ÏÂ±ê´Ó0¿ªÊ¼
+//         for(int j = 0; j <= V; j++) // ä¸‹æ ‡ä»0å¼€å§‹
 //         {
 //             dp[i][j] = dp[i - 1][j];
 //             if(j >= v[i] && dp[i][j - v[i]] != -1)
@@ -8941,7 +8941,7 @@ public:
 //     return 0;
 // }
 
-// v2.0 ¹ö¶¯Êı×éÓÅ»¯
+// v2.0 æ»šåŠ¨æ•°ç»„ä¼˜åŒ–
 // int main()
 // {
 //     int n = 0, V = 0;
@@ -8987,7 +8987,7 @@ public:
 //     return 0;
 // }
 
-// ÁãÇ®¶Ò»»
+// é›¶é’±å…‘æ¢
 // v1.0
 // int coinChange(vector<int>& coins, int amount) 
 // {
@@ -9018,7 +9018,7 @@ public:
 //     return dp[n][amount] >= INF ? -1 : dp[n][amount];
 // }
 
-// v2.0 ¹ö¶¯Êı×éÓÅ»¯
+// v2.0 æ»šåŠ¨æ•°ç»„ä¼˜åŒ–
 // int coinChange(vector<int>& coins, int amount) 
 // {
 //     const int INF = 0x3f3f3f3f;
@@ -9039,7 +9039,7 @@ public:
 //     return dp[amount] >= INF ? -1 : dp[amount];
 // }
 
-// ÁãÇ®¶Ò»»¢ò
+// é›¶é’±å…‘æ¢â…¡
 // int change(int amount, vector<int>& coins) 
 // {
 //     vector<int> dp(amount + 1);
@@ -9056,7 +9056,7 @@ public:
 //     return dp[amount];
 // }
 
-// ÍêÈ«Æ½·½Êı
+// å®Œå…¨å¹³æ–¹æ•°
 // v1.0
 // int numSquares(int n) 
 // {
@@ -9087,7 +9087,7 @@ public:
 //     return dp[m][n];
 // }
 
-// v2.0 ¹ö¶¯Êı×éÓÅ»¯
+// v2.0 æ»šåŠ¨æ•°ç»„ä¼˜åŒ–
 // int numSquares(int n) 
 // {
 //     const int INF = 0x3f3f3f3f;
@@ -9108,7 +9108,7 @@ public:
 //     return dp[n];
 // }
 
-// Ò»ºÍÁã
+// ä¸€å’Œé›¶
 // v1.0
 // int findMaxForm(vector<string>& strs, int n, int m) 
 // {
@@ -9117,7 +9117,7 @@ public:
 
 //     for(int i = 1; i <= len; i++)
 //     {
-//         // ÏÈÍ³¼Æ×Ö·û´®ÖĞ0 1µÄ¸öÊı
+//         // å…ˆç»Ÿè®¡å­—ç¬¦ä¸²ä¸­0 1çš„ä¸ªæ•°
 //         int a = 0, b = 0;
 //         for(auto& ch : strs[i - 1])
 //         {
@@ -9141,7 +9141,7 @@ public:
 //     return dp[len][n][m];
 // }
 
-// v2.0 ¹ö¶¯Êı×éÓÅ»¯
+// v2.0 æ»šåŠ¨æ•°ç»„ä¼˜åŒ–
 // int findMaxForm(vector<string>& strs, int n, int m) 
 // {
 //     int len = strs.size();
@@ -9149,7 +9149,7 @@ public:
 
 //     for(int i = 1; i <= len; i++)
 //     {
-//         // ÏÈÍ³¼Æ×Ö·û´®ÖĞ0 1µÄ¸öÊı
+//         // å…ˆç»Ÿè®¡å­—ç¬¦ä¸²ä¸­0 1çš„ä¸ªæ•°
 //         int a = 0, b = 0;
 //         for(auto& ch : strs[i - 1])
 //         {
@@ -9169,7 +9169,7 @@ public:
 //     return dp[n][m];
 // }
 
-// Ó¯Àû¼Æ»®
+// ç›ˆåˆ©è®¡åˆ’
 // v1.0
 // int profitableSchemes(int n, int m, vector<int>& g, vector<int>& p) 
 // {
@@ -9203,7 +9203,7 @@ public:
 //     return dp[len][n][m];
 // }
 
-// v2.0 ¹ö¶¯Êı×éÓÅ»¯
+// v2.0 æ»šåŠ¨æ•°ç»„ä¼˜åŒ–
 // int profitableSchemes(int n, int m, vector<int>& g, vector<int>& p) 
 // {
 //     const int MOD = 1e9 + 7;
@@ -9232,7 +9232,7 @@ public:
 //     return dp[n][m];
 // }
 
-// ×éºÏ×ÜÊı¢ô
+// ç»„åˆæ€»æ•°â…£
 // int combinationSum4(vector<int>& nums, int target) 
 // {
 //     vector<unsigned long long> dp(target + 1);
@@ -9252,7 +9252,7 @@ public:
 //     return dp[target];
 // }
 
-// ²»Í¬µÄ¶ş²æËÑË÷Ê÷
+// ä¸åŒçš„äºŒå‰æœç´¢æ ‘
 // int numTrees(int n) 
 // {
 //     vector<int> dp(n + 1);
@@ -9269,7 +9269,7 @@ public:
 //     return dp[n];
 // }
 
-// ÄûÃÊË®ÕÒÁã
+// æŸ æª¬æ°´æ‰¾é›¶
 // bool lemonadeChange(vector<int>& bills) 
 // {
 //     int five = 0, ten = 0;
@@ -9312,7 +9312,7 @@ public:
 //     return true;
 // }
 
-// ½«Êı×éºÍ¼õ°ëµÄ×îÉÙ²Ù×÷´ÎÊı
+// å°†æ•°ç»„å’Œå‡åŠçš„æœ€å°‘æ“ä½œæ¬¡æ•°
 // int halveArray(vector<int>& nums) 
 // {
 //     double sum = 0.0;
@@ -9339,10 +9339,10 @@ public:
 //     return count;
 // }
 
-// ×î´óÊı
+// æœ€å¤§æ•°
 // string largestNumber(vector<int>& nums) 
 // {
-//     // ÓÅ»¯£ºÏÈ×ª»¯³É×Ö·û´®£¬ÔÙ±È½Ï×ÖµäĞò
+//     // ä¼˜åŒ–ï¼šå…ˆè½¬åŒ–æˆå­—ç¬¦ä¸²ï¼Œå†æ¯”è¾ƒå­—å…¸åº
 //     vector<string> strs;
 //     for(const auto& x : nums)
 //     {
@@ -9363,7 +9363,7 @@ public:
 //     return ret[0] == '0' ? "0" : ret;
 // }
 
-// ×î³¤µİÔö×ÓĞòÁĞ
+// æœ€é•¿é€’å¢å­åºåˆ—
 // int lengthOfLIS(vector<int>& nums) 
 // {
 //     int n = nums.size();
@@ -9378,7 +9378,7 @@ public:
 //         }
 //         else
 //         {
-//             // ¶ş·Ö²åÈëÎ»ÖÃ
+//             // äºŒåˆ†æ’å…¥ä½ç½®
 //             int left = 0, right = ret.size() - 1;
 //             while(left < right)
 //             {
@@ -9400,7 +9400,7 @@ public:
 //     return ret.size();
 // }
 
-// µİÔöµÄÈıÔª×ÓĞòÁĞ
+// é€’å¢çš„ä¸‰å…ƒå­åºåˆ—
 // bool increasingTriplet(vector<int>& nums) 
 // {
 //     int a = nums[0], b = INT_MAX;
@@ -9423,7 +9423,7 @@ public:
 //     return false;
 // }
 
-// ×î³¤Á¬ĞøµİÔöĞòÁĞ
+// æœ€é•¿è¿ç»­é€’å¢åºåˆ—
 // int findLengthOfLCIS(vector<int>& nums) 
 // {
 //     int n = nums.size(), ret = 0;
@@ -9436,13 +9436,13 @@ public:
 //         }
 
 //         ret = max(ret, j - i);
-//         i = j; // Ì°ĞÄ
+//         i = j; // è´ªå¿ƒ
 //     }
 
 //     return ret;
 // }
 
-// ÂòÂô¹ÉÆ±µÄ×î¼ÑÊ±»ú
+// ä¹°å–è‚¡ç¥¨çš„æœ€ä½³æ—¶æœº
 // int maxProfit(vector<int>& prices) 
 // {
 //     int ret = 0, prevMin = INT_MAX;
@@ -9453,14 +9453,14 @@ public:
 //             ret = max(ret, prices[i] - prevMin);
 //         }
 
-//         prevMin = min(prices[i], prevMin); // Ì°ĞÄ
+//         prevMin = min(prices[i], prevMin); // è´ªå¿ƒ
 //     }
 
 //     return ret;
 // }
 
-// ÂòÂô¹ÉÆ±µÄ×î¼ÑÊ±»ú II
-// v1.0 Ë«Ö¸Õë
+// ä¹°å–è‚¡ç¥¨çš„æœ€ä½³æ—¶æœº II
+// v1.0 åŒæŒ‡é’ˆ
 // int maxProfit(vector<int>& p) 
 // {
 //     int ret = 0, n = p.size();
@@ -9479,7 +9479,7 @@ public:
 //     return ret;
 // }
 
-// v2.0 ²ğ·Ö³ÉÒ»ÌìÒ»Ìì
+// v2.0 æ‹†åˆ†æˆä¸€å¤©ä¸€å¤©
 // int maxProfit(vector<int>& p) 
 // {
 //     int ret = 0;
@@ -9494,24 +9494,24 @@ public:
 //     return ret;
 // }
 
-// Å£¿Í Ê÷¸ù
+// ç‰›å®¢ æ ‘æ ¹
 // int main()
 // {
 //     string orgin;
 //     while(cin >> orgin)
 //     {
-//         // ÌáÈ¡Êı¾İ
+//         // æå–æ•°æ®
 //         int n = 0;
 //         for(const auto& ch : orgin)
 //         {
 //             n += ch - '0';
 //         }
 
-//         // ÇóÊ÷¸ù
-//         while(n / 10) // Ã¿ÂÖ¼ÆËã
+//         // æ±‚æ ‘æ ¹
+//         while(n / 10) // æ¯è½®è®¡ç®—
 //         {
 //             int tmp = 0;
-//             while(n) // ¼ÆËã¸÷Î»ºÍ
+//             while(n) // è®¡ç®—å„ä½å’Œ
 //             {
 //                 tmp += n % 10;
 //                 n /= 10;
@@ -9525,11 +9525,11 @@ public:
 //     return 0;
 // }
 
-// Å£¿Í ĞÇ¼ÊÃÜÂë
-// ¾ØÕóÄ£ĞÍ»¯¼òÖ®ºó£¬¾ÍÊÇì³²¨ÄÇÆõÊıÁĞÄ£ĞÍ
+// ç‰›å®¢ æ˜Ÿé™…å¯†ç 
+// çŸ©é˜µæ¨¡å‹åŒ–ç®€ä¹‹åï¼Œå°±æ˜¯æ–æ³¢é‚£å¥‘æ•°åˆ—æ¨¡å‹
 // int main()
 // {
-//     // ×¼±¸Fib
+//     // å‡†å¤‡Fib
 //     int fib[10001] = {1, 1};
 //     for(int i = 2; i <= 10000; i++)
 //     {
@@ -9537,7 +9537,7 @@ public:
 //         fib[i] %= 10000;
 //     }
  
-//     // ½â
+//     // è§£
 //     int n = 0, tmp = 0;
 //     while(cin >> n)
 //     {
@@ -9552,8 +9552,8 @@ public:
 //     return 0;
 // }
 
-// Å£¿Í ºï×Ó·ÖÌÒ
-// ÊıÑ§¹«Ê½ÍÆµ¼
+// ç‰›å®¢ çŒ´å­åˆ†æ¡ƒ
+// æ•°å­¦å…¬å¼æ¨å¯¼
 // int main()
 // {
 //     int n = 0;
@@ -9568,7 +9568,7 @@ public:
 //     return 0;
 // }
 
-// Å£¿Í ÓĞ¼Ù±Ò
+// ç‰›å®¢ æœ‰å‡å¸
 // int main()
 // {
 //     int n = 0;
@@ -9580,7 +9580,7 @@ public:
 //         while(n > 1)
 //         {
 //             cnt++;
-//             n = n / 3 + (n % 3 > 0); // ºóÃæÎªÂß¼­±í´ïÊ½
+//             n = n / 3 + (n % 3 > 0); // åé¢ä¸ºé€»è¾‘è¡¨è¾¾å¼
 //         }
 //         cout << cnt << endl;
 //     }
@@ -9588,12 +9588,12 @@ public:
 //     return 0;
 // }
 
-// K ´ÎÈ¡·´ºó×î´ó»¯µÄÊı×éºÍ
+// K æ¬¡å–ååæœ€å¤§åŒ–çš„æ•°ç»„å’Œ
 // int largestSumAfterKNegations(vector<int>& nums, int k) 
 // {
 //     int n = nums.size(), m = 0, minElem = INT_MAX, ret = 0;
 
-//     // Çó¸ºÊı¸öÊı & ×îĞ¡Öµ
+//     // æ±‚è´Ÿæ•°ä¸ªæ•° & æœ€å°å€¼
 //     for(const auto& x : nums)
 //     {
 //         if(x < 0)
@@ -9603,7 +9603,7 @@ public:
 //         minElem = min(minElem, abs(x));
 //     }
 
-//     // ·ÖÀàÌÖÂÛ
+//     // åˆ†ç±»è®¨è®º
 //     if(m > k)
 //     {
 //         sort(nums.begin(), nums.end());
@@ -9619,7 +9619,7 @@ public:
 //     }
 //     else
 //     {
-//         // °ÑËùÓĞ¸ºÊı±ä³ÉÕıÊı
+//         // æŠŠæ‰€æœ‰è´Ÿæ•°å˜æˆæ­£æ•°
 //         for(const auto& x : nums)
 //         {
 //             ret += abs(x);
@@ -9634,23 +9634,23 @@ public:
 //     return ret;
 // }
 
-// °´Éí¸ßÅÅĞò
+// æŒ‰èº«é«˜æ’åº
 // vector<string> sortPeople(vector<string>& names, vector<int>& heights) 
 // {
 //     int n = names.size();
-//     vector<int> index(n); // ÏÂ±êÊı×é
+//     vector<int> index(n); // ä¸‹æ ‡æ•°ç»„
 //     for(int i = 0; i < n; i++)
 //     {
 //         index[i] = i;
 //     }
 
-//     // ¶ÔÏÂ±ê½øĞĞÅÅĞò
+//     // å¯¹ä¸‹æ ‡è¿›è¡Œæ’åº
 //     sort(index.begin(), index.end(), [&](int i, int j)
 //          {
 //              return heights[i] > heights[j];
 //          });
 
-//     // ´ÓÏÂ±êÊı×éÈ¡½á¹û
+//     // ä»ä¸‹æ ‡æ•°ç»„å–ç»“æœ
 //     vector<string> ret;
 //     for(const auto& x : index)
 //     {
@@ -9660,7 +9660,7 @@ public:
 //     return ret;
 // }
 
-// ÓÅÊÆÏ´ÅÆ
+// ä¼˜åŠ¿æ´—ç‰Œ
 // vector<int> advantageCount(vector<int>& nums1, vector<int>& nums2) 
 // {
 //     int n = nums1.size();
@@ -9670,14 +9670,14 @@ public:
 //         index[i] = i;
 //     }
 
-//     // ÅÅĞò
+//     // æ’åº
 //     sort(nums1.begin(), nums1.end());
 //     sort(index.begin(), index.end(), [&](int i, int j)
 //          {
 //              return nums2[i] < nums2[j];
 //          });
 
-//     // Ìï¼ÉÈüÂí
+//     // ç”°å¿Œèµ›é©¬
 //     vector<int> ret(n);
 //     int left = 0, right = n - 1;
 //     for(const auto& x : nums1)
@@ -9695,7 +9695,7 @@ public:
 //     return ret;
 // }
 
-// ×î³¤»ØÎÄ´® Ì°ĞÄ
+// æœ€é•¿å›æ–‡ä¸² è´ªå¿ƒ
 // int longestPalindrome(string s) 
 // {
 //     int hash[128] = {0};
@@ -9707,13 +9707,13 @@ public:
 //     int ret = 0;
 //     for(const auto& x : hash)
 //     {
-//         ret += x / 2 * 2; // ÆæÅ¼»ìºÏ´¦Àí
+//         ret += x / 2 * 2; // å¥‡å¶æ··åˆå¤„ç†
 //     }
 
 //     return ret < s.size() ? ret + 1 : ret;
 // }
 
-// Ôö³¤×Ö·û´®Æ¥Åä
+// å¢é•¿å­—ç¬¦ä¸²åŒ¹é…
 // vector<int> diStringMatch(string s) 
 // {
 //     int left = 0, right = s.size();
@@ -9735,7 +9735,7 @@ public:
 //     return ret;
 // }
 
-// ·Ö·¢±ı¸É
+// åˆ†å‘é¥¼å¹²
 // int findContentChildren(vector<int>& g, vector<int>& s) 
 // {
 //     sort(g.begin(), g.end());
@@ -9758,7 +9758,7 @@ public:
 //     return ret;
 // }
 
-// ×îÓÅ³ı·¨
+// æœ€ä¼˜é™¤æ³•
 // string optimalDivision(vector<int>& nums) 
 // {
 //     int n = nums.size();
@@ -9781,7 +9781,7 @@ public:
 //     return ret;
 // }
 
-// ÌøÔ¾ÓÎÏ·¢ò
+// è·³è·ƒæ¸¸æˆâ…¡
 // int jump(vector<int>& nums) 
 // {
 //     int left = 0, right = 0, maxPos = 0, ret = 0, n = nums.size();
@@ -9792,7 +9792,7 @@ public:
 //             return ret;
 //         }
 
-// 		// ±éÀúµ±Ç°²ã£¬¸üĞÂÏÂÒ»²ã×îÓÒ¶Ëµã
+// 		// éå†å½“å‰å±‚ï¼Œæ›´æ–°ä¸‹ä¸€å±‚æœ€å³ç«¯ç‚¹
 //         for(int i = left; i <= right; i++)
 //         {
 //             maxPos = max(maxPos, nums[i] + i);
@@ -9802,10 +9802,10 @@ public:
 //         ret++;
 //     }
 
-//     return -1; // Ìø²»µ½µÄÇé¿ö
+//     return -1; // è·³ä¸åˆ°çš„æƒ…å†µ
 // }
 
-// ÌøÔ¾ÓÎÏ·
+// è·³è·ƒæ¸¸æˆ
 // bool canJump(vector<int>& nums) 
 // {
 //     int left = 0, right = 0, maxPos = 0, n = nums.size();
@@ -9827,17 +9827,17 @@ public:
 //     return false;
 // }
 
-// ¼ÓÓÍÕ¾
-// v1.0 ±©Á¦½â
+// åŠ æ²¹ç«™
+// v1.0 æš´åŠ›è§£
 // int canCompleteCircuit(vector<int>& gas, vector<int>& cost) 
 // {
 //     int n = gas.size();
-//     for(int i = 0; i < n; i++) // Ã¶¾ÙÆğµã
+//     for(int i = 0; i < n; i++) // æšä¸¾èµ·ç‚¹
 //     {
 //         int rest = 0;
-//         for(int step = 0; step < n; step++) // Ã¶¾ÙÏòºó×ßµÄ²½Êı
+//         for(int step = 0; step < n; step++) // æšä¸¾å‘åèµ°çš„æ­¥æ•°
 //         {
-//             int index = (i + step) % n; // Çó³ö×ßstep²½Ö®ºóµÄÏÂ±ê
+//             int index = (i + step) % n; // æ±‚å‡ºèµ°stepæ­¥ä¹‹åçš„ä¸‹æ ‡
 //             rest = rest + gas[index] - cost[index];
 
 //             if(rest < 0)
@@ -9855,16 +9855,16 @@ public:
 //     return -1;
 // }
 
-// v2.0 Ì°ĞÄ
+// v2.0 è´ªå¿ƒ
 // int canCompleteCircuit(vector<int>& gas, vector<int>& cost) 
 // {
 //     int n = gas.size();
-//     for(int i = 0; i < n; i++) // Ã¶¾ÙÆğµã
+//     for(int i = 0; i < n; i++) // æšä¸¾èµ·ç‚¹
 //     {
 //         int rest = 0, step = 0;
-//         for(; step < n; step++) // Ã¶¾ÙÏòºó×ßµÄ²½Êı
+//         for(; step < n; step++) // æšä¸¾å‘åèµ°çš„æ­¥æ•°
 //         {
-//             int index = (i + step) % n; // Çó³ö×ßstep²½Ö®ºóµÄÏÂ±ê
+//             int index = (i + step) % n; // æ±‚å‡ºèµ°stepæ­¥ä¹‹åçš„ä¸‹æ ‡
 //             rest = rest + gas[index] - cost[index];
 
 //             if(rest < 0)
@@ -9878,38 +9878,38 @@ public:
 //             return i;
 //         }
 
-//         i = i + step; // ÓÅ»¯
+//         i = i + step; // ä¼˜åŒ–
 //     }
 
 //     return -1;
 // }
 
-// µ¥µ÷µİÔöµÄÊı×Ö
+// å•è°ƒé€’å¢çš„æ•°å­—
 // int monotoneIncreasingDigits(int n)
 // {
-//     string str = to_string(n); // °ÑÊı×Ö×ª»¯Îª×Ö·û´®£¬ÒÔ±ãÖğÎ»²Ù×÷
+//     string str = to_string(n); // æŠŠæ•°å­—è½¬åŒ–ä¸ºå­—ç¬¦ä¸²ï¼Œä»¥ä¾¿é€ä½æ“ä½œ
 
 //     int i = 0, m = str.size();
 
-//     // ÕÒµ½µÚÒ»¸öµİ¼õµÄÎ»ÖÃ
+//     // æ‰¾åˆ°ç¬¬ä¸€ä¸ªé€’å‡çš„ä½ç½®
 //     while (i + 1 < m && str[i] <= str[i + 1])
 //     {
 //         i++;
 //     }
 
-//     // ÌØÅĞ
+//     // ç‰¹åˆ¤
 //     if (i == m - 1)
 //     {
 //         return n;
 //     }
 
-//     // »ØÍÆ
+//     // å›æ¨
 //     while (i - 1 >= 0 && str[i] == str[i - 1])
 //     {
 //         i--;
 //     }
 
-//     // ²Ù×÷
+//     // æ“ä½œ
 //     str[i]--;
 //     for (int j = i + 1; j < m; j++)
 //     {
@@ -9919,7 +9919,7 @@ public:
 //     return stoi(str);
 // }
 
-// »µÁËµÄ¼ÆËãÆ÷
+// åäº†çš„è®¡ç®—å™¨
 // int brokenCalc(int startValue, int target)
 // {
 //     int ret = 0;
@@ -9940,24 +9940,24 @@ public:
 //     return ret + startValue - target;
 // }
 
-// ºÏ²¢Çø¼ä
+// åˆå¹¶åŒºé—´
 // vector<vector<int>> merge(vector<vector<int>> &intervals)
 // {
-//     // ÅÅĞò
+//     // æ’åº
 //     sort(intervals.begin(), intervals.end());
 
-//     // ºÏ²¢Çø¼ä
+//     // åˆå¹¶åŒºé—´
 //     vector<vector<int>> ret;
 //     int left = intervals[0][0], right = intervals[0][1];
 
 //     for (int i = 0; i < intervals.size(); i++)
 //     {
 //         int a = intervals[i][0], b = intervals[i][1];
-//         if (a <= right) // ÓĞÖØµş
+//         if (a <= right) // æœ‰é‡å 
 //         {
 //             right = max(right, b);
 //         }
-//         else // ÎŞÖØµş
+//         else // æ— é‡å 
 //         {
 //             ret.push_back({left, right});
 //             left = a;
@@ -9965,30 +9965,30 @@ public:
 //         }
 //     }
 
-//     // ×îºóÒ»¸öÇø¼ä
+//     // æœ€åä¸€ä¸ªåŒºé—´
 //     ret.push_back({left, right});
 
 //     return ret;
 // }
 
-// ÎŞÖØµşÇø¼ä
+// æ— é‡å åŒºé—´
 // int eraseOverlapIntervals(vector<vector<int>> &intervals)
 // {
-//     // ÅÅĞò
+//     // æ’åº
 //     sort(intervals.begin(), intervals.end());
 
-//     // ÒÆ³ıÇø¼ä
+//     // ç§»é™¤åŒºé—´
 //     int ret = 0;
 //     int left = intervals[0][0], right = intervals[0][1];
 //     for (int i = 1; i < intervals.size(); i++)
 //     {
 //         int a = intervals[i][0], b = intervals[i][1];
-//         if (a < right) // ÓĞÖØµş
+//         if (a < right) // æœ‰é‡å 
 //         {
 //             ret++;                 // DELETE
-//             right = min(right, b); // Ì°ĞÄ, É¾³ıÓÒ¶Ëµã½Ï´óµÄÇø¼ä
+//             right = min(right, b); // è´ªå¿ƒ, åˆ é™¤å³ç«¯ç‚¹è¾ƒå¤§çš„åŒºé—´
 //         }
-//         else // ÎŞÖØµş
+//         else // æ— é‡å 
 //         {
 //             right = b;
 //         }
@@ -9997,23 +9997,23 @@ public:
 //     return ret;
 // }
 
-// ÓÃ×îÉÙÊıÁ¿µÄ¼ıÒı±¬ÆøÇò
+// ç”¨æœ€å°‘æ•°é‡çš„ç®­å¼•çˆ†æ°”çƒ
 // int findMinArrowShots(vector<vector<int>>& points) 
 // {
-//     // ÅÅĞò
+//     // æ’åº
 //     sort(points.begin(), points.end());
 
-//     // Çó»¥ÏàÖØµşÇø¼äµÄÊıÁ¿
+//     // æ±‚äº’ç›¸é‡å åŒºé—´çš„æ•°é‡
 //     int right = points[0][1];
 //     int ret = 1;
 //     for(int i = 1; i < points.size(); i++)
 //     {
 //         int a = points[i][0], b = points[i][1];
-//         if(a <= right) // ÓĞÖØµş
+//         if(a <= right) // æœ‰é‡å 
 //         {
 //             right = min(right, b);
 //         }
-//         else // ÎŞÖØµş
+//         else // æ— é‡å 
 //         {
 //             ret++;
 //             right = b;
@@ -10023,7 +10023,7 @@ public:
 //     return ret;
 // }
 
-// ÕûÊıÌæ»»
+// æ•´æ•°æ›¿æ¢
 // class Solution
 // {
 //     unordered_map<int, int> hash;
@@ -10060,7 +10060,7 @@ public:
 //     }
 // };
 
-// ¶íÂŞË¹Ì×ÍŞ ·½·¨Ò»
+// ä¿„ç½—æ–¯å¥—å¨ƒ æ–¹æ³•ä¸€
 // int maxEnvelopes(vector<vector<int>> &e)
 // {
 //     sort(e.begin(), e.end());
@@ -10085,14 +10085,14 @@ public:
 //     return ret;
 // }
 
-// ¶íÂŞË¹Ì×ÍŞ ·½·¨¶ş
+// ä¿„ç½—æ–¯å¥—å¨ƒ æ–¹æ³•äºŒ
 // int maxEnvelopes(vector<vector<int>> &e)
 // {
-//     // ÖØĞ´ÅÅĞò
+//     // é‡å†™æ’åº
 //     sort(e.begin(), e.end(), [&](const vector<int> &v1, const vector<int> &v2)
 //          { return v1[0] != v2[0] ? v1[0] < v2[0] : v1[1] > v2[1]; });
 
-//     // Ì°ĞÄ + ¶ş·Ö
+//     // è´ªå¿ƒ + äºŒåˆ†
 //     vector<int> ret;
 //     ret.push_back(e[0][1]);
 
