@@ -1,70 +1,80 @@
 #include <iostream>
-#include <vector>
 #include <string>
-#include <cstdlib>
-#include <climits>
+#include <algorithm>
 using namespace std;
 
+int date = 0, year = 0;
+int days[13] = { 0, 31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31 };
+
+bool isLeap(int year)
+{
+    return (year % 4 == 0 && year % 100 != 0) || (year % 400 == 0);
+}
+
+bool Check(int x) // x == year
+{
+    string str = to_string(x);
+    reverse(str.begin(), str.end());
+
+    int _month = atoi(str.substr(0, 2).c_str());
+    int _day = atoi(str.substr(2, 2).c_str());
+
+    if (isLeap(x) && _month == 2 && _day > 29)
+    {
+        return false;
+    }
+
+    if (_month > 12 || _day > days[_month])
+    {
+        return false;
+    }
+
+    return true;
+}
+
+bool CheckAB(int x)
+{
+    /*
+    return (x / 1000 == (x % 100) / 10) &&
+           ((x % 1000) / 100 == x % 10) &&
+           (x / 1000 != (x % 1000) / 100);
+    */
+
+    string str = to_string(x);
+    return str[0] == str[2] && str[1] == str[3] && str[0] != str[1]; // ABABBABA
+}
+
+// 枚举每个回文, 然后判断是否是合法日期即可
 int main()
 {
-	int n = 0;
-	string str1, str2;
-	cin >> n >> str1 >> str2;
+    cin >> date;
+    year = date / 10000;
 
-	vector<string> strs(n);
-	for (int i = 0; i < n; i++)
-	{
-		cin >> strs[i];
-	}
+    // 1.枚举回文
+    bool found = false;
+    string tmp, ret;
+    for (int i = year + 1; i < 10000; i++)
+    {
+        // 2.是否是合法日期?
+        if (Check(i))
+        {
+            tmp = to_string(i);
+            ret = tmp + string(tmp.rbegin(), tmp.rend());
 
-	if (str1.empty() && str2.empty())
-	{
-		cout << -1 << endl;
-		return 0;
-	}
+            if (!found)
+            {
+                cout << ret << endl;
+                found = true;
+            }
 
-	// 双指针
-	int p1 = 0, p2 = 0, ret1 = 0, ret2 = 0, minDist = INT_MAX;
-	bool flag1 = false, flag2 = false;
+            // 3.是回文, 是否是ABABBABA?
+            if (CheckAB(i))
+            {
+                cout << ret << endl;
+                break;
+            }
+        }
+    }
 
-	while (p1 < n && p2 < n)
-	{
-		// 找str1
-		while (p1 < n)
-		{
-			if (strs[p1] == str1)
-			{
-				flag1 = true;
-				ret1 = p1++;
-				break;
-			}
-
-			p1++;
-		}
-		if (flag1 && flag2)
-		{
-			minDist = min(minDist, abs(ret1 - ret2));
-		}
-
-		// 找str2
-		while (p2 < n)
-		{
-			if (strs[p2] == str2)
-			{
-				flag2 = true;
-				ret2 = p2++;
-				break;
-			}
-
-			p2++;
-		}
-		if (flag1 && flag2)
-		{
-			minDist = min(minDist, abs(ret1 - ret2));
-		}
-	}
-
-	cout << (minDist == INT_MAX ? -1 : minDist) << endl;
-
-	return 0;
+    return 0;
 }
