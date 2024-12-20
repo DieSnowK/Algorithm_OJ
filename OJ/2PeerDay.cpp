@@ -56,3 +56,53 @@
 
 //     return 0;
 // }
+
+// 排序 --> 指定快排
+// class Solution
+// {
+// public:
+//     vector<int> MySort(vector<int> &nums)
+//     {
+//         srand(time(nullptr)); // 种下随机数种子
+//         QuickSort(nums, 0, nums.size() - 1);
+//         return nums;
+//     }
+
+//     void QuickSort(vector<int> &nums, int l, int r)
+//     {
+//         // 1.定义递归出口
+//         if (l >= r)
+//         {
+//             return;
+//         }
+
+//         // 2.随机选择基准元素
+//         int key = nums[rand() % (r - l + 1) + l];
+
+//         // 3.数组分三块
+//         int i = l, left = l - 1, right = r + 1;
+//         while (i < right)
+//         {
+//             if (nums[i] < key)
+//             {
+//                 swap(nums[++left], nums[i++]);
+//             }
+//             else if (nums[i] == key)
+//             {
+//                 i++;
+//             }
+//             else // nums[i] > key
+//             {
+//                 swap(nums[--right], nums[i]);
+//             }
+//         }
+
+//         // 至此，key左边都比key小，key右边都比key大
+//         // 即key已经在正确的位置上了
+
+//         // 4.递归左右区间
+//         // [l, left] [left + 1, right - 1] [right, r]
+//         QuickSort(nums, l, left);
+//         QuickSort(nums, right, r);
+//     }
+// };
