@@ -106,3 +106,58 @@
 //         QuickSort(nums, right, r);
 //     }
 // };
+
+// 复写零
+// class Solution
+// {
+// public:
+//     void duplicateZeros(vector<int> &arr)
+//     {
+//         // cur -> current -> 当前的 dest -> destination
+//         int cur = 0, dest = -1;
+//         int n = arr.size();
+
+//         // 找第一个复写的位置 -> 从后往前复写
+//         while (cur < n)
+//         {
+//             if (arr[cur])
+//             {
+//                 dest++;
+//             }
+//             else
+//             {
+//                 dest += 2;
+//             }
+
+//             if (dest >= n - 1)
+//             {
+//                 break;
+//             }
+
+//             cur++;
+//         }
+
+//         // 边界情况处理
+//         if (dest == n)
+//         {
+//             arr[n - 1] = 0;
+//             dest -= 2;
+//             cur--;
+//         }
+
+//         // 从后往前复写
+//         while (cur >= 0)
+//         {
+//             if (arr[cur])
+//             {
+//                 arr[dest--] = arr[cur--];
+//             }
+//             else
+//             {
+//                 arr[dest--] = 0;
+//                 arr[dest--] = 0;
+//                 cur--;
+//             }
+//         }
+//     }
+// };
