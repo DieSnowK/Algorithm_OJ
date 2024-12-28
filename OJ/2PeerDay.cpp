@@ -161,3 +161,43 @@
 //         }
 //     }
 // };
+
+// 反转链表 (1)
+// class Solution
+// {
+// public:
+//     ListNode *reverseList(ListNode *head)
+//     {
+//         // 空链表或者只有一个节点时，直接返回
+//         if (!head || !head->next)
+//         {
+//             return head;
+//         }
+
+//         stack<ListNode *> st;
+
+//         // 将所有节点入栈
+//         ListNode *cur = head;
+//         while (cur)
+//         {
+//             st.push(cur);
+//             cur = cur->next;
+//         }
+
+//         // 取出新的头节点
+//         ListNode *newHead = st.top();
+//         st.pop();
+
+//         // 尾插
+//         cur = newHead;
+//         while (st.size())
+//         {
+//             cur->next = st.top();
+//             st.pop();
+//             cur = cur->next;
+//         }
+//         cur->next = nullptr; // 将新链表的尾节点的next置空，即断链
+
+//         return newHead;
+//     }
+// };
