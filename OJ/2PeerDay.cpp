@@ -223,3 +223,25 @@
 //         return ret;
 //     }
 // };
+
+// 反转链表 (2)
+// class Solution
+// {
+// public:
+//     ListNode *reverseList(ListNode *head)
+//     {
+//         // 出口 -> 叶子节点
+//         // head == nullptr -> 避免传入的就是一个空链表
+//         // head->next == nullptr -> 判断是否是叶子节点
+//         if (head == nullptr || head->next == nullptr)
+//         {
+//             return head;
+//         }
+
+//         ListNode *newHead = reverseList(head->next);
+//         head->next->next = head;
+//         head->next = nullptr;
+
+//         return newHead;
+//     }
+// };
