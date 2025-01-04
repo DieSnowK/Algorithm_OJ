@@ -267,3 +267,49 @@
 //         return ret;
 //     }
 // };
+
+// 用队列实现栈
+// class MyStack
+// {
+// public:
+//     MyStack()
+//     {
+//     }
+
+//     void push(int x)
+//     {
+//         // 先往q2中压入元素
+//         q2.push(x);
+
+//         // 将q1中的元素搬移到q2中
+//         while (q1.size())
+//         {
+//             q2.push(q1.front());
+//             q1.pop();
+//         }
+
+//         // 交换q1 && q2，维持其逻辑关系
+//         swap(q1, q2);
+//     }
+
+//     int pop()
+//     {
+//         int x = q1.front();
+//         q1.pop();
+//         return x;
+//     }
+
+//     int top()
+//     {
+//         return q1.front();
+//     }
+
+//     bool empty()
+//     {
+//         return q1.empty();
+//     }
+
+// private:
+//     queue<int> q1; // 模拟队列
+//     queue<int> q2; // 辅助队列
+// };
