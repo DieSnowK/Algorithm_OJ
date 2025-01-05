@@ -313,3 +313,50 @@
 //     queue<int> q1; // 模拟队列
 //     queue<int> q2; // 辅助队列
 // };
+
+// 删除排序链表中的重复元素 II
+// class Solution
+// {
+// public:
+//     ListNode *deleteDuplicates(ListNode *head)
+//     {
+//         if (head == nullptr || head->next == nullptr)
+//         {
+//             return head;
+//         }
+
+//         // newHead是为了闭合开头就存在要删除的情况的逻辑
+//         ListNode *newHead = new ListNode(0, head);
+//         ListNode *cur = head, *prev = newHead;
+
+//         while (cur)
+//         {
+//             bool isDel = false;
+
+//             // 查找是否有重复元素
+//             while (cur->next && cur->val == cur->next->val)
+//             {
+//                 cur = cur->next;
+//                 isDel = true;
+//             }
+
+//             // 如果存在删除逻辑，则此处执行删除逻辑
+//             if (isDel)
+//             {
+//                 prev->next = cur->next;
+//             }
+//             else
+//             {
+//                 prev = cur;
+//             }
+
+//             // 向后迭代
+//             cur = cur->next;
+//         }
+
+//         cur = newHead->next;
+//         delete newHead;
+
+//         return cur;
+//     }
+// };
