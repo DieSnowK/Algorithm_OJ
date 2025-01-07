@@ -360,3 +360,22 @@
 //         return cur;
 //     }
 // };
+
+// 判断字符是否唯一
+// class Solution 
+// {
+// public:
+//     bool isUnique(string astr) 
+//     {
+//         int hash[26] = { 0 };
+//         for(auto& ch : astr)
+//         {
+//             if (++hash[ch - 'a'] > 1)
+//             {
+//                 return false;
+//             }
+//         }
+
+//         return true;
+//     }
+// };
