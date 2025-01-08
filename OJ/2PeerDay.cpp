@@ -379,3 +379,40 @@
 //         return true;
 //     }
 // };
+
+// 二叉树的最小深度
+// class Solution
+// {
+//     int ret = 0x3f3f3f3f;
+
+// public:
+//     int minDepth(TreeNode *root)
+//     {
+//         if (root == nullptr)
+//         {
+//             return 0;
+//         }
+
+//         DFS(root, 1);
+//         return ret;
+//     }
+
+//     // 无需手动回溯, 参数自行完成了回溯工作
+//     void DFS(TreeNode *root, int path)
+//     {
+//         if (root == nullptr)
+//         {
+//             return;
+//         }
+//         else if (root->left == nullptr && root->right == nullptr)
+//         {
+//             ret = min(ret, path);
+//             return;
+//         }
+//         else
+//         {
+//             DFS(root->left, path + 1);
+//             DFS(root->right, path + 1);
+//         }
+//     }
+// };
