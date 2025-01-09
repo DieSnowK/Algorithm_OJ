@@ -416,3 +416,55 @@
 //         }
 //     }
 // };
+
+// 排序 --> 指定归并
+// class Solution
+// {
+//     vector<int> assist; // 归并时的辅助数组
+// public:
+//     vector<int> MySort(vector<int> &nums)
+//     {
+//         assist.resize(nums.size(), 0);
+//         MergeSort(nums, 0, nums.size() - 1);
+//         return nums;
+//     }
+
+//     void MergeSort(vector<int> &nums, int left, int right)
+//     {
+//         if (left >= right)
+//         {
+//             return;
+//         }
+
+//         // 1.选择中间点, 划分区间
+//         int mid = left + (right - left) / 2;
+
+//         // 2.排序左右区间 -> [left, mid] [mid + 1, right]
+//         MergeSort(nums, left, mid);
+//         MergeSort(nums, mid + 1, right);
+
+//         // 3.合并两个有序数组
+//         int i = 0, cur1 = left, cur2 = mid + 1;
+//         while (cur1 <= mid && cur2 <= right)
+//         {
+//             assist[i++] = nums[cur1] <= nums[cur2] ? nums[cur1++] : nums[cur2++];
+//         }
+
+//         // 4.处理未遍历完的数组
+//         while (cur1 <= mid)
+//         {
+//             assist[i++] = nums[cur1++];
+//         }
+
+//         while (cur2 <= right)
+//         {
+//             assist[i++] = nums[cur2++];
+//         }
+
+//         // 5.还原
+//         for (int i = left; i <= right; i++)
+//         {
+//             nums[i] = assist[i - left];
+//         }
+//     }
+// };
