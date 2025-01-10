@@ -468,3 +468,34 @@
 //         }
 //     }
 // };
+
+// 快乐数
+// class Solution
+// {
+// public:
+//     // 双指针 -> 快慢指针 -> 指针抽象为数字 -> 判环
+//     bool isHappy(int n)
+//     {
+//         int slow = n, fast = n;
+
+//         // 判断成环, 这一步比较关键, 否则无法判断false, 只能判断true
+//         while ((slow = BitSum(slow)) != (fast = BitSum(BitSum(fast))))
+//             ;
+
+//         // 成环后, 判断是否在1处成环即可
+//         return slow == 1;
+//     }
+
+//     int BitSum(int n)
+//     {
+//         int sum = 0;
+//         while (n)
+//         {
+//             int tmp = n % 10;
+//             sum += tmp * tmp;
+//             n /= 10;
+//         }
+
+//         return sum;
+//     }
+// };
