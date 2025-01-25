@@ -499,3 +499,25 @@
 //         return sum;
 //     }
 // };
+
+// 删除有序数组中的重复项
+// class Solution
+// {
+// public:
+//     int removeDuplicates(vector<int> &nums)
+//     {
+//         // 双指针 -> 快慢指针
+//         int i = 0, j = 0;
+//         while (j < nums.size())
+//         {
+//             if (nums[i] != nums[j])
+//             {
+//                 nums[++i] = nums[j];
+//             }
+
+//             ++j;
+//         }
+
+//         return i + 1;
+//     }
+// };
