@@ -563,3 +563,38 @@
 
 //     return 0;
 // }
+
+// 移除链表元素
+// class Solution 
+// {
+// public:
+//     ListNode* removeElements(ListNode* head, int val) 
+//     {
+//         if(head == nullptr)
+//         {
+//             return head;
+//         }
+
+//         ListNode* newHead = new ListNode(0, head);
+//         ListNode* prev = newHead, *cur = head;
+
+//         while(cur)
+//         {
+//             if(cur->val == val)
+//             {
+//                 prev->next = cur->next;
+//             }
+//             else
+//             {
+//                 prev = cur;
+//             }
+
+//             cur = cur->next;
+//         }
+
+//         cur = newHead->next;
+//         delete newHead;
+
+//         return cur;
+//     }
+// };
