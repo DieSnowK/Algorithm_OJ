@@ -636,3 +636,37 @@
         // return vector<int>(arr.begin(), arr.begin() + k);
     // }
 // };
+
+// 复杂链表的复制
+// class Solution 
+// {
+// public:
+//     Node* copyRandomList(Node* head) 
+//     {
+//         if(head == nullptr)
+//         {
+//             return head;
+//         }
+
+//         unordered_map<Node*, Node*> hash; // <old, new>
+//         Node* cur = head;
+
+//         // 1.存储映射关系
+//         while(cur)
+//         {
+//             hash[cur] = new Node(cur->val);
+//             cur = cur->next;
+//         }
+
+//         // 2.构建指向关系
+//         cur = head;
+//         while(cur)
+//         {
+//             hash[cur]->next = hash[cur->next];
+//             hash[cur]->random = hash[cur->random];
+//             cur = cur->next;
+//         }
+
+//         return hash[head];
+//     }
+// };
