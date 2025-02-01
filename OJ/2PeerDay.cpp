@@ -701,3 +701,37 @@
 //         return len;
 //     }
 // };
+
+// 二叉树的最大深度
+// class Solution 
+// {
+//     int ret = 0;
+// public:
+//     int maxDepth(TreeNode* root) 
+//     {
+//         if(root == nullptr)
+//         {
+//             return 0;
+//         }
+
+//         DFS(root, 1);
+//         return ret;
+//     }
+
+//     void DFS(TreeNode* root, int path)
+//     {
+//         if(root == nullptr)
+//         {
+//             return;
+//         }
+        
+//         if(root->left == nullptr && root->right == nullptr)
+//         {
+//             ret = max(ret, path);
+//             return;
+//         }
+
+//         DFS(root->left, path + 1);
+//         DFS(root->right, path + 1);
+//     }
+// };
