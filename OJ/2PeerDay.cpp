@@ -670,3 +670,34 @@
 //         return hash[head];
 //     }
 // };
+
+// 无重复字符的最长子串
+// class Solution 
+// {
+// public:
+//     int lengthOfLongestSubstring(string s) 
+//     {
+//         int len = 0, n = s.size();
+//         unordered_map<char, int> hash;
+
+//         // 滑动窗口
+//         int left = 0, right = 0;
+//         while(right < n)
+//         {
+//             // 1.进窗口
+//             hash[s[right]]++;
+
+//             // 2.判断/出窗口
+//             while(hash[s[right]] > 1)
+//             {
+//                 hash[s[left++]]--;
+//             }
+
+//             // 3.更新
+//             len = max(len, right - left + 1);
+//             right++;
+//         }
+
+//         return len;
+//     }
+// };
