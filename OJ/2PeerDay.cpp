@@ -735,3 +735,60 @@
 //         DFS(root->right, path + 1);
 //     }
 // };
+
+// 排序 -> 指定堆排序
+// class Solution 
+// {
+// public:
+//     vector<int> MySort(vector<int>& nums) 
+//     {
+//         HeapSort(nums);
+//         return nums;
+//     }
+
+//     // 升序: 建大堆; 降序: 建小堆
+//     void HeapSort(vector<int>& nums)
+//     {
+//         int n = nums.size();
+        
+//         // 1.建堆: 从最后一个非叶子节点开始，向下调整
+//         for(int i = (n - 1 - 1) / 2; i >= 0; i--)
+//         {
+//             AdjustDown(nums, n, i);
+//         }
+
+//         // 2.堆排序
+//         int end = nums.size() - 1;
+//         while(end > 0)
+//         {
+//             swap(nums[0], nums[end]);
+//             AdjustDown(nums, end--, 0);
+//         }
+//     }
+
+//     // 向下调整前提: 左右子树必须是小/大堆
+//     void AdjustDown(vector<int>& nums, int size, int parent)
+//     {
+// 		int child = parent * 2 + 1;
+//         while(child < size)
+//         {
+//             // 找到左右孩子中较大的
+//             if(child + 1 < size && nums[child + 1] > nums[child])
+//             {
+//                 child++;
+//             }
+            
+//             // 比较父子节点
+//             if(nums[child] > nums[parent])
+//             {
+//                 swap(nums[child], nums[parent]);
+//                 parent = child;
+//                 child = parent * 2 + 1;
+//             }
+//             else
+//             {
+//                 break;
+//             }
+//         }
+//     }
+// };
