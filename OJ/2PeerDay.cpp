@@ -792,3 +792,30 @@
 //         }
 //     }
 // };
+
+// 盛最多水的容器
+// class Solution 
+// {
+// public:
+//     int maxArea(vector<int>& height) 
+//     {
+//         int n = height.size(), maxV = 0;
+
+//         // 双指针
+//         int left = 0, right = n - 1;
+//         while(left < right)
+//         {
+//             maxV = max(maxV, min(height[left], height[right]) * (right - left));
+//             if(height[left] < height[right])
+//             {
+//                 left++;
+//             }
+//             else
+//             {
+//                 right--;
+//             }
+//         }
+
+//         return maxV;
+//     }
+// };
