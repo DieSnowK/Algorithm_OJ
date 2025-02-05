@@ -819,3 +819,25 @@
 //         return maxV;
 //     }
 // };
+
+// 移除元素
+// class Solution 
+// {
+// public:
+//     int removeElement(vector<int>& nums, int val) 
+//     {
+//         // 双指针
+//         int left = 0, right = 0;
+//         while(right < nums.size())
+//         {
+//             if(nums[right] != val) // 找到要替换的元素
+//             {
+//                 nums[left++] = nums[right];
+//             }
+
+//             right++;
+//         }
+
+//         return left;
+//     }
+// };
