@@ -841,3 +841,31 @@
 //         return left;
 //     }
 // };
+
+// 寻找数组的中心下标
+// class Solution
+// {
+// public:
+//     int pivotIndex(vector<int> &nums)
+//     {
+//         int n = nums.size();
+//         vector<int> dp(n + 1, 0);
+
+//         // 1.前缀和 [0, i]
+//         for (int i = 1; i <= n; i++)
+//         {
+//             dp[i] = dp[i - 1] + nums[i - 1];
+//         }
+
+//         // 2.枚举中点 i -> i - 1
+//         for (int i = 1; i <= n; i++)
+//         {
+//             if (dp[i - 1] == (dp[n] - dp[i]))
+//             {
+//                 return i - 1;
+//             }
+//         }
+
+//         return -1;
+//     }
+// };
