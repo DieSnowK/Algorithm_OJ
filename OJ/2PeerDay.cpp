@@ -869,3 +869,32 @@
 //         return -1;
 //     }
 // };
+
+// 相交链表 -> 哈希
+// class Solution 
+// {
+// public:
+//     ListNode *getIntersectionNode(ListNode *headA, ListNode *headB) 
+//     {
+//         unordered_set<ListNode*> hash;
+        
+//         ListNode* cur = headA;
+//         while(cur)
+//         {
+//             hash.insert(cur);
+//             cur = cur->next;
+//         }
+
+//         cur = headB;
+//         while(cur)
+//         {
+//             if(hash.count(cur))
+//             {
+//                 return cur;
+//             }
+//             cur = cur->next;
+//         }
+
+//         return nullptr;
+//     }
+// };
