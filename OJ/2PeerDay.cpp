@@ -921,3 +921,31 @@
 //         return cur1;
 //     }
 // };
+
+// 寻找目标值
+// class Solution 
+// {
+// public:
+//     bool findTargetIn2DPlants(vector<vector<int>>& plants, int target) 
+//     {
+//         // 将矩阵从顶点出发, 看成二叉搜索树
+//         int i = plants.size() - 1, j = 0;
+//         while(i >= 0 && j < plants[0].size())
+//         {
+//             if(plants[i][j] > target)
+//             {
+//                 i--;
+//             }
+//             else if(plants[i][j] < target)
+//             {
+//                 j++;
+//             }
+//             else
+//             {
+//                 return true;
+//             }
+//         }
+
+//         return false;
+//     }
+// };
