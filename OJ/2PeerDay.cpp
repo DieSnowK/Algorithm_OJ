@@ -898,3 +898,26 @@
 //         return nullptr;
 //     }
 // };
+
+// 相交链表 -> 双指针
+// class Solution
+// {
+// public:
+//     ListNode *getIntersectionNode(ListNode *headA, ListNode *headB)
+//     {
+//         if (headA == nullptr || headB == nullptr)
+//         {
+//             return nullptr;
+//         }
+
+//         // 每步操作, 同时更新cur1, cur2
+//         ListNode *cur1 = headA, *cur2 = headB;
+//         while (cur1 != cur2)
+//         {
+//             cur1 = cur1 == nullptr ? headB : cur1->next;
+//             cur2 = cur2 == nullptr ? headA : cur2->next;
+//         }
+
+//         return cur1;
+//     }
+// };
