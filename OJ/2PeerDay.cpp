@@ -949,3 +949,45 @@
 //         return false;
 //     }
 // };
+
+// 图书整理 II -> 用栈实现队列
+// class CQueue
+// {
+// public:
+//     CQueue() 
+//     {}
+    
+//     void appendTail(int value) // 直接入栈
+//     {
+//         st1.push(value);
+//     }
+    
+//     int deleteHead() 
+//     {
+//         if(st2.size()) // 若输出栈此时有元素, 直接出栈
+//         {
+//             int x = st2.top();
+//             st2.pop();
+//             return x;
+//         }
+
+//         if(st1.empty())
+//         {
+//             return -1;
+//         }
+
+//         while(st1.size()) // 倒叙输入栈至输出栈
+//         {
+//             st2.push(st1.top());
+//             st1.pop();
+//         }
+
+//         int x = st2.top();
+//         st2.pop();
+//         return x;
+//     }
+    
+// private:
+//     stack<int> st1; // 输入栈 -> 栈底元素对应队首元素
+//     stack<int> st2; // 输出栈 -> 倒序输入栈, 此时栈顶对应队首元素
+// };
