@@ -1022,3 +1022,30 @@
 //         return ret;
 //     }
 // };
+
+// 环形链表
+// class Solution 
+// {
+// public:
+//     bool hasCycle(ListNode *head) 
+//     {
+//         if(head == nullptr || head->next == nullptr)
+//         {
+//             return false;
+//         }
+
+//         ListNode *slow = head, *fast = head->next; // 细节
+//         while(slow != fast) // 细节, 条件先于循环体
+//         {
+//             if(fast == nullptr || fast->next == nullptr)
+//             {
+//                 return false;
+//             } 
+
+//             slow = slow->next;
+//             fast = fast->next->next;
+//         }
+
+//         return true;
+//     }
+// };
