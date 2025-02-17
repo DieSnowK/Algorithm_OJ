@@ -991,3 +991,34 @@
 //     stack<int> st1; // 输入栈 -> 栈底元素对应队首元素
 //     stack<int> st2; // 输出栈 -> 倒序输入栈, 此时栈顶对应队首元素
 // };
+
+// 前 K 个高频元素
+// class Solution 
+// {
+// public:
+//     vector<int> topKFrequent(vector<int>& nums, int k) 
+//     {
+//         // 1.统计元素出现频次
+//         unordered_map<int, int> hash;
+//         for(auto x : nums)
+//         {
+//             hash[x]++;
+//         }
+
+//         // 2.TOPK
+//         priority_queue<pair<int, int>> heap;
+//         for(auto& iter : hash)
+//         {
+//             heap.push({iter.second, iter.first});
+//         }
+
+//         vector<int> ret;
+//         while(k--)
+//         {
+//             ret.push_back(heap.top().second);
+//             heap.pop();
+//         }
+
+//         return ret;
+//     }
+// };
