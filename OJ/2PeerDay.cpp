@@ -1049,3 +1049,39 @@
 //         return true;
 //     }
 // };
+
+// 二叉树的最近公共祖先 -> LCA
+// 方法一：DFS
+// class Solution
+// {
+//     TreeNode *ret = nullptr;
+
+// public:
+//     TreeNode *lowestCommonAncestor(TreeNode *root, TreeNode *p, TreeNode *q)
+//     {
+//         DFS(root, p, q);
+//         return ret;
+//     }
+
+//     bool DFS(TreeNode *root, TreeNode *p, TreeNode *q)
+//     {
+//         if (root == nullptr)
+//         {
+//             return false;
+//         }
+
+//         // 1.子树中是否包含 p节点 或 q节点?
+//         bool left = DFS(root->left, p, q);
+//         bool right = DFS(root->right, p, q);
+
+//         // 2.(p q分别位于左右子树中) || (一个节点为root && 一个节点在其中一个子树中)
+//         if ((left && right) ||
+//             ((root->val == p->val || root->val == q->val) && (left || right)))
+//         {
+//             ret = root;
+//         }
+
+//         // 3.该子树是否有 p 或 q
+//         return left || right || (root->val == p->val || root->val == q->val);
+//     }
+// };
