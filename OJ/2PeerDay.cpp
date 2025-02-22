@@ -1085,3 +1085,54 @@
 //         return left || right || (root->val == p->val || root->val == q->val);
 //     }
 // };
+
+// 二叉树的最近公共祖先 -> LCA
+// 方法二: 存储父节点判断
+// class Solution
+// {
+//     unordered_map<TreeNode *, TreeNode *> parent; // <child, parent>
+//     unordered_set<TreeNode *> visit;
+
+// public:
+//     TreeNode *lowestCommonAncestor(TreeNode *root, TreeNode *p, TreeNode *q)
+//     {
+//         // 1.建立子父节点映射关系
+//         parent[root] = nullptr; // 细节, 构造循环结束条件
+//         DFS(root);
+
+//         // 2.向上扫描p的父节点
+//         while (p)
+//         {
+//             visit.insert(p); // 细节, 自己本身也是要被扫描的
+//             p = parent[p];
+//         }
+
+//         // 3.向上扫描q的父节点, 寻找和p重合的最近父节点
+//         while (q)
+//         {
+//             if (visit.count(q))
+//             {
+//                 return q;
+//             }
+
+//             q = parent[q];
+//         }
+
+//         return nullptr;
+//     }
+
+//     void DFS(TreeNode *root)
+//     {
+//         if (root->left)
+//         {
+//             parent[root->left] = root;
+//             DFS(root->left);
+//         }
+
+//         if (root->right)
+//         {
+//             parent[root->right] = root;
+//             DFS(root->right);
+//         }
+//     }
+// };
