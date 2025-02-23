@@ -1136,3 +1136,23 @@
 //         }
 //     }
 // };
+
+// 主持人调度
+// class Solution 
+// {
+// public:
+//     bool hostschedule(vector<vector<int>>& schedule) 
+//     {
+//         sort(schedule.begin(), schedule.end());
+
+//         for(int i = 1; i < schedule.size(); i++)
+//         {
+//             if(schedule[i][0] < schedule[i - 1][1])
+//             {
+//                 return false;
+//             }
+//         }
+
+//         return true;
+//     }
+// };
