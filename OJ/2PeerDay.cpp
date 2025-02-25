@@ -1187,3 +1187,32 @@
 //         return cnt;
 //     }
 // };
+
+// 合并两个有序数组
+// class Solution 
+// {
+// public:
+//     void merge(vector<int>& nums1, int m, vector<int>& nums2, int n) 
+//     {
+// 	    // 双指针
+//         vector<int> tmp;
+//         int cur1 = 0, cur2 = 0;
+
+//         while(cur1 < m && cur2 < n)
+//         {
+//             tmp.push_back(nums1[cur1] < nums2[cur2] ? nums1[cur1++] : nums2[cur2++]);
+//         }
+
+//         while(cur1 < m)
+//         {
+//             tmp.push_back(nums1[cur1++]);
+//         }
+
+//         while(cur2 < n)
+//         {
+//             tmp.push_back(nums2[cur2++]);
+//         }
+
+//         swap(nums1, tmp);
+//     }
+// };
