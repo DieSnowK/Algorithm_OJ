@@ -1216,3 +1216,31 @@
 //         swap(nums1, tmp);
 //     }
 // };
+
+// 和可被 K 整除的子数组
+// class Solution 
+// {
+// public:
+// 	// 在[0, i - 1]区间内，有多少个前缀和的余数等于(sum % k + k) % k
+//     int subarraysDivByK(vector<int>& nums, int k) 
+//     {
+//         unordered_map<int, int> hash; // <前缀和余数, 次数>
+//         hash[0] = 1;
+
+//         int sum = 0, ret = 0; // 用于标记前一个位置的前缀和
+//         for(auto& e : nums)
+//         {
+//             sum += e; // 计算当前位置的前缀和
+
+//             int tmp = (sum % k + k) % k; // 修正后的余数
+//             if(hash.count(tmp))
+//             {
+//                 ret += hash[tmp];
+//             }
+
+//             hash[tmp]++; // 将i位置的前缀和的余数入hash
+//         }
+
+//         return ret;
+//     }
+// };
