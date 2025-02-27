@@ -1244,3 +1244,44 @@
 //         return ret;
 //     }
 // };
+
+// 分割链表
+// class Solution
+// {
+// public:
+//     ListNode *partition(ListNode *head, int x)
+//     {
+//         if (head == nullptr || head->next == nullptr)
+//         {
+//             return head;
+//         }
+
+//         ListNode *newHead = new ListNode(0, head);
+//         ListNode *less = new ListNode(0);
+//         ListNode *cur = head, *prev = newHead, *lessTail = less;
+
+//         while (cur)
+//         {
+//             if (cur->val < x)
+//             {
+//                 lessTail->next = cur;
+//                 lessTail = lessTail->next;
+//                 prev->next = cur->next;
+//             }
+//             else
+//             {
+//                 prev = cur;
+//             }
+
+//             cur = cur->next;
+//         }
+
+//         lessTail->next = newHead->next;
+//         cur = less->next == nullptr ? newHead->next : less->next;
+
+//         delete less;
+//         delete newHead;
+
+//         return cur;
+//     }
+// };
