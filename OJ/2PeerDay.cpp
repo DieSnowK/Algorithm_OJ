@@ -1348,3 +1348,35 @@
 //         return ret;
 //     }
 // };
+
+// 招式拆解 II
+// class Solution
+// {
+// public:
+//     char dismantlingAction(string arr)
+//     {
+//         // 有序哈希表 -> 依赖于一个额外的数组
+//         vector<char> keys;
+//         unordered_map<char, bool> hash;
+
+//         for (auto ch : arr)
+//         {
+//             if (!hash.count(ch))
+//             {
+//                 keys.push_back(ch);
+//             }
+
+//             hash[ch] = !hash.count(ch);
+//         }
+
+//         for (auto ch : keys)
+//         {
+//             if (hash[ch])
+//             {
+//                 return ch;
+//             }
+//         }
+
+//         return ' ';
+//     }
+// };
