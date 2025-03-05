@@ -1380,3 +1380,46 @@
 //         return ' ';
 //     }
 // };
+
+// 移掉 K 位数字
+// class Solution
+// {
+// public:
+//     string removeKdigits(string num, int k)
+//     {
+//         vector<char> st; // 用数组模拟栈, 避免翻转操作
+
+//         // 1.贪心 + 单调栈
+//         for (auto &x : num)
+//         {
+//             while (st.size() && st.back() > x && k)
+//             {
+//                 st.pop_back();
+//                 k--;
+//             }
+//             st.push_back(x);
+//         }
+
+//         // 2.处理剩余元素
+//         while (k--)
+//         {
+//             st.pop_back();
+//         }
+
+//         // 3.构造结果 + 处理前导0
+//         string ret = "";
+//         bool flag = true;
+//         for (auto &x : st)
+//         {
+//             if (flag && x == '0') // 处理前导0
+//             {
+//                 continue;
+//             }
+
+//             flag = false;
+//             ret += x;
+//         }
+
+//         return ret == "" ? "0" : ret;
+//     }
+// };
