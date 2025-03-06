@@ -1456,3 +1456,72 @@
 //         return len;
 //     }
 // };
+
+// 最小高度树
+// class Solution
+// {
+// public:
+//     vector<int> findMinHeightTrees(int n, vector<vector<int>> &edges)
+//     {
+//         // 1.建图 -> 构建图的逻辑结构 + 入度表
+//         vector<vector<int>> graph(n);
+//         vector<int> in(n, 0);
+//         for (const auto &edge : edges)
+//         {
+//             int x = edge[0], y = edge[1]; // x <--> y
+
+//             // 图的逻辑结构(无向图) -> 谁连接了谁
+//             graph[x].push_back(y);
+//             graph[y].push_back(x);
+
+//             // 入读表 -> 有多少节点连向它
+//             in[x]++, in[y]++;
+//         }
+
+//         // 2.将所有入度为1的点入队列
+//         queue<int> q;
+//         for (int i = 0; i < n; i++)
+//         {
+//             if (in[i] == 1)
+//             {
+//                 q.push(i);
+//             }
+//         }
+
+//         // 3.BFS
+//         int maxDepth = 0;
+//         vector<int> depth(n, 0);
+//         while (q.size())
+//         {
+//             int size = q.size();
+//             while (size--) // 控制一层一层出
+//             {
+//                 int u = q.front();
+//                 q.pop();
+
+//                 // 修改与该点相连接的入度
+//                 for (const auto &v : graph[u])
+//                 {
+//                     if (--in[v] == 1)
+//                     {
+//                         q.push(v);
+//                         depth[v] = depth[u] + 1;
+//                         maxDepth = max(maxDepth, depth[v]);
+//                     }
+//                 }
+//             }
+//         }
+
+//         // 4.取结果
+//         vector<int> ret;
+//         for (int i = 0; i < n; i++)
+//         {
+//             if (depth[i] == maxDepth)
+//             {
+//                 ret.push_back(i);
+//             }
+//         }
+
+//         return ret;
+//     }
+// };
