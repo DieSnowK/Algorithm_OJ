@@ -1423,3 +1423,36 @@
 //         return ret == "" ? "0" : ret;
 //     }
 // };
+
+// 最长回文串
+// class Solution 
+// {
+// public:
+//     int longestPalindrome(string s) 
+//     {
+//         unordered_map<char, int> hash;
+//         for(const auto ch : s)
+//         {
+//             hash[ch]++;
+//         }
+
+//         int len = 0;
+//         bool flag = false;
+//         for(auto iter = hash.begin(); iter != hash.end(); iter++)
+//         {
+//             if(iter->second % 2 == 1)
+//             {
+//                 flag = true;
+//             }
+
+//             len += (iter->second / 2) * 2;
+//         }
+
+//         if(flag)
+//         {
+//             len += 1;
+//         }
+
+//         return len;
+//     }
+// };
