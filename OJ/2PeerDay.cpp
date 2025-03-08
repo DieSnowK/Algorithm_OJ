@@ -1525,3 +1525,33 @@
 //         return ret;
 //     }
 // };
+
+// 两个数组的交集
+// class Solution
+// {
+// public:
+//     vector<int> intersection(vector<int> &nums1, vector<int> &nums2)
+//     {
+//         vector<int> ret;
+//         unordered_set<int> hash;
+
+//         for (const auto &x : nums1)
+//         {
+//             if (!hash.count(x))
+//             {
+//                 hash.insert(x);
+//             }
+//         }
+
+//         for (const auto &x : nums2)
+//         {
+//             if (hash.count(x))
+//             {
+//                 hash.erase(x);
+//                 ret.push_back(x);
+//             }
+//         }
+
+//         return ret;
+//     }
+// };
