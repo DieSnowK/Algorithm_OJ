@@ -1555,3 +1555,37 @@
 //         return ret;
 //     }
 // };
+
+// 最大连续1的个数 III
+// class Solution
+// {
+// public:
+//     int longestOnes(vector<int> &nums, int k)
+//     {
+//         // 问题转化: 子数组内, 0的个数不超过k
+//         int maxLen = 0, cnt = 0;
+
+//         for (int left = 0, right = 0; right < nums.size(); right++)
+//         {
+//             // 1.入窗口
+//             if (nums[right] == 0)
+//             {
+//                 cnt++;
+//             }
+
+//             // 2.判断 + 出窗口
+//             while (cnt > k)
+//             {
+//                 if (nums[left++] == 0)
+//                 {
+//                     cnt--;
+//                 }
+//             }
+
+//             // 3.更新数据
+//             maxLen = max(maxLen, right - left + 1);
+//         }
+
+//         return maxLen;
+//     }
+// };
