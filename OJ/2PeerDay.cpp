@@ -1589,3 +1589,24 @@
 //         return maxLen;
 //     }
 // };
+
+// 丢失的数字
+// class Solution
+// {
+// public:
+//     int missingNumber(vector<int> &nums)
+//     {
+//         int tmp = 0;
+//         for (int i = 0; i <= nums.size(); i++)
+//         {
+//             tmp ^= i;
+//         }
+
+//         for (const auto &x : nums)
+//         {
+//             tmp ^= x;
+//         }
+
+//         return tmp;
+//     }
+// };
