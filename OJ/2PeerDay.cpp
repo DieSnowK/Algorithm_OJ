@@ -1638,3 +1638,49 @@
 //         return len;
 //     }
 // };
+
+// 逆波兰表达式求值
+// class Solution
+// {
+// public:
+//     int evalRPN(vector<string> &tokens)
+//     {
+//         stack<int> st;
+//         for (const auto &str : tokens)
+//         {
+//             if (str == "+" || str == "-" || str == "*" || str == "/")
+//             {
+//                 int x2 = st.top();
+//                 st.pop();
+//                 int x1 = st.top();
+//                 st.pop();
+
+//                 int ret = 0;
+//                 if (str == "+")
+//                 {
+//                     ret = x1 + x2;
+//                 }
+//                 else if (str == "-")
+//                 {
+//                     ret = x1 - x2;
+//                 }
+//                 else if (str == "*")
+//                 {
+//                     ret = x1 * x2;
+//                 }
+//                 else if (str == "/")
+//                 {
+//                     ret = x1 / x2;
+//                 }
+
+//                 st.push(ret);
+//             }
+//             else
+//             {
+//                 st.push(stoi(str));
+//             }
+//         }
+
+//         return st.top();
+//     }
+// };
