@@ -1684,3 +1684,62 @@
 //         return st.top();
 //     }
 // };
+
+// 螺旋矩阵
+// class Solution
+// {
+// public:
+//     vector<int> spiralOrder(vector<vector<int>> &matrix)
+//     {
+//         if (matrix.size() == 0 || matrix[0].size() == 0)
+//         {
+//             return {};
+//         }
+
+//         // 控制4个指针, 来限制遍历范围
+//         int colBegin = 0, colEnd = matrix[0].size() - 1; // 控制列行为
+//         int rowBegin = 0, rowEnd = matrix.size() - 1;    // 控制行行为
+
+//         vector<int> ret;
+//         while (1) // -> 爱滴魔力转圈圈~
+//         {
+//             for (int i = colBegin; i <= colEnd; i++) // 从左往右
+//             {
+//                 ret.push_back(matrix[rowBegin][i]);
+//             }
+//             if (++rowBegin > rowEnd)
+//             {
+//                 break;
+//             }
+
+//             for (int i = rowBegin; i <= rowEnd; i++) // 从上往下
+//             {
+//                 ret.push_back(matrix[i][colEnd]);
+//             }
+//             if (--colEnd < colBegin)
+//             {
+//                 break;
+//             }
+
+//             for (int i = colEnd; i >= colBegin; i--) // 从右往左
+//             {
+//                 ret.push_back(matrix[rowEnd][i]);
+//             }
+//             if (--rowEnd < rowBegin)
+//             {
+//                 break;
+//             }
+
+//             for (int i = rowEnd; i >= rowBegin; i--) // 从下往上
+//             {
+//                 ret.push_back(matrix[i][colBegin]);
+//             }
+//             if (++colBegin > colEnd)
+//             {
+//                 break;
+//             }
+//         }
+
+//         return ret;
+//     }
+// };
