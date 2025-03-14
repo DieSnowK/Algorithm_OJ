@@ -1764,3 +1764,25 @@
 //         return nums[0];
 //     }
 // };
+
+// 第三大的数 -- 集合
+// class Solution
+// {
+// public:
+//     int thirdMax(vector<int> &nums)
+//     {
+//         set<int> s;
+
+//         for (auto x : nums)
+//         {
+//             s.insert(x);
+
+//             if (s.size() > 3)
+//             {
+//                 s.erase(s.begin());
+//             }
+//         }
+
+//         return s.size() == 3 ? *(s.begin()) : *(s.rbegin());
+//     }
+// };
