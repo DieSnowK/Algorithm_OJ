@@ -1786,3 +1786,34 @@
 //         return s.size() == 3 ? *(s.begin()) : *(s.rbegin());
 //     }
 // };
+
+// 第三大的数 -- 三指针 一次遍历
+// class Solution
+// {
+// public:
+//     int thirdMax(vector<int> &nums)
+//     {
+//         long a = LONG_MIN, b = LONG_MIN, c = LONG_MIN;
+
+//         for (auto x : nums)
+//         {
+//             if (x > a)
+//             {
+//                 c = b;
+//                 b = a;
+//                 a = x;
+//             }
+//             else if (a > x && x > b)
+//             {
+//                 c = b;
+//                 b = x;
+//             }
+//             else if (b > x && x > c)
+//             {
+//                 c = x;
+//             }
+//         }
+
+//         return c == LONG_MIN ? a : c;
+//     }
+// };
