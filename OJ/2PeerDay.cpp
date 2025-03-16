@@ -1817,3 +1817,43 @@
 //         return c == LONG_MIN ? a : c;
 //     }
 // };
+
+// 将 x 减到 0 的最小操作数
+// class Solution
+// {
+// public:
+//     int minOperations(vector<int> &nums, int x)
+//     {
+//         // 将模型转化为最长子数组的和 == (sumNum - x)
+//         int sum = 0, ret = -1;
+//         int target = -x;
+
+//         for (auto &e : nums)
+//         {
+//             target += e;
+//         }
+
+//         // 细节处理，当target为负数时，怎么减都减不够
+//         if (target < 0)
+//         {
+//             return -1;
+//         }
+
+//         for (int left = 0, right = 0; right < nums.size(); right++)
+//         {
+//             sum += nums[right]; // 入窗口
+
+//             while (sum > target) // 判断
+//             {
+//                 sum -= nums[left++]; // 出窗口
+//             }
+
+//             if (sum == target)
+//             {
+//                 ret = max(ret, right - left + 1); // 更新结果
+//             }
+//         }
+
+//         return ret == -1 ? -1 : nums.size() - ret;
+//     }
+// };
