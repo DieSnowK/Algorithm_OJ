@@ -1857,3 +1857,32 @@
 //         return ret == -1 ? -1 : nums.size() - ret;
 //     }
 // };
+
+// 分发饼干
+// class Solution
+// {
+// public:
+//     int findContentChildren(vector<int> &g, vector<int> &s)
+//     {
+//         // 预处理: 排序
+//         sort(g.begin(), g.end());
+//         sort(s.begin(), s.end());
+
+//         // 双指针 + 贪心
+//         int ret = 0, n = g.size(), m = s.size();
+//         for (int i = 0, j = 0; i < n && j < m; i++, j++)
+//         {
+//             while (j < m && s[j] < g[i])
+//             {
+//                 j++;
+//             }
+
+//             if (j < m)
+//             {
+//                 ret++;
+//             }
+//         }
+
+//         return ret;
+//     }
+// };
