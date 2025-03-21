@@ -1919,3 +1919,34 @@
 //         return ret;
 //     }
 // };
+
+// 按奇偶排序数组
+// class Solution
+// {
+// public:
+//     vector<int> sortArrayByParity(vector<int> &nums)
+//     {
+//         // 双指针
+//         int n = nums.size();
+//         int left = 0, right = nums.size() - 1;
+//         while (left < right)
+//         {
+//             while (left < n && nums[left] % 2 == 0) // 找奇数
+//             {
+//                 left++;
+//             }
+
+//             while (right >= 0 && nums[right] % 2 == 1) // 找偶数
+//             {
+//                 right--;
+//             }
+
+//             if (left < right)
+//             {
+//                 swap(nums[left++], nums[right--]);
+//             }
+//         }
+
+//         return nums;
+//     }
+// };
