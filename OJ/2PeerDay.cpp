@@ -1950,3 +1950,49 @@
 //         return nums;
 //     }
 // };
+
+// 找到字符串中所有字母异位词
+// class Solution
+// {
+// public:
+//     vector<int> findAnagrams(string s, string p)
+//     {
+//         unordered_map<char, int> hs, hp;
+//         for (const auto ch : p)
+//         {
+//             hp[ch]++;
+//         }
+
+//         int n = s.size(), m = p.size();
+//         int left = 0, right = 0;
+
+//         vector<int> ret;
+//         while (right < n)
+//         {
+//             char ch = s[right];
+//             if (hp.count(ch))
+//             {
+//                 hs[s[right]]++; // 入窗口
+
+//                 while (hs[ch] > hp[ch]) // 出窗口
+//                 {
+//                     hs[s[left++]]--;
+//                 }
+
+//                 if (right - left + 1 == m) // 判断 + 更新
+//                 {
+//                     ret.push_back(left);
+//                 }
+
+//                 right++;
+//             }
+//             else
+//             {
+//                 left = ++right;
+//                 hs.clear();
+//             }
+//         }
+
+//         return ret;
+//     }
+// };
