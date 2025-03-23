@@ -1996,3 +1996,31 @@
 //         return ret;
 //     }
 // };
+
+// 最小绝对差
+// class Solution
+// {
+// public:
+//     vector<vector<int>> minimumAbsDifference(vector<int> &arr)
+//     {
+//         int n = arr.size(), less = INT_MAX;
+//         sort(arr.begin(), arr.end());
+
+//         vector<vector<int>> ret;
+//         for (int i = 0; i < n - 1; i++)
+//         {
+//             // C++17 [if with initializer]
+//             if (int delta = arr[i + 1] - arr[i]; delta < less)
+//             {
+//                 less = delta;
+//                 ret = {{arr[i], arr[i + 1]}};
+//             }
+//             else if (delta == less)
+//             {
+//                 ret.push_back({arr[i], arr[i + 1]});
+//             }
+//         }
+
+//         return ret;
+//     }
+// };
