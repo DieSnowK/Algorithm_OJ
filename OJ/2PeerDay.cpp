@@ -2024,3 +2024,66 @@
 //         return ret;
 //     }
 // };
+
+// 至少有 K 个重复字符的最长子串
+// class Solution
+// {
+// public:
+//     // 分治思想
+//     int longestSubstring(string s, int k)
+//     {
+//         int n = s.size();
+//         return DFS(s, 0, n - 1, k);
+//     }
+
+//     int DFS(const string &s, int left, int right, int k)
+//     {
+//         // 1.统计该区间字符出现次数
+//         vector<int> cnt(26, 0);
+//         for (int i = left; i <= right; i++)
+//         {
+//             cnt[s[i] - 'a']++;
+//         }
+
+//         // 2.找出区间内, 是否存在不符合 [次数 > k] 的字符, 存在则标记
+//         char split = 0;
+//         for (int i = 0; i < 26; i++)
+//         {
+//             if (cnt[i] > 0 && cnt[i] < k)
+//             {
+//                 split = 'a' + i;
+//                 break;
+//             }
+//         }
+
+//         // 3.均符合条件, 则该区间长度就是最长长度
+//         if (split == 0)
+//         {
+//             return right - left + 1;
+//         }
+
+//         // 4.否则, 将该区间, 以split为分界点, 分治为多个子区间, 重复解决问题
+//         int ret = 0, cur = left;
+//         while (cur <= right)
+//         {
+//             // 4.1 找[左]边界, 略过split
+//             while (cur <= right && s[cur] == split)
+//             {
+//                 cur++;
+//             }
+
+//             // 4.2 找[右]边界
+//             int start = cur;
+//             while (cur <= right && s[cur] != split)
+//             {
+//                 cur++;
+//             }
+
+//             // 4.3 已找到新的区间, 分治新区间; 获取子区间返回值, 获取最大值
+//             int len = DFS(s, start, cur - 1, k);
+//             ret = max(ret, len);
+//         }
+
+//         return ret;
+//     }
+// };
