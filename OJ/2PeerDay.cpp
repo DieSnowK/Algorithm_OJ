@@ -2098,3 +2098,38 @@
 //         return (nums[0] - 1) * (nums[1] - 1);
 //     }
 // };
+
+// 替换后的最长重复字符
+// class Solution
+// {
+// public:
+//     int characterReplacement(string s, int k)
+//     {
+//         int n = s.size();
+//         if (n < 2)
+//         {
+//             return n;
+//         }
+
+//         int ret = 0, maxCount = 0;
+
+//         // 区间边界 + 数组, 共同维护窗口
+//         int left = 0, right = 0;
+//         vector<int> cnt(26, 0);
+
+//         while (right < n)
+//         {
+//             // [left, right) 内最多替换 k 个字符可以得到只有一种字符的子串
+//             maxCount = max(maxCount, ++cnt[s[right++] - 'A']);
+
+//             if (right - left > maxCount + k) // 此时 k 不够用
+//             {
+//                 cnt[s[left] - 'A']--;
+//                 left++;
+//             }
+
+//             ret = max(ret, right - left);
+//         }
+//         return ret;
+//     }
+// };
