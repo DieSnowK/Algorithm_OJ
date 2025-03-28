@@ -2165,3 +2165,62 @@
 //         return s;
 //     }
 // };
+
+// 最小覆盖子串
+// class Solution
+// {
+// public:
+//     string minWindow(string s, string t)
+//     {
+//         // 仅用数组可以避免STL的开销，提高效率
+//         int hashS[128] = {0};
+//         int hashT[128] = {0};
+
+//         int kinds = 0;
+//         for (auto &ch : t)
+//         {
+//             if (hashT[ch]++ == 0)
+//             {
+//                 kinds++;
+//             }
+//         }
+
+//         int begin = -1, minLen = INT_MAX;
+//         for (int left = 0, right = 0, count = 0; right < s.size(); right++)
+//         {
+//             // 入窗口
+//             char in = s[right];
+
+//             // 维护count，仅统计t中有效字符的种类
+//             if (++hashS[in] == hashT[in])
+//             {
+//                 count++;
+//             }
+
+//             while (count == kinds) // 判断
+//             {
+//                 // 更新
+//                 if (right - left + 1 < minLen)
+//                 {
+//                     begin = left;
+//                     minLen = right - left + 1;
+//                 }
+
+//                 // 出窗口 && 维护count
+//                 char out = s[left++];
+//                 if (hashS[out]-- == hashT[out])
+//                 {
+//                     count--;
+//                 }
+//             }
+//         }
+
+//         string ret = "";
+//         if (begin != -1)
+//         {
+//             ret = s.substr(begin, minLen);
+//         }
+
+//         return ret;
+//     }
+// };
