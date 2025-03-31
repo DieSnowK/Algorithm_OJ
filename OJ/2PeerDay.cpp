@@ -2277,3 +2277,27 @@
 //         return -1;
 //     }
 // };
+
+// 最后一个单词的长度
+// class Solution
+// {
+// public:
+//     int lengthOfLastWord(string s)
+//     {
+//         // 一次反向遍历
+//         int cur = s.size() - 1;
+//         while (s[cur] == ' ')
+//         {
+//             cur--;
+//         }
+
+//         int len = 0;
+//         while (cur >= 0 && s[cur] != ' ')
+//         {
+//             len++;
+//             cur--;
+//         }
+
+//         return len;
+//     }
+// };
