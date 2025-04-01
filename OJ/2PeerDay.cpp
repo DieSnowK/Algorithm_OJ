@@ -2301,3 +2301,61 @@
 //         return len;
 //     }
 // };
+
+// 在排序数组中查找元素的第一个和最后一个位置
+// class Solution
+// {
+// public:
+//     vector<int> searchRange(vector<int> &nums, int target)
+//     {
+//         // 处理边界情况
+//         if (nums.size() == 0)
+//         {
+//             return {-1, -1};
+//         }
+
+//         // 二分左端点
+//         int left = 0, right = nums.size() - 1;
+//         while (left < right)
+//         {
+//             int mid = left + (right - left) / 2;
+//             if (nums[mid] < target)
+//             {
+//                 left = mid + 1;
+//             }
+//             else
+//             {
+//                 right = mid;
+//             }
+//         }
+
+//         int begin = 0;
+//         if (nums[left] == target)
+//         {
+//             begin = left; // 标记左端点
+//         }
+//         else
+//         {
+//             return {-1, -1};
+//         }
+
+//         // 二分右端点
+//         // 这里其实left可以不做处理，算一个小优化
+//         left = 0, right = nums.size() - 1;
+//         while (left < right)
+//         {
+//             int mid = left + (right - left + 1) / 2;
+//             if (nums[mid] <= target)
+//             {
+//                 left = mid;
+//             }
+//             else
+//             {
+//                 right = mid - 1;
+//                 ;
+//             }
+//         }
+
+//         return {begin, right};
+//     }
+// };
