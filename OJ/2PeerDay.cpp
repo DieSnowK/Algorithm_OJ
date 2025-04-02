@@ -2359,3 +2359,41 @@
 //         return {begin, right};
 //     }
 // };
+
+// 验证回文串 II
+// class Solution
+// {
+// public:
+//     bool validPalindrome(string s)
+//     {
+//         //
+//         int left = 0, right = s.size() - 1;
+//         while (left < right)
+//         {
+//             if (s[left] == s[right])
+//             {
+//                 left++, right--;
+//             }
+//             else
+//             {
+//                 return CheckPalindrome(s, left, right - 1) ||
+//                        CheckPalindrome(s, left + 1, right);
+//             }
+//         }
+
+//         return true;
+//     }
+
+//     bool CheckPalindrome(const string &s, int left, int right)
+//     {
+//         while (left < right)
+//         {
+//             if (s[left++] != s[right--])
+//             {
+//                 return false;
+//             }
+//         }
+
+//         return true;
+//     }
+// };
