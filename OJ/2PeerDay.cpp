@@ -2397,3 +2397,19 @@
 //         return true;
 //     }
 // };
+
+// x 的平方根 -- 一次遍历
+// class Solution
+// {
+// public:
+//     int mySqrt(int x)
+//     {
+//         long i = 0;
+//         while (i * i < x)
+//         {
+//             i++;
+//         }
+
+//         return i * i == x ? i : i - 1;
+//     }
+// };
