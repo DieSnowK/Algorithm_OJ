@@ -2438,3 +2438,28 @@
 //         return ret;
 //     }
 // };
+
+// 宝石与石头 -- 哈希
+// class Solution
+// {
+// public:
+//     int numJewelsInStones(string jewels, string stones)
+//     {
+//         unordered_set<char> hash;
+//         for (const auto ch : jewels)
+//         {
+//             hash.insert(ch);
+//         }
+
+//         int cnt = 0;
+//         for (const auto ch : stones)
+//         {
+//             if (hash.count(ch))
+//             {
+//                 cnt++;
+//             }
+//         }
+
+//         return cnt;
+//     }
+// };
