@@ -2463,3 +2463,25 @@
 //         return cnt;
 //     }
 // };
+
+// 宝石与石头 -- 位运算
+// class Solution
+// {
+// public:
+//     int numJewelsInStones(string jewels, string stones)
+//     {
+//         long long mask = 0; // 64位, 每一位表示对应字符是否是宝石 -> 充当hash
+//         for (const auto ch : jewels)
+//         {
+//             mask |= 1LL << (ch & 63); // 取ch低6位, 设置mask第 (ch & 63) 位为1
+//         }
+
+//         int ret = 0;
+//         for (const auto ch : stones)
+//         {
+//             ret += mask >> (ch & 63) & 1;
+//         }
+
+//         return ret;
+//     }
+// };
