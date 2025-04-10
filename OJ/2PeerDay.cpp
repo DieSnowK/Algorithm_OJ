@@ -2485,3 +2485,31 @@
 //         return ret;
 //     }
 // };
+
+// 快乐数
+// class Solution
+// {
+// public:
+//     int BitSum(int n)
+//     {
+//         int sum = 0;
+//         while (n)
+//         {
+//             int tmp = n % 10;
+//             sum += tmp * tmp;
+//             n /= 10;
+//         }
+
+//         return sum;
+//     }
+
+//     // 本题将双指针的"指针"抽象成了两个数
+//     bool isHappy(int n)
+//     {
+//         int slow = n, fast = n;
+//         while ((slow = BitSum(slow)) != (fast = BitSum(BitSum(fast))))
+//             ;
+
+//         return slow == 1;
+//     }
+// };
