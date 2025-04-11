@@ -2513,3 +2513,52 @@
 //         return slow == 1;
 //     }
 // };
+
+// 全排列 II
+//  class Solution
+//  {
+//      vector<vector<int>> ret;
+//      vector<int> path;
+//      vector<bool> check;
+
+// public:
+//     vector<vector<int>> permuteUnique(vector<int> &nums)
+//     {
+
+//         check.resize(nums.size(), false);
+//         sort(nums.begin(), nums.end());
+
+//         DFS(nums);
+//         return ret;
+//     }
+
+//     void DFS(vector<int> &nums)
+//     {
+//         // 0.递归出口
+//         if (path.size() == nums.size())
+//         {
+//             ret.push_back(path);
+//             return;
+//         }
+
+//         // 1.暴搜
+//         for (int i = 0; i < nums.size(); i++)
+//         {
+//             // 2.剪枝 -> 何时不进?
+//             if (check[i] ||
+//                 i != 0 && nums[i] == nums[i - 1] && check[i - 1] == false)
+//             {
+//                 continue;
+//             }
+
+//             // 3.进
+//             path.push_back(nums[i]);
+//             check[i] = true;
+//             DFS(nums);
+
+//             // 4.回溯, 恢复现场
+//             path.pop_back();
+//             check[i] = false;
+//         }
+//     }
+// };
