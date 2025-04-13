@@ -2589,3 +2589,22 @@
 //         return maxV;
 //     }
 // };
+
+// 最大子数组和 -- 动态规划
+// class Solution
+// {
+// public:
+//     int maxSubArray(vector<int> &nums)
+//     {
+//         int n = nums.size(), ret = -0x3f3f3f3f;
+//         vector<int> dp(n + 1, 0);
+
+//         for (int i = 1; i <= n; i++)
+//         {
+//             dp[i] = max(nums[i - 1], dp[i - 1] + nums[i - 1]);
+//             ret = max(ret, dp[i]);
+//         }
+
+//         return ret;
+//     }
+// };
