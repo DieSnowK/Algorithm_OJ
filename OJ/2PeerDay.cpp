@@ -2608,3 +2608,42 @@
 //         return ret;
 //     }
 // };
+
+// 最大子数组和 -- 线段树 -> 分而治之
+// class Solution
+// {
+// public:
+//     struct Status
+//     {
+//         int lSum, rSum, mSum, iSum;
+//     };
+
+//     Status PushUp(Status l, Status r)
+//     {
+//         int iSum = l.iSum + r.iSum;
+//         int lSum = max(l.lSum, l.iSum + r.lSum);
+//         int rSum = max(r.rSum, r.iSum + l.rSum);
+//         int mSum = max(max(l.mSum, r.mSum), l.rSum + r.lSum);
+
+//         return (Status){lSum, rSum, mSum, iSum};
+//     };
+
+//     Status Get(vector<int> &a, int l, int r)
+//     {
+//         if (l == r)
+//         {
+//             return (Status){a[l], a[l], a[l], a[l]};
+//         }
+
+//         int m = (l + r) >> 1;
+//         Status lSub = Get(a, l, m);
+//         Status rSub = Get(a, m + 1, r);
+
+//         return PushUp(lSub, rSub);
+//     }
+
+//     int maxSubArray(vector<int> &nums)
+//     {
+//         return Get(nums, 0, nums.size() - 1).mSum;
+//     }
+// };
