@@ -2679,3 +2679,57 @@
 //         return ret;
 //     }
 // };
+
+// 螺旋矩阵
+// class Solution
+// {
+// public:
+//     vector<int> spiralOrder(vector<vector<int>> &matrix)
+//     {
+//         // 四个指针转圈圈
+//         int colBegin = 0, colEnd = matrix[0].size() - 1;
+//         int rowBegin = 0, rowEnd = matrix.size() - 1;
+
+//         vector<int> ret;
+//         while (1)
+//         {
+//             for (int i = colBegin; i <= colEnd; i++)
+//             {
+//                 ret.push_back(matrix[rowBegin][i]);
+//             }
+//             if (++rowBegin > rowEnd)
+//             {
+//                 break;
+//             }
+
+//             for (int i = rowBegin; i <= rowEnd; i++)
+//             {
+//                 ret.push_back(matrix[i][colEnd]);
+//             }
+//             if (--colEnd < colBegin)
+//             {
+//                 break;
+//             }
+
+//             for (int i = colEnd; i >= colBegin; i--)
+//             {
+//                 ret.push_back(matrix[rowEnd][i]);
+//             }
+//             if (--rowEnd < rowBegin)
+//             {
+//                 break;
+//             }
+
+//             for (int i = rowEnd; i >= rowBegin; i--)
+//             {
+//                 ret.push_back(matrix[i][colBegin]);
+//             }
+//             if (++colBegin > colEnd)
+//             {
+//                 break;
+//             }
+//         }
+
+//         return ret;
+//     }
+// };
