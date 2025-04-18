@@ -2733,3 +2733,29 @@
 //         return ret;
 //     }
 // };
+
+// 和为 K 的子数组
+// class Solution
+// {
+// public:
+//     int subarraySum(vector<int> &nums, int k)
+//     {
+//         unordered_map<int, int> hash; // <前缀和, 次数>
+//         hash[0] = 1;
+
+//         int ret = 0, sum = 0; // 标识前一个位置的前缀和
+//         for (auto &e : nums)
+//         {
+//             sum += e; // 计算当前位置的前缀和
+
+//             if (hash.count(sum - k))
+//             {
+//                 ret += hash[sum - k];
+//             }
+
+//             hash[sum]++; // 将i位置的前缀和入hash
+//         }
+
+//         return ret;
+//     }
+// };
