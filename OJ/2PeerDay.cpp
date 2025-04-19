@@ -2759,3 +2759,38 @@
 //         return ret;
 //     }
 // };
+
+// 合并区间
+// class Solution
+// {
+// public:
+//     vector<vector<int>> merge(vector<vector<int>> &intervals)
+//     {
+//         // 1.排序
+//         sort(intervals.begin(), intervals.end());
+
+//         // 2.合并
+//         vector<vector<int>> ret;
+//         int left = intervals[0][0], right = intervals[0][1]; // 合并方式: 求并集
+
+//         for (int i = 1; i < intervals.size(); i++)
+//         {
+//             int a = intervals[i][0], b = intervals[i][1];
+
+//             if (a <= right)
+//             {
+//                 right = max(right, b);
+//             }
+//             else
+//             {
+//                 ret.push_back({left, right});
+//                 left = a, right = b;
+//             }
+//         }
+
+//         // 3.最后一个区间
+//         ret.push_back({left, right});
+
+//         return ret;
+//     }
+// };
