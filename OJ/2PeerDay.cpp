@@ -2822,3 +2822,37 @@
 //         return len;
 //     }
 // };
+
+// 逆波兰表达式求值
+// class Solution 
+// {
+// public:
+//     int evalRPN(vector<string>& tokens) 
+//     {
+//         unordered_map<string, function<int(int, int)>> hash = 
+//         {
+//             {"+", [](int a, int b) { return a + b; }},
+//             {"-", [](int a, int b) { return a - b; }},
+//             {"*", [](int a, int b) { return a * b; }},
+//             {"/", [](int a, int b) { return a / b; }}
+//         };
+
+//         stack<int> st;
+//         for(const auto& str : tokens)
+//         {
+//             if(hash.count(str))
+//             {
+//                 int x2 = st.top(); st.pop();
+//                 int x1 = st.top(); st.pop();
+
+//                 st.push(hash[str](x1, x2));
+//             }
+//             else
+//             {
+//                 st.push(stoi(str));
+//             }
+//         }
+
+//         return st.top();
+//     }
+// };
