@@ -2856,3 +2856,42 @@
 //         return st.top();
 //     }
 // };
+
+// 判定字符是否唯一
+// class Solution 
+// {
+// public:
+//     bool isUnique(string astr) 
+//     {
+//         // 1.Hash
+//         int mask = 0;
+//         for(const auto ch : astr)
+//         {
+//             mask |= 1 << (ch - 'a');
+//         }
+
+//         // 2.Cnt Check
+//         if(Check(mask) == astr.size())
+//         {
+//             return true;
+//         }
+
+//         return false;
+//     }
+
+//     int Check(int mask)
+//     {
+//         int cnt = 0;
+//         while(mask)
+//         {
+//             if(mask & 1)
+//             {
+//                 cnt++;
+//             }
+
+//             mask >>= 1;
+//         }
+
+//         return cnt;
+//     }
+// };
