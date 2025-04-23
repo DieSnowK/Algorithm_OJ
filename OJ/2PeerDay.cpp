@@ -2895,3 +2895,39 @@
 //         return cnt;
 //     }
 // };
+
+// 最小栈
+// class MinStack
+// {
+// public:
+//     MinStack()
+//     {
+//         minSt.push(INT_MAX);
+//     }
+
+//     void push(int val)
+//     {
+//         st.push(val);
+//         minSt.push(min(minSt.top(), val));
+//     }
+
+//     void pop()
+//     {
+//         st.pop();
+//         minSt.pop();
+//     }
+
+//     int top()
+//     {
+//         return st.top();
+//     }
+
+//     int getMin()
+//     {
+//         return minSt.top();
+//     }
+
+// private:
+//     stack<int> st;
+//     stack<int> minSt;
+// };
