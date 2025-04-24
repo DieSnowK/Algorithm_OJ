@@ -2931,3 +2931,24 @@
 //     stack<int> st;
 //     stack<int> minSt;
 // };
+
+// 丢失的数字
+// class Solution
+// {
+// public:
+//     int missingNumber(vector<int> &nums)
+//     {
+//         int mask = 0;
+//         for (int i = 0; i <= nums.size(); i++)
+//         {
+//             mask ^= i;
+//         }
+
+//         for (const auto x : nums)
+//         {
+//             mask ^= x;
+//         }
+
+//         return mask;
+//     }
+// };
