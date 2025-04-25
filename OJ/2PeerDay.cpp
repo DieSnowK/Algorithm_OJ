@@ -2952,3 +2952,59 @@
 //         return mask;
 //     }
 // };
+
+// 用栈实现队列
+// class MyQueue
+// {
+// public:
+//     MyQueue()
+//     {
+//     }
+
+//     void push(int x)
+//     {
+//         inSt.push(x);
+//     }
+
+//     int pop()
+//     {
+//         if (outSt.empty())
+//         {
+//             In2Out();
+//         }
+
+//         int x = outSt.top();
+//         outSt.pop();
+
+//         return x;
+//     }
+
+//     int peek()
+//     {
+//         if (outSt.empty())
+//         {
+//             In2Out();
+//         }
+
+//         return outSt.top();
+//     }
+
+//     bool empty()
+//     {
+//         return inSt.empty() && outSt.empty();
+//     }
+
+// private:
+//     void In2Out()
+//     {
+//         while (inSt.size())
+//         {
+//             outSt.push(inSt.top());
+//             inSt.pop();
+//         }
+//     }
+
+// private:
+//     stack<int> inSt;
+//     stack<int> outSt;
+// };
