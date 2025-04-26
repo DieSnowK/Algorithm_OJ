@@ -3008,3 +3008,19 @@
 //     stack<int> inSt;
 //     stack<int> outSt;
 // };
+
+// 递归乘法 -- 累加
+// class Solution
+// {
+// public:
+//     int multiply(int A, int B)
+//     {
+//         int ret = 0;
+//         for (int i = 0; i < B; i++)
+//         {
+//             ret += A;
+//         }
+
+//         return ret;
+//     }
+// };
