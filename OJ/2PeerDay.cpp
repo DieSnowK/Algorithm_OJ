@@ -3049,3 +3049,31 @@
 //         return ret;
 //     }
 // };
+
+// 最短无序连续子数组
+// class Solution
+// {
+// public:
+//     int findUnsortedSubarray(vector<int> &nums)
+//     {
+//         if (is_sorted(nums.begin(), nums.end()))
+//         {
+//             return 0;
+//         }
+
+//         vector<int> stNums(nums);
+//         sort(stNums.begin(), stNums.end());
+//         int left = 0, right = nums.size() - 1;
+
+//         while (nums[left] == stNums[left])
+//         {
+//             left++;
+//         }
+//         while (nums[right] == stNums[right])
+//         {
+//             right--;
+//         }
+
+//         return right - left + 1;
+//     }
+// };
