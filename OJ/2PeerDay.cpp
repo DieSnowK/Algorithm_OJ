@@ -3077,3 +3077,45 @@
 //         return right - left + 1;
 //     }
 // };
+
+// 螺旋矩阵 II
+// class Solution
+// {
+// public:
+//     vector<vector<int>> generateMatrix(int n)
+//     {
+//         int colBegin = 0, colEnd = n - 1;
+//         int rowBegin = 0, rowEnd = n - 1;
+//         vector<vector<int>> ret(n, vector<int>(n, 0));
+
+//         int cnt = 1;
+//         while (cnt <= n * n)
+//         {
+//             for (int i = colBegin; i <= colEnd; i++)
+//             {
+//                 ret[rowBegin][i] = cnt++;
+//             }
+//             ++rowBegin;
+
+//             for (int i = rowBegin; i <= rowEnd; i++)
+//             {
+//                 ret[i][colEnd] = cnt++;
+//             }
+//             --colEnd;
+
+//             for (int i = colEnd; i >= colBegin; i--)
+//             {
+//                 ret[rowEnd][i] = cnt++;
+//             }
+//             --rowEnd;
+
+//             for (int i = rowEnd; i >= rowBegin; i--)
+//             {
+//                 ret[i][colBegin] = cnt++;
+//             }
+//             ++colBegin;
+//         }
+
+//         return ret;
+//     }
+// };
