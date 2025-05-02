@@ -3191,3 +3191,51 @@
 //         return strSt.top();
 //     }
 // };
+
+// 字符串相乘
+// class Solution
+// {
+// public:
+//     string multiply(string num1, string num2)
+//     {
+//         int n = num1.size(), m = num2.size();
+
+//         // 逆序字符串，便于运算
+//         reverse(num1.begin(), num1.end());
+//         reverse(num2.begin(), num2.end());
+
+//         // 无进位相加
+//         vector<int> tmp(n + m - 1);
+//         for (int i = 0; i < n; i++)
+//         {
+//             for (int j = 0; j < m; j++)
+//             {
+//                 tmp[i + j] += (num1[i] - '0') * (num2[j] - '0');
+//             }
+//         }
+
+//         // 进位
+//         int cur = 0, carry = 0;
+//         string ret;
+//         while (cur < n + m - 1 || carry)
+//         {
+//             if (cur < n + m - 1)
+//             {
+//                 carry += tmp[cur++];
+//             }
+
+//             ret += carry % 10 + '0';
+//             carry /= 10;
+//         }
+
+//         // 处理前导0
+//         while (ret.size() > 1 && ret.back() == '0')
+//         {
+//             ret.pop_back();
+//         }
+
+//         reverse(ret.begin(), ret.end());
+
+//         return ret;
+//     }
+// };
