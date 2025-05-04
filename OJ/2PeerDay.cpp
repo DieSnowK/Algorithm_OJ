@@ -3239,3 +3239,37 @@
 //         return ret;
 //     }
 // };
+
+// 无重复字符的最长子串
+// class Solution
+// {
+// public:
+//     int lengthOfLongestSubstring(string s)
+//     {
+//         unordered_map<char, int> hash;
+//         int n = s.size(), maxLen = 0;
+//         int left = 0, right = 0;
+
+//         while (right < n)
+//         {
+//             char ch = s[right];
+
+//             // 1.入窗口
+//             hash[ch]++;
+
+//             // 2.出窗口
+//             while (hash[ch] > 1)
+//             {
+//                 hash[s[left++]]--;
+//             }
+
+//             // 3.更新
+//             maxLen = max(maxLen, right - left + 1);
+
+//             // 4.迭代
+//             right++;
+//         }
+
+//         return maxLen;
+//     }
+// };
