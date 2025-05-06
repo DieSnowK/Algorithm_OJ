@@ -3273,3 +3273,25 @@
 //         return maxLen;
 //     }
 // };
+
+// 二叉树的最大深度
+// class Solution 
+// {
+// public:
+//     int maxDepth(TreeNode* root) 
+//     {
+//         if(root == nullptr)
+//         {
+//             return 0;
+//         }
+
+//         if(root->left == nullptr && root->right == nullptr)
+//         {
+//             return 1;
+//         }
+
+//         int left = maxDepth(root->left), right = maxDepth(root->right);
+
+//         return max(left, right) + 1;
+//     }
+// };
