@@ -3336,3 +3336,30 @@
 //         return cur;
 //     }
 // };
+
+// 将有序数组转换为二叉搜索树
+// class Solution 
+// {
+// public:
+//     TreeNode* sortedArrayToBST(vector<int>& nums) 
+//     {
+//         return DFS(nums, 0, nums.size() - 1);
+//     }
+
+//     TreeNode* DFS(vector<int>& nums, int left, int right)
+//     {
+//         if(left > right)
+//         {
+//             return nullptr;
+//         }
+
+//         int mid = (left + right) / 2;
+//         TreeNode* root = new TreeNode(nums[mid]);
+
+//         // [left, mid - 1] [mid + 1, right]
+//         root->left = DFS(nums, left, mid - 1);
+//         root->right = DFS(nums, mid + 1, right);
+
+//         return root;
+//     }
+// };
