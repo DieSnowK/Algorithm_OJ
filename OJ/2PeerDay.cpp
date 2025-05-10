@@ -3363,3 +3363,49 @@
 //         return root;
 //     }
 // };
+
+// 旋转链表 --> 模拟
+// class Solution 
+// {
+// public:
+//     ListNode* rotateRight(ListNode* head, int k) 
+//     {
+//         if(head == nullptr)
+//         {
+//             return nullptr;
+//         }
+
+//         int n = 0;
+//         ListNode *cur = head, *tail = nullptr;
+
+//         // 1.计数 && 找尾
+//         while(cur)
+//         {
+//             if(cur->next == nullptr)
+//             {
+//                 tail = cur;
+//             }
+
+//             n++;
+//             cur = cur->next;
+//         }
+//         k %= n;
+
+//         // 2.模拟
+//         while(k--)
+//         {
+//             ListNode* prev = head;
+//             while(prev->next && prev->next->next)
+//             {
+//                 prev = prev->next;
+//             }
+
+//             tail->next = head;
+//             head = tail;
+//             tail = prev;
+//             tail->next = nullptr;
+//         }
+
+//         return head;
+//     }
+// };
