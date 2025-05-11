@@ -3409,3 +3409,40 @@
 //         return head;
 //     }
 // };
+
+// 旋转链表 --> 数学 -> 闭合为环，再断开
+// class Solution 
+// {
+// public:
+//     ListNode* rotateRight(ListNode* head, int k) 
+//     {
+//         if (head == nullptr) 
+//         {
+//             return head;
+//         }
+
+//         int n = 1;
+//         ListNode* cur = head;
+
+//             // 1.计数 && 找尾
+//         while (cur->next)
+//         {
+//             cur = cur->next;
+//             n++;
+//         }
+
+//         // 2.闭合为环 -> 新链表的最后一个节点为原链表的第k个
+//         k = n - k % n;
+//         cur->next = head;
+
+//         // 3.断链 && 找新头
+//         while (k--) 
+//         {
+//             cur = cur->next;
+//         }
+//         ListNode* ret = cur->next;
+//         cur->next = nullptr;
+        
+//         return ret;
+//     }
+// };
