@@ -3446,3 +3446,33 @@
 //         return ret;
 //     }
 // };
+
+// 汉诺塔问题
+// class Solution 
+// {
+// public:
+//     void hanota(vector<int>& A, vector<int>& B, vector<int>& C) 
+//     {
+//         DFS(A, B, C, A.size());
+//     }
+
+//     void DFS(vector<int>& a, vector<int>& b, vector<int>& c, size_t n)
+//     {
+//         if(n == 1)
+//         {
+//             c.push_back(a.back());
+//             a.pop_back();
+//             return;
+//         }
+
+//         // 将A上面n-1个通过C移到B
+//         DFS(a, c, b, n - 1);
+
+//         // 将A最后一个移到C
+//         c.push_back(a.back());
+//         a.pop_back();
+
+//         // 将B上面n-1个通过空的A移到C
+//         DFS(b, a, c, n - 1);
+//     }
+// };
