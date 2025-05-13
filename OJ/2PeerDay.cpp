@@ -3476,3 +3476,55 @@
 //         DFS(b, a, c, n - 1);
 //     }
 // };
+
+// 训练计划 IV --> 迭代
+// class Solution 
+// {
+// public:
+//     ListNode* trainningPlan(ListNode* l1, ListNode* l2) 
+//     {
+//         if(l1 == nullptr)
+//         {
+//             return l2;
+//         }
+
+//         if(l2 == nullptr)
+//         {
+//             return l1;
+//         }
+
+//         ListNode *head = new ListNode(0);
+//         ListNode *cur1 = l1, *cur2 = l2, *tail = head;
+
+//         while(cur1 && cur2)
+//         {
+//             if(cur1->val < cur2->val)
+//             {
+//                 tail->next = cur1;
+//                 tail = cur1;
+//                 cur1 = cur1->next;
+//             }
+//             else
+//             {
+//                 tail->next = cur2;
+//                 tail = cur2;
+//                 cur2 = cur2->next;
+//             }
+//         }
+
+//         if(cur1)
+//         {
+//             tail->next = cur1;
+//         }
+
+//         if(cur2)
+//         {
+//             tail->next = cur2;
+//         }
+
+//         tail = head->next;
+//         delete head;
+
+//         return tail;
+//     }
+// };
