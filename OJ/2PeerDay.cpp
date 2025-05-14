@@ -3555,3 +3555,38 @@
 //         }
 //     }
 // };
+
+// 链表中的下一个更大节点
+// class Solution 
+// {
+// public:
+//     vector<int> nextLargerNodes(ListNode* head)
+//     {
+//         vector<int> ret;
+//         stack<pair<int, int>> st; // <num, index>
+
+//         int index = 0;
+//         ListNode* cur = head;
+//         while(cur)
+//         {
+//             // 1.Init
+//             ret.push_back(0);
+
+//             // 2.尝试找到更大值
+//             while(!st.empty() && st.top().first < cur->val)
+//             {
+//                 // 更新栈顶节点的下一个更大节点为当前节点的值
+//                 ret[st.top().second] = cur->val;
+//                 st.pop();
+//             }
+
+//             // 3.将当前节点入栈
+//             st.emplace(cur->val, index++);
+
+//             // 4.迭代
+//             cur = cur->next;
+//         }
+
+//         return ret;
+//     }
+// };
