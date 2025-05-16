@@ -3590,3 +3590,19 @@
 //         return ret;
 //     }
 // };
+
+// 破冰游戏 --> 数学 + 递归
+// class Solution 
+// {
+// public:
+//     int iceBreakingGame(int num, int target) 
+//     {
+//         if (num == 1) 
+//         {
+//             return 0;
+//         }
+        
+//         int x = iceBreakingGame(num - 1, target);
+//         return (target + x) % num;
+//     }
+// };
