@@ -3606,3 +3606,18 @@
 //         return (target + x) % num;
 //     }
 // };
+
+// 破冰游戏 --> 动态规划
+// class Solution 
+// {
+// public:
+//     int iceBreakingGame(int num, int target) 
+//     {
+//         int dp = 0;
+//         for (int i = 2; i <= num; ++i) 
+//         {
+//             dp = (target + dp) % i;
+//         }
+//         return dp;
+//     }
+// };
