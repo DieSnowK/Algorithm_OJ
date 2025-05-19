@@ -3653,3 +3653,48 @@
 
 //     return -1;
 // }
+
+// 路径总和 II
+// class Solution 
+// {
+//     int target;
+//     vector<int> path;
+//     vector<vector<int>> ret;
+// public:
+//     vector<vector<int>> pathSum(TreeNode* root, int targetSum) 
+//     {
+//         if(root == nullptr)
+//         {
+//             return {};
+//         }
+
+//         target = targetSum;
+
+//         path.push_back(root->val);
+//         DFS(root, root->val);
+
+//         return ret;
+//     }
+
+//     void DFS(TreeNode* root, int cnt)
+//     {
+//         if(root->left == nullptr && root->right == nullptr && cnt == target)
+//         {
+//             ret.push_back(path);
+//         }
+
+//         if(root->left)
+//         {
+//             path.push_back(root->left->val);
+//             DFS(root->left, cnt + root->left->val);
+//             path.pop_back();
+//         }
+
+//         if(root->right)
+//         {
+//             path.push_back(root->right->val);
+//             DFS(root->right, cnt + root->right->val);
+//             path.pop_back();
+//         }
+//     }
+// };
