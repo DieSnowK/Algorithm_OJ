@@ -3621,3 +3621,35 @@
 //         return dp;
 //     }
 // };
+
+// 破冰游戏 --> 模拟
+// int LastRemaining_Solution(int n, int m) 
+// {
+//     int cnt = n, time = 0;
+//     vector<bool> children(n, false);
+
+//     for(int i = 0; cnt != 1; i++)
+//     {
+//         if(!children[i % n] && time == m - 1)
+//         {
+//             children[i % n] = true;
+//             cnt--;
+//             time = 0;
+//         }
+
+//         if(!children[i % n])
+//         {
+//             time++;
+//         }
+//     }
+
+//     for(int i = 0; i < n; i++)
+//     {
+//         if(!children[i])
+//         {
+//             return i;
+//         }
+//     }
+
+//     return -1;
+// }
