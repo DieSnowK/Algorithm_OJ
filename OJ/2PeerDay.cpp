@@ -3713,3 +3713,36 @@
 //         return ret;
 //     }
 // };
+
+// 二叉树最大宽度 --> BFS
+// class Solution 
+// {
+// public:
+//     int widthOfBinaryTree(TreeNode* root) 
+//     {
+//         unsigned int ret = 1;
+//         vector<pair<TreeNode*, unsigned int>> record; // <node, index>
+//         record.emplace_back(root, 1);
+
+//         while (!record.empty()) 
+//         {
+//             vector<pair<TreeNode*, unsigned int>> tmp;
+//             for (auto& [node, index] : record) 
+//             {
+//                 if (node->left) 
+//                 {
+//                     tmp.emplace_back(node->left, index * 2);
+//                 }
+//                 if (node->right) 
+//                 {
+//                     tmp.emplace_back(node->right, index * 2 + 1);
+//                 }
+//             }
+
+//             ret = max(ret, record.back().second - record[0].second + 1);
+//             record = move(tmp); // 移动赋值, 效率高
+//         }
+
+//         return ret;
+//     }
+// };
