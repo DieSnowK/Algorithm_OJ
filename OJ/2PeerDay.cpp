@@ -3746,3 +3746,33 @@
 //         return ret;
 //     }
 // };
+
+// 二叉树最大宽度 --> DFS
+// class Solution 
+// {
+//     unordered_map<int, unsigned int> levelMin; // <depth, index>
+// public:
+//     int widthOfBinaryTree(TreeNode* root) 
+//     {
+//         return DFS(root, 1, 1);
+//     }
+
+// 	// 返回值: 当前层数的最大宽度
+//     unsigned int DFS(TreeNode* node, int depth, unsigned int index)
+//     {
+//         if (node == nullptr) 
+//         {
+//             return 0;
+//         }
+
+//         // 每一层最先访问到的节点会是最左边的节点
+//         if (!levelMin.count(depth)) 
+//         {
+//             levelMin[depth] = index; 
+//         }
+
+//         return max({index - levelMin[depth] + 1, 
+//                     DFS(node->left, depth + 1, index * 2), 
+//                     DFS(node->right, depth + 1, index * 2 + 1)});
+//     }
+// };
