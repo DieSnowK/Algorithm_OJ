@@ -3776,3 +3776,75 @@
 //                     DFS(node->right, depth + 1, index * 2 + 1)});
 //     }
 // };
+
+// 动物收容所
+// class AnimalShelf 
+// {
+// public:
+//     AnimalShelf() 
+//     {}
+    
+//     void enqueue(vector<int> animal) 
+//     {
+//         if(animal[1] == 0) // Cat
+//         {
+//             cats.push(animal[0]);
+//         }
+//         else // Dog
+//         {
+//             dogs.push(animal[0]);
+//         }
+//     }
+    
+//     vector<int> dequeueAny() 
+//     {
+//         if(cats.empty())
+//         {
+//             return dequeueDog();
+//         }
+
+//         if(dogs.empty())
+//         {
+//             return dequeueCat();
+//         }
+        
+//         if(cats.front() < dogs.front())
+//         {
+//             return dequeueCat();
+//         }
+//         else
+//         {
+//             return dequeueDog();
+//         }
+//     }
+    
+//     vector<int> dequeueDog() 
+//     {
+//         if(dogs.empty())
+//         {
+//             return {-1, -1};
+//         }
+
+//         int num = dogs.front();
+//         dogs.pop();
+
+//         return {num, 1};
+//     }
+    
+//     vector<int> dequeueCat() 
+//     {
+//         if(cats.empty())
+//         {
+//             return {-1, -1};
+//         }
+
+//         int num = cats.front();
+//         cats.pop();
+
+//         return {num, 0};
+//     }
+
+// private:
+//     queue<int> cats;
+//     queue<int> dogs;
+// };
