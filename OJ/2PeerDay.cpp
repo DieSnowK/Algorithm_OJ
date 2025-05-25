@@ -3848,3 +3848,27 @@
 //     queue<int> cats;
 //     queue<int> dogs;
 // };
+
+// 字母异位词分组
+// class Solution 
+// {
+// public:
+//     vector<vector<string>> groupAnagrams(vector<string>& strs) 
+//     {
+//         unordered_map<string, vector<string>> hash;
+//         for(auto& str : strs)
+//         {
+//             string tmp = str;
+//             sort(tmp.begin(), tmp.end());
+//             hash[tmp].push_back(str);
+//         }
+
+//         vector<vector<string>> ret;
+//         for(auto& [x, y] : hash) // 这种写法积累下来
+//         {
+//             ret.push_back(y);
+//         }
+
+//         return ret;
+//     }
+// };
