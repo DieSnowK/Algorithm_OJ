@@ -3963,3 +3963,25 @@
 //     list<pair<int, int>> _LRUList;
 //     size_t _capacity;
 // };
+
+// 买票需要的时间 --> 环形模拟
+// class Solution 
+// {
+// public:
+//     int timeRequiredToBuy(vector<int>& tickets, int k) 
+//     {
+//         int i = 0, ret = 0, n = tickets.size();
+
+//         while(tickets[k])
+//         {
+//             if(tickets[i % n] > 0)
+//             {
+//                 tickets[i % n]--;
+//                 ret++;
+//             }
+//             i++;
+//         }
+
+//         return ret;
+//     }
+// };
