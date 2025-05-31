@@ -4027,3 +4027,33 @@
 //         return s1 == s2;
 //     }
 // };
+
+// 判定是否互为字符重排 --> Hash
+// class Solution 
+// {
+// public:
+//     bool CheckPermutation(string s1, string s2) 
+//     {
+//         if (s1.length() != s2.length()) 
+//         {
+//             return false;
+//         }
+
+//         int hash[26] = {0};
+//         for (auto& ch: s1) 
+//         {
+//             hash[ch - 'a']++;
+//         }
+
+//         for (auto& ch: s2) 
+//         {
+//             hash[ch - 'a']--;
+//             if (hash[ch - 'a'] < 0) 
+//             {
+//                 return false;
+//             }
+//         }
+
+//         return true;
+//     }
+// };
