@@ -4185,3 +4185,41 @@
 //         }
 //     }
 // };
+
+// 非递减子序列
+// class Solution 
+// {
+//     vector<int> tmp; 
+//     vector<vector<int>> ret;
+// public:
+//     vector<vector<int>> findSubsequences(vector<int>& nums) 
+//     {
+//         DFS(0, INT_MIN, nums);
+//         return ret;
+//     }
+
+//     void DFS(int cur, int last, vector<int>& nums) 
+//     {
+//         if (cur == nums.size()) 
+//         {
+//             if (tmp.size() >= 2) 
+//             {
+//                 ret.push_back(tmp);
+//             }
+
+//             return;
+//         }
+
+//         if (nums[cur] >= last) 
+//         {
+//             tmp.push_back(nums[cur]);
+//             DFS(cur + 1, nums[cur], nums);
+//             tmp.pop_back();
+//         }
+
+//         if (nums[cur] != last) 
+//         {
+//             DFS(cur + 1, last, nums);
+//         }
+//     }
+// };
