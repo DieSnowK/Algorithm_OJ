@@ -4288,3 +4288,27 @@
 //         return triangle;
 //     }
 // };
+
+// 二叉树的前序遍历
+// class Solution 
+// {
+//     vector<int> ret;
+// public:
+//     vector<int> preorderTraversal(TreeNode* root) 
+//     {
+//         DFS(root);
+//         return ret;
+//     }
+
+//     void DFS(TreeNode* root)
+//     {
+//         if(root == nullptr)
+//         {
+//             return;
+//         }
+
+//         ret.push_back(root->val);
+//         DFS(root->left);
+//         DFS(root->right);
+//     }
+// };
