@@ -4360,3 +4360,53 @@
 //         return ret;
 //     }
 // };
+
+// 分割回文串
+// class Solution 
+// {
+// private:
+//     vector<vector<bool>> dp;
+//     vector<vector<string>> ret;
+//     vector<string> path;
+//     int n;
+
+// public:
+//     vector<vector<string>> partition(string s) 
+//     {
+//         n = s.size();
+//         dp.resize(n, vector<bool>(n, true));
+
+//         // 1.DP 预处理 -> s[i, j] 是否为回文串
+//         for (int i = n - 1; i >= 0; --i) 
+//         {
+//             for (int j = i + 1; j < n; ++j) 
+//             {
+//                 dp[i][j] = (s[i] == s[j]) && dp[i + 1][j - 1];
+//             }
+//         }
+
+//         // 2.DFS
+//         DFS(s, 0);
+
+//         return ret;
+//     }
+
+//     void DFS(const string& s, int i) 
+//     {
+//         if (i == n) 
+//         {
+//             ret.push_back(path);
+//             return;
+//         }
+
+//         for (int j = i; j < n; ++j) 
+//         {
+//             if (dp[i][j]) 
+//             {
+//                 path.push_back(s.substr(i, j - i + 1));
+//                 DFS(s, j + 1);
+//                 path.pop_back();
+//             }
+//         }
+//     }
+// };
